@@ -25,30 +25,40 @@ export default function CalendarDates(props: dateProps) {
   for (let j = firstDayOfMonth; j > 0; j--) {
     dates.splice(firstDayOfMonth - j, 1, "");
   }
-  // identify the date gets clicked
+  // highlight when the date gets clicked
   const [activeDate, setActiveDate] = useState<number | string | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const handleDateClick = (
     e: React.MouseEvent<HTMLLIElement>,
-    date: number | string
+    date: number | string,
+    index: number
   ): void => {
     setActiveDate(date);
+    setActiveIndex(index);
   };
 
   return (
     <ul className={styles.dates}>
       {dates.map((date: number | string, index: number) => {
         return date === currDate.getDate() && highlightCurrDate ? (
-          <li key={index} className={styles.currDate}>
+          <li
+            key={index}
+            className={styles.currDate}
+            onClick={(e) => handleDateClick(e, date, index)}
+          >
             {date}
           </li>
         ) : (
           <li
             className={clsx(
               { [styles.date]: date },
-              { [styles.activeDate]: date === activeDate }
+              {
+                [styles.activeDate]:
+                  date === activeDate && index === activeIndex,
+              }
             )}
             key={index}
-            onClick={(e) => handleDateClick(e, date)}
+            onClick={(e) => handleDateClick(e, date, index)}
           >
             {date}
           </li>
