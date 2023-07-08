@@ -1,5 +1,9 @@
 @use "styles/base";
 
+header {
+  position: sticky;
+}
+
 .navbarTop {
   height: 90px;
   gap: 30px;
@@ -17,7 +21,6 @@
   gap: 18px;
   .brandTitle {
     color: #fff;
-    font-size: 32px;
   }
 }
 
@@ -73,17 +76,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 120px));
   grid-template-rows: auto;
-}
-
-li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  color: #fff;
-  opacity: 0.4;
-  .sportsIcon {
-    width: 30px;
-    height: 30px;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    opacity: 0.4;
+    .sportsIcon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

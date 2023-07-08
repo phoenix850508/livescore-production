@@ -1,0 +1,13 @@
+@use "styles/base";
+
+.leaguesAll {
+  margin-top: 35px;
+  width: 307px;
+  padding-top: 21px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.leagueTitle {
+  color: base.$secondary-grey-background;
+}

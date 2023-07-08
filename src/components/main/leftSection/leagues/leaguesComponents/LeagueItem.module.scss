@@ -1,0 +1,17 @@
+.leagueItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 41px;
+}
+
+.leagueInfoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.flags {
+  width: 40px;
+  height: 40px;
+}
