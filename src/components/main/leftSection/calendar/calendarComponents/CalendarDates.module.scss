@@ -16,6 +16,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(55, 77, 245, 0.5);
+  background-color: rgba(55, 77, 245, 0.6);
   border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(55, 77, 245, 0.65);
+  }
+}
+
+.date {
+  @extend .currDate;
+  background-color: #fff;
+  &:hover {
+    background-color: rgba(55, 77, 245, 0.09);
+  }
+}
+
+.activeDate {
+  background-color: rgba(55, 77, 245, 0.2);
 }

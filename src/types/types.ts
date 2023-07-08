@@ -7,7 +7,8 @@ export type dateProps = {
   nextClick?: React.MouseEventHandler<HTMLImageElement>;
 };
 
-export type leagueProps = {
+export type locationProps = {
   locationIcon: string[];
   locationTitle: string[];
+  leagueArr?: string[] | null;
 };
