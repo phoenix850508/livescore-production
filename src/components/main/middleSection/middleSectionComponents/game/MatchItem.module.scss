@@ -1,0 +1,49 @@
+@use "styles/base";
+
+.matchItem {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.matchSchedule {
+  width: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.matchScoreBox {
+  flex: 1;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  border-left: 1px solid base.$secondary-grey-background;
+  border-right: 1px solid base.$secondary-grey-background;
+  .matchTeams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    .away,
+    .home {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  .matchScores {
+    @extend .matchTeams;
+  }
+}
+
+.subscriptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+}
