@@ -6,6 +6,7 @@ export default function MiddleSection() {
     <div className={styles.middleSection}>
       <h3 className={styles.middleTitle}>Pinned Games</h3>
       <LeaguePlayed />
+      <LeaguePlayed />
     </div>
   );
 }

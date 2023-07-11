@@ -1,6 +1,5 @@
 import mlbIcon from "icons/mlbIcon.svg";
 import nbaIcon from "icons/nbaIcon.svg";
-
 import styles from "./LeaguePlayedTop.module.scss";
 
 export default function LeaguePlayedTop() {
