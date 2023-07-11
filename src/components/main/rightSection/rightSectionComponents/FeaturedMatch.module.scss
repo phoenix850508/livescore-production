@@ -1,0 +1,34 @@
+.featuredMatch {
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+}
+
+.matchInfo {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 38px;
+  padding: 0 14px;
+}
+
+.away,
+.home {
+  height: 103px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scores {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo {
+  width: 63px;
+  height: 63px;
+}
