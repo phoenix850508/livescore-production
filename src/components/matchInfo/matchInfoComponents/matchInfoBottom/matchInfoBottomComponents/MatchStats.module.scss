@@ -1,0 +1,125 @@
+@use "styles/base";
+
+.matchStats {
+  margin-top: 36px;
+  padding: 38px 60px;
+  min-height: 517px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.tableWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: rgba(229, 233, 339, 0.4);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 1px;
+    background-color: rgba(34, 34, 38, 0.2);
+  }
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    vertical-align: center;
+    color: rgba(34, 34, 38, 0.46);
+  }
+
+  th {
+    height: 40px;
+  }
+
+  td {
+    height: 30px;
+    min-width: 36px;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.rectangle {
+  position: relative;
+  margin: 0 auto;
+  height: 106px;
+  background-color: rgba(116, 244, 140, 0.2);
+  border-radius: 15px;
+  .halftime {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+  }
+  .timelineBar {
+    position: absolute;
+    left: 75%;
+    height: 100%;
+    width: 3px;
+    background-color: #e89faa;
+    &::after {
+      content: "3Q";
+      position: absolute;
+      bottom: 0;
+      transform: translate(-50%, 120%);
+      color: #e89faa;
+    }
+  }
+}
+
+.timecodeWrapper {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(34, 34, 38, 0.2);
+  .startTime,
+  .halftime {
+    transform: translateX(-50%);
+  }
+  .fulltime {
+    transform: translateX(50%);
+  }
+}
+
+.arena,
+.officials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.arenaTitle,
+.officialsTitle {
+  color: base.$secondary-grey-background;
+}
+
+.areanaName,
+.areanaCity,
+.areanaState {
+  font-size: 16px;
+  color: #ffac33;
+}
+.officialsName {
+  font-size: 16px;
+  color: #348632;
+}

@@ -15,9 +15,9 @@ export default function FeaturedMatch() {
           />
         </div>
         <div className={styles.scores}>
-          <span className={styles.awayScore}>8</span>
+          <span className={styles.awayScore}>108</span>
           <span>-</span>
-          <span className={styles.homeScore}>4</span>
+          <span className={styles.homeScore}>14</span>
         </div>
         <div className={styles.home}>
           <h3 className={styles.homeName}>Orioles</h3>

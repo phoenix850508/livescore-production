@@ -1,27 +1,27 @@
-.featuredMatch {
-  background-color: #fff;
-  border-radius: 0 0 30px 30px;
-}
-
-.matchInfo {
-  height: 200px;
+.matchTeams {
+  margin-top: 36px;
+  padding: 50px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 38px;
-  padding: 0 14px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.subscriptionStatus {
+  width: 29px;
+  height: 37px;
 }
 
 .away,
 .home {
-  height: 103px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .scores {
-  min-width: 50px;
   display: flex;
   justify-content: space-between;
   font-size: 24px;
