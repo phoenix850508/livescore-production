@@ -1,6 +1,7 @@
 .featuredMatch {
   background-color: #fff;
   border-radius: 0 0 30px 30px;
+  cursor: pointer;
 }
 
 .matchInfo {
@@ -12,20 +13,22 @@
   padding: 0 14px;
 }
 
+.scores {
+  transform: translateX(-10%);
+  min-width: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .away,
 .home {
   height: 103px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.scores {
-  min-width: 50px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 24px;
-  font-weight: 700;
+  align-items: center;
 }
 
 .logo {
