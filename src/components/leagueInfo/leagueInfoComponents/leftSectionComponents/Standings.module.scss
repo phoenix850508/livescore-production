@@ -1,0 +1,58 @@
+@use "styles/base";
+
+.standings {
+  margin-top: 30px;
+  border-radius: 30px;
+  padding: 28px 0;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.buttonGroup {
+  margin-left: 47px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 36px;
+  margin-bottom: 20px;
+  button {
+    width: 127px;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.standingsWrapper,
+table {
+  width: 100%;
+  th,
+  td {
+    height: 34px;
+    min-width: 84px;
+    text-align: center;
+  }
+  th {
+    color: base.$secondary-grey-background;
+    border-top: 1.5px solid rgba(34, 34, 38, 0.2);
+    border-bottom: 1.5px solid rgba(34, 34, 38, 0.1);
+  }
+  .emptyGap {
+    min-width: 160px;
+  }
+  .teamLogo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .teamName {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
