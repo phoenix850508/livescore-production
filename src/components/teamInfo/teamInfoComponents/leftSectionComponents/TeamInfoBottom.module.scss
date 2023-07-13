@@ -1,0 +1,18 @@
+.teamInfoBottom {
+  margin-top: 36px;
+  padding: 30px 37px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.matches {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

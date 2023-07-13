@@ -35,6 +35,7 @@ export default function MatchStats() {
           <div className={styles.rectangle}>
             <div className={styles.halftime}></div>
             <div className={styles.timelineBar}></div>
+            <div className={styles.timeLayer}></div>
           </div>
         </div>
         <div className={styles.timecodeWrapper}>

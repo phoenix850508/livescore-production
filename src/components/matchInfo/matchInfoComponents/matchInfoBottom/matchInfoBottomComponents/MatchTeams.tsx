@@ -2,9 +2,14 @@ import heats from "icons/nbaEastTeams/miami-heat.svg";
 import nuggets from "icons/nbaWestTeams/denver-nuggets.svg";
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
+import { useNavigate } from "react-router-dom";
 import styles from "./MatchTeams.module.scss";
 
 export default function MatchTeams() {
+  const navigate = useNavigate();
+  const handleAwayTeamClick = () => {
+    navigate("/teamInfo");
+  };
   return (
     <div>
       <div className={styles.matchTeams}>
@@ -15,7 +20,12 @@ export default function MatchTeams() {
         />
         <div className={styles.away}>
           <h3 className={styles.awayName}>Nuggets</h3>
-          <img className={styles.logo} src={nuggets} alt="nuggets.svg" />
+          <img
+            className={styles.logo}
+            src={nuggets}
+            alt="nuggets.svg"
+            onClick={handleAwayTeamClick}
+          />
         </div>
         <div className={styles.scores}>
           <span className={styles.awayScore}>108</span>

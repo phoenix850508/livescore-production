@@ -14,7 +14,7 @@
 }
 
 .buttonGroup {
-  margin-left: 47px;
+  margin-left: 67px;
   display: flex;
   justify-content: flex-start;
   gap: 36px;
@@ -28,12 +28,11 @@
   }
 }
 
-.standingsWrapper,
-table {
+.standingsWrapper table {
   width: 100%;
   th,
   td {
-    height: 34px;
+    height: 44px;
     min-width: 84px;
     text-align: center;
   }
