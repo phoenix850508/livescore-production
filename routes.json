@@ -1,0 +1,9 @@
+{
+  "/date/:date": "/date?date=:date",
+  "/live/:live": "/live?live=:live",
+  "/season/:season/team/:team": "/season?season=:season.team.team=:team",
+  "/game/:id": "/game?id=:id",
+  "/teams/:conference": "/teams?conference=:conference",
+  "/standing/:league/:season/:conference": "/standing?league=:league/season=:season/conference=:conference",
+  "/stats/:id": "/stats?id=:id"
+}

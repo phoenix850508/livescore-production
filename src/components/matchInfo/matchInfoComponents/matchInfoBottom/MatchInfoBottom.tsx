@@ -1,5 +1,5 @@
-import PlayerStats from "./matchInfoBottomComponents/PlayerStats";
 import MatchStats from "./matchInfoBottomComponents/MatchStats";
+import MatchInfoBottomRight from "./matchInfoBottomComponents/MatchInfoBottomRight";
 import MatchTeams from "./matchInfoBottomComponents/MatchTeams";
 import styles from "./MatchInfoBottom.module.scss";
 
@@ -8,9 +8,9 @@ export default function MatchInfoBottom() {
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>
         <MatchTeams />
-        <PlayerStats />
+        <MatchStats />
       </div>
-      <MatchStats />
+      <MatchInfoBottomRight />
     </div>
   );
 }

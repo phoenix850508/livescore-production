@@ -1,0 +1,5021 @@
+{
+  "date": {
+    "2023-07-14": {
+      "response": [
+        {
+          "id": 12211,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T00:30:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [31, 25, 34, 24] },
+            "home": { "linescore": [21, 24, 26, 31] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 16,
+              "name": "LA Clippers",
+              "nickname": "Clippers",
+              "code": "LAC"
+            },
+            "home": {
+              "id": 23,
+              "name": "New Orleans Pelicans",
+              "nickname": "Pelicans",
+              "code": "NOP"
+            }
+          }
+        },
+        {
+          "id": 12212,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T17:00:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [35, 32, 34, 27] },
+            "home": { "linescore": [25, 27, 37, 19] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 38,
+              "name": "Toronto Raptors",
+              "nickname": "Raptors",
+              "code": "TOR"
+            },
+            "home": {
+              "id": 5,
+              "name": "Charlotte Hornets",
+              "nickname": "Hornets",
+              "code": "CHA"
+            }
+          }
+        },
+        {
+          "id": 12213,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T19:30:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [17, 25, 26, 42] },
+            "home": { "linescore": [30, 23, 32, 26] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 40,
+              "name": "Utah Jazz",
+              "nickname": "Jazz",
+              "code": "UTA"
+            },
+            "home": {
+              "id": 4,
+              "name": "Brooklyn Nets",
+              "nickname": "Nets",
+              "code": "BKN"
+            }
+          }
+        },
+        {
+          "id": 12214,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T19:30:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [36, 32, 16, 23] },
+            "home": { "linescore": [25, 28, 40, 35] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 19,
+              "name": "Memphis Grizzlies",
+              "nickname": "Grizzlies",
+              "code": "MEM"
+            },
+            "home": {
+              "id": 6,
+              "name": "Chicago Bulls",
+              "nickname": "Bulls",
+              "code": "CHI"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "live": {
+    "all": {
+      "response": [
+        {
+          "id": 12215,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T19:30:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [31, 25, 26, 25] },
+            "home": { "linescore": [29, 33, 24, 19] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 29,
+              "name": "Portland Trail Blazers",
+              "nickname": "Trail Blazers",
+              "code": "POR"
+            },
+            "home": {
+              "id": 22,
+              "name": "Minnesota Timberwolves",
+              "nickname": "Timberwolves",
+              "code": "MIN"
+            }
+          }
+        },
+        {
+          "id": 12216,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T22:00:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [29, 37, 25, 32, 7] },
+            "home": { "linescore": [37, 33, 24, 29, 9] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 8,
+              "name": "Dallas Mavericks",
+              "nickname": "Mavericks",
+              "code": "DAL"
+            },
+            "home": {
+              "id": 1,
+              "name": "Atlanta Hawks",
+              "nickname": "Hawks",
+              "code": "ATL"
+            }
+          }
+        },
+        {
+          "id": 12216,
+          "status": {
+            "clock": null,
+            "halftime": "false",
+            "long": "Finished"
+          },
+          "date": {
+            "start": "2023-04-02T22:00:00.000Z",
+            "end": null
+          },
+          "periods": {
+            "current": 4,
+            "total": 4
+          },
+          "scores": {
+            "visitors": { "linescore": [31, 30, 18, 30, 7] },
+            "home": { "linescore": [34, 19, 33, 32] }
+          },
+          "teams": {
+            "visitors": {
+              "id": 41,
+              "name": "Washington Wizards",
+              "nickname": "Wizards",
+              "code": "WAS"
+            },
+            "home": {
+              "id": 24,
+              "name": "New York Knicks",
+              "nickname": "Knicks",
+              "code": "NYK"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "season": {
+    "2022": {
+      "team": {
+        "1": {
+          "response": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "2": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "3": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "4": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "5": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "6": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "7": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "8": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "9": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "10": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "11": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "12": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "13": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "14": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "15": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "16": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "17": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "18": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "19": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        },
+        "20": {
+          "resonse": [
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            },
+            {
+              "id": 11002,
+              "date": { "start": "2022-10-06T16:00:00.000Z" },
+              "teams": {
+                "visitors": {
+                  "id": 21,
+                  "name": "Milwaukee Bucks",
+                  "nickname": "Bucks",
+                  "code": "MIL"
+                },
+                "home": {
+                  "id": 1,
+                  "name": "Atlanta Hawks",
+                  "nickname": "Hawks",
+                  "code": "ATL"
+                }
+              },
+              "scores": {
+                "visitors": {
+                  "linescore": [33, 34, 27, 19],
+                  "points": 113
+                },
+                "home": {
+                  "linescore": [32, 39, 30, 22],
+                  "points": 123
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "game": {
+    "12211": {
+      "response": {
+        "id": 12211,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T00:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [31, 25, 34, 24] },
+          "home": { "linescore": [21, 24, 26, 31] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 16,
+            "name": "LA Clippers",
+            "nickname": "Clippers",
+            "code": "LAC"
+          },
+          "home": {
+            "id": 23,
+            "name": "New Orleans Pelicans",
+            "nickname": "Pelicans",
+            "code": "NOP"
+          }
+        }
+      }
+    },
+    "12212": {
+      "response": {
+        "id": 12212,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T17:00:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [35, 32, 34, 27] },
+          "home": { "linescore": [25, 27, 37, 19] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 38,
+            "name": "Toronto Raptors",
+            "nickname": "Raptors",
+            "code": "TOR"
+          },
+          "home": {
+            "id": 5,
+            "name": "Charlotte Hornets",
+            "nickname": "Hornets",
+            "code": "CHA"
+          }
+        }
+      }
+    },
+    "12213": {
+      "response": {
+        "id": 12213,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T19:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [17, 25, 26, 42] },
+          "home": { "linescore": [30, 23, 32, 26] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 40,
+            "name": "Utah Jazz",
+            "nickname": "Jazz",
+            "code": "UTA"
+          },
+          "home": {
+            "id": 4,
+            "name": "Brooklyn Nets",
+            "nickname": "Nets",
+            "code": "BKN"
+          }
+        }
+      }
+    },
+    "12214": {
+      "response": {
+        "id": 12214,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T19:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [36, 32, 16, 23] },
+          "home": { "linescore": [25, 28, 40, 35] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 19,
+            "name": "Memphis Grizzlies",
+            "nickname": "Grizzlies",
+            "code": "MEM"
+          },
+          "home": {
+            "id": 6,
+            "name": "Chicago Bulls",
+            "nickname": "Bulls",
+            "code": "CHI"
+          }
+        }
+      }
+    },
+    "12215": {
+      "response": {
+        "id": 12215,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T19:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [31, 25, 26, 25] },
+          "home": { "linescore": [29, 33, 24, 19] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 29,
+            "name": "Portland Trail Blazers",
+            "nickname": "Trail Blazers",
+            "code": "POR"
+          },
+          "home": {
+            "id": 22,
+            "name": "Minnesota Timberwolves",
+            "nickname": "Timberwolves",
+            "code": "MIN"
+          }
+        }
+      }
+    },
+    "12216": {
+      "response": {
+        "id": 12216,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T22:00:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [29, 37, 25, 32, 7] },
+          "home": { "linescore": [37, 33, 24, 29, 9] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 8,
+            "name": "Dallas Mavericks",
+            "nickname": "Mavericks",
+            "code": "DAL"
+          },
+          "home": {
+            "id": 1,
+            "name": "Atlanta Hawks",
+            "nickname": "Hawks",
+            "code": "ATL"
+          }
+        }
+      }
+    }
+  },
+  "teams": {
+    "west": {
+      "response": [
+        {
+          "id": 8,
+          "name": "Dallas Mavericks",
+          "nickname": "Mavericks",
+          "code": "DAL",
+          "city": "Dallas",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/dallas-mavericks.svg"
+        },
+        {
+          "id": 9,
+          "name": "Denver Nuggets",
+          "nickname": "Nuggets",
+          "code": "DEN",
+          "city": "Denver",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/denver-nuggets.svg"
+        },
+        {
+          "id": 11,
+          "name": "Golden State Warriors",
+          "nickname": "Warriors",
+          "city": "Golden State",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/golden-state-warriors.svg"
+        },
+        {
+          "id": 14,
+          "name": "Houston Rockets",
+          "nickname": "Rockets",
+          "code": "HOU",
+          "city": "Houston",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/houston-rockets.svg"
+        },
+        {
+          "id": 16,
+          "name": "LA Clippers",
+          "nickname": "Clippers",
+          "code": "LAC",
+          "city": "LA",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/la-clippers.svg"
+        },
+        {
+          "id": 17,
+          "name": "Los Angeles Lakers",
+          "nickname": "Lakers",
+          "code": "LAL",
+          "city": "Los Angeles",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/los-angeles-lakers.svg"
+        },
+        {
+          "id": 19,
+          "name": "Memphis Grizzlies",
+          "nickname": "Grizzlies",
+          "code": "MEM",
+          "city": "Memphis",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/memphis-grizzlies.svg"
+        },
+        {
+          "id": 22,
+          "name": "Minnesota Timberwolves",
+          "nickname": "Timberwolves",
+          "code": "MIN",
+          "city": "Minnesota",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/minnesota-timberwolves.svg"
+        },
+        {
+          "id": 23,
+          "name": "New Orleans Pelicans",
+          "nickname": "Pelicans",
+          "code": "NOP",
+          "city": "New Orleans",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/new-orleans-pelicans.svg"
+        },
+        {
+          "id": 25,
+          "name": "Oklahoma City Thunder",
+          "nickname": "Thunder",
+          "code": "OKC",
+          "city": "Oklahoma City",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/oklahoma-city-thunder-logo.svg"
+        },
+        {
+          "id": 28,
+          "name": "Phoenix Suns",
+          "nickname": "Suns",
+          "code": "PHX",
+          "city": "Phoenix",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/phoenix-suns.svg"
+        },
+        {
+          "id": 29,
+          "name": "Portland Trail Blazers",
+          "nickname": "Trail Blazers",
+          "code": "POR",
+          "city": "Portland",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/portland-trail-blazers.svg"
+        },
+        {
+          "id": 30,
+          "name": "Sacramento Kings",
+          "nickname": "Kings",
+          "code": "SAC",
+          "city": "Sacramento",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/sacramento-kings.svg"
+        },
+        {
+          "id": 31,
+          "name": "San Antonio Spurs",
+          "nickname": "Spurs",
+          "code": "SAS",
+          "city": "San Antonio",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/san-antonio-spurs.svg"
+        },
+        {
+          "id": 40,
+          "name": "Utah Jazz",
+          "nickname": "Jazz",
+          "code": "UTA",
+          "city": "Utah",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/utah-jazz.svg"
+        }
+      ]
+    },
+    "east": {
+      "response": [
+        {
+          "id": 1,
+          "name": "Atlanta Hawks",
+          "nickname": "Hawks",
+          "code": "ATL",
+          "city": "Atlanta",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/atlanta-hawks.svg"
+        },
+        {
+          "id": 2,
+          "name": "Boston Celtics",
+          "nickname": "Celtics",
+          "code": "BOS",
+          "city": "Boston",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/boston-celtics.svg"
+        },
+        {
+          "id": 4,
+          "name": "Brooklyn Nets",
+          "nickname": "Nets",
+          "code": "BKN",
+          "city": "Brooklyn",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/brooklyn-nets.svg"
+        },
+        {
+          "id": 5,
+          "name": "Charlotte Hornets",
+          "nickname": "Hornets",
+          "code": "CHA",
+          "city": "Charlotte",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/charlotte-hornets.svg"
+        },
+        {
+          "id": 6,
+          "name": "Chicago Bulls",
+          "nickname": "Bulls",
+          "code": "CHI",
+          "city": "Chicago",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/chicago-bulls.svg"
+        },
+        {
+          "id": 7,
+          "name": "Cleveland Cavaliers",
+          "nickname": "Cavaliers",
+          "code": "CLE",
+          "city": "Cleveland",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/cleveland-cavaliers.svg"
+        },
+        {
+          "id": 10,
+          "name": "Detroit Pistons",
+          "nickname": "Pistons",
+          "code": "DET",
+          "city": "Detroit",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/detroit-pistons.svg"
+        },
+        {
+          "id": 15,
+          "name": "Indiana Pacers",
+          "nickname": "Pacers",
+          "code": "IND",
+          "city": "Indiana",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/indiana-pacers.svg"
+        },
+        {
+          "id": 20,
+          "name": "Miami Heat",
+          "nickname": "Heat",
+          "code": "MIA",
+          "city": "Miami",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/miami-heat.svg"
+        },
+        {
+          "id": 21,
+          "name": "Milwaukee Bucks",
+          "nickname": "Bucks",
+          "code": "MIL",
+          "city": "Milwaukee",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/milwaukee-bucks.svg"
+        },
+        {
+          "id": 24,
+          "name": "New York Knicks",
+          "nickname": "Knicks",
+          "code": "NYK",
+          "city": "New York",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/new-york-knicks.svg"
+        },
+        {
+          "id": 26,
+          "name": "Orlando Magic",
+          "nickname": "Magic",
+          "code": "ORL",
+          "city": "Orlando",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/orlando-magic.svg"
+        },
+        {
+          "id": 27,
+          "name": "Philadelphia 76ers",
+          "nickname": "76ers",
+          "code": "PHI",
+          "city": "Philadelphia",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/philidephia-76ers.svg"
+        },
+        {
+          "id": 38,
+          "name": "Toronto Raptors",
+          "nickname": "Raptors",
+          "code": "TOR",
+          "city": "Toronto",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/toronto-raptors.svg"
+        },
+        {
+          "id": 41,
+          "name": "Washington Wizards",
+          "nickname": "Wizards",
+          "code": "WAS",
+          "city": "Washington",
+          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/washington-wizards.svg"
+        }
+      ]
+    }
+  },
+  "standing": {
+    "standard": {
+      "2022": {
+        "east": {
+          "response": [
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 2,
+                "name": "Boston Celtics",
+                "nickname": "Celtics",
+                "code": "BOS"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 2,
+                "win": 57,
+                "loss": 25
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 27,
+                "name": "Philadelphia 76ers",
+                "nickname": "76ers",
+                "code": "PHI"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 3,
+                "win": 54,
+                "loss": 28
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 24,
+                "name": "New York Knicks",
+                "nickname": "Knicks",
+                "code": "NYK"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 5,
+                "win": 47,
+                "loss": 35
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 4,
+                "name": "Brooklyn Nets",
+                "nickname": "Nets",
+                "code": "BKN"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 6,
+                "win": 45,
+                "loss": 37
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 38,
+                "name": "Toronto Raptors",
+                "nickname": "Raptors",
+                "code": "TOR"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 9,
+                "win": 41,
+                "loss": 41
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 21,
+                "name": "Milwaukee Bucks",
+                "nickname": "Bucks",
+                "code": "MIL"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 1,
+                "win": 58,
+                "loss": 24
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 7,
+                "name": "Cleveland Cavaliers",
+                "nickname": "Cavaliers",
+                "code": "CLE"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 4,
+                "win": 51,
+                "loss": 31
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 6,
+                "name": "Chicago Bulls",
+                "nickname": "Bulls",
+                "code": "CHI"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 10,
+                "win": 40,
+                "loss": 42
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 15,
+                "name": "Indiana Pacers",
+                "nickname": "Pacers",
+                "code": "IND"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 12,
+                "win": 35,
+                "loss": 47
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 10,
+                "name": "Detroit Pistons",
+                "nickname": "Pistons",
+                "code": "DET"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 15,
+                "win": 17,
+                "loss": 65
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 1,
+                "name": "Atlanta Hawks",
+                "nickname": "Hawks",
+                "code": "ATL"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 8,
+                "win": 41,
+                "loss": 41
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 20,
+                "name": "Miami Heat",
+                "nickname": "Heat",
+                "code": "MIA"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 7,
+                "win": 44,
+                "loss": 38
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 41,
+                "name": "Washington Wizards",
+                "nickname": "Wizards",
+                "code": "WAS"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 11,
+                "win": 35,
+                "loss": 47
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 26,
+                "name": "Orlando Magic",
+                "nickname": "Magic",
+                "code": "ORL"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 13,
+                "win": 34,
+                "loss": 48
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 5,
+                "name": "Charlotte Hornets",
+                "nickname": "Hornets",
+                "code": "CHA"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 14,
+                "win": 27,
+                "loss": 55
+              }
+            }
+          ]
+        },
+        "west": {
+          "response": [
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 9,
+                "name": "Denver Nuggets",
+                "nickname": "Nuggets",
+                "code": "DEN"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 1,
+                "win": 53,
+                "loss": 29
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 22,
+                "name": "Minnesota Timberwolves",
+                "nickname": "Timberwolves",
+                "code": "MIN"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 8,
+                "win": 42,
+                "loss": 40
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 25,
+                "name": "Oklahoma City Thunder",
+                "nickname": "Thunder",
+                "code": "OKC"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 10,
+                "win": 40,
+                "loss": 42
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 40,
+                "name": "Utah Jazz",
+                "nickname": "Jazz",
+                "code": "UTA"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 12,
+                "win": 37,
+                "loss": 45
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 29,
+                "name": "Portland Trail Blazers",
+                "nickname": "Trail Blazers",
+                "code": "POR"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 13,
+                "win": 33,
+                "loss": 49
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 30,
+                "name": "Sacramento Kings",
+                "nickname": "Kings",
+                "code": "SAC"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 3,
+                "win": 48,
+                "loss": 34
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 28,
+                "name": "Phoenix Suns",
+                "nickname": "Suns",
+                "code": "PHX"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 4,
+                "win": 45,
+                "loss": 37
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 16,
+                "name": "LA Clippers",
+                "nickname": "Clippers",
+                "code": "LAC"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 5,
+                "win": 44,
+                "loss": 38
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 11,
+                "name": "Golden State Warriors",
+                "nickname": "Warriors",
+                "code": "GSW"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 6,
+                "win": 44,
+                "loss": 38
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 17,
+                "name": "Los Angeles Lakers",
+                "nickname": "Lakers",
+                "code": "LAL"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 7,
+                "win": 43,
+                "loss": 39
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 19,
+                "name": "Memphis Grizzlies",
+                "nickname": "Grizzlies",
+                "code": "MEM"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 2,
+                "win": 51,
+                "loss": 31
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 23,
+                "name": "New Orleans Pelicans",
+                "nickname": "Pelicans",
+                "code": "NOP"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 9,
+                "win": 42,
+                "loss": 40
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 8,
+                "name": "Dallas Mavericks",
+                "nickname": "Mavericks",
+                "code": "DAL"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 11,
+                "win": 38,
+                "loss": 44
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 14,
+                "name": "Houston Rockets",
+                "nickname": "Rockets",
+                "code": "HOU"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 14,
+                "win": 22,
+                "loss": 60
+              }
+            },
+            {
+              "league": "standard",
+              "season": 2022,
+              "team": {
+                "id": 31,
+                "name": "San Antonio Spurs",
+                "nickname": "Spurs",
+                "code": "SAS"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 15,
+                "win": 22,
+                "loss": 60
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "stats": {
+    "12211": {
+      "response": [
+        {
+          "team": {
+            "id": 23,
+            "name": "New Orleans Pelicans",
+            "nickname": "Pelicans",
+            "code": "NOP"
+          },
+          "statistics": {
+            "points": 122,
+            "fgm": 42,
+            "fga": 86,
+            "fgp": "48.8",
+            "ftm": 31,
+            "fta": 35,
+            "ftp": "88.6",
+            "tpm": 7,
+            "tpa": 17,
+            "tpp": "41.2",
+            "offReb": 14,
+            "defReb": 26,
+            "totReb": 40,
+            "assists": 21,
+            "pFouls": 15,
+            "steals": 6,
+            "turnovers": 7,
+            "blocks": 5
+          }
+        },
+        {
+          "team": {
+            "id": 16,
+            "name": "LA Clippers",
+            "nickname": "Clippers",
+            "code": "LAC"
+          },
+          "statistics": {
+            "points": 114,
+            "fgm": 42,
+            "fga": 85,
+            "fgp": "88.6",
+            "ftm": 19,
+            "fta": 23,
+            "ftp": "82.6",
+            "tpm": 11,
+            "tpa": 29,
+            "tpp": "37.9",
+            "offReb": 11,
+            "defReb": 26,
+            "totReb": 37,
+            "assists": 25,
+            "pFouls": 29,
+            "steals": 5,
+            "turnovers": 13,
+            "blocks": 4
+          }
+        }
+      ]
+    },
+    "12212": {
+      "response": [
+        {
+          "team": {
+            "id": 5,
+            "name": "Charlotte Hornets",
+            "nickname": "Hornets",
+            "code": "CHA"
+          },
+          "statistics": {
+            "points": 108,
+            "fgm": 42,
+            "fga": 85,
+            "fgp": "49.4",
+            "ftm": 9,
+            "fta": 13,
+            "ftp": "69.2",
+            "tpm": 15,
+            "tpa": 31,
+            "tpp": "48.4",
+            "offReb": 10,
+            "defReb": 27,
+            "totReb": 37,
+            "assists": 26,
+            "pFouls": 11,
+            "steals": 3,
+            "turnovers": 18,
+            "blocks": 4
+          }
+        },
+        {
+          "team": {
+            "id": 38,
+            "name": "Toronto Raptors",
+            "nickname": "Raptors",
+            "code": "TOR"
+          },
+          "statistics": {
+            "points": 128,
+            "fgm": 56,
+            "fga": 104,
+            "fgp": "69.2",
+            "ftm": 8,
+            "fta": 8,
+            "ftp": "100.0",
+            "tpm": 8,
+            "tpa": 28,
+            "tpp": "28.6",
+            "offReb": 15,
+            "defReb": 30,
+            "totReb": 45,
+            "assists": 38,
+            "pFouls": 14,
+            "steals": 8,
+            "turnovers": 8,
+            "blocks": 6
+          }
+        }
+      ]
+    },
+    "12213": {
+      "response": [
+        {
+          "team": {
+            "id": 4,
+            "name": "Brooklyn Nets",
+            "nickname": "Nets",
+            "code": "BKN"
+          },
+          "statistics": {
+            "points": 111,
+            "fgm": 38,
+            "fga": 86,
+            "fgp": "44.2",
+            "ftm": 26,
+            "fta": 34,
+            "ftp": "76.5",
+            "tpm": 9,
+            "tpa": 32,
+            "tpp": "28.1",
+            "offReb": 7,
+            "defReb": 33,
+            "totReb": 40,
+            "assists": 25,
+            "pFouls": 26,
+            "steals": 6,
+            "turnovers": 9,
+            "blocks": 2
+          }
+        },
+        {
+          "team": {
+            "id": 40,
+            "name": "Utah Jazz",
+            "nickname": "Jazz",
+            "code": "UTA"
+          },
+          "statistics": {
+            "points": 110,
+            "fgm": 40,
+            "fga": 91,
+            "fgp": "76.5",
+            "ftm": 22,
+            "fta": 30,
+            "ftp": "73.3",
+            "tpm": 8,
+            "tpa": 32,
+            "tpp": "25.0",
+            "offReb": 11,
+            "defReb": 41,
+            "totReb": 52,
+            "assists": 24,
+            "pFouls": 23,
+            "steals": 5,
+            "turnovers": 11,
+            "blocks": 1
+          }
+        }
+      ]
+    },
+    "12214": {
+      "response": [
+        {
+          "team": {
+            "id": 6,
+            "name": "Chicago Bulls",
+            "nickname": "Bulls",
+            "code": "CHI"
+          },
+          "statistics": {
+            "points": 128,
+            "fgm": 50,
+            "fga": 94,
+            "fgp": "53.2",
+            "ftm": 19,
+            "fta": 22,
+            "ftp": "86.4",
+            "tpm": 9,
+            "tpa": 31,
+            "tpp": "29.0",
+            "offReb": 4,
+            "defReb": 32,
+            "totReb": 36,
+            "assists": 29,
+            "pFouls": 13,
+            "steals": 9,
+            "turnovers": 3,
+            "blocks": 6
+          }
+        },
+        {
+          "team": {
+            "id": 19,
+            "name": "Memphis Grizzlies",
+            "nickname": "Grizzlies",
+            "code": "MEM"
+          },
+          "statistics": {
+            "points": 107,
+            "fgm": 39,
+            "fga": 84,
+            "fgp": "86.4",
+            "ftm": 10,
+            "fta": 12,
+            "ftp": "83.3",
+            "tpm": 19,
+            "tpa": 43,
+            "tpp": "44.2",
+            "offReb": 8,
+            "defReb": 39,
+            "totReb": 47,
+            "assists": 29,
+            "pFouls": 22,
+            "steals": 1,
+            "turnovers": 18,
+            "blocks": 3
+          }
+        }
+      ]
+    },
+    "12215": {
+      "response": [
+        {
+          "team": {
+            "id": 22,
+            "name": "Minnesota Timberwolves",
+            "nickname": "Timberwolves",
+            "code": "MIN"
+          },
+          "statistics": {
+            "points": 105,
+            "fgm": 38,
+            "fga": 79,
+            "fgp": "48.1",
+            "ftm": 18,
+            "fta": 23,
+            "ftp": "78.3",
+            "tpm": 11,
+            "tpa": 26,
+            "tpp": "42.3",
+            "offReb": 7,
+            "defReb": 40,
+            "totReb": 47,
+            "assists": 29,
+            "pFouls": 17,
+            "steals": 3,
+            "turnovers": 18,
+            "blocks": 5
+          }
+        },
+        {
+          "team": {
+            "id": 29,
+            "name": "Portland Trail Blazers",
+            "nickname": "Trail Blazers",
+            "code": "POR"
+          },
+          "statistics": {
+            "points": 107,
+            "fgm": 43,
+            "fga": 93,
+            "fgp": "78.3",
+            "ftm": 12,
+            "fta": 20,
+            "ftp": "60.0",
+            "tpm": 9,
+            "tpa": 30,
+            "tpp": "30.0",
+            "offReb": 11,
+            "defReb": 31,
+            "totReb": 42,
+            "assists": 29,
+            "pFouls": 26,
+            "steals": 12,
+            "turnovers": 10,
+            "blocks": 3
+          }
+        }
+      ]
+    },
+    "12216": {
+      "response": [
+        {
+          "team": {
+            "id": 1,
+            "name": "Atlanta Hawks",
+            "nickname": "Hawks",
+            "code": "ATL"
+          },
+          "statistics": {
+            "points": 132,
+            "fgm": 51,
+            "fga": 108,
+            "fgp": "47.2",
+            "ftm": 18,
+            "fta": 22,
+            "ftp": "81.8",
+            "tpm": 12,
+            "tpa": 35,
+            "tpp": "34.3",
+            "offReb": 16,
+            "defReb": 37,
+            "totReb": 53,
+            "assists": 28,
+            "pFouls": 22,
+            "steals": 10,
+            "turnovers": 11,
+            "blocks": 3
+          }
+        },
+        {
+          "team": {
+            "id": 8,
+            "name": "Dallas Mavericks",
+            "nickname": "Mavericks",
+            "code": "DAL"
+          },
+          "statistics": {
+            "points": 130,
+            "fgm": 49,
+            "fga": 95,
+            "fgp": "81.8",
+            "ftm": 22,
+            "fta": 32,
+            "ftp": "68.8",
+            "tpm": 10,
+            "tpa": 38,
+            "tpp": "26.3",
+            "offReb": 10,
+            "defReb": 37,
+            "totReb": 47,
+            "assists": 24,
+            "pFouls": 15,
+            "steals": 4,
+            "turnovers": 14,
+            "blocks": 3
+          }
+        }
+      ]
+    }
+  }
+}
