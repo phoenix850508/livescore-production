@@ -12,3 +12,21 @@ export type locationProps = {
   locationTitle: string[];
   leagueArr?: string[] | null;
 };
+
+export type calendarDate = {
+  selectedDateObj: {
+    selectedYear: number;
+    selectedMonthIndex: number;
+    selectedDate: number;
+  };
+};
+
+export type dateState = {
+  yearNew: number;
+  monthIndexNew: number;
+  dateNew: number;
+};
+
+export type actionType = {
+  type: "change_year" | "change_monthIndex" | "change_date";
+};

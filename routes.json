@@ -5,5 +5,6 @@
   "/game/:id": "/game?id=:id",
   "/teams/:conference": "/teams?conference=:conference",
   "/standing/:league/:season/:conference": "/standing?league=:league/season=:season/conference=:conference",
-  "/stats/:id": "/stats?id=:id"
+  "/stats/:id": "/stats?id=:id",
+  "/team/:id": "/team?id=:id"
 }

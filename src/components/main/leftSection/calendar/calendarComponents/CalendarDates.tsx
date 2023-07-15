@@ -1,6 +1,7 @@
 import { dateProps } from "types/types";
 import clsx from "clsx";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { calendarDate } from "types/types";
 import styles from "./CalendarDates.module.scss";
 
 export default function CalendarDates(props: dateProps) {
@@ -28,13 +29,23 @@ export default function CalendarDates(props: dateProps) {
   // highlight when the date gets clicked
   const [activeDate, setActiveDate] = useState<number | string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  // use useRef to memorize the clicked date/moth/year
+  const dateRef = useRef<calendarDate | null>(null);
   const handleDateClick = (
-    e: React.MouseEvent<HTMLLIElement>,
     date: number | string,
-    index: number
+    index: number,
+    props: dateProps
   ): void => {
     setActiveDate(date);
     setActiveIndex(index);
+    dateRef.current = {
+      selectedDateObj: {
+        selectedYear: props.year,
+        selectedMonthIndex: props.monthIndex,
+        selectedDate: Number(date),
+      },
+    };
+    console.log(dateRef.current);
   };
 
   return (
@@ -44,7 +55,7 @@ export default function CalendarDates(props: dateProps) {
           <li
             key={index}
             className={styles.currDate}
-            onClick={(e) => handleDateClick(e, date, index)}
+            onClick={(e) => handleDateClick?.(date, index, props)}
           >
             {date}
           </li>
@@ -58,7 +69,7 @@ export default function CalendarDates(props: dateProps) {
               }
             )}
             key={index}
-            onClick={(e) => handleDateClick(e, date, index)}
+            onClick={(e) => handleDateClick?.(date, index, props)}
           >
             {date}
           </li>
