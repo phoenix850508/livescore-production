@@ -1,7 +1,7 @@
 import { dateProps } from "types/types";
 import clsx from "clsx";
-import { useState, useRef } from "react";
-import { calendarDate } from "types/types";
+import { useState, useContext } from "react";
+import { DateContext } from "context/DateContext";
 import styles from "./CalendarDates.module.scss";
 
 export default function CalendarDates(props: dateProps) {
@@ -29,8 +29,7 @@ export default function CalendarDates(props: dateProps) {
   // highlight when the date gets clicked
   const [activeDate, setActiveDate] = useState<number | string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  // use useRef to memorize the clicked date/moth/year
-  const dateRef = useRef<calendarDate | null>(null);
+  const { dispatch } = useContext(DateContext);
   const handleDateClick = (
     date: number | string,
     index: number,
@@ -38,14 +37,12 @@ export default function CalendarDates(props: dateProps) {
   ): void => {
     setActiveDate(date);
     setActiveIndex(index);
-    dateRef.current = {
-      selectedDateObj: {
-        selectedYear: props.year,
-        selectedMonthIndex: props.monthIndex,
-        selectedDate: Number(date),
-      },
-    };
-    console.log(dateRef.current);
+    dispatch({
+      type: "change_date",
+      year: props.year,
+      monthIndex: props.monthIndex,
+      date: Number(date),
+    });
   };
 
   return (

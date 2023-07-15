@@ -1,21 +1,13 @@
-import { dateState, actionType } from "types/types";
+import { initDateState, actionType } from "types/types";
 
-export default function dateReducer(date: dateState, action: actionType) {
+export default function dateReducer(date: initDateState, action: actionType) {
   switch (action.type) {
-    case "change_year":
-      return {
-        ...date,
-        selectedYear: date.yearNew,
-      };
-    case "change_monthIndex":
-      return {
-        ...date,
-        selectedMonthIndex: date.monthIndexNew,
-      };
     case "change_date":
       return {
         ...date,
-        selectedDate: date.dateNew,
+        year: action.year,
+        monthIndex: action.monthIndex,
+        date: action.date,
       };
   }
 }

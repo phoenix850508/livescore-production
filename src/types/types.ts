@@ -13,20 +13,15 @@ export type locationProps = {
   leagueArr?: string[] | null;
 };
 
-export type calendarDate = {
-  selectedDateObj: {
-    selectedYear: number;
-    selectedMonthIndex: number;
-    selectedDate: number;
-  };
-};
-
-export type dateState = {
-  yearNew: number;
-  monthIndexNew: number;
-  dateNew: number;
+export type initDateState = {
+  year: number | undefined;
+  monthIndex: number | undefined;
+  date: number | undefined;
 };
 
 export type actionType = {
-  type: "change_year" | "change_monthIndex" | "change_date";
+  type: "change_date";
+  year?: number;
+  monthIndex?: number;
+  date?: number;
 };
