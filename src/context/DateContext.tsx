@@ -14,7 +14,11 @@ const DateContext = createContext<{
   state: initDateState;
   dispatch: React.Dispatch<actionType>;
 }>({
-  state: { year: 2023, monthIndex: 6, date: 15 },
+  state: {
+    year: defaultDate.year,
+    monthIndex: defaultDate.monthIndex,
+    date: defaultDate.date,
+  },
   dispatch: () => {},
 });
 const DateContextProvider = ({ children }: any) => {

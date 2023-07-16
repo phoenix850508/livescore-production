@@ -29,6 +29,7 @@ export default function CalendarDates(props: dateProps) {
   // highlight when the date gets clicked
   const [activeDate, setActiveDate] = useState<number | string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  // add useReducer from the DateContext to update the latest clicked date
   const { dispatch } = useContext(DateContext);
   const handleDateClick = (
     date: number | string,

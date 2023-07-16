@@ -6,6 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &:hover {
+    background-color: rgba(153, 153, 153, 0.1);
+  }
 }
 
 .matchSchedule {

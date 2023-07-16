@@ -1,145 +1,143 @@
 {
   "date": {
-    "2023-07-14": {
-      "response": [
-        {
-          "id": 12211,
-          "status": {
-            "clock": null,
-            "halftime": "false",
-            "long": "Finished"
-          },
-          "date": {
-            "start": "2023-04-02T00:30:00.000Z",
-            "end": null
-          },
-          "periods": {
-            "current": 4,
-            "total": 4
-          },
-          "scores": {
-            "visitors": { "linescore": [31, 25, 34, 24] },
-            "home": { "linescore": [21, 24, 26, 31] }
-          },
-          "teams": {
-            "visitors": {
-              "id": 16,
-              "name": "LA Clippers",
-              "nickname": "Clippers",
-              "code": "LAC"
-            },
-            "home": {
-              "id": 23,
-              "name": "New Orleans Pelicans",
-              "nickname": "Pelicans",
-              "code": "NOP"
-            }
-          }
+    "2023-07-14": [
+      {
+        "id": 12211,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
         },
-        {
-          "id": 12212,
-          "status": {
-            "clock": null,
-            "halftime": "false",
-            "long": "Finished"
-          },
-          "date": {
-            "start": "2023-04-02T17:00:00.000Z",
-            "end": null
-          },
-          "periods": {
-            "current": 4,
-            "total": 4
-          },
-          "scores": {
-            "visitors": { "linescore": [35, 32, 34, 27] },
-            "home": { "linescore": [25, 27, 37, 19] }
-          },
-          "teams": {
-            "visitors": {
-              "id": 38,
-              "name": "Toronto Raptors",
-              "nickname": "Raptors",
-              "code": "TOR"
-            },
-            "home": {
-              "id": 5,
-              "name": "Charlotte Hornets",
-              "nickname": "Hornets",
-              "code": "CHA"
-            }
-          }
+        "date": {
+          "start": "2023-04-02T00:30:00.000Z",
+          "end": null
         },
-        {
-          "id": 12213,
-          "status": {
-            "clock": null,
-            "halftime": "false",
-            "long": "Finished"
-          },
-          "date": {
-            "start": "2023-04-02T19:30:00.000Z",
-            "end": null
-          },
-          "periods": {
-            "current": 4,
-            "total": 4
-          },
-          "scores": {
-            "visitors": { "linescore": [17, 25, 26, 42] },
-            "home": { "linescore": [30, 23, 32, 26] }
-          },
-          "teams": {
-            "visitors": {
-              "id": 40,
-              "name": "Utah Jazz",
-              "nickname": "Jazz",
-              "code": "UTA"
-            },
-            "home": {
-              "id": 4,
-              "name": "Brooklyn Nets",
-              "nickname": "Nets",
-              "code": "BKN"
-            }
-          }
+        "periods": {
+          "current": 4,
+          "total": 4
         },
-        {
-          "id": 12214,
-          "status": {
-            "clock": null,
-            "halftime": "false",
-            "long": "Finished"
+        "scores": {
+          "visitors": { "linescore": [31, 25, 34, 24] },
+          "home": { "linescore": [21, 24, 26, 31] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 16,
+            "name": "LA Clippers",
+            "nickname": "Clippers",
+            "code": "LAC"
           },
-          "date": {
-            "start": "2023-04-02T19:30:00.000Z",
-            "end": null
-          },
-          "periods": {
-            "current": 4,
-            "total": 4
-          },
-          "scores": {
-            "visitors": { "linescore": [36, 32, 16, 23] },
-            "home": { "linescore": [25, 28, 40, 35] }
-          },
-          "teams": {
-            "visitors": {
-              "id": 19,
-              "name": "Memphis Grizzlies",
-              "nickname": "Grizzlies",
-              "code": "MEM"
-            },
-            "home": {
-              "id": 6,
-              "name": "Chicago Bulls",
-              "nickname": "Bulls",
-              "code": "CHI"
-            }
+          "home": {
+            "id": 23,
+            "name": "New Orleans Pelicans",
+            "nickname": "Pelicans",
+            "code": "NOP"
           }
         }
-      ]
-    }
+      },
+      {
+        "id": 12212,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T17:00:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [35, 32, 34, 27] },
+          "home": { "linescore": [25, 27, 37, 19] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 38,
+            "name": "Toronto Raptors",
+            "nickname": "Raptors",
+            "code": "TOR"
+          },
+          "home": {
+            "id": 5,
+            "name": "Charlotte Hornets",
+            "nickname": "Hornets",
+            "code": "CHA"
+          }
+        }
+      },
+      {
+        "id": 12213,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T19:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [17, 25, 26, 42] },
+          "home": { "linescore": [30, 23, 32, 26] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 40,
+            "name": "Utah Jazz",
+            "nickname": "Jazz",
+            "code": "UTA"
+          },
+          "home": {
+            "id": 4,
+            "name": "Brooklyn Nets",
+            "nickname": "Nets",
+            "code": "BKN"
+          }
+        }
+      },
+      {
+        "id": 12214,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T19:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [36, 32, 16, 23] },
+          "home": { "linescore": [25, 28, 40, 35] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 19,
+            "name": "Memphis Grizzlies",
+            "nickname": "Grizzlies",
+            "code": "MEM"
+          },
+          "home": {
+            "id": 6,
+            "name": "Chicago Bulls",
+            "nickname": "Bulls",
+            "code": "CHI"
+          }
+        }
+      }
+    ]
   },
   "live": {
     "all": {
@@ -5026,7 +5024,7 @@
         "nickname": "Mavericks",
         "code": "DAL",
         "city": "Dallas",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/dallas-mavericks.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3411/image"
       }
     },
     {
@@ -5036,7 +5034,7 @@
         "nickname": "Nuggets",
         "code": "DEN",
         "city": "Denver",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/denver-nuggets.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3417/image"
       }
     },
     {
@@ -5045,7 +5043,7 @@
         "name": "Golden State Warriors",
         "nickname": "Warriors",
         "city": "Golden State",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/golden-state-warriors.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3428/image"
       }
     },
     {
@@ -5055,7 +5053,7 @@
         "nickname": "Rockets",
         "code": "HOU",
         "city": "Houston",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/houston-rockets.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3412/image"
       }
     },
     {
@@ -5065,7 +5063,7 @@
         "nickname": "Clippers",
         "code": "LAC",
         "city": "LA",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/la-clippers.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3425/image"
       }
     },
     {
@@ -5075,7 +5073,7 @@
         "nickname": "Lakers",
         "code": "LAL",
         "city": "Los Angeles",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/los-angeles-lakers.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3427/image"
       }
     },
     {
@@ -5085,7 +5083,7 @@
         "nickname": "Grizzlies",
         "code": "MEM",
         "city": "Memphis",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/memphis-grizzlies.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3415/image"
       }
     },
     {
@@ -5095,7 +5093,7 @@
         "nickname": "Timberwolves",
         "code": "MIN",
         "city": "Minnesota",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/minnesota-timberwolves.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3426/image"
       }
     },
     {
@@ -5105,7 +5103,7 @@
         "nickname": "Pelicans",
         "code": "NOP",
         "city": "New Orleans",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/new-orleans-pelicans.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/5539/image"
       }
     },
     {
@@ -5115,7 +5113,7 @@
         "nickname": "Thunder",
         "code": "OKC",
         "city": "Oklahoma City",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/oklahoma-city-thunder-logo.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3418/image"
       }
     },
     {
@@ -5125,7 +5123,7 @@
         "nickname": "Suns",
         "code": "PHX",
         "city": "Phoenix",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/phoenix-suns.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3416/image"
       }
     },
     {
@@ -5135,7 +5133,7 @@
         "nickname": "Trail Blazers",
         "code": "POR",
         "city": "Portland",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/portland-trail-blazers.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3414/image"
       }
     },
     {
@@ -5145,7 +5143,7 @@
         "nickname": "Kings",
         "code": "SAC",
         "city": "Sacramento",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/sacramento-kings.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3413/image"
       }
     },
     {
@@ -5155,7 +5153,7 @@
         "nickname": "Spurs",
         "code": "SAS",
         "city": "San Antonio",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/san-antonio-spurs.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3429/image"
       }
     },
     {
@@ -5165,7 +5163,7 @@
         "nickname": "Jazz",
         "code": "UTA",
         "city": "Utah",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/utah-jazz.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3434/image"
       }
     },
     {
@@ -5175,7 +5173,7 @@
         "nickname": "Hawks",
         "code": "ATL",
         "city": "Atlanta",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/atlanta-hawks.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3423/image"
       }
     },
     {
@@ -5185,7 +5183,7 @@
         "nickname": "Celtics",
         "code": "BOS",
         "city": "Boston",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/boston-celtics.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3422/image"
       }
     },
     {
@@ -5195,7 +5193,7 @@
         "nickname": "Nets",
         "code": "BKN",
         "city": "Brooklyn",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/brooklyn-nets.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3436/image"
       }
     },
     {
@@ -5205,7 +5203,7 @@
         "nickname": "Hornets",
         "code": "CHA",
         "city": "Charlotte",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/charlotte-hornets.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3430/image"
       }
     },
     {
@@ -5215,7 +5213,7 @@
         "nickname": "Bulls",
         "code": "CHI",
         "city": "Chicago",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/chicago-bulls.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3409/image"
       }
     },
     {
@@ -5225,7 +5223,7 @@
         "nickname": "Cavaliers",
         "code": "CLE",
         "city": "Cleveland",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/cleveland-cavaliers.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3432/image"
       }
     },
     {
@@ -5235,7 +5233,7 @@
         "nickname": "Pistons",
         "code": "DET",
         "city": "Detroit",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/detroit-pistons.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3424/image"
       }
     },
     {
@@ -5245,7 +5243,7 @@
         "nickname": "Pacers",
         "code": "IND",
         "city": "Indiana",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/indiana-pacers.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3419/image"
       }
     },
     {
@@ -5255,7 +5253,7 @@
         "nickname": "Heat",
         "code": "MIA",
         "city": "Miami",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/miami-heat.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3435/image"
       }
     },
     {
@@ -5265,7 +5263,7 @@
         "nickname": "Bucks",
         "code": "MIL",
         "city": "Milwaukee",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/milwaukee-bucks.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3410/image"
       }
     },
     {
@@ -5275,7 +5273,7 @@
         "nickname": "Knicks",
         "code": "NYK",
         "city": "New York",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/new-york-knicks.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3421/image"
       }
     },
     {
@@ -5285,7 +5283,7 @@
         "nickname": "Magic",
         "code": "ORL",
         "city": "Orlando",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/orlando-magic.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3437/image"
       }
     },
     {
@@ -5295,7 +5293,7 @@
         "nickname": "76ers",
         "code": "PHI",
         "city": "Philadelphia",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/philidephia-76ers.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3420/image"
       }
     },
     {
@@ -5305,7 +5303,7 @@
         "nickname": "Raptors",
         "code": "TOR",
         "city": "Toronto",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/toronto-raptors.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3433/image"
       }
     },
     {
@@ -5315,14 +5313,12 @@
         "nickname": "Wizards",
         "code": "WAS",
         "city": "Washington",
-        "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/washington-wizards.svg"
+        "logo": "https://api.sofascore.app/api/v1/team/3431/image"
       }
     }
   ],
-  "test": {
-    "st": [
-      { "id": 1, "text": "yabi" },
-      { "id": 2, "text": "nani" }
-    ]
-  }
+  "test": [
+    { "id": 1, "text": "yabi" },
+    { "id": 2, "text": "nani" }
+  ]
 }

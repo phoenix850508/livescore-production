@@ -1,4 +1,6 @@
 import FeaturedMatch from "./rightSectionComponents/FeaturedMatch";
+import { MatchContext } from "context/MatchContext";
+import { useContext } from "react";
 import styles from "./RightSection.module.scss";
 
 export default function RightSection() {
