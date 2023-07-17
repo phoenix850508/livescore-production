@@ -28,10 +28,10 @@ export type actionType = {
 
 export type allGamesProps = {
   nbaGames?: object[] | object;
-  mlbGames?: object[];
+  mlbGames?: object[] | object;
 };
 
-export type matchItemProps = {
+export type nbaMatchItemProps = {
   id?: number;
   scores?: {
     visitors?: {
@@ -65,6 +65,8 @@ export type matchItemProps = {
   };
 };
 
+export type mlbMatchItemProps = {};
+
 export type initMatchType = {
   awayTeam?: {
     nickname?: string | undefined;
@@ -75,8 +77,8 @@ export type initMatchType = {
     id?: number | undefined;
   };
   scores?: {
-    awayTotal?: number;
-    homeTotal?: number | undefined;
+    awayTotal?: number | string | undefined;
+    homeTotal?: number | string | undefined;
   };
 };
 
@@ -94,4 +96,21 @@ export type matchActionType = {
     awayTotal: number | undefined;
     homeTotal: number | undefined;
   };
+};
+
+export type showSportType = {
+  showSport: string;
+};
+
+export type handleSportType = {
+  onBasketballClick?:
+    | ((e: React.MouseEvent<HTMLImageElement>) => React.MouseEvent)
+    | React.MouseEventHandler<HTMLImageElement>;
+  onBaseballClick?:
+    | ((e: React.MouseEvent<HTMLImageElement>) => React.MouseEvent)
+    | React.MouseEventHandler<HTMLImageElement>;
+};
+
+export type newType = {
+  onBasketballClick?: React.MouseEventHandler<HTMLImageElement>;
 };

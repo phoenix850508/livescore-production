@@ -1,11 +1,11 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
-import { matchItemProps } from "types/types";
+import { nbaMatchItemProps } from "types/types";
 import { useContext, useEffect } from "react";
 import { MatchContext } from "context/MatchContext";
-import styles from "./MatchItem.module.scss";
+import styles from "./MlbMatchItem.module.scss";
 
-export default function MatchItem(props: matchItemProps) {
+export default function MlbMatchItem(props: nbaMatchItemProps) {
   // extract props teams
   const teams = props.teams;
   // extract props away scores

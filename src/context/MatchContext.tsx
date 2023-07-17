@@ -12,8 +12,8 @@ const defaultMatch = {
     id: 0,
   },
   scores: {
-    awayTotal: 0,
-    homeTotal: 0,
+    awayTotal: "",
+    homeTotal: "",
   },
 };
 

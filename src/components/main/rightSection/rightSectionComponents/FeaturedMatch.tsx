@@ -12,14 +12,17 @@ export default function FeaturedMatch() {
     navigate("/match");
   };
   const { match } = useContext(MatchContext);
-  console.log(match);
   // extract the latest/selected match information
   const awayTeam = match.awayTeam;
   const homeTeam = match.homeTeam;
   const scores = match.scores;
   // use useState to memorize the teams logo
-  const [awayTeamLogo, setAwayTeamLogo] = useState("");
-  const [homeTeamLogo, setHomeTeamLogo] = useState("");
+  const [awayTeamLogo, setAwayTeamLogo] = useState(
+    "https://www.svgrepo.com/show/133513/shield.svg"
+  );
+  const [homeTeamLogo, setHomeTeamLogo] = useState(
+    "https://www.svgrepo.com/show/133513/shield.svg"
+  );
 
   useEffect(() => {
     const asyncGetTeam = async () => {

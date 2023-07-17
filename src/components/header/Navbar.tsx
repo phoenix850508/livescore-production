@@ -4,13 +4,17 @@ import solidBellIcon from "icons/solidBellIcon.svg";
 import basketballIcon from "icons/basketballIcon.svg";
 import baseballIcon from "icons/baseballIcon.svg";
 import { useNavigate } from "react-router-dom";
+import { handleSportType } from "types/types";
 import stlyes from "./Navbar.module.scss";
 
-export default function Navbar() {
+export default function Navbar(props: handleSportType) {
   return (
     <header>
       <NavbarTop />
-      <NavbarBottom />
+      <NavbarBottom
+        onBasketballClick={props.onBasketballClick}
+        onBaseballClick={props.onBaseballClick}
+      />
     </header>
   );
 }
@@ -46,7 +50,7 @@ function NavbarTop() {
   );
 }
 
-function NavbarBottom() {
+function NavbarBottom(props: handleSportType) {
   return (
     <nav className={stlyes.navbarBottom}>
       <ul className={stlyes.navbarIconList}>
@@ -55,6 +59,7 @@ function NavbarBottom() {
             className={stlyes.sportsIcon}
             src={basketballIcon}
             alt="basketballIcon.svg"
+            onClick={(e) => props.onBasketballClick?.(e)}
           />
           <span>Basketball</span>
         </li>
@@ -63,6 +68,7 @@ function NavbarBottom() {
             className={stlyes.sportsIcon}
             src={baseballIcon}
             alt="baseballIcon.svg"
+            onClick={(e) => props.onBaseballClick?.(e)}
           />
           <span>Baseball</span>
         </li>

@@ -5316,9 +5316,5 @@
         "logo": "https://api.sofascore.app/api/v1/team/3431/image"
       }
     }
-  ],
-  "test": [
-    { "id": 1, "text": "yabi" },
-    { "id": 2, "text": "nani" }
   ]
 }
