@@ -5,7 +5,8 @@ import basketballIcon from "icons/basketballIcon.svg";
 import baseballIcon from "icons/baseballIcon.svg";
 import { useNavigate } from "react-router-dom";
 import { handleSportType } from "types/types";
-import stlyes from "./Navbar.module.scss";
+import clsx from "clsx";
+import styles from "./Navbar.module.scss";
 
 export default function Navbar(props: handleSportType) {
   return (
@@ -14,6 +15,7 @@ export default function Navbar(props: handleSportType) {
       <NavbarBottom
         onBasketballClick={props.onBasketballClick}
         onBaseballClick={props.onBaseballClick}
+        showSport={props.showSport}
       />
     </header>
   );
@@ -25,25 +27,25 @@ function NavbarTop() {
     navigate("/main");
   };
   return (
-    <nav className={stlyes.navbarTop}>
-      <div className={stlyes.navbarBrand} onClick={handleClick}>
+    <nav className={styles.navbarTop}>
+      <div className={styles.navbarBrand} onClick={handleClick}>
         <img src={brandIcon} alt="brandIcon.svg" />
-        <h1 className={stlyes.brandTitle}>Livescore</h1>
+        <h1 className={styles.brandTitle}>Livescore</h1>
       </div>
-      <div className={stlyes.navbarSearchBox}>
+      <div className={styles.navbarSearchBox}>
         <img
-          className={stlyes.searchIcon}
+          className={styles.searchIcon}
           src={searchIcon}
           alt="searchIcon.svg"
         />
         <input
-          className={stlyes.searchInput}
+          className={styles.searchInput}
           type="text"
           placeholder="Search"
         />
       </div>
-      <div className={stlyes.navbarFavorites}>
-        <span className={stlyes.favorites}>Favorites</span>
+      <div className={styles.navbarFavorites}>
+        <span className={styles.favorites}>Favorites</span>
         <img src={solidBellIcon} alt="solidBellIcon.svg" />
       </div>
     </nav>
@@ -52,20 +54,28 @@ function NavbarTop() {
 
 function NavbarBottom(props: handleSportType) {
   return (
-    <nav className={stlyes.navbarBottom}>
-      <ul className={stlyes.navbarIconList}>
-        <li>
+    <nav className={styles.navbarBottom}>
+      <ul className={styles.navbarIconList}>
+        <li
+          className={clsx({
+            [styles.markBasketball]: props.showSport === "basketball",
+          })}
+        >
           <img
-            className={stlyes.sportsIcon}
+            className={styles.sportsIcon}
             src={basketballIcon}
             alt="basketballIcon.svg"
             onClick={(e) => props.onBasketballClick?.(e)}
           />
           <span>Basketball</span>
         </li>
-        <li>
+        <li
+          className={clsx({
+            [styles.markBaseball]: props.showSport === "baseball",
+          })}
+        >
           <img
-            className={stlyes.sportsIcon}
+            className={styles.sportsIcon}
             src={baseballIcon}
             alt="baseballIcon.svg"
             onClick={(e) => props.onBaseballClick?.(e)}

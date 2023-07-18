@@ -29,6 +29,7 @@ export type actionType = {
 export type allGamesProps = {
   nbaGames?: object[] | object;
   mlbGames?: object[] | object;
+  showSport?: string;
 };
 
 export type nbaMatchItemProps = {
@@ -115,6 +116,7 @@ export type showSportType = {
 };
 
 export type handleSportType = {
+  showSport?: string;
   onBasketballClick?:
     | ((e: React.MouseEvent<HTMLImageElement>) => React.MouseEvent)
     | React.MouseEventHandler<HTMLImageElement>;

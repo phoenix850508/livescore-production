@@ -18,32 +18,44 @@ export default function FeaturedMatch(props: showSportType) {
   const homeTeam = match.homeTeam;
   const scores = match.scores;
   // use useState to memorize the teams logo
-  const [awayTeamLogo, setAwayTeamLogo] = useState(
-    "https://www.svgrepo.com/show/133513/shield.svg"
-  );
-  const [homeTeamLogo, setHomeTeamLogo] = useState(
-    "https://www.svgrepo.com/show/133513/shield.svg"
-  );
+  const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
+  const [awayTeamLogo, setAwayTeamLogo] = useState(defaultLogo);
+  const [homeTeamLogo, setHomeTeamLogo] = useState(defaultLogo);
 
+  // get team logo
   useEffect(() => {
     const asyncGetTeam = async () => {
-      if (awayTeam?.id) {
+      // if homeTeam data exists, and the data is from nba (which its name is more than 3 words)
+      if (
+        awayTeam?.id &&
+        awayTeam?.nickname &&
+        awayTeam?.nickname?.length > 3
+      ) {
         const response = awayTeam && (await getTeam(awayTeam?.id));
         setAwayTeamLogo(response?.data[0].response.logo);
+      } else {
+        setAwayTeamLogo(defaultLogo);
       }
     };
-    if (props.showSport === "basketball") asyncGetTeam();
-  }, [awayTeam, props.showSport]);
+    asyncGetTeam();
+  }, [awayTeam, props]);
 
   useEffect(() => {
     const asyncGetTeam = async () => {
-      if (homeTeam?.id) {
+      // if homeTeam data exists, and the data is from nba (which its name is more than 3 words)
+      if (
+        homeTeam?.id &&
+        homeTeam?.nickname &&
+        homeTeam?.nickname?.length > 3
+      ) {
         const response = homeTeam && (await getTeam(homeTeam?.id));
         setHomeTeamLogo(response?.data[0].response.logo);
+      } else {
+        setHomeTeamLogo(defaultLogo);
       }
     };
-    if (props.showSport === "basketball") asyncGetTeam();
-  }, [homeTeam, props.showSport]);
+    asyncGetTeam();
+  }, [homeTeam, props]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>

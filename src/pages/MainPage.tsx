@@ -16,6 +16,7 @@ export default function MainPage() {
       <Navbar
         onBasketballClick={handleBasketballClick}
         onBaseballClick={handleBaseballClick}
+        showSport={showSport}
       />
       <Main showSport={showSport} />
     </div>

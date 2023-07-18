@@ -83,12 +83,26 @@ export default function MiddleSection(props: showSportType) {
     <div className={styles.middleSection}>
       <h3 className={styles.middleTitle}>Pinned Games</h3>
       {/* dummy data不管輸入資料是否正確，都會render，因此這邊需要判斷式來比對是否當天有資料 */}
-      {showNba && nbaGamesOnDate ? (
-        <LeagueNbaPlayed nbaGames={nbaGamesOnDate} />
-      ) : mlbDate === "20230718" &&
+      {showNba && nbaGamesOnDate && mlbDate === "20230714" && dummyMlbGames ? (
+        <div>
+          <LeagueNbaPlayed
+            nbaGames={nbaGamesOnDate}
+            showSport={props.showSport}
+          />
+          <LeagueMlbPlayed
+            mlbGames={dummyMlbGames}
+            showSport={props.showSport}
+          />
+        </div>
+      ) : showNba && nbaGamesOnDate ? (
+        <LeagueNbaPlayed
+          nbaGames={nbaGamesOnDate}
+          showSport={props.showSport}
+        />
+      ) : mlbDate === "20230714" &&
         dummyMlbGames &&
         (props.showSport === "baseball" || props.showSport === "all") ? (
-        <LeagueMlbPlayed mlbGames={dummyMlbGames} />
+        <LeagueMlbPlayed mlbGames={dummyMlbGames} showSport={props.showSport} />
       ) : (
         <div className={styles.noEventsWrapper}>
           <img

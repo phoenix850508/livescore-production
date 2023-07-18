@@ -65,6 +65,7 @@ header {
 }
 
 .navbarBottom {
+  position: relative;
   height: 90px;
   padding: 0 60px;
   background-color: base.$secondary-brand;
@@ -88,6 +89,18 @@ header {
       width: 30px;
       height: 30px;
       cursor: pointer;
+    }
+  }
+  .markBasketball,
+  .markBaseball {
+    opacity: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 120px;
+      height: 3px;
+      background-color: #fff;
     }
   }
 }
