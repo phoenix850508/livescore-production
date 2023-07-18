@@ -2,7 +2,7 @@ import LeagueNbaPlayed from "./middleSectionComponents/LeagueNbaPlayed";
 import LeagueMlbPlayed from "./middleSectionComponents/LeagueMlbPlayed";
 import { DateContext } from "context/DateContext";
 import { useContext, useEffect, useState } from "react";
-import { getAllGames } from "api/nba";
+import { getAllGames, getLiveGames } from "api/nba";
 import { getMlbGames } from "api/mlb";
 import { dummyMlbGames } from "./dummyMlbGames";
 import { showSportType } from "types/types";
@@ -87,28 +87,35 @@ export default function MiddleSection(props: showSportType) {
       {/* dummy data不管輸入資料是否正確，都會render，因此這邊需要判斷式來比對是否當天有資料 */}
       {showNba &&
       nbaGamesOnDate &&
-      mlbDate === "20230714" &&
+      mlbDate === "20230718" &&
       dummyMlbGames &&
       props.showSport === "all" ? (
         <div>
           <LeagueNbaPlayed
             nbaGames={nbaGamesOnDate}
             showSport={props.showSport}
+            showFavorites={props.showFavorites}
           />
           <LeagueMlbPlayed
             mlbGames={dummyMlbGames}
             showSport={props.showSport}
+            showFavorites={props.showFavorites}
           />
         </div>
       ) : showNba && nbaGamesOnDate ? (
         <LeagueNbaPlayed
           nbaGames={nbaGamesOnDate}
           showSport={props.showSport}
+          showFavorites={props.showFavorites}
         />
-      ) : mlbDate === "20230714" &&
+      ) : mlbDate === "20230718" &&
         dummyMlbGames &&
         (props.showSport === "baseball" || props.showSport === "all") ? (
-        <LeagueMlbPlayed mlbGames={dummyMlbGames} showSport={props.showSport} />
+        <LeagueMlbPlayed
+          mlbGames={dummyMlbGames}
+          showSport={props.showSport}
+          showFavorites={props.showFavorites}
+        />
       ) : (
         <div className={styles.noEventsWrapper}>
           <img

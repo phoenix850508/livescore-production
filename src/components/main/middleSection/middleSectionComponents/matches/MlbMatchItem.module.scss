@@ -11,8 +11,12 @@
   }
 }
 
+.notInFavorite {
+  display: none;
+}
+
 .matchSchedule {
-  width: 55px;
+  width: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -12,6 +12,15 @@ export const getAllGames = async (date: string) => {
   }
 };
 
+export const getLiveGames = async () => {
+  try {
+    const response = await axios.get(`${base_url}/live/all`);
+    return response;
+  } catch (error) {
+    console.error("[GET all live games filed: ]", error);
+  }
+};
+
 // get team information
 export const getTeam = async (id: number) => {
   try {

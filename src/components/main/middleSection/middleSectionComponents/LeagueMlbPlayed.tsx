@@ -21,6 +21,7 @@ export default function LeagueMlbPlayed(props: allGamesProps) {
               gameTime={match.gameTime}
               teamIDAway={match.teamIDAway}
               teamIDHome={match.teamIDHome}
+              showFavorites={props.showFavorites}
             />
           );
         })}

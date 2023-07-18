@@ -1,27 +1,29 @@
 import LeaguePlayedTop from "./leaguePlayedTop/LeaguePlayedTop";
-import MatchItem from "./matches/NbaMatchItem";
+import NbaMatchItem from "./matches/NbaMatchItem";
 import { allGamesProps, nbaMatchItemProps } from "types/types";
 import styles from "./LeaguePlayed.module.scss";
 
 export default function LeaguePlayed(props: allGamesProps) {
-  const dateObject = props.nbaGames && Object.values(props.nbaGames);
-  const allGames = dateObject && Object.values(dateObject)[0];
+  const allGames = props.nbaGames && Object.values(props.nbaGames)[0];
   return (
     <div className={styles.leaguePlayed}>
       <LeaguePlayedTop showSport={props.showSport} nbaGames={props.nbaGames} />
-      {allGames.map((match: nbaMatchItemProps, index: number) => {
-        return (
-          <MatchItem
-            key={index}
-            id={match.id}
-            scores={match.scores}
-            teams={match.teams}
-            date={match.date}
-            periods={match.periods}
-            status={match.status}
-          />
-        );
-      })}
+      {allGames.map(
+        (match: nbaMatchItemProps, index: number, showFavorites: boolean) => {
+          return (
+            <NbaMatchItem
+              key={index}
+              id={match.id}
+              scores={match.scores}
+              teams={match.teams}
+              date={match.date}
+              periods={match.periods}
+              status={match.status}
+              showFavorites={props.showFavorites}
+            />
+          );
+        }
+      )}
     </div>
   );
 }

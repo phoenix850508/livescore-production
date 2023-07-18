@@ -10,7 +10,10 @@ export default function Main(props: showSportType) {
     <div className={styles.main}>
       <MatchContextProvider>
         <LeftSection />
-        <MiddleSection showSport={props.showSport} />
+        <MiddleSection
+          showSport={props.showSport}
+          showFavorites={props.showFavorites}
+        />
         <RightSection showSport={props.showSport} />
       </MatchContextProvider>
     </div>

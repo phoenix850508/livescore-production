@@ -3,15 +3,18 @@ import searchIcon from "icons/searchIcon.svg";
 import solidBellIcon from "icons/solidBellIcon.svg";
 import basketballIcon from "icons/basketballIcon.svg";
 import baseballIcon from "icons/baseballIcon.svg";
-import { useNavigate } from "react-router-dom";
-import { handleSportType } from "types/types";
+
+import { handleSportType, onFavoritesClick } from "types/types";
 import clsx from "clsx";
 import styles from "./Navbar.module.scss";
 
 export default function Navbar(props: handleSportType) {
   return (
     <header>
-      <NavbarTop />
+      <NavbarTop
+        onFavoritesClick={props.onFavoritesClick}
+        onBrandClick={props.onBrandClick}
+      />
       <NavbarBottom
         onBasketballClick={props.onBasketballClick}
         onBaseballClick={props.onBaseballClick}
@@ -21,14 +24,10 @@ export default function Navbar(props: handleSportType) {
   );
 }
 
-function NavbarTop() {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/main");
-  };
+function NavbarTop(props: onFavoritesClick) {
   return (
     <nav className={styles.navbarTop}>
-      <div className={styles.navbarBrand} onClick={handleClick}>
+      <div className={styles.navbarBrand} onClick={props.onBrandClick}>
         <img src={brandIcon} alt="brandIcon.svg" />
         <h1 className={styles.brandTitle}>Livescore</h1>
       </div>
@@ -44,7 +43,7 @@ function NavbarTop() {
           placeholder="Search"
         />
       </div>
-      <div className={styles.navbarFavorites}>
+      <div className={styles.navbarFavorites} onClick={props.onFavoritesClick}>
         <span className={styles.favorites}>Favorites</span>
         <img src={solidBellIcon} alt="solidBellIcon.svg" />
       </div>

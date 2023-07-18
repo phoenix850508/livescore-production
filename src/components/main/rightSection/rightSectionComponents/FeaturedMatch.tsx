@@ -38,7 +38,7 @@ export default function FeaturedMatch(props: showSportType) {
       }
     };
     asyncGetTeam();
-  }, [awayTeam, props]);
+  }, [awayTeam, props?.showSport]);
 
   useEffect(() => {
     const asyncGetTeam = async () => {
@@ -55,7 +55,7 @@ export default function FeaturedMatch(props: showSportType) {
       }
     };
     asyncGetTeam();
-  }, [homeTeam, props]);
+  }, [homeTeam, props?.showSport]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>

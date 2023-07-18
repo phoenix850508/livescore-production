@@ -3,6 +3,7 @@ import bellSolidIcon from "icons/bellSolidIcon.svg";
 import { nbaMatchItemProps } from "types/types";
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
+import clsx from "clsx";
 import styles from "./NbaMatchItem.module.scss";
 
 export default function NbaMatchItem(props: nbaMatchItemProps) {
@@ -151,8 +152,15 @@ export default function NbaMatchItem(props: nbaMatchItemProps) {
       }
     }
   }, []);
+
   return (
-    <div className={styles.matchItem} onClick={handleMatchClick}>
+    <div
+      id={styles.matchItem}
+      className={clsx(styles.matchItem, {
+        [styles.notInFavorite]: props.showFavorites && !awaySubs && !homeSubs,
+      })}
+      onClick={handleMatchClick}
+    >
       <div className={styles.matchSchedule}>
         <div className={styles.matchTime}>{matchHour}</div>
         <div className={styles.matchProgress}>

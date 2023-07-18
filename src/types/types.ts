@@ -30,6 +30,7 @@ export type allGamesProps = {
   nbaGames?: object[] | object;
   mlbGames?: object[] | object;
   showSport?: string;
+  showFavorites?: boolean;
 };
 
 export type nbaMatchItemProps = {
@@ -64,6 +65,7 @@ export type nbaMatchItemProps = {
     halftime?: string;
     long?: string;
   };
+  showFavorites?: boolean;
 };
 
 export type mlbMatchItemProps = {
@@ -74,6 +76,7 @@ export type mlbMatchItemProps = {
   home?: string;
   teamIDAway?: string;
   teamIDHome?: string;
+  showFavorites?: boolean;
 };
 
 export type mlbLiveMatchItemProps = {
@@ -113,6 +116,8 @@ export type matchActionType = {
 
 export type showSportType = {
   showSport?: string;
+  onFavoritesClick?: React.MouseEventHandler<HTMLDivElement>;
+  showFavorites?: boolean;
 };
 
 export type handleSportType = {
@@ -123,6 +128,8 @@ export type handleSportType = {
   onBaseballClick?:
     | ((e: React.MouseEvent<HTMLImageElement>) => React.MouseEvent)
     | React.MouseEventHandler<HTMLImageElement>;
+  onFavoritesClick?: React.MouseEventHandler<HTMLDivElement>;
+  onBrandClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
 export type matchDataObjType = {
@@ -135,4 +142,9 @@ export type matchDataObjType = {
       R?: number | undefined | null;
     };
   };
+};
+
+export type onFavoritesClick = {
+  onFavoritesClick?: React.MouseEventHandler<HTMLDivElement>;
+  onBrandClick?: React.MouseEventHandler<HTMLDivElement>;
 };

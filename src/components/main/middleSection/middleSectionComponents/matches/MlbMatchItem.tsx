@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import { getMlbMatchScore } from "api/mlb";
 import { dummyMlbMatch } from "./dummyMlbMatch";
+import clsx from "clsx";
 import styles from "./MlbMatchItem.module.scss";
 
 export default function MlbMatchItem(props: mlbMatchItemProps) {
@@ -25,13 +26,15 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
   if (timeLength === 5) {
     matchHour = props?.gameTime?.slice(
       colonIndex && colonIndex - 1,
-      colonIndex && colonIndex + 3
+      colonIndex && colonIndex + 4
     );
+    matchHour += "m";
   } else {
     matchHour = props.gameTime?.slice(
       colonIndex && colonIndex - 2,
-      colonIndex && colonIndex + 3
+      colonIndex && colonIndex + 4
     );
+    matchHour += "m";
   }
   // set useState matchInforation
   const [matchDataObj, setMatchDataObj] = useState<matchDataObjType | null>(
@@ -41,25 +44,24 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
   const matchAwayScore = matchDataObj && matchDataObj?.lineScore?.away?.R;
   const matchHomeScore = matchDataObj?.lineScore?.home?.R;
 
+  // dispatch match
   const { dispatch } = useContext(MatchContext);
   const handleMatchClick = () => {
-    if (matchDataObj) {
-      dispatch({
-        type: "selectFeaturedMatch",
-        awayTeam: {
-          id: awayId,
-          nickname: away,
-        },
-        homeTeam: {
-          id: homeId,
-          nickname: home,
-        },
-        scores: {
-          awayTotal: matchAwayScore,
-          homeTotal: matchHomeScore,
-        },
-      });
-    }
+    dispatch({
+      type: "selectFeaturedMatch",
+      awayTeam: {
+        id: awayId,
+        nickname: away,
+      },
+      homeTeam: {
+        id: homeId,
+        nickname: home,
+      },
+      scores: {
+        awayTotal: matchAwayScore,
+        homeTotal: matchHomeScore,
+      },
+    });
   };
 
   // toggle subscribe away team
@@ -136,23 +138,21 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
 
   // dispath the latest match
   useEffect(() => {
-    if (matchHomeScore) {
-      dispatch({
-        type: "selectFeaturedMatch",
-        awayTeam: {
-          id: awayId,
-          nickname: away,
-        },
-        homeTeam: {
-          id: homeId,
-          nickname: home,
-        },
-        scores: {
-          awayTotal: matchAwayScore,
-          homeTotal: matchHomeScore,
-        },
-      });
-    }
+    dispatch({
+      type: "selectFeaturedMatch",
+      awayTeam: {
+        id: awayId,
+        nickname: away,
+      },
+      homeTeam: {
+        id: homeId,
+        nickname: home,
+      },
+      scores: {
+        awayTotal: matchAwayScore,
+        homeTotal: matchHomeScore,
+      },
+    });
   }, []);
 
   // decide whether the subscription bell should be solid
@@ -172,7 +172,12 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
   }, []);
 
   return (
-    <div className={styles.matchItem} onClick={handleMatchClick}>
+    <div
+      className={clsx(styles.matchItem, {
+        [styles.notInFavorite]: props.showFavorites && !awaySubs && !homeSubs,
+      })}
+      onClick={handleMatchClick}
+    >
       <div className={styles.matchSchedule}>
         <div className={styles.matchTime}>{matchHour}</div>
         <div className={styles.matchProgress}>
