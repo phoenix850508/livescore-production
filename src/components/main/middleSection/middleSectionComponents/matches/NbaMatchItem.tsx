@@ -1,11 +1,79 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
 import { nbaMatchItemProps } from "types/types";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import styles from "./NbaMatchItem.module.scss";
 
 export default function NbaMatchItem(props: nbaMatchItemProps) {
+  // use useState to decide whether the team is subscribed
+  const [awaySubs, setAwaySubs] = useState(false);
+  const [homeSubs, setHomeSubs] = useState(false);
+
+  // toggle subscribe away team
+  const handleAwayBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    console.log(e.target);
+    // if localStorage has data
+    const awayTeamName = teams?.visitors?.nickname;
+    if (localStorage.getItem("subscribedTeams") !== null) {
+      const team = localStorage.getItem("subscribedTeams");
+      let teamsParsed = team && JSON.parse(team);
+      // if teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === awayTeamName)) {
+        // remove the name from array
+        setAwaySubs(false);
+        const arr = teamsParsed.filter(
+          (teamName: string) => teamName !== awayTeamName
+        );
+        teamsParsed = arr;
+      }
+      // if teamName does not exists
+      else {
+        setAwaySubs(true);
+        teamsParsed.push(awayTeamName);
+      }
+      localStorage.setItem("subscribedTeams", JSON.stringify(teamsParsed));
+    }
+    // if localStorage has no data
+    else {
+      setAwaySubs(true);
+      localStorage.setItem("subscribedTeams", JSON.stringify([awayTeamName]));
+    }
+  };
+
+  // toggle subscribe home team
+  const handleHomeBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    console.log(e.target);
+    // if localStorage has data
+    const homeTeamName = teams?.home?.nickname;
+    if (localStorage.getItem("subscribedTeams") !== null) {
+      const team = localStorage.getItem("subscribedTeams");
+      let teamsParsed = team && JSON.parse(team);
+      // if teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === homeTeamName)) {
+        // remove the name from array
+        setHomeSubs(false);
+        const arr = teamsParsed.filter(
+          (teamName: string) => teamName !== homeTeamName
+        );
+        teamsParsed = arr;
+      }
+      // if teamName does not exists
+      else {
+        setHomeSubs(true);
+        teamsParsed.push(homeTeamName);
+      }
+      localStorage.setItem("subscribedTeams", JSON.stringify(teamsParsed));
+    }
+    // if localStorage has no data
+    else {
+      setHomeSubs(true);
+      localStorage.setItem("subscribedTeams", JSON.stringify([homeTeamName]));
+    }
+  };
+
   // extract props teams
   const teams = props.teams;
   // extract props away scores
@@ -46,6 +114,8 @@ export default function NbaMatchItem(props: nbaMatchItemProps) {
       },
     });
   };
+
+  // dispatch the latest match
   useEffect(() => {
     dispatch({
       type: "selectFeaturedMatch",
@@ -63,6 +133,24 @@ export default function NbaMatchItem(props: nbaMatchItemProps) {
       },
     });
   }, [props]);
+
+  // decide whether the subscription bell should be solid
+  useEffect(() => {
+    const awayTeamName = teams?.visitors?.nickname;
+    const homeTeamName = teams?.home?.nickname;
+    if (localStorage.getItem("subscribedTeams") !== null) {
+      const team = localStorage.getItem("subscribedTeams");
+      let teamsParsed = team && JSON.parse(team);
+      // if away teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === awayTeamName)) {
+        setAwaySubs(true);
+      }
+      // if home teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === homeTeamName)) {
+        setHomeSubs(true);
+      }
+    }
+  }, []);
   return (
     <div className={styles.matchItem} onClick={handleMatchClick}>
       <div className={styles.matchSchedule}>
@@ -82,11 +170,17 @@ export default function NbaMatchItem(props: nbaMatchItemProps) {
         </div>
       </div>
       <div className={styles.subscriptions}>
-        <div className={styles.awayBell}>
-          <img src={bellSolidIcon} alt="bellSolidIcon.svg" />
+        <div className={styles.awayBell} onClick={handleAwayBellClicked}>
+          <img
+            src={awaySubs ? bellSolidIcon : bellEmptyIcon}
+            alt="subscribeBell.svg"
+          />
         </div>
-        <div className={styles.homeBell}>
-          <img src={bellEmptyIcon} alt="bellEmptyIcon.svg" />
+        <div className={styles.homeBell} onClick={handleHomeBellClicked}>
+          <img
+            src={homeSubs ? bellSolidIcon : bellEmptyIcon}
+            alt="subscribeBell.svg"
+          />
         </div>
       </div>
     </div>

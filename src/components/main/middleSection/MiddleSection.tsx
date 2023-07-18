@@ -17,6 +17,7 @@ export default function MiddleSection(props: showSportType) {
     object | null | undefined
   >(null);
   const { state } = useContext(DateContext);
+
   // turn the date into db schema format
   let nbaDate = `${state.year}-`;
   let mlbDate = `${state.year}`;
@@ -35,6 +36,7 @@ export default function MiddleSection(props: showSportType) {
     nbaDate += `${state.date}`;
     mlbDate += `${state.date}`;
   }
+
   // control whether nba games should be shown
   const [showNba, setShowNba] = useState<boolean | null>(null);
 
@@ -83,7 +85,11 @@ export default function MiddleSection(props: showSportType) {
     <div className={styles.middleSection}>
       <h3 className={styles.middleTitle}>Pinned Games</h3>
       {/* dummy data不管輸入資料是否正確，都會render，因此這邊需要判斷式來比對是否當天有資料 */}
-      {showNba && nbaGamesOnDate && mlbDate === "20230714" && dummyMlbGames ? (
+      {showNba &&
+      nbaGamesOnDate &&
+      mlbDate === "20230714" &&
+      dummyMlbGames &&
+      props.showSport === "all" ? (
         <div>
           <LeagueNbaPlayed
             nbaGames={nbaGamesOnDate}

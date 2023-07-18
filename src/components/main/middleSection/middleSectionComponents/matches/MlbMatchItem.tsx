@@ -8,6 +8,10 @@ import { dummyMlbMatch } from "./dummyMlbMatch";
 import styles from "./MlbMatchItem.module.scss";
 
 export default function MlbMatchItem(props: mlbMatchItemProps) {
+  // use useState to decide whether the team is subscribed
+  const [awaySubs, setAwaySubs] = useState(false);
+  const [homeSubs, setHomeSubs] = useState(false);
+
   // extract props teams
   const away = props.away;
   const home = props.home;
@@ -58,6 +62,64 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
     }
   };
 
+  // toggle subscribe away team
+  const handleAwayBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    console.log(e.target);
+    // if localStorage has data
+    if (localStorage.getItem("subscribedTeams") !== null) {
+      const team = localStorage.getItem("subscribedTeams");
+      let teamsParsed = team && JSON.parse(team);
+      // if teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === away)) {
+        // remove the name from array
+        setAwaySubs(false);
+        const arr = teamsParsed.filter((teamName: string) => teamName !== away);
+        teamsParsed = arr;
+      }
+      // if teamName does not exists
+      else {
+        setAwaySubs(true);
+        teamsParsed.push(away);
+      }
+      localStorage.setItem("subscribedTeams", JSON.stringify(teamsParsed));
+    }
+    // if localStorage has no data
+    else {
+      setAwaySubs(true);
+      localStorage.setItem("subscribedTeams", JSON.stringify([away]));
+    }
+  };
+
+  // toggle subscribe home team
+  const handleHomeBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    console.log(e.target);
+    // if localStorage has data
+    if (localStorage.getItem("subscribedTeams") !== null) {
+      const team = localStorage.getItem("subscribedTeams");
+      let teamsParsed = team && JSON.parse(team);
+      // if teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === home)) {
+        // remove the name from array
+        setHomeSubs(false);
+        const arr = teamsParsed.filter((teamName: string) => teamName !== home);
+        teamsParsed = arr;
+      }
+      // if teamName does not exists
+      else {
+        setHomeSubs(true);
+        teamsParsed.push(home);
+      }
+      localStorage.setItem("subscribedTeams", JSON.stringify(teamsParsed));
+    }
+    // if localStorage has no data
+    else {
+      setHomeSubs(true);
+      localStorage.setItem("subscribedTeams", JSON.stringify([home]));
+    }
+  };
+
   useEffect(() => {
     setMatchDataObj(Object.values(dummyMlbMatch)[0]);
   }, []);
@@ -72,8 +134,8 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
   //   asynGetMlbMatchScore();
   // }, [props]);
 
+  // dispath the latest match
   useEffect(() => {
-    console.log("re-render useEffect");
     if (matchHomeScore) {
       dispatch({
         type: "selectFeaturedMatch",
@@ -90,6 +152,22 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
           homeTotal: matchHomeScore,
         },
       });
+    }
+  }, []);
+
+  // decide whether the subscription bell should be solid
+  useEffect(() => {
+    if (localStorage.getItem("subscribedTeams") !== null) {
+      const team = localStorage.getItem("subscribedTeams");
+      let teamsParsed = team && JSON.parse(team);
+      // if away teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === away)) {
+        setAwaySubs(true);
+      }
+      // if home teamName existed in localStorage
+      if (teamsParsed.some((teamName: string) => teamName === home)) {
+        setHomeSubs(true);
+      }
     }
   }, []);
 
@@ -114,11 +192,17 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
         </div>
       </div>
       <div className={styles.subscriptions}>
-        <div className={styles.awayBell}>
-          <img src={bellSolidIcon} alt="bellSolidIcon.svg" />
+        <div className={styles.awayBell} onClick={handleAwayBellClicked}>
+          <img
+            src={awaySubs ? bellSolidIcon : bellEmptyIcon}
+            alt="subscribeBell.svg"
+          />
         </div>
-        <div className={styles.homeBell}>
-          <img src={bellEmptyIcon} alt="bellEmptyIcon.svg" />
+        <div className={styles.homeBell} onClick={handleHomeBellClicked}>
+          <img
+            src={homeSubs ? bellSolidIcon : bellEmptyIcon}
+            alt="subscribeBell.svg"
+          />
         </div>
       </div>
     </div>

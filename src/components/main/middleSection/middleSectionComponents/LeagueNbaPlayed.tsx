@@ -1,6 +1,6 @@
 import LeaguePlayedTop from "./leaguePlayedTop/LeaguePlayedTop";
 import MatchItem from "./matches/NbaMatchItem";
-import { allGamesProps, nbaMatchItemProps, showSportType } from "types/types";
+import { allGamesProps, nbaMatchItemProps } from "types/types";
 import styles from "./LeaguePlayed.module.scss";
 
 export default function LeaguePlayed(props: allGamesProps) {
