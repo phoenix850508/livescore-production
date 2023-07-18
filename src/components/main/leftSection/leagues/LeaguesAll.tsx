@@ -26,6 +26,8 @@ export default function LeaguesAll() {
     <div className={styles.leaguesAll}>
       <h3 className={styles.leagueTitle}>All Leagues</h3>
       {locations.map((location: object, index: number) => {
+        let indexBottom = false;
+        if (index === 7) indexBottom = true;
         let leagueArr: string[] | null = null;
         if (leagues.has(Object.keys(location)[0])) {
           leagueArr = leagues.get(Object.keys(location)[0]);
@@ -36,6 +38,7 @@ export default function LeaguesAll() {
             locationIcon={Object.values(location)}
             locationTitle={Object.keys(location)}
             leagueArr={leagueArr}
+            indexBottom={indexBottom}
           />
         );
       })}

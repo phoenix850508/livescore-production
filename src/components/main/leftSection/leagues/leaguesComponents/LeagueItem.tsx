@@ -16,9 +16,13 @@ export default function LeagueItem(props: locationProps) {
   return (
     <>
       <div
-        className={clsx(styles.leagueItem, {
-          [styles.leagueItemFocus]: toggleDown,
-        })}
+        className={clsx(
+          styles.leagueItem,
+          {
+            [styles.leagueItemFocus]: toggleDown,
+          },
+          { [styles.indexBottom]: props.indexBottom }
+        )}
         onClick={handleDropdownClick}
       >
         <div className={styles.leagueInfoWrapper}>

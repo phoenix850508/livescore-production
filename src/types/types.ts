@@ -11,6 +11,7 @@ export type locationProps = {
   locationIcon: string[];
   locationTitle: string[];
   leagueArr?: string[] | null;
+  indexBottom?: boolean;
 };
 
 export type initDateState = {

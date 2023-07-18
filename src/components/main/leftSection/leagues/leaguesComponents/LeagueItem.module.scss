@@ -8,6 +8,12 @@
     background-color: rgba(14, 17, 21, 0.05);
   }
 }
+.indexBottom {
+  &:hover {
+    background-color: rgba(14, 17, 21, 0.05);
+    border-radius: 0 0 30px 30px;
+  }
+}
 
 .leagueItemFocus {
   background-color: rgba(14, 17, 21, 0.05);
