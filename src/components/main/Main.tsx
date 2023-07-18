@@ -11,7 +11,7 @@ export default function Main(props: showSportType) {
       <MatchContextProvider>
         <LeftSection />
         <MiddleSection showSport={props.showSport} />
-        <RightSection />
+        <RightSection showSport={props.showSport} />
       </MatchContextProvider>
     </div>
   );

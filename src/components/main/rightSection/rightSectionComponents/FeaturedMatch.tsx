@@ -4,9 +4,10 @@ import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import { useNavigate } from "react-router-dom";
 import { getTeam } from "api/nba";
+import { showSportType } from "types/types";
 import styles from "./FeaturedMatch.module.scss";
 
-export default function FeaturedMatch() {
+export default function FeaturedMatch(props: showSportType) {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/match");
@@ -31,8 +32,8 @@ export default function FeaturedMatch() {
         setAwayTeamLogo(response?.data[0].response.logo);
       }
     };
-    asyncGetTeam();
-  }, [awayTeam]);
+    if (props.showSport === "basketball") asyncGetTeam();
+  }, [awayTeam, props.showSport]);
 
   useEffect(() => {
     const asyncGetTeam = async () => {
@@ -41,8 +42,8 @@ export default function FeaturedMatch() {
         setHomeTeamLogo(response?.data[0].response.logo);
       }
     };
-    asyncGetTeam();
-  }, [homeTeam]);
+    if (props.showSport === "basketball") asyncGetTeam();
+  }, [homeTeam, props.showSport]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>

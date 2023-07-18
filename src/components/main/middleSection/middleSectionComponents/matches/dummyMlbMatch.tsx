@@ -1,0 +1,45 @@
+export const dummyMlbMatch = [
+  {
+    gameDate: "20230410",
+    away: "CHW",
+    lineScore: {
+      away: {
+        H: "8",
+        R: 4,
+        team: "CHW",
+        scoresByInning: {
+          "1": "0",
+          "2": "0",
+          "3": "0",
+          "4": "4",
+          "5": "0",
+          "6": "0",
+          "7": "0",
+          "8": "0",
+          "9": "0",
+        },
+        E: "3",
+      },
+      home: {
+        H: "4",
+        R: 3,
+        team: "MIN",
+        scoresByInning: {
+          "1": "0",
+          "2": "0",
+          "3": "1",
+          "4": "1",
+          "5": "1",
+          "6": "0",
+          "7": "0",
+          "8": "0",
+          "9": "0",
+        },
+        E: "0",
+      },
+    },
+    currentInning: "Final",
+    gameID: "20230410_CHW@MIN",
+    home: "MIN",
+  },
+];

@@ -24,3 +24,15 @@ export const getMlbGames = async (date: string) => {
     console.error("GET mlb games failed: ", error);
   }
 };
+
+// get per match line score
+export const getMlbMatchScore = async (gameID: string) => {
+  try {
+    const response = axiosInstance.get(
+      `${base_url}/getMLBLineScore?gameID=${gameID}`
+    );
+    return response;
+  } catch (error) {
+    console.error(["GET mlb match score failed: ", error]);
+  }
+};

@@ -9,16 +9,16 @@ export default function dateReducer(
       return {
         ...match,
         awayTeam: {
-          nickname: action.awayTeam.nickname,
-          id: action.awayTeam.id,
+          nickname: action?.awayTeam?.nickname,
+          id: action?.awayTeam?.id,
         },
         homeTeam: {
-          nickname: action.homeTeam.nickname,
-          id: action.homeTeam.id,
+          nickname: action?.homeTeam?.nickname,
+          id: action?.homeTeam?.id,
         },
         scores: {
-          awayTotal: action.scores.awayTotal,
-          homeTotal: action.scores.homeTotal,
+          awayTotal: action?.scores?.awayTotal,
+          homeTotal: action?.scores?.homeTotal,
         },
       };
     }

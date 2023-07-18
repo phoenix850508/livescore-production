@@ -65,7 +65,19 @@ export type nbaMatchItemProps = {
   };
 };
 
-export type mlbMatchItemProps = {};
+export type mlbMatchItemProps = {
+  away?: string;
+  gameDate?: string;
+  gameID?: string;
+  gameTime?: string;
+  home?: string;
+  teamIDAway?: string;
+  teamIDHome?: string;
+};
+
+export type mlbLiveMatchItemProps = {
+  dummtMlbLiveGames: object;
+};
 
 export type initMatchType = {
   awayTeam?: {
@@ -77,29 +89,29 @@ export type initMatchType = {
     id?: number | undefined;
   };
   scores?: {
-    awayTotal?: number | string | undefined;
-    homeTotal?: number | string | undefined;
+    awayTotal?: number | string | undefined | null;
+    homeTotal?: number | string | undefined | null;
   };
 };
 
 export type matchActionType = {
   type: "selectFeaturedMatch";
-  awayTeam: {
+  awayTeam?: {
     nickname: string | undefined;
     id: number | undefined;
   };
-  homeTeam: {
+  homeTeam?: {
     nickname: string | undefined;
     id: number | undefined;
   };
-  scores: {
-    awayTotal: number | undefined;
-    homeTotal: number | undefined;
+  scores?: {
+    awayTotal?: number | string | undefined | null;
+    homeTotal?: number | string | undefined | null;
   };
 };
 
 export type showSportType = {
-  showSport: string;
+  showSport?: string;
 };
 
 export type handleSportType = {
@@ -111,6 +123,14 @@ export type handleSportType = {
     | React.MouseEventHandler<HTMLImageElement>;
 };
 
-export type newType = {
-  onBasketballClick?: React.MouseEventHandler<HTMLImageElement>;
+export type matchDataObjType = {
+  currentInning?: string;
+  lineScore?: {
+    away?: {
+      R?: number | undefined | null;
+    };
+    home?: {
+      R?: number | undefined | null;
+    };
+  };
 };
