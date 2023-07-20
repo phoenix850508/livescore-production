@@ -1,6 +1,10 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
-import { mlbMatchItemProps, matchDataObjType } from "types/types";
+import {
+  mlbMatchItemProps,
+  matchDataObjType,
+  showFavorites,
+} from "types/types";
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import { getMlbMatchScore } from "api/mlb";
@@ -8,7 +12,9 @@ import { dummyMlbMatch } from "./dummyMlbMatch";
 import clsx from "clsx";
 import styles from "./MlbMatchItem.module.scss";
 
-export default function MlbMatchItem(props: mlbMatchItemProps) {
+interface combinedTypes extends mlbMatchItemProps, showFavorites {}
+
+export default function MlbMatchItem(props: combinedTypes) {
   // use useState to decide whether the team is subscribed
   const [awaySubs, setAwaySubs] = useState(false);
   const [homeSubs, setHomeSubs] = useState(false);
@@ -153,7 +159,7 @@ export default function MlbMatchItem(props: mlbMatchItemProps) {
         homeTotal: matchHomeScore,
       },
     });
-  }, []);
+  }, [matchAwayScore, matchHomeScore]);
 
   // decide whether the subscription bell should be solid
   useEffect(() => {

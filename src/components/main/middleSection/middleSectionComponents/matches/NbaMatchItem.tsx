@@ -1,12 +1,14 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
-import { nbaMatchItemProps } from "types/types";
+import { nbaMatchItemProps, showFavorites } from "types/types";
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import clsx from "clsx";
 import styles from "./NbaMatchItem.module.scss";
 
-export default function NbaMatchItem(props: nbaMatchItemProps) {
+interface combinedTypes extends nbaMatchItemProps, showFavorites {}
+
+export default function NbaMatchItem(props: combinedTypes) {
   // use useState to decide whether the team is subscribed
   const [awaySubs, setAwaySubs] = useState(false);
   const [homeSubs, setHomeSubs] = useState(false);

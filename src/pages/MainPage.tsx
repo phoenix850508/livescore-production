@@ -1,6 +1,5 @@
 import Navbar from "components/header/Navbar";
 import Main from "components/main/Main";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function MainPage() {
@@ -15,12 +14,12 @@ export default function MainPage() {
     setShowSport("baseball");
     setShowFavorites(false);
   };
+  // use useState to control whether shos favorites
   const handleFavoritesClick = () => {
     setShowFavorites(true);
   };
-  const navigate = useNavigate();
+  // when main is clicked, navigate to main page
   const handleBrandClick = () => {
-    navigate("/main");
     setShowFavorites(false);
     setShowSport("all");
   };

@@ -1,9 +1,11 @@
 import mlbIcon from "icons/mlbIcon.svg";
 import nbaIcon from "icons/nbaIcon.svg";
-import { allGamesProps } from "types/types";
+import { allGamesProps, showSportType } from "types/types";
 import styles from "./LeaguePlayedTop.module.scss";
 
-export default function LeaguePlayedTop(props: allGamesProps) {
+interface combinedTypes extends allGamesProps, showSportType {}
+
+export default function LeaguePlayedTop(props: combinedTypes) {
   return (
     <div className={styles.leaguePlayedTop}>
       <div className={styles.leagueInfo}>

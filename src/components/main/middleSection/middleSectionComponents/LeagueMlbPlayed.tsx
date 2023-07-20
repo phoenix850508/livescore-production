@@ -1,9 +1,20 @@
 import LeaguePlayedTop from "./leaguePlayedTop/LeaguePlayedTop";
 import MlbMatchItem from "./matches/MlbMatchItem";
-import { allGamesProps, mlbMatchItemProps } from "types/types";
+import {
+  allGamesProps,
+  mlbMatchItemProps,
+  showFavorites,
+  showSportType,
+} from "types/types";
 import styles from "./LeagueMlbPlayed.module.scss";
 
-export default function LeagueMlbPlayed(props: allGamesProps) {
+interface combinedTypes
+  extends allGamesProps,
+    mlbMatchItemProps,
+    showFavorites,
+    showSportType {}
+
+export default function LeagueMlbPlayed(props: combinedTypes) {
   const objectData = props.mlbGames && props?.mlbGames;
   const allGames: object[] | undefined =
     objectData && Object.values(objectData);
@@ -11,7 +22,7 @@ export default function LeagueMlbPlayed(props: allGamesProps) {
     <div className={styles.leaguePlayed}>
       <LeaguePlayedTop showSport={props.showSport} mlbGames={props.mlbGames} />
       {allGames &&
-        allGames.map((match: mlbMatchItemProps, index: number) => {
+        allGames.map((match: combinedTypes, index: number) => {
           return (
             <MlbMatchItem
               key={index}

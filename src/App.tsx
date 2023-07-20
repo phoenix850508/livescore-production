@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import {
   HomePage,
   MainPage,
@@ -21,7 +21,7 @@ function App() {
             <Route path="*" element={<HomePage />} />
             <Route path="main" element={<MainPage />} />
             <Route path="match" element={<MatchInfoPage />} />
-            <Route path="leagueInfo" element={<LeagueInfoPage />} />
+            <Route path="leagueInfo/:league" element={<LeagueInfoPage />} />
             <Route path="teamInfo" element={<TeamInfoPage />} />
           </Routes>
         </DateContextProvider>
