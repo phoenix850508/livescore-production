@@ -30,6 +30,18 @@
     display: flex;
     align-items: center;
     gap: 18px;
+    .season {
+      padding: 0.5rem;
+      margin-bottom: 5px;
+      max-width: 200px;
+      border-radius: 5px;
+      border: 1px solid #a7aaaf;
+      &:hover,
+      &:focus {
+        border-color: #4a4a4a;
+        cursor: pointer;
+      }
+    }
     .locationLogo {
       width: 67px;
       height: 67px;

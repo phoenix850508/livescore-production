@@ -42,7 +42,7 @@ export default function LeagueItem(props: locationProps) {
         <ul>
           {props.leagueArr.map((league: string, index: number) => {
             const handleLeagueClick = () => {
-              navigate("/leagueInfo");
+              navigate(`/leagueInfo/${league.toLowerCase()}`);
             };
             return (
               <li

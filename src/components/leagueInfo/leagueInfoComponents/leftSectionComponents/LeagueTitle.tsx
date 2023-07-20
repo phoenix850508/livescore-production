@@ -1,14 +1,31 @@
 import nbaIcon from "icons/nbaIcon.svg";
 import mlbIcon from "icons/mlbIcon.svg";
 import usaIcon from "icons/usaIcon.svg";
+import { useContext } from "react";
+import { SeasonContext } from "context/SeasonContext";
+import { leagueParamsProps } from "types/types";
 import styles from "./LeagueTitle.module.scss";
 
-export default function LeagueTitle() {
+export default function LeagueTitle(props: leagueParamsProps) {
+  const { dispatch } = useContext(SeasonContext);
+  const handleSeasonChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch({
+      type: "selectSeason",
+      season: e.target.value,
+    });
+  };
   return (
     <div className={styles.leagueTitle}>
-      <img className={styles.leagueLogo} src={nbaIcon} alt="nbaIcon.svg" />
+      <img
+        className={styles.leagueLogo}
+        src={props.league === "nba" ? nbaIcon : mlbIcon}
+        alt="leagueIcon.svg"
+      />
       <div className={styles.titleRight}>
-        <div className={styles.titleName}>National Basketball Association</div>
+        <div className={styles.titleName}>
+          {props.league === "nba" && "National Basketball Association"}
+          {props.league === "mlb" && "Major League Baseball"}
+        </div>
         <div className={styles.location}>
           <img
             className={styles.locationLogo}
@@ -16,6 +33,20 @@ export default function LeagueTitle() {
             alt="usaIcon.svg"
           />
           <div className={styles.locationName}>United States</div>
+          <select
+            className={styles.season}
+            name="season"
+            id="season"
+            onChange={handleSeasonChange}
+          >
+            {props.league === "mlb" && <option value="2023">2023</option>}
+            {props.league === "nba" && (
+              <>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+              </>
+            )}
+          </select>
         </div>
       </div>
     </div>

@@ -20,7 +20,6 @@ interface combinedNavbarTypes
     showSportType {}
 
 export default function Navbar(props: combinedNavbarTypes) {
-  console.log(props.league);
   return (
     <header>
       <NavbarTop
@@ -31,6 +30,7 @@ export default function Navbar(props: combinedNavbarTypes) {
         onBasketballClick={props.onBasketballClick}
         onBaseballClick={props.onBaseballClick}
         showSport={props.showSport}
+        league={props.league}
       />
     </header>
   );
@@ -71,7 +71,10 @@ function NavbarTop(props: onFavoritesClick) {
   );
 }
 
-interface combinedNavBottomTypes extends showSportType, handleSportType {}
+interface combinedNavBottomTypes
+  extends showSportType,
+    handleSportType,
+    leagueParamsProps {}
 
 function NavbarBottom(props: combinedNavBottomTypes) {
   return (
@@ -79,7 +82,8 @@ function NavbarBottom(props: combinedNavBottomTypes) {
       <ul className={styles.navbarIconList}>
         <li
           className={clsx({
-            [styles.markBasketball]: props.showSport === "basketball",
+            [styles.markBasketball]:
+              props.showSport === "basketball" || props.league === "nba",
           })}
         >
           <img
@@ -92,7 +96,8 @@ function NavbarBottom(props: combinedNavBottomTypes) {
         </li>
         <li
           className={clsx({
-            [styles.markBaseball]: props.showSport === "baseball",
+            [styles.markBaseball]:
+              props.showSport === "baseball" || props.league === "mlb",
           })}
         >
           <img

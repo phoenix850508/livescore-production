@@ -3920,7 +3920,7 @@
           "nickname": "Mavericks",
           "code": "DAL",
           "city": "Dallas",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/dallas-mavericks.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
         },
         {
           "id": 9,
@@ -3928,14 +3928,14 @@
           "nickname": "Nuggets",
           "code": "DEN",
           "city": "Denver",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/denver-nuggets.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
         },
         {
           "id": 11,
           "name": "Golden State Warriors",
           "nickname": "Warriors",
           "city": "Golden State",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/golden-state-warriors.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
         },
         {
           "id": 14,
@@ -3943,7 +3943,7 @@
           "nickname": "Rockets",
           "code": "HOU",
           "city": "Houston",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/houston-rockets.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
         },
         {
           "id": 16,
@@ -3951,7 +3951,7 @@
           "nickname": "Clippers",
           "code": "LAC",
           "city": "LA",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/la-clippers.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
         },
         {
           "id": 17,
@@ -3959,7 +3959,7 @@
           "nickname": "Lakers",
           "code": "LAL",
           "city": "Los Angeles",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/los-angeles-lakers.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
         },
         {
           "id": 19,
@@ -3967,7 +3967,7 @@
           "nickname": "Grizzlies",
           "code": "MEM",
           "city": "Memphis",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/memphis-grizzlies.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
         },
         {
           "id": 22,
@@ -3975,7 +3975,7 @@
           "nickname": "Timberwolves",
           "code": "MIN",
           "city": "Minnesota",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/minnesota-timberwolves.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
         },
         {
           "id": 23,
@@ -3983,7 +3983,7 @@
           "nickname": "Pelicans",
           "code": "NOP",
           "city": "New Orleans",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/new-orleans-pelicans.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
         },
         {
           "id": 25,
@@ -3991,7 +3991,7 @@
           "nickname": "Thunder",
           "code": "OKC",
           "city": "Oklahoma City",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/oklahoma-city-thunder-logo.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
         },
         {
           "id": 28,
@@ -3999,7 +3999,7 @@
           "nickname": "Suns",
           "code": "PHX",
           "city": "Phoenix",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/phoenix-suns.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
         },
         {
           "id": 29,
@@ -4007,7 +4007,7 @@
           "nickname": "Trail Blazers",
           "code": "POR",
           "city": "Portland",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/portland-trail-blazers.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
         },
         {
           "id": 30,
@@ -4015,7 +4015,7 @@
           "nickname": "Kings",
           "code": "SAC",
           "city": "Sacramento",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/sacramento-kings.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
         },
         {
           "id": 31,
@@ -4023,7 +4023,7 @@
           "nickname": "Spurs",
           "code": "SAS",
           "city": "San Antonio",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/san-antonio-spurs.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
         },
         {
           "id": 40,
@@ -4031,7 +4031,7 @@
           "nickname": "Jazz",
           "code": "UTA",
           "city": "Utah",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaWestTeams/utah-jazz.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
         }
       ]
     },
@@ -4043,7 +4043,7 @@
           "nickname": "Hawks",
           "code": "ATL",
           "city": "Atlanta",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/atlanta-hawks.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
         },
         {
           "id": 2,
@@ -4051,7 +4051,7 @@
           "nickname": "Celtics",
           "code": "BOS",
           "city": "Boston",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/boston-celtics.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
         },
         {
           "id": 4,
@@ -4059,7 +4059,7 @@
           "nickname": "Nets",
           "code": "BKN",
           "city": "Brooklyn",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/brooklyn-nets.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
         },
         {
           "id": 5,
@@ -4067,7 +4067,7 @@
           "nickname": "Hornets",
           "code": "CHA",
           "city": "Charlotte",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/charlotte-hornets.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
         },
         {
           "id": 6,
@@ -4075,7 +4075,7 @@
           "nickname": "Bulls",
           "code": "CHI",
           "city": "Chicago",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/chicago-bulls.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
         },
         {
           "id": 7,
@@ -4083,7 +4083,7 @@
           "nickname": "Cavaliers",
           "code": "CLE",
           "city": "Cleveland",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/cleveland-cavaliers.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
         },
         {
           "id": 10,
@@ -4091,7 +4091,7 @@
           "nickname": "Pistons",
           "code": "DET",
           "city": "Detroit",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/detroit-pistons.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
         },
         {
           "id": 15,
@@ -4099,7 +4099,7 @@
           "nickname": "Pacers",
           "code": "IND",
           "city": "Indiana",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/indiana-pacers.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
         },
         {
           "id": 20,
@@ -4107,7 +4107,7 @@
           "nickname": "Heat",
           "code": "MIA",
           "city": "Miami",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/miami-heat.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
         },
         {
           "id": 21,
@@ -4115,7 +4115,7 @@
           "nickname": "Bucks",
           "code": "MIL",
           "city": "Milwaukee",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/milwaukee-bucks.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
         },
         {
           "id": 24,
@@ -4123,7 +4123,7 @@
           "nickname": "Knicks",
           "code": "NYK",
           "city": "New York",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/new-york-knicks.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
         },
         {
           "id": 26,
@@ -4131,7 +4131,7 @@
           "nickname": "Magic",
           "code": "ORL",
           "city": "Orlando",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/orlando-magic.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
         },
         {
           "id": 27,
@@ -4139,7 +4139,7 @@
           "nickname": "76ers",
           "code": "PHI",
           "city": "Philadelphia",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/philidephia-76ers.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
         },
         {
           "id": 38,
@@ -4147,7 +4147,7 @@
           "nickname": "Raptors",
           "code": "TOR",
           "city": "Toronto",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/toronto-raptors.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png"
         },
         {
           "id": 41,
@@ -4155,7 +4155,7 @@
           "nickname": "Wizards",
           "code": "WAS",
           "city": "Washington",
-          "logo": "file:///Users/sutaoliang/live-score/src/icons/nbaEastTeams/washington-wizards.svg"
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
         }
       ]
     }
@@ -4172,14 +4172,40 @@
                 "id": 2,
                 "name": "Boston Celtics",
                 "nickname": "Celtics",
-                "code": "BOS"
+                "code": "BOS",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 2,
                 "win": 57,
                 "loss": 25
-              }
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 1,
+                "win": 57,
+                "loss": 25,
+                "gamesBehind": null
+              },
+              "win": {
+                "home": 32,
+                "away": 25,
+                "total": 57,
+                "percentage": "0.695",
+                "lastTen": 8
+              },
+              "loss": {
+                "home": 9,
+                "away": 16,
+                "total": 25,
+                "percentage": "0.305",
+                "lastTen": 2
+              },
+              "gamesBehind": null,
+              "streak": 3,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4188,14 +4214,40 @@
                 "id": 27,
                 "name": "Philadelphia 76ers",
                 "nickname": "76ers",
-                "code": "PHI"
+                "code": "PHI",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 3,
                 "win": 54,
                 "loss": 28
-              }
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 2,
+                "win": 54,
+                "loss": 28,
+                "gamesBehind": "3"
+              },
+              "win": {
+                "home": 29,
+                "away": 25,
+                "total": 54,
+                "percentage": "0.659",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 12,
+                "away": 16,
+                "total": 28,
+                "percentage": "0.341",
+                "lastTen": 5
+              },
+              "gamesBehind": "3",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4204,14 +4256,40 @@
                 "id": 24,
                 "name": "New York Knicks",
                 "nickname": "Knicks",
-                "code": "NYK"
+                "code": "NYK",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 5,
                 "win": 47,
                 "loss": 35
-              }
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 3,
+                "win": 47,
+                "loss": 35,
+                "gamesBehind": "10"
+              },
+              "win": {
+                "home": 23,
+                "away": 24,
+                "total": 47,
+                "percentage": "0.573",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 18,
+                "away": 17,
+                "total": 35,
+                "percentage": "0.427",
+                "lastTen": 5
+              },
+              "gamesBehind": "10",
+              "streak": 2,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4220,14 +4298,40 @@
                 "id": 4,
                 "name": "Brooklyn Nets",
                 "nickname": "Nets",
-                "code": "BKN"
+                "code": "BKN",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 6,
                 "win": 45,
                 "loss": 37
-              }
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 4,
+                "win": 45,
+                "loss": 37,
+                "gamesBehind": "12"
+              },
+              "win": {
+                "home": 23,
+                "away": 22,
+                "total": 45,
+                "percentage": "0.549",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 18,
+                "away": 19,
+                "total": 37,
+                "percentage": "0.451",
+                "lastTen": 4
+              },
+              "gamesBehind": "12",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4236,14 +4340,40 @@
                 "id": 38,
                 "name": "Toronto Raptors",
                 "nickname": "Raptors",
-                "code": "TOR"
+                "code": "TOR",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 9,
                 "win": 41,
                 "loss": 41
-              }
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 5,
+                "win": 41,
+                "loss": 41,
+                "gamesBehind": "16"
+              },
+              "win": {
+                "home": 27,
+                "away": 14,
+                "total": 41,
+                "percentage": "0.500",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 14,
+                "away": 27,
+                "total": 41,
+                "percentage": "0.500",
+                "lastTen": 4
+              },
+              "gamesBehind": "16",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4252,14 +4382,40 @@
                 "id": 21,
                 "name": "Milwaukee Bucks",
                 "nickname": "Bucks",
-                "code": "MIL"
+                "code": "MIL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 1,
                 "win": 58,
                 "loss": 24
-              }
+              },
+              "division": {
+                "name": "central",
+                "rank": 1,
+                "win": 58,
+                "loss": 24,
+                "gamesBehind": null
+              },
+              "win": {
+                "home": 32,
+                "away": 26,
+                "total": 58,
+                "percentage": "0.707",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 9,
+                "away": 15,
+                "total": 24,
+                "percentage": "0.293",
+                "lastTen": 4
+              },
+              "gamesBehind": null,
+              "streak": 2,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4268,14 +4424,40 @@
                 "id": 7,
                 "name": "Cleveland Cavaliers",
                 "nickname": "Cavaliers",
-                "code": "CLE"
+                "code": "CLE",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 4,
                 "win": 51,
                 "loss": 31
-              }
+              },
+              "division": {
+                "name": "central",
+                "rank": 2,
+                "win": 51,
+                "loss": 31,
+                "gamesBehind": "7"
+              },
+              "win": {
+                "home": 31,
+                "away": 20,
+                "total": 51,
+                "percentage": "0.622",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 10,
+                "away": 21,
+                "total": 31,
+                "percentage": "0.378",
+                "lastTen": 3
+              },
+              "gamesBehind": "7",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4284,14 +4466,40 @@
                 "id": 6,
                 "name": "Chicago Bulls",
                 "nickname": "Bulls",
-                "code": "CHI"
+                "code": "CHI",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 10,
                 "win": 40,
                 "loss": 42
-              }
+              },
+              "division": {
+                "name": "central",
+                "rank": 3,
+                "win": 40,
+                "loss": 42,
+                "gamesBehind": "18"
+              },
+              "win": {
+                "home": 22,
+                "away": 18,
+                "total": 40,
+                "percentage": "0.488",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 19,
+                "away": 23,
+                "total": 42,
+                "percentage": "0.512",
+                "lastTen": 4
+              },
+              "gamesBehind": "18",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4300,14 +4508,40 @@
                 "id": 15,
                 "name": "Indiana Pacers",
                 "nickname": "Pacers",
-                "code": "IND"
+                "code": "IND",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 12,
                 "win": 35,
                 "loss": 47
-              }
+              },
+              "division": {
+                "name": "central",
+                "rank": 4,
+                "win": 35,
+                "loss": 47,
+                "gamesBehind": "23"
+              },
+              "win": {
+                "home": 20,
+                "away": 15,
+                "total": 35,
+                "percentage": "0.427",
+                "lastTen": 3
+              },
+              "loss": {
+                "home": 21,
+                "away": 26,
+                "total": 47,
+                "percentage": "0.573",
+                "lastTen": 7
+              },
+              "gamesBehind": "23",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4316,14 +4550,40 @@
                 "id": 10,
                 "name": "Detroit Pistons",
                 "nickname": "Pistons",
-                "code": "DET"
+                "code": "DET",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 15,
                 "win": 17,
                 "loss": 65
-              }
+              },
+              "division": {
+                "name": "central",
+                "rank": 5,
+                "win": 17,
+                "loss": 65,
+                "gamesBehind": "41"
+              },
+              "win": {
+                "home": 9,
+                "away": 8,
+                "total": 17,
+                "percentage": "0.207",
+                "lastTen": 1
+              },
+              "loss": {
+                "home": 32,
+                "away": 33,
+                "total": 65,
+                "percentage": "0.793",
+                "lastTen": 9
+              },
+              "gamesBehind": "41",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4332,14 +4592,40 @@
                 "id": 1,
                 "name": "Atlanta Hawks",
                 "nickname": "Hawks",
-                "code": "ATL"
+                "code": "ATL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 8,
                 "win": 41,
                 "loss": 41
-              }
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 2,
+                "win": 41,
+                "loss": 41,
+                "gamesBehind": "3"
+              },
+              "win": {
+                "home": 24,
+                "away": 17,
+                "total": 41,
+                "percentage": "0.500",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 17,
+                "away": 24,
+                "total": 41,
+                "percentage": "0.500",
+                "lastTen": 5
+              },
+              "gamesBehind": "3",
+              "streak": 2,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4348,14 +4634,40 @@
                 "id": 20,
                 "name": "Miami Heat",
                 "nickname": "Heat",
-                "code": "MIA"
+                "code": "MIA",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 7,
                 "win": 44,
                 "loss": 38
-              }
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 1,
+                "win": 44,
+                "loss": 38,
+                "gamesBehind": null
+              },
+              "win": {
+                "home": 27,
+                "away": 17,
+                "total": 44,
+                "percentage": "0.537",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 14,
+                "away": 24,
+                "total": 38,
+                "percentage": "0.463",
+                "lastTen": 4
+              },
+              "gamesBehind": null,
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4364,14 +4676,40 @@
                 "id": 41,
                 "name": "Washington Wizards",
                 "nickname": "Wizards",
-                "code": "WAS"
+                "code": "WAS",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 11,
                 "win": 35,
                 "loss": 47
-              }
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 3,
+                "win": 35,
+                "loss": 47,
+                "gamesBehind": "9"
+              },
+              "win": {
+                "home": 19,
+                "away": 16,
+                "total": 35,
+                "percentage": "0.427",
+                "lastTen": 3
+              },
+              "loss": {
+                "home": 22,
+                "away": 25,
+                "total": 47,
+                "percentage": "0.573",
+                "lastTen": 7
+              },
+              "gamesBehind": "9",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4380,14 +4718,40 @@
                 "id": 26,
                 "name": "Orlando Magic",
                 "nickname": "Magic",
-                "code": "ORL"
+                "code": "ORL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 13,
                 "win": 34,
                 "loss": 48
-              }
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 4,
+                "win": 34,
+                "loss": 48,
+                "gamesBehind": "10"
+              },
+              "win": {
+                "home": 20,
+                "away": 14,
+                "total": 34,
+                "percentage": "0.415",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 21,
+                "away": 27,
+                "total": 48,
+                "percentage": "0.585",
+                "lastTen": 5
+              },
+              "gamesBehind": "10",
+              "streak": 4,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4396,14 +4760,40 @@
                 "id": 5,
                 "name": "Charlotte Hornets",
                 "nickname": "Hornets",
-                "code": "CHA"
+                "code": "CHA",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
               },
               "conference": {
                 "name": "east",
                 "rank": 14,
                 "win": 27,
                 "loss": 55
-              }
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 5,
+                "win": 27,
+                "loss": 55,
+                "gamesBehind": "17"
+              },
+              "win": {
+                "home": 13,
+                "away": 14,
+                "total": 27,
+                "percentage": "0.329",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 28,
+                "away": 27,
+                "total": 55,
+                "percentage": "0.671",
+                "lastTen": 5
+              },
+              "gamesBehind": "17",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
             }
           ]
         },
@@ -4416,14 +4806,40 @@
                 "id": 9,
                 "name": "Denver Nuggets",
                 "nickname": "Nuggets",
-                "code": "DEN"
+                "code": "DEN",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 1,
                 "win": 53,
                 "loss": 29
-              }
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 1,
+                "win": 53,
+                "loss": 29,
+                "gamesBehind": null
+              },
+              "win": {
+                "home": 34,
+                "away": 19,
+                "total": 53,
+                "percentage": "0.646",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 7,
+                "away": 22,
+                "total": 29,
+                "percentage": "0.354",
+                "lastTen": 5
+              },
+              "gamesBehind": null,
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4432,14 +4848,40 @@
                 "id": 22,
                 "name": "Minnesota Timberwolves",
                 "nickname": "Timberwolves",
-                "code": "MIN"
+                "code": "MIN",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 8,
                 "win": 42,
                 "loss": 40
-              }
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 2,
+                "win": 42,
+                "loss": 40,
+                "gamesBehind": "11"
+              },
+              "win": {
+                "home": 22,
+                "away": 20,
+                "total": 42,
+                "percentage": "0.512",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 19,
+                "away": 21,
+                "total": 40,
+                "percentage": "0.488",
+                "lastTen": 3
+              },
+              "gamesBehind": "11",
+              "streak": 3,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4448,14 +4890,40 @@
                 "id": 25,
                 "name": "Oklahoma City Thunder",
                 "nickname": "Thunder",
-                "code": "OKC"
+                "code": "OKC",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 10,
                 "win": 40,
                 "loss": 42
-              }
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 3,
+                "win": 40,
+                "loss": 42,
+                "gamesBehind": "13"
+              },
+              "win": {
+                "home": 24,
+                "away": 16,
+                "total": 40,
+                "percentage": "0.488",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 17,
+                "away": 25,
+                "total": 42,
+                "percentage": "0.512",
+                "lastTen": 6
+              },
+              "gamesBehind": "13",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4464,14 +4932,40 @@
                 "id": 40,
                 "name": "Utah Jazz",
                 "nickname": "Jazz",
-                "code": "UTA"
+                "code": "UTA",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 12,
                 "win": 37,
                 "loss": 45
-              }
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 4,
+                "win": 37,
+                "loss": 45,
+                "gamesBehind": "16"
+              },
+              "win": {
+                "home": 23,
+                "away": 14,
+                "total": 37,
+                "percentage": "0.451",
+                "lastTen": 2
+              },
+              "loss": {
+                "home": 18,
+                "away": 27,
+                "total": 45,
+                "percentage": "0.549",
+                "lastTen": 8
+              },
+              "gamesBehind": "16",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4480,14 +4974,40 @@
                 "id": 29,
                 "name": "Portland Trail Blazers",
                 "nickname": "Trail Blazers",
-                "code": "POR"
+                "code": "POR",
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 13,
                 "win": 33,
                 "loss": 49
-              }
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 5,
+                "win": 33,
+                "loss": 49,
+                "gamesBehind": "20"
+              },
+              "win": {
+                "home": 17,
+                "away": 16,
+                "total": 33,
+                "percentage": "0.402",
+                "lastTen": 1
+              },
+              "loss": {
+                "home": 24,
+                "away": 25,
+                "total": 49,
+                "percentage": "0.598",
+                "lastTen": 9
+              },
+              "gamesBehind": "20",
+              "streak": 4,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4496,14 +5016,40 @@
                 "id": 30,
                 "name": "Sacramento Kings",
                 "nickname": "Kings",
-                "code": "SAC"
+                "code": "SAC",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 3,
                 "win": 48,
                 "loss": 34
-              }
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 1,
+                "win": 48,
+                "loss": 34,
+                "gamesBehind": null
+              },
+              "win": {
+                "home": 23,
+                "away": 25,
+                "total": 48,
+                "percentage": "0.585",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 18,
+                "away": 16,
+                "total": 34,
+                "percentage": "0.415",
+                "lastTen": 5
+              },
+              "gamesBehind": null,
+              "streak": 3,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4512,14 +5058,40 @@
                 "id": 28,
                 "name": "Phoenix Suns",
                 "nickname": "Suns",
-                "code": "PHX"
+                "code": "PHX",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 4,
                 "win": 45,
                 "loss": 37
-              }
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 2,
+                "win": 45,
+                "loss": 37,
+                "gamesBehind": "3"
+              },
+              "win": {
+                "home": 28,
+                "away": 17,
+                "total": 45,
+                "percentage": "0.549",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 13,
+                "away": 24,
+                "total": 37,
+                "percentage": "0.451",
+                "lastTen": 3
+              },
+              "gamesBehind": "3",
+              "streak": 2,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4528,14 +5100,40 @@
                 "id": 16,
                 "name": "LA Clippers",
                 "nickname": "Clippers",
-                "code": "LAC"
+                "code": "LAC",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 5,
                 "win": 44,
                 "loss": 38
-              }
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 3,
+                "win": 44,
+                "loss": 38,
+                "gamesBehind": "4"
+              },
+              "win": {
+                "home": 23,
+                "away": 21,
+                "total": 44,
+                "percentage": "0.537",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 18,
+                "away": 20,
+                "total": 38,
+                "percentage": "0.463",
+                "lastTen": 4
+              },
+              "gamesBehind": "4",
+              "streak": 3,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4544,14 +5142,40 @@
                 "id": 11,
                 "name": "Golden State Warriors",
                 "nickname": "Warriors",
-                "code": "GSW"
+                "code": "GSW",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 6,
                 "win": 44,
                 "loss": 38
-              }
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 4,
+                "win": 44,
+                "loss": 38,
+                "gamesBehind": "4"
+              },
+              "win": {
+                "home": 33,
+                "away": 11,
+                "total": 44,
+                "percentage": "0.537",
+                "lastTen": 8
+              },
+              "loss": {
+                "home": 8,
+                "away": 30,
+                "total": 38,
+                "percentage": "0.463",
+                "lastTen": 2
+              },
+              "gamesBehind": "4",
+              "streak": 3,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4560,14 +5184,40 @@
                 "id": 17,
                 "name": "Los Angeles Lakers",
                 "nickname": "Lakers",
-                "code": "LAL"
+                "code": "LAL",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 7,
                 "win": 43,
                 "loss": 39
-              }
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 5,
+                "win": 43,
+                "loss": 39,
+                "gamesBehind": "5"
+              },
+              "win": {
+                "home": 23,
+                "away": 20,
+                "total": 43,
+                "percentage": "0.524",
+                "lastTen": 8
+              },
+              "loss": {
+                "home": 18,
+                "away": 21,
+                "total": 39,
+                "percentage": "0.476",
+                "lastTen": 2
+              },
+              "gamesBehind": "5",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4576,14 +5226,40 @@
                 "id": 19,
                 "name": "Memphis Grizzlies",
                 "nickname": "Grizzlies",
-                "code": "MEM"
+                "code": "MEM",
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 2,
                 "win": 51,
                 "loss": 31
-              }
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 1,
+                "win": 51,
+                "loss": 31,
+                "gamesBehind": null
+              },
+              "win": {
+                "home": 35,
+                "away": 16,
+                "total": 51,
+                "percentage": "0.622",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 6,
+                "away": 25,
+                "total": 31,
+                "percentage": "0.378",
+                "lastTen": 4
+              },
+              "gamesBehind": null,
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4592,14 +5268,40 @@
                 "id": 23,
                 "name": "New Orleans Pelicans",
                 "nickname": "Pelicans",
-                "code": "NOP"
+                "code": "NOP",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 9,
                 "win": 42,
                 "loss": 40
-              }
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 2,
+                "win": 42,
+                "loss": 40,
+                "gamesBehind": "9"
+              },
+              "win": {
+                "home": 27,
+                "away": 15,
+                "total": 42,
+                "percentage": "0.512",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 14,
+                "away": 26,
+                "total": 40,
+                "percentage": "0.488",
+                "lastTen": 3
+              },
+              "gamesBehind": "9",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4608,14 +5310,40 @@
                 "id": 8,
                 "name": "Dallas Mavericks",
                 "nickname": "Mavericks",
-                "code": "DAL"
+                "code": "DAL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 11,
                 "win": 38,
                 "loss": 44
-              }
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 3,
+                "win": 38,
+                "loss": 44,
+                "gamesBehind": "13"
+              },
+              "win": {
+                "home": 23,
+                "away": 15,
+                "total": 38,
+                "percentage": "0.463",
+                "lastTen": 2
+              },
+              "loss": {
+                "home": 18,
+                "away": 26,
+                "total": 44,
+                "percentage": "0.537",
+                "lastTen": 8
+              },
+              "gamesBehind": "13",
+              "streak": 2,
+              "winStreak": false,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4624,14 +5352,40 @@
                 "id": 14,
                 "name": "Houston Rockets",
                 "nickname": "Rockets",
-                "code": "HOU"
+                "code": "HOU",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 14,
                 "win": 22,
                 "loss": 60
-              }
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 4,
+                "win": 22,
+                "loss": 60,
+                "gamesBehind": "29"
+              },
+              "win": {
+                "home": 14,
+                "away": 8,
+                "total": 22,
+                "percentage": "0.268",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 27,
+                "away": 33,
+                "total": 60,
+                "percentage": "0.732",
+                "lastTen": 6
+              },
+              "gamesBehind": "29",
+              "streak": 3,
+              "winStreak": true,
+              "tieBreakerPoints": null
             },
             {
               "league": "standard",
@@ -4640,14 +5394,1310 @@
                 "id": 31,
                 "name": "San Antonio Spurs",
                 "nickname": "Spurs",
-                "code": "SAS"
+                "code": "SAS",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
               },
               "conference": {
                 "name": "west",
                 "rank": 15,
                 "win": 22,
                 "loss": 60
-              }
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 5,
+                "win": 22,
+                "loss": 60,
+                "gamesBehind": "29"
+              },
+              "win": {
+                "home": 14,
+                "away": 8,
+                "total": 22,
+                "percentage": "0.268",
+                "lastTen": 3
+              },
+              "loss": {
+                "home": 27,
+                "away": 33,
+                "total": 60,
+                "percentage": "0.732",
+                "lastTen": 7
+              },
+              "gamesBehind": "29",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            }
+          ]
+        }
+      },
+      "2021": {
+        "east": {
+          "response": [
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 41,
+                "name": "Washington Wizards",
+                "nickname": "Wizards",
+                "code": "WAS",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 12,
+                "win": 24,
+                "loss": 28
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 4,
+                "win": 7,
+                "loss": 9,
+                "gamesBehind": "18.0"
+              },
+              "win": {
+                "home": 21,
+                "away": 14,
+                "total": 35,
+                "percentage": ".427",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 20,
+                "away": 27,
+                "total": 47,
+                "percentage": ".573",
+                "lastTen": 5
+              },
+              "gamesBehind": "18.0",
+              "streak": 3,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 5,
+                "name": "Charlotte Hornets",
+                "nickname": "Hornets",
+                "code": "CHA",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 10,
+                "win": 27,
+                "loss": 25
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 3,
+                "win": 8,
+                "loss": 8,
+                "gamesBehind": "10.0"
+              },
+              "win": {
+                "home": 22,
+                "away": 21,
+                "total": 43,
+                "percentage": ".524",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 19,
+                "away": 20,
+                "total": 39,
+                "percentage": ".476",
+                "lastTen": 4
+              },
+              "gamesBehind": "10.0",
+              "streak": 3,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 20,
+                "name": "Miami Heat",
+                "nickname": "Heat",
+                "code": "MIA",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 1,
+                "win": 35,
+                "loss": 17
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 1,
+                "win": 13,
+                "loss": 3,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 29,
+                "away": 24,
+                "total": 53,
+                "percentage": ".646",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 12,
+                "away": 17,
+                "total": 29,
+                "percentage": ".354",
+                "lastTen": 4
+              },
+              "gamesBehind": "0.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 1,
+                "name": "Atlanta Hawks",
+                "nickname": "Hawks",
+                "code": "ATL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 8,
+                "win": 26,
+                "loss": 26
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 2,
+                "win": 9,
+                "loss": 7,
+                "gamesBehind": "10.0"
+              },
+              "win": {
+                "home": 27,
+                "away": 16,
+                "total": 43,
+                "percentage": ".524",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 14,
+                "away": 25,
+                "total": 39,
+                "percentage": ".476",
+                "lastTen": 3
+              },
+              "gamesBehind": "10.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 26,
+                "name": "Orlando Magic",
+                "nickname": "Magic",
+                "code": "ORL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 15,
+                "win": 12,
+                "loss": 40
+              },
+              "division": {
+                "name": "southeast",
+                "rank": 5,
+                "win": 3,
+                "loss": 13,
+                "gamesBehind": "31.0"
+              },
+              "win": {
+                "home": 12,
+                "away": 10,
+                "total": 22,
+                "percentage": ".268",
+                "lastTen": 3
+              },
+              "loss": {
+                "home": 29,
+                "away": 31,
+                "total": 60,
+                "percentage": ".732",
+                "lastTen": 7
+              },
+              "gamesBehind": "31.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 24,
+                "name": "New York Knicks",
+                "nickname": "Knicks",
+                "code": "NYK",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 11,
+                "win": 22,
+                "loss": 30
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 5,
+                "win": 5,
+                "loss": 11,
+                "gamesBehind": "14.0"
+              },
+              "win": {
+                "home": 17,
+                "away": 20,
+                "total": 37,
+                "percentage": ".451",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 24,
+                "away": 21,
+                "total": 45,
+                "percentage": ".549",
+                "lastTen": 3
+              },
+              "gamesBehind": "16.0",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 4,
+                "name": "Brooklyn Nets",
+                "nickname": "Nets",
+                "code": "BKN",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 7,
+                "win": 31,
+                "loss": 21
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 4,
+                "win": 10,
+                "loss": 6,
+                "gamesBehind": "7.0"
+              },
+              "win": {
+                "home": 20,
+                "away": 24,
+                "total": 44,
+                "percentage": ".537",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 21,
+                "away": 17,
+                "total": 38,
+                "percentage": ".463",
+                "lastTen": 4
+              },
+              "gamesBehind": "9.0",
+              "streak": 4,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 27,
+                "name": "Philadelphia 76ers",
+                "nickname": "76ers",
+                "code": "PHI",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 4,
+                "win": 32,
+                "loss": 20
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 2,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 24,
+                "away": 27,
+                "total": 51,
+                "percentage": ".622",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 17,
+                "away": 14,
+                "total": 31,
+                "percentage": ".378",
+                "lastTen": 4
+              },
+              "gamesBehind": "2.0",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 38,
+                "name": "Toronto Raptors",
+                "nickname": "Raptors",
+                "code": "TOR",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 5,
+                "win": 30,
+                "loss": 22
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 3,
+                "win": 10,
+                "loss": 6,
+                "gamesBehind": "3.0"
+              },
+              "win": {
+                "home": 24,
+                "away": 24,
+                "total": 48,
+                "percentage": ".585",
+                "lastTen": 8
+              },
+              "loss": {
+                "home": 17,
+                "away": 17,
+                "total": 34,
+                "percentage": ".415",
+                "lastTen": 2
+              },
+              "gamesBehind": "5.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 2,
+                "name": "Boston Celtics",
+                "nickname": "Celtics",
+                "code": "BOS",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 2,
+                "win": 33,
+                "loss": 19
+              },
+              "division": {
+                "name": "atlantic",
+                "rank": 1,
+                "win": 9,
+                "loss": 7,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 28,
+                "away": 23,
+                "total": 51,
+                "percentage": ".622",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 13,
+                "away": 18,
+                "total": 31,
+                "percentage": ".378",
+                "lastTen": 3
+              },
+              "gamesBehind": "2.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 6,
+                "name": "Chicago Bulls",
+                "nickname": "Bulls",
+                "code": "CHI",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 6,
+                "win": 29,
+                "loss": 23
+              },
+              "division": {
+                "name": "central",
+                "rank": 2,
+                "win": 10,
+                "loss": 6,
+                "gamesBehind": "5.0"
+              },
+              "win": {
+                "home": 27,
+                "away": 19,
+                "total": 46,
+                "percentage": ".561",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 14,
+                "away": 22,
+                "total": 36,
+                "percentage": ".439",
+                "lastTen": 6
+              },
+              "gamesBehind": "7.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 21,
+                "name": "Milwaukee Bucks",
+                "nickname": "Bucks",
+                "code": "MIL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 3,
+                "win": 33,
+                "loss": 19
+              },
+              "division": {
+                "name": "central",
+                "rank": 1,
+                "win": 12,
+                "loss": 4,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 27,
+                "away": 24,
+                "total": 51,
+                "percentage": ".622",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 14,
+                "away": 17,
+                "total": 31,
+                "percentage": ".378",
+                "lastTen": 4
+              },
+              "gamesBehind": "2.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 7,
+                "name": "Cleveland Cavaliers",
+                "nickname": "Cavaliers",
+                "code": "CLE",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 9,
+                "win": 27,
+                "loss": 25
+              },
+              "division": {
+                "name": "central",
+                "rank": 3,
+                "win": 10,
+                "loss": 6,
+                "gamesBehind": "7.0"
+              },
+              "win": {
+                "home": 25,
+                "away": 19,
+                "total": 44,
+                "percentage": ".537",
+                "lastTen": 3
+              },
+              "loss": {
+                "home": 16,
+                "away": 22,
+                "total": 38,
+                "percentage": ".463",
+                "lastTen": 7
+              },
+              "gamesBehind": "9.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 15,
+                "name": "Indiana Pacers",
+                "nickname": "Pacers",
+                "code": "IND",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 13,
+                "win": 11,
+                "loss": 41
+              },
+              "division": {
+                "name": "central",
+                "rank": 4,
+                "win": 2,
+                "loss": 14,
+                "gamesBehind": "26.0"
+              },
+              "win": {
+                "home": 16,
+                "away": 9,
+                "total": 25,
+                "percentage": ".305",
+                "lastTen": 0
+              },
+              "loss": {
+                "home": 25,
+                "away": 32,
+                "total": 57,
+                "percentage": ".695",
+                "lastTen": 10
+              },
+              "gamesBehind": "28.0",
+              "streak": 10,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 10,
+                "name": "Detroit Pistons",
+                "nickname": "Pistons",
+                "code": "DET",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Detroit_Pistons_primary_logo_2017.png/150px-Detroit_Pistons_primary_logo_2017.png"
+              },
+              "conference": {
+                "name": "east",
+                "rank": 14,
+                "win": 18,
+                "loss": 34
+              },
+              "division": {
+                "name": "central",
+                "rank": 5,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "28.0"
+              },
+              "win": {
+                "home": 13,
+                "away": 10,
+                "total": 23,
+                "percentage": ".280",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 28,
+                "away": 31,
+                "total": 59,
+                "percentage": ".720",
+                "lastTen": 6
+              },
+              "gamesBehind": "30.0",
+              "streak": 3,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            }
+          ]
+        },
+        "west": {
+          "response": [
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 19,
+                "name": "Memphis Grizzlies",
+                "nickname": "Grizzlies",
+                "code": "MEM",
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 2,
+                "win": 36,
+                "loss": 16
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 1,
+                "win": 11,
+                "loss": 5,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 30,
+                "away": 26,
+                "total": 56,
+                "percentage": ".683",
+                "lastTen": 7
+              },
+              "loss": {
+                "home": 11,
+                "away": 15,
+                "total": 26,
+                "percentage": ".317",
+                "lastTen": 3
+              },
+              "gamesBehind": "8.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 14,
+                "name": "Houston Rockets",
+                "nickname": "Rockets",
+                "code": "HOU",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 15,
+                "win": 11,
+                "loss": 41
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 5,
+                "win": 3,
+                "loss": 13,
+                "gamesBehind": "36.0"
+              },
+              "win": {
+                "home": 11,
+                "away": 9,
+                "total": 20,
+                "percentage": ".244",
+                "lastTen": 2
+              },
+              "loss": {
+                "home": 30,
+                "away": 32,
+                "total": 62,
+                "percentage": ".756",
+                "lastTen": 8
+              },
+              "gamesBehind": "44.0",
+              "streak": 7,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 8,
+                "name": "Dallas Mavericks",
+                "nickname": "Mavericks",
+                "code": "DAL",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 4,
+                "win": 36,
+                "loss": 16
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 2,
+                "win": 14,
+                "loss": 2,
+                "gamesBehind": "4.0"
+              },
+              "win": {
+                "home": 29,
+                "away": 23,
+                "total": 52,
+                "percentage": ".634",
+                "lastTen": 8
+              },
+              "loss": {
+                "home": 12,
+                "away": 18,
+                "total": 30,
+                "percentage": ".366",
+                "lastTen": 2
+              },
+              "gamesBehind": "12.0",
+              "streak": 4,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 31,
+                "name": "San Antonio Spurs",
+                "nickname": "Spurs",
+                "code": "SAS",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 10,
+                "win": 24,
+                "loss": 28
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 4,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "22.0"
+              },
+              "win": {
+                "home": 16,
+                "away": 18,
+                "total": 34,
+                "percentage": ".415",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 25,
+                "away": 23,
+                "total": 48,
+                "percentage": ".585",
+                "lastTen": 4
+              },
+              "gamesBehind": "30.0",
+              "streak": 3,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 23,
+                "name": "New Orleans Pelicans",
+                "nickname": "Pelicans",
+                "code": "NOP",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 8,
+                "win": 25,
+                "loss": 27
+              },
+              "division": {
+                "name": "southwest",
+                "rank": 3,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "20.0"
+              },
+              "win": {
+                "home": 19,
+                "away": 17,
+                "total": 36,
+                "percentage": ".439",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 22,
+                "away": 24,
+                "total": 46,
+                "percentage": ".561",
+                "lastTen": 4
+              },
+              "gamesBehind": "28.0",
+              "streak": 2,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 11,
+                "name": "Golden State Warriors",
+                "nickname": "Warriors",
+                "code": "GSW",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 3,
+                "win": 33,
+                "loss": 19
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 2,
+                "win": 12,
+                "loss": 4,
+                "gamesBehind": "11.0"
+              },
+              "win": {
+                "home": 31,
+                "away": 22,
+                "total": 53,
+                "percentage": ".646",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 10,
+                "away": 19,
+                "total": 29,
+                "percentage": ".354",
+                "lastTen": 4
+              },
+              "gamesBehind": "11.0",
+              "streak": 5,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 30,
+                "name": "Sacramento Kings",
+                "nickname": "Kings",
+                "code": "SAC",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 12,
+                "win": 20,
+                "loss": 32
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 5,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "34.0"
+              },
+              "win": {
+                "home": 16,
+                "away": 14,
+                "total": 30,
+                "percentage": ".366",
+                "lastTen": 5
+              },
+              "loss": {
+                "home": 25,
+                "away": 27,
+                "total": 52,
+                "percentage": ".634",
+                "lastTen": 5
+              },
+              "gamesBehind": "34.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 28,
+                "name": "Phoenix Suns",
+                "nickname": "Suns",
+                "code": "PHX",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 1,
+                "win": 39,
+                "loss": 13
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 1,
+                "win": 10,
+                "loss": 6,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 32,
+                "away": 32,
+                "total": 64,
+                "percentage": ".780",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 9,
+                "away": 9,
+                "total": 18,
+                "percentage": ".220",
+                "lastTen": 4
+              },
+              "gamesBehind": "0.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 16,
+                "name": "LA Clippers",
+                "nickname": "Clippers",
+                "code": "LAC",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 9,
+                "win": 26,
+                "loss": 26
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 3,
+                "win": 9,
+                "loss": 7,
+                "gamesBehind": "22.0"
+              },
+              "win": {
+                "home": 25,
+                "away": 17,
+                "total": 42,
+                "percentage": ".512",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 16,
+                "away": 24,
+                "total": 40,
+                "percentage": ".488",
+                "lastTen": 4
+              },
+              "gamesBehind": "22.0",
+              "streak": 5,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 17,
+                "name": "Los Angeles Lakers",
+                "nickname": "Lakers",
+                "code": "LAL",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 11,
+                "win": 18,
+                "loss": 34
+              },
+              "division": {
+                "name": "pacific",
+                "rank": 4,
+                "win": 3,
+                "loss": 13,
+                "gamesBehind": "31.0"
+              },
+              "win": {
+                "home": 21,
+                "away": 12,
+                "total": 33,
+                "percentage": ".402",
+                "lastTen": 2
+              },
+              "loss": {
+                "home": 20,
+                "away": 29,
+                "total": 49,
+                "percentage": ".598",
+                "lastTen": 8
+              },
+              "gamesBehind": "31.0",
+              "streak": 2,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 40,
+                "name": "Utah Jazz",
+                "nickname": "Jazz",
+                "code": "UTA",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 5,
+                "win": 33,
+                "loss": 19
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 1,
+                "win": 15,
+                "loss": 1,
+                "gamesBehind": "0.0"
+              },
+              "win": {
+                "home": 29,
+                "away": 20,
+                "total": 49,
+                "percentage": ".598",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 12,
+                "away": 21,
+                "total": 33,
+                "percentage": ".402",
+                "lastTen": 6
+              },
+              "gamesBehind": "15.0",
+              "streak": 1,
+              "winStreak": true,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 22,
+                "name": "Minnesota Timberwolves",
+                "nickname": "Timberwolves",
+                "code": "MIN",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 7,
+                "win": 32,
+                "loss": 20
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 3,
+                "win": 12,
+                "loss": 4,
+                "gamesBehind": "3.0"
+              },
+              "win": {
+                "home": 26,
+                "away": 20,
+                "total": 46,
+                "percentage": ".561",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 15,
+                "away": 21,
+                "total": 36,
+                "percentage": ".439",
+                "lastTen": 6
+              },
+              "gamesBehind": "18.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 9,
+                "name": "Denver Nuggets",
+                "nickname": "Nuggets",
+                "code": "DEN",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 6,
+                "win": 29,
+                "loss": 23
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 2,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "1.0"
+              },
+              "win": {
+                "home": 23,
+                "away": 25,
+                "total": 48,
+                "percentage": ".585",
+                "lastTen": 6
+              },
+              "loss": {
+                "home": 18,
+                "away": 16,
+                "total": 34,
+                "percentage": ".415",
+                "lastTen": 4
+              },
+              "gamesBehind": "16.0",
+              "streak": 1,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 29,
+                "name": "Portland Trail Blazers",
+                "nickname": "Trail Blazers",
+                "code": "POR",
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 13,
+                "win": 11,
+                "loss": 41
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 4,
+                "win": 1,
+                "loss": 15,
+                "gamesBehind": "22.0"
+              },
+              "win": {
+                "home": 17,
+                "away": 10,
+                "total": 27,
+                "percentage": ".329",
+                "lastTen": 0
+              },
+              "loss": {
+                "home": 24,
+                "away": 31,
+                "total": 55,
+                "percentage": ".671",
+                "lastTen": 10
+              },
+              "gamesBehind": "37.0",
+              "streak": 11,
+              "winStreak": false,
+              "tieBreakerPoints": null
+            },
+            {
+              "league": "standard",
+              "season": 2021,
+              "team": {
+                "id": 25,
+                "name": "Oklahoma City Thunder",
+                "nickname": "Thunder",
+                "code": "OKC",
+                "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png"
+              },
+              "conference": {
+                "name": "west",
+                "rank": 14,
+                "win": 17,
+                "loss": 35
+              },
+              "division": {
+                "name": "northwest",
+                "rank": 5,
+                "win": 6,
+                "loss": 10,
+                "gamesBehind": "25.0"
+              },
+              "win": {
+                "home": 12,
+                "away": 12,
+                "total": 24,
+                "percentage": ".293",
+                "lastTen": 4
+              },
+              "loss": {
+                "home": 29,
+                "away": 29,
+                "total": 58,
+                "percentage": ".707",
+                "lastTen": 6
+              },
+              "gamesBehind": "40.0",
+              "streak": 3,
+              "winStreak": false,
+              "tieBreakerPoints": null
             }
           ]
         }

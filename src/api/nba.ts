@@ -30,3 +30,29 @@ export const getTeam = async (id: number) => {
     console.error("[GET team]: ", error);
   }
 };
+
+//get teams per conference
+export const getTeamsConference = async (conference: string) => {
+  try {
+    const response = await axios.get(`${base_url}/teams/${conference}`);
+    return response;
+  } catch (error) {
+    console.error("[GET team per conference failed]: ", error);
+  }
+};
+
+// get teams standing
+export const getTeamsStandings = async (
+  league: string,
+  season: string,
+  conference: string
+) => {
+  try {
+    const response = await axios.get(
+      `${base_url}/standing/:${league}/:${season}/:${conference}`
+    );
+    return response;
+  } catch (error) {
+    console.error("[GET teams standing failed]: ", error);
+  }
+};

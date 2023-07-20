@@ -150,3 +150,62 @@ export type onFavoritesClick = {
 export type leagueParamsProps = {
   league?: string;
 };
+
+export type nbaTeamsStandingType = {
+  standard?: {
+    2022?: {
+      east?: {
+        response?: [] | object[];
+      };
+      west?: {
+        response?: [] | object[];
+      };
+    };
+    2021?: {
+      east?: {
+        response?: [] | object[];
+      };
+      west?: {
+        response?: [] | object[];
+      };
+    };
+  };
+};
+
+export type nbaTeamStandingType = {
+  team?: {
+    nickname?: string;
+    id?: number;
+    logo?: string;
+  };
+  conference?: {
+    name?: string;
+    rank?: number;
+    win?: number;
+    loss?: number;
+  };
+};
+
+export type mlbTeamStandingType = {
+  DIFF?: string;
+  RA?: string;
+  RS?: string;
+  conference?: string;
+  division?: string;
+  loss?: string;
+  mlbLogo1?: string;
+  teamAbv?: string;
+  teamCity?: string;
+  teamID?: string;
+  teamName?: string;
+  wins?: string;
+};
+
+export type initSeason = {
+  season: string;
+};
+
+export type seasonActionType = {
+  type: "selectSeason";
+  season: string;
+};

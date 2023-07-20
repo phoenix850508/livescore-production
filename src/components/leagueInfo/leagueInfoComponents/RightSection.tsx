@@ -1,9 +1,10 @@
 import FeaturedMatch from "components/main/rightSection/rightSectionComponents/FeaturedMatch";
 import nbaIcon from "icons/nbaIcon.svg";
 import mlbIcon from "icons/mlbIcon.svg";
+import { leagueParamsProps } from "types/types";
 import styles from "./RightSection.module.scss";
 
-export default function RightSection() {
+export default function RightSection(props: leagueParamsProps) {
   return (
     <div className={styles.rightSection}>
       <h3 className={styles.title}>Featured Match</h3>

@@ -20,11 +20,21 @@
   gap: 36px;
   margin-bottom: 20px;
   button {
-    width: 127px;
+    width: 100px;
     height: 40px;
     border: none;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 700;
+    background-color: rgba(34, 34, 38, 0.2);
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(34, 34, 38, 0.6);
+    }
+  }
+  .selected {
+    background-color: rgba(34, 34, 38, 0.6);
   }
 }
 
@@ -46,7 +56,8 @@
   }
   .teamLogo {
     width: 24px;
-    height: 24px;
+    object-fit: cover;
+    margin-right: 10px;
   }
 
   .teamName {
