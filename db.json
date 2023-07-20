@@ -136,6 +136,108 @@
             "code": "CHI"
           }
         }
+      },
+      {
+        "id": 12215,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T19:30:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [31, 25, 26, 25] },
+          "home": { "linescore": [29, 33, 24, 19] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 29,
+            "name": "Portland Trail Blazers",
+            "nickname": "Trail Blazers",
+            "code": "POR"
+          },
+          "home": {
+            "id": 22,
+            "name": "Minnesota Timberwolves",
+            "nickname": "Timberwolves",
+            "code": "MIN"
+          }
+        }
+      },
+      {
+        "id": 12216,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T22:00:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [29, 37, 25, 32, 7] },
+          "home": { "linescore": [37, 33, 24, 29, 9] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 8,
+            "name": "Dallas Mavericks",
+            "nickname": "Mavericks",
+            "code": "DAL"
+          },
+          "home": {
+            "id": 1,
+            "name": "Atlanta Hawks",
+            "nickname": "Hawks",
+            "code": "ATL"
+          }
+        }
+      },
+      {
+        "id": 12216,
+        "status": {
+          "clock": null,
+          "halftime": "false",
+          "long": "Finished"
+        },
+        "date": {
+          "start": "2023-04-02T22:00:00.000Z",
+          "end": null
+        },
+        "periods": {
+          "current": 4,
+          "total": 4
+        },
+        "scores": {
+          "visitors": { "linescore": [31, 30, 18, 30, 7] },
+          "home": { "linescore": [34, 19, 33, 32] }
+        },
+        "teams": {
+          "visitors": {
+            "id": 41,
+            "name": "Washington Wizards",
+            "nickname": "Wizards",
+            "code": "WAS"
+          },
+          "home": {
+            "id": 24,
+            "name": "New York Knicks",
+            "nickname": "Knicks",
+            "code": "NYK"
+          }
+        }
       }
     ]
   },
