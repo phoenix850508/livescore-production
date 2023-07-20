@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Livescore
+<img width="1000" alt="截圖 2023-07-19 下午2 53 32" src="https://github.com/phoenix850508/livescore/assets/121414639/3cb5cd01-8558-442d-839d-ed7460341d3e">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🏀 Introduction
+This side project is built for sports fans to subscribe their favorite teams, and get real-time match information on all sports.
 
-## Available Scripts
+Currently this project is still on the fly, therefore, the score shown may not be corrent on the day. However, as I'm really excited to build this project, soon the APIs will be connected, and all the dummy data will be removed in all pages. 
 
-In the project directory, you can run:
+note: RWD is also coming soon, don't be frustrated if the application does not fit with your mobile screens
 
-### `npm start`
+## Features (🚧 means there are still things to add, feature not completed)
+A simple version of a livescore web application, the features can be categorized into 6 main chunks:
+- User can view all matches on the date selected (currently the dummy data only shows 14th of July and 18th of July if you'd like to try out the gist of the application)
+- User can subscribe a team from main page, when the bell turns solid, it means you've successfully subscribed the team. And when you click the top right side of the page "Favorites", you will see only the teams that you subscribed on the date 🚧
+- User can access the detail of the match by clicking the right section "Featured Match", and view the details of the match 🚧
+- User can access differnt leagues, by clicking one of the country in the All Leagues section, and select a league of your choice
+- User can view a certain team from by clicking the team logo in the matchinfo page  🚧
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Please ensure that Node.js and npm are well installed in your local environment.
+2. Find a folder where you want to put this project, open Terminal, and run the command for cloning. Enter:
+<br /> `git clone https://github.com/phoenix850508/livescore`
+4. Open your terminal, and change the directory to the livescore folder. Enter:
+<br /> `cd livescore`
+5. After installment, run json-server to enable dummy data, you should see "http://localhost:3001" shows in the last line. Enter:
+<br /> `npm run json-server`
+6. After json-server is enabled, open a new terminal window while the previous json-server is still running.
+7. Again, this time change the directory to the livescore folder in the new terminal, then enter:
+<br /> `npm run start`
+8. You should see "webpack compiled successfully" shows up in the last line of the terminal.
+9. Press "ctrl + c" in Terminal if you want to stop running the project.
