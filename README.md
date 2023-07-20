@@ -26,7 +26,7 @@ A simple version of a livescore web application, the features can be categorized
 5. After installment, run json-server to enable dummy data, you should see "http://localhost:3001" shows in the last line. Enter:
 <br /> `npm run json-server`
 6. After json-server is enabled, open a new terminal window while the previous json-server is still running.
-7. Again, this time change the directory to the livescore folder in the new terminal, then enter:
+7. Again, repeat step 4, change the directory to the livescore folder in the new terminal, then enter:
 <br /> `npm run start`
 8. You should see "webpack compiled successfully" shows up in the last line of the terminal.
 9. Press "ctrl + c" in Terminal if you want to stop running the project.
