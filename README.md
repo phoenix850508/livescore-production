@@ -23,10 +23,12 @@ A simple version of a livescore web application, the features can be categorized
 <br /> `git clone https://github.com/phoenix850508/livescore`
 4. Open your terminal, and change the directory to the livescore folder. Enter:
 <br /> `cd livescore`
-5. After installment, run json-server to enable dummy data, you should see "http://localhost:3001" shows in the last line. Enter:
+5. Run the command to install all necessary npms. Enter:
+<br /> `npm install`
+7. After installment, run json-server to enable dummy data, you should see "http://localhost:3001" shows in the last line. Enter:
 <br /> `npm run json-server`
-6. After json-server is enabled, open a new terminal window while the previous json-server is still running.
-7. Again, repeat step 4, change the directory to the livescore folder in the new terminal, then enter:
+8. After json-server is enabled, open a new terminal window while the previous json-server is still running.
+9. Again, repeat step 4, change the directory to the livescore folder in the new terminal, then enter:
 <br /> `npm run start`
-8. You should see "webpack compiled successfully" shows up in the last line of the terminal.
-9. Press "ctrl + c" in Terminal if you want to stop running the project.
+10. You should see "webpack compiled successfully" shows up in the last line of the terminal.
+11. Press "ctrl + c" in Terminal if you want to stop running the project.
