@@ -1,5 +1,25 @@
-import yankees from "icons/mlbALTeams/new-york-yankees.svg";
-import orioles from "icons/mlbALTeams/baltimore-orieles.svg";
+import BOS from "icons/mlbALTeams/boston-red-sox-logo.svg";
+import ATL from "icons/mlbNLTeams/atlanta-braves.svg";
+import NYM from "icons/mlbNLTeams/new-york-mets.svg";
+import CIN from "icons/mlbNLTeams/cincinnati-reds.svg";
+import TOR from "icons/mlbALTeams/toronto-blue-jays.svg";
+import PHI from "icons/mlbNLTeams/philadelphia-phillies.svg";
+import MIA from "icons/mlbNLTeams/miami-marlins-primary.svg";
+import ARI from "icons/mlbNLTeams/arizona-diamondbacks.svg";
+import LAD from "icons/mlbNLTeams/los-angeles-dodgers.svg";
+import MIL from "icons/mlbNLTeams/milwaukee-brewers.svg";
+import TB from "icons/mlbALTeams/tampa-bay-rays.svg";
+import SEA from "icons/mlbALTeams/seattle-mariners.svg";
+import CHW from "icons/mlbALTeams/chicago-white-sox.svg";
+import KC from "icons/mlbALTeams/kansas-city-royals.svg";
+import OAK from "icons/mlbALTeams/oakland-athletics.svg";
+import NYY from "icons/mlbALTeams/new-york-yankees.svg";
+import COL from "icons/mlbNLTeams/colorado-rockies.svg";
+import PIT from "icons/mlbNLTeams/pittsburgh-pirates.svg";
+import SD from "icons/mlbNLTeams/san-diego-padres.svg";
+import MIN from "icons/mlbALTeams/minnesota-twins.svg";
+import DET from "icons/mlbALTeams/detroit-tigers.svg";
+import CLE from "icons/mlbALTeams/cleveland-guardians.svg";
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +28,53 @@ import { showSportType } from "types/types";
 import styles from "./FeaturedMatch.module.scss";
 
 export default function FeaturedMatch(props: showSportType) {
+  // just temporarily shows some logo for better view (will figure out other ways later)
+  const mlbLogo = [
+    BOS,
+    "BOS",
+    ATL,
+    "ATL",
+    NYM,
+    "NYM",
+    CIN,
+    "CIN",
+    TOR,
+    "TOR",
+    PHI,
+    "PHI",
+    MIA,
+    "MIA",
+    ARI,
+    "ARI",
+    LAD,
+    "LAD",
+    MIL,
+    "MIL",
+    TB,
+    "TB",
+    SEA,
+    "SEA",
+    CHW,
+    "CHW",
+    KC,
+    "KC",
+    OAK,
+    "OAK",
+    NYY,
+    "NYY",
+    COL,
+    "COL",
+    PIT,
+    "PIT",
+    SD,
+    "SD",
+    MIN,
+    "MIN",
+    DET,
+    "DET",
+    CLE,
+    "CLE",
+  ];
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/match");
@@ -34,11 +101,18 @@ export default function FeaturedMatch(props: showSportType) {
         const response = awayTeam && (await getTeam(awayTeam?.id));
         setAwayTeamLogo(response?.data[0].response.logo);
       } else {
-        setAwayTeamLogo(defaultLogo);
+        const logo = `${awayTeam?.nickname}`;
+        let index: number | null = null;
+        for (let i = 0; i < mlbLogo.length; i++) {
+          if (logo === mlbLogo[i]) {
+            index = i;
+          }
+        }
+        setAwayTeamLogo(index ? mlbLogo[index - 1] : defaultLogo);
       }
     };
     asyncGetTeam();
-  }, [awayTeam, props?.showSport]);
+  }, [awayTeam, props?.showSport, mlbLogo]);
 
   useEffect(() => {
     const asyncGetTeam = async () => {
@@ -51,11 +125,18 @@ export default function FeaturedMatch(props: showSportType) {
         const response = homeTeam && (await getTeam(homeTeam?.id));
         setHomeTeamLogo(response?.data[0].response.logo);
       } else {
-        setHomeTeamLogo(defaultLogo);
+        const logo = `${homeTeam?.nickname}`;
+        let index: number | null = null;
+        for (let i = 0; i < mlbLogo.length; i++) {
+          if (logo === mlbLogo[i]) {
+            index = i;
+          }
+        }
+        setHomeTeamLogo(index ? mlbLogo[index - 1] : defaultLogo);
       }
     };
     asyncGetTeam();
-  }, [homeTeam, props?.showSport]);
+  }, [homeTeam, props?.showSport, mlbLogo]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>
