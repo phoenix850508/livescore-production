@@ -1,4 +1,3 @@
-import nuggets from "icons/nbaWestTeams/denver-nuggets.svg";
 import usa from "icons/usaIcon.svg";
 import bellEmpty from "icons/bellEmptyIcon.svg";
 import bellSolid from "icons/bellSolidIcon.svg";
@@ -8,7 +7,7 @@ export default function TeamInfoTop() {
   return (
     <div className={styles.teamInfoTop}>
       <div className={styles.logoTitleWrapper}>
-        <img className={styles.teamLogo} src={nuggets} alt="nuggets.svg" />
+        <img className={styles.teamLogo} src={""} alt="nuggets.svg" />
         <div className={styles.teamNameWrapper}>
           <div className={styles.teamTitle}>Denver Nuggets</div>
           <div className={styles.teamLocation}>

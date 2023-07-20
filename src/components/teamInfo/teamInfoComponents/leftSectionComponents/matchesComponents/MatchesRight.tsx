@@ -1,5 +1,3 @@
-import bucks from "icons/nbaEastTeams/milwaukee-bucks.svg";
-import nuggets from "icons/nbaWestTeams/denver-nuggets.svg";
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
 
@@ -18,7 +16,7 @@ export default function MatchesRight() {
           />
           <div className={styles.teamWrapper}>
             <div className={styles.teamName}>Bucks</div>
-            <img className={styles.teamLogo} src={bucks} alt="bucks.svg" />
+            <img className={styles.teamLogo} src={""} alt="bucks.svg" />
           </div>
         </div>
         <div className={styles.matchSchedule}>
@@ -28,7 +26,7 @@ export default function MatchesRight() {
         <div className={styles.homeTeam}>
           <div className={styles.teamWrapper}>
             <div className={styles.teamName}>Nuggets</div>
-            <img className={styles.teamLogo} src={nuggets} alt="nuggets.svg" />
+            <img className={styles.teamLogo} src={""} alt="nuggets.svg" />
           </div>
           <img
             className={styles.subscriptionStatus}

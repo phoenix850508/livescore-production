@@ -1,5 +1,3 @@
-import heats from "icons/nbaEastTeams/miami-heat.svg";
-import nuggets from "icons/nbaWestTeams/denver-nuggets.svg";
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +20,7 @@ export default function MatchTeams() {
           <h3 className={styles.awayName}>Nuggets</h3>
           <img
             className={styles.logo}
-            src={nuggets}
+            src={""}
             alt="nuggets.svg"
             onClick={handleAwayTeamClick}
           />
@@ -34,7 +32,7 @@ export default function MatchTeams() {
         </div>
         <div className={styles.home}>
           <h3 className={styles.homeName}>Heat</h3>
-          <img className={styles.logo} src={heats} alt="heats.svg" />
+          <img className={styles.logo} src={""} alt="heats.svg" />
         </div>
         <img
           className={styles.subscriptionStatus}
