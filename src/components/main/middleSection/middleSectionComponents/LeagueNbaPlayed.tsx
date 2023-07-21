@@ -14,7 +14,7 @@ interface combinedTypes
     showFavorites,
     showSportType {}
 
-export default function LeaguePlayed(props: combinedTypes) {
+export default function LeagueNbaPlayed(props: combinedTypes) {
   const allGames = props.nbaGames && Object.values(props.nbaGames)[0];
   return (
     <div className={styles.leaguePlayed}>
@@ -30,6 +30,7 @@ export default function LeaguePlayed(props: combinedTypes) {
             periods={match.periods}
             status={match.status}
             showFavorites={props.showFavorites}
+            showSport={props.showSport}
           />
         );
       })}

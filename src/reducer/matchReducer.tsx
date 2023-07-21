@@ -20,6 +20,7 @@ export default function dateReducer(
           awayTotal: action?.scores?.awayTotal,
           homeTotal: action?.scores?.homeTotal,
         },
+        sportType: action?.sportType,
       };
     }
   }

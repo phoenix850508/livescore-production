@@ -33,6 +33,7 @@ export default function LeagueMlbPlayed(props: combinedTypes) {
               teamIDAway={match.teamIDAway}
               teamIDHome={match.teamIDHome}
               showFavorites={props.showFavorites}
+              showSport={props.showSport}
             />
           );
         })}

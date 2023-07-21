@@ -4,6 +4,7 @@ import {
   mlbMatchItemProps,
   matchDataObjType,
   showFavorites,
+  showSportType,
 } from "types/types";
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
@@ -12,7 +13,10 @@ import { dummyMlbMatch } from "./dummyMlbMatch";
 import clsx from "clsx";
 import styles from "./MlbMatchItem.module.scss";
 
-interface combinedTypes extends mlbMatchItemProps, showFavorites {}
+interface combinedTypes
+  extends mlbMatchItemProps,
+    showFavorites,
+    showSportType {}
 
 export default function MlbMatchItem(props: combinedTypes) {
   // use useState to decide whether the team is subscribed
@@ -50,6 +54,12 @@ export default function MlbMatchItem(props: combinedTypes) {
   const matchAwayScore = matchDataObj && matchDataObj?.lineScore?.away?.R;
   const matchHomeScore = matchDataObj?.lineScore?.home?.R;
 
+  // identify MLB sport type to dispatch to Feature Match
+  const sportType =
+    away && home && (away.length < 4 || home.length < 4)
+      ? "Baseball"
+      : "Basketball";
+
   // dispatch match
   const { dispatch } = useContext(MatchContext);
   const handleMatchClick = () => {
@@ -67,6 +77,7 @@ export default function MlbMatchItem(props: combinedTypes) {
         awayTotal: matchAwayScore,
         homeTotal: matchHomeScore,
       },
+      sportType: sportType,
     });
   };
 
@@ -160,6 +171,7 @@ export default function MlbMatchItem(props: combinedTypes) {
         awayTotal: matchAwayScore,
         homeTotal: matchHomeScore,
       },
+      sportType: sportType,
     });
   }, [matchAwayScore, matchHomeScore]);
 

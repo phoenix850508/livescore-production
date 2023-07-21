@@ -1,12 +1,15 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
-import { nbaMatchItemProps, showFavorites } from "types/types";
+import { nbaMatchItemProps, showFavorites, showSportType } from "types/types";
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import clsx from "clsx";
 import styles from "./NbaMatchItem.module.scss";
 
-interface combinedTypes extends nbaMatchItemProps, showFavorites {}
+interface combinedTypes
+  extends nbaMatchItemProps,
+    showFavorites,
+    showSportType {}
 
 export default function NbaMatchItem(props: combinedTypes) {
   // use useState to decide whether the team is subscribed
@@ -98,6 +101,7 @@ export default function NbaMatchItem(props: combinedTypes) {
     ?.slice(colonIndex && colonIndex - 2, colonIndex && colonIndex + 3);
   //extract props match periods
   const periods = props.periods;
+  const sportType = periods?.total === 4 ? "Basketball" : "Baseball";
   // dispatch match
   const { dispatch } = useContext(MatchContext);
   const handleMatchClick = () => {
@@ -115,6 +119,7 @@ export default function NbaMatchItem(props: combinedTypes) {
         awayTotal: awayTotal && awayTotal,
         homeTotal: homeTotal && homeTotal,
       },
+      sportType: sportType,
     });
   };
 
@@ -134,6 +139,7 @@ export default function NbaMatchItem(props: combinedTypes) {
         awayTotal: awayTotal && awayTotal,
         homeTotal: homeTotal && homeTotal,
       },
+      sportType: sportType,
     });
   }, [props]);
 

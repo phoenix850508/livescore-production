@@ -1,6 +1,7 @@
 import MatchStats from "./matchInfoBottomComponents/MatchStats";
 import MatchInfoBottomRight from "./matchInfoBottomComponents/MatchInfoBottomRight";
 import MatchTeams from "./matchInfoBottomComponents/MatchTeams";
+import { initMatchType } from "types/types";
 import styles from "./MatchInfoBottom.module.scss";
 
 export default function MatchInfoBottom() {

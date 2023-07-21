@@ -15,6 +15,7 @@ const defaultMatch = {
     awayTotal: "",
     homeTotal: "",
   },
+  sportType: "",
 };
 
 const MatchContext = createContext<{
@@ -34,6 +35,7 @@ const MatchContext = createContext<{
       awayTotal: 0,
       homeTotal: 0,
     },
+    sportType: "",
   },
   dispatch: () => {},
 });

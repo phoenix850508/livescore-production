@@ -101,6 +101,7 @@ export type initMatchType = {
     awayTotal?: number | string | undefined | null;
     homeTotal?: number | string | undefined | null;
   };
+  sportType?: string | undefined;
 };
 
 export type matchActionType = {
@@ -117,6 +118,7 @@ export type matchActionType = {
     awayTotal?: number | string | undefined | null;
     homeTotal?: number | string | undefined | null;
   };
+  sportType?: string | undefined;
 };
 
 export type handleSportType = {

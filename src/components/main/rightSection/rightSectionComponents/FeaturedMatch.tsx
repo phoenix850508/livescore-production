@@ -75,11 +75,17 @@ export default function FeaturedMatch(props: showSportType) {
     CLE,
     "CLE",
   ];
+  const { match } = useContext(MatchContext);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/match");
+    if (
+      match?.awayTeam?.nickname !== "away" ||
+      match?.homeTeam?.nickname !== "home"
+    ) {
+      return navigate("/match");
+    }
+    alert("no teams selcted");
   };
-  const { match } = useContext(MatchContext);
   // extract the latest/selected match information
   const awayTeam = match.awayTeam;
   const homeTeam = match.homeTeam;
@@ -101,6 +107,7 @@ export default function FeaturedMatch(props: showSportType) {
         const response = awayTeam && (await getTeam(awayTeam?.id));
         setAwayTeamLogo(response?.data[0].response.logo);
       } else {
+        // temporarily use for better UX in dummy data
         const logo = `${awayTeam?.nickname}`;
         let index: number | null = null;
         for (let i = 0; i < mlbLogo.length; i++) {
@@ -125,6 +132,7 @@ export default function FeaturedMatch(props: showSportType) {
         const response = homeTeam && (await getTeam(homeTeam?.id));
         setHomeTeamLogo(response?.data[0].response.logo);
       } else {
+        // temporarily use for better UX in dummy data
         const logo = `${homeTeam?.nickname}`;
         let index: number | null = null;
         for (let i = 0; i < mlbLogo.length; i++) {

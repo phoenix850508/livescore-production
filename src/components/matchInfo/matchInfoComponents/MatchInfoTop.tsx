@@ -1,7 +1,11 @@
 import triangleRight from "icons/triangle-right.svg";
+import { MatchContext } from "context/MatchContext";
+import { useContext } from "react";
 import styles from "./MatchInfoTop.module.scss";
 
 export default function MathInfoTop() {
+  const { match } = useContext(MatchContext);
+  console.log(match);
   return (
     <div className={styles.matchInfoTop}>
       <div className={styles.leagueAndDate}>

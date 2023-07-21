@@ -16,7 +16,7 @@ export default function MainPage() {
   };
   // use useState to control whether shos favorites
   const handleFavoritesClick = () => {
-    setShowFavorites(true);
+    setShowFavorites(!showFavorites);
   };
   // when main is clicked, navigate to main page
   const handleBrandClick = () => {
@@ -31,6 +31,7 @@ export default function MainPage() {
         showSport={showSport}
         onFavoritesClick={handleFavoritesClick}
         onBrandClick={handleBrandClick}
+        showFavorites={showFavorites}
       />
       <Main showSport={showSport} showFavorites={showFavorites} />
     </div>

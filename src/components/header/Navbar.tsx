@@ -8,6 +8,7 @@ import {
   onFavoritesClick,
   leagueParamsProps,
   showSportType,
+  showFavorites,
 } from "types/types";
 import clsx from "clsx";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +18,8 @@ interface combinedNavbarTypes
   extends onFavoritesClick,
     handleSportType,
     leagueParamsProps,
-    showSportType {}
+    showSportType,
+    showFavorites {}
 
 export default function Navbar(props: combinedNavbarTypes) {
   return (
@@ -25,6 +27,7 @@ export default function Navbar(props: combinedNavbarTypes) {
       <NavbarTop
         onFavoritesClick={props.onFavoritesClick}
         onBrandClick={props.onBrandClick}
+        showFavorites={props.showFavorites}
       />
       <NavbarBottom
         onBasketballClick={props.onBasketballClick}
@@ -36,7 +39,9 @@ export default function Navbar(props: combinedNavbarTypes) {
   );
 }
 
-function NavbarTop(props: onFavoritesClick) {
+interface combinedNavTopTypes extends onFavoritesClick, showFavorites {}
+
+function NavbarTop(props: combinedNavTopTypes) {
   const resetShowSport = props.onBrandClick;
   const navigate = useNavigate();
   return (
@@ -63,7 +68,12 @@ function NavbarTop(props: onFavoritesClick) {
           placeholder="Search"
         />
       </div>
-      <div className={styles.navbarFavorites} onClick={props.onFavoritesClick}>
+      <div
+        className={clsx(styles.navbarFavorites, {
+          [styles.highlightFav]: props.showFavorites,
+        })}
+        onClick={props.onFavoritesClick}
+      >
         <span className={styles.favorites}>Favorites</span>
         <img src={solidBellIcon} alt="solidBellIcon.svg" />
       </div>
