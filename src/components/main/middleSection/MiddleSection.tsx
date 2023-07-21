@@ -70,7 +70,7 @@ export default function MiddleSection(props: combinedType) {
   //   const asyncGetMlbGames = async () => {
   //     const response = await getMlbGames(mlbDate);
   //     setMlbGamesOnDate(response && response?.data?.body);
-  //     console.log(mlbGamesOnDate);
+  //     console.log(response);
   //   };
   //   asyncGetMlbGames();
   // }, [mlbDate]);
