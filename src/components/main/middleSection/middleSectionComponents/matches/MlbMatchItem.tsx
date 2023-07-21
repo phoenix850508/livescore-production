@@ -132,15 +132,17 @@ export default function MlbMatchItem(props: combinedTypes) {
     setMatchDataObj(Object.values(dummyMlbMatch)[0]);
   }, []);
 
-  // get per match information
+  // // get per match information
   // useEffect(() => {
   //   console.log("re-render useEffect");
   //   const asynGetMlbMatchScore = async () => {
   //     const response = props?.gameID && (await getMlbMatchScore(props.gameID));
-  //     response && setMatchDataObj(response.data.body);
+  //     response && console.log(response.data);
+  //     // const response = props?.gameID && (await getMlbMatchScore(props.gameID));
+  //     // response && setMatchDataObj(response.data.body);
   //   };
   //   asynGetMlbMatchScore();
-  // }, [props]);
+  // }, [props?.gameID]);
 
   // dispath the latest match
   useEffect(() => {
