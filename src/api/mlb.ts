@@ -7,7 +7,7 @@ const base_url =
 const axiosInstance = axios.create({
   baseURL: base_url,
   headers: {
-    "X-RapidAPI-Key": "bde343a922msh1feb7e1b69eeb67p1cd130jsn5e7ce6f22dd7",
+    "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
     "X-RapidAPI-Host":
       "tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com",
   },
