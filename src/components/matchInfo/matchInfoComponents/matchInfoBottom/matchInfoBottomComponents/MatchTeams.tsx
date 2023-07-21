@@ -1,13 +1,21 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
+import { useState, useEffect } from "react";
+import { matchInfoObj } from "types/types";
 import { useNavigate } from "react-router-dom";
 import styles from "./MatchTeams.module.scss";
 
-export default function MatchTeams() {
+export default function MatchTeams(props: matchInfoObj) {
+  const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
   const navigate = useNavigate();
   const handleAwayTeamClick = () => {
     navigate("/teamInfo");
   };
+
+  useEffect(() => {
+    const matchInfoObjString = localStorage.getItem("matchInfoObj");
+    matchInfoObjString && setMatchInfoObj(JSON.parse(matchInfoObjString));
+  }, []);
   return (
     <div>
       <div className={styles.matchTeams}>
@@ -17,22 +25,34 @@ export default function MatchTeams() {
           alt="bellEmptyIcon.svg"
         />
         <div className={styles.away}>
-          <h3 className={styles.awayName}>Nuggets</h3>
+          <h3 className={styles.awayName}>
+            {props.awayTeam ? props.awayTeam : matchInfoObj?.awayTeam}
+          </h3>
           <img
             className={styles.logo}
-            src={""}
-            alt="nuggets.svg"
+            src={props.awayLogo ? props.awayLogo : matchInfoObj?.awayLogo}
+            alt="awayLogo.svg"
             onClick={handleAwayTeamClick}
           />
         </div>
         <div className={styles.scores}>
-          <span className={styles.awayScore}>108</span>
+          <span className={styles.awayScore}>
+            {props.awayTotal ? props.awayTotal : matchInfoObj?.awayTotal}
+          </span>
           <span>-</span>
-          <span className={styles.homeScore}>111</span>
+          <span className={styles.homeScore}>
+            {props.homeTotal ? props.homeTotal : matchInfoObj?.homeTotal}
+          </span>
         </div>
         <div className={styles.home}>
-          <h3 className={styles.homeName}>Heat</h3>
-          <img className={styles.logo} src={""} alt="heats.svg" />
+          <h3 className={styles.homeName}>
+            {props.homeTeam ? props.homeTeam : matchInfoObj?.homeTeam}
+          </h3>
+          <img
+            className={styles.logo}
+            src={props.homeLogo ? props.homeLogo : matchInfoObj?.homeLogo}
+            alt="homeLogo.svg"
+          />
         </div>
         <img
           className={styles.subscriptionStatus}

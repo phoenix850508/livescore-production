@@ -56,3 +56,13 @@ export const getTeamsStandings = async (
     console.error("[GET teams standing failed]: ", error);
   }
 };
+
+// get match info
+export const getMatchInfo = async (id: number | string) => {
+  try {
+    const response = await axios.get(`${base_url}/game/:${id}`);
+    return response;
+  } catch (error) {
+    console.error("[GET match info failed: ]", error);
+  }
+};

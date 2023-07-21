@@ -55,10 +55,8 @@ export default function MlbMatchItem(props: combinedTypes) {
   const matchHomeScore = matchDataObj?.lineScore?.home?.R;
 
   // identify MLB sport type to dispatch to Feature Match
-  const sportType =
-    away && home && (away.length < 4 || home.length < 4)
-      ? "Baseball"
-      : "Basketball";
+  const leagueType =
+    away && home && (away.length < 4 || home.length < 4) ? "mlb" : "";
 
   // dispatch match
   const { dispatch } = useContext(MatchContext);
@@ -77,7 +75,8 @@ export default function MlbMatchItem(props: combinedTypes) {
         awayTotal: matchAwayScore,
         homeTotal: matchHomeScore,
       },
-      sportType: sportType,
+      leagueType: leagueType,
+      id: props.gameID,
     });
   };
 
@@ -171,7 +170,8 @@ export default function MlbMatchItem(props: combinedTypes) {
         awayTotal: matchAwayScore,
         homeTotal: matchHomeScore,
       },
-      sportType: sportType,
+      leagueType: leagueType,
+      id: props.gameID,
     });
   }, [matchAwayScore, matchHomeScore]);
 

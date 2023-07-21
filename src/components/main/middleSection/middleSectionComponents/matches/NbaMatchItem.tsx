@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import clsx from "clsx";
 import styles from "./NbaMatchItem.module.scss";
+import { match } from "assert";
 
 interface combinedTypes
   extends nbaMatchItemProps,
@@ -101,7 +102,7 @@ export default function NbaMatchItem(props: combinedTypes) {
     ?.slice(colonIndex && colonIndex - 2, colonIndex && colonIndex + 3);
   //extract props match periods
   const periods = props.periods;
-  const sportType = periods?.total === 4 ? "Basketball" : "Baseball";
+  const leagueType = periods?.total === 4 ? "nba" : "";
   // dispatch match
   const { dispatch } = useContext(MatchContext);
   const handleMatchClick = () => {
@@ -119,7 +120,8 @@ export default function NbaMatchItem(props: combinedTypes) {
         awayTotal: awayTotal && awayTotal,
         homeTotal: homeTotal && homeTotal,
       },
-      sportType: sportType,
+      leagueType: leagueType,
+      id: props.id,
     });
   };
 
@@ -139,7 +141,8 @@ export default function NbaMatchItem(props: combinedTypes) {
         awayTotal: awayTotal && awayTotal,
         homeTotal: homeTotal && homeTotal,
       },
-      sportType: sportType,
+      leagueType: leagueType,
+      id: props.id,
     });
   }, [props]);
 

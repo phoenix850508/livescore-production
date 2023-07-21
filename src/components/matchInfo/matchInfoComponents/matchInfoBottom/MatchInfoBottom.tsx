@@ -1,14 +1,25 @@
 import MatchStats from "./matchInfoBottomComponents/MatchStats";
 import MatchInfoBottomRight from "./matchInfoBottomComponents/MatchInfoBottomRight";
 import MatchTeams from "./matchInfoBottomComponents/MatchTeams";
-import { initMatchType } from "types/types";
+import { matchInfoObj } from "types/types";
 import styles from "./MatchInfoBottom.module.scss";
 
-export default function MatchInfoBottom() {
+export default function MatchInfoBottom(props: matchInfoObj) {
   return (
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>
-        <MatchTeams />
+        <MatchTeams
+          awayScores={props.awayScores}
+          homeScores={props.homeScores}
+          status={props.status}
+          periods={props.periods}
+          awayTeam={props.awayTeam}
+          awayLogo={props.awayLogo}
+          awayTotal={props.awayTotal}
+          homeTeam={props.homeTeam}
+          homeLogo={props.homeLogo}
+          homeTotal={props.homeTotal}
+        />
         <MatchStats />
       </div>
       <MatchInfoBottomRight />

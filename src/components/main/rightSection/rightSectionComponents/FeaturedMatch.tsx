@@ -75,17 +75,7 @@ export default function FeaturedMatch(props: showSportType) {
     CLE,
     "CLE",
   ];
-  const { match } = useContext(MatchContext);
-  const navigate = useNavigate();
-  const handleClick = () => {
-    if (
-      match?.awayTeam?.nickname !== "away" ||
-      match?.homeTeam?.nickname !== "home"
-    ) {
-      return navigate("/match");
-    }
-    alert("no teams selcted");
-  };
+  const { match, dispatch } = useContext(MatchContext);
   // extract the latest/selected match information
   const awayTeam = match.awayTeam;
   const homeTeam = match.homeTeam;
@@ -94,6 +84,30 @@ export default function FeaturedMatch(props: showSportType) {
   const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
   const [awayTeamLogo, setAwayTeamLogo] = useState(defaultLogo);
   const [homeTeamLogo, setHomeTeamLogo] = useState(defaultLogo);
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    // if Featured Match is not empty, then dispatch data to matchInfoPage
+    if (
+      match?.awayTeam?.nickname !== "away" ||
+      match?.homeTeam?.nickname !== "home"
+    ) {
+      dispatch({
+        type: "selectFeaturedMatch",
+        ...match,
+        awayTeam: {
+          ...match.awayTeam,
+          logo: awayTeamLogo,
+        },
+        homeTeam: {
+          ...match.homeTeam,
+          logo: homeTeamLogo,
+        },
+      });
+      return navigate(`/match/${match.leagueType}/${match.id}`);
+    }
+    alert("no teams selcted");
+  };
 
   // get team logo
   useEffect(() => {

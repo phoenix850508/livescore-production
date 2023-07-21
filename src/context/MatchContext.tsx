@@ -4,18 +4,21 @@ import React, { createContext, useReducer } from "react";
 
 const defaultMatch = {
   awayTeam: {
-    nickname: "away",
+    nickname: "",
     id: 0,
+    logo: "",
   },
   homeTeam: {
-    nickname: "home",
+    nickname: "",
     id: 0,
+    logo: "",
   },
   scores: {
     awayTotal: "",
     homeTotal: "",
   },
-  sportType: "",
+  leagueType: "",
+  id: 0,
 };
 
 const MatchContext = createContext<{
@@ -24,18 +27,21 @@ const MatchContext = createContext<{
 }>({
   match: {
     awayTeam: {
-      nickname: "away",
+      nickname: "",
       id: 0,
+      logo: "",
     },
     homeTeam: {
-      nickname: "home",
+      nickname: "",
       id: 0,
+      logo: "",
     },
     scores: {
       awayTotal: 0,
       homeTotal: 0,
     },
-    sportType: "",
+    leagueType: "",
+    id: 0,
   },
   dispatch: () => {},
 });

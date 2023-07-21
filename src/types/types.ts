@@ -92,33 +92,39 @@ export type initMatchType = {
   awayTeam?: {
     nickname?: string | undefined;
     id?: number | undefined;
+    logo?: string | undefined;
   };
   homeTeam?: {
     nickname?: string | undefined;
     id?: number | undefined;
+    logo?: string | undefined;
   };
   scores?: {
     awayTotal?: number | string | undefined | null;
     homeTotal?: number | string | undefined | null;
   };
-  sportType?: string | undefined;
+  leagueType?: string | undefined;
+  id?: number | string;
 };
 
 export type matchActionType = {
   type: "selectFeaturedMatch";
   awayTeam?: {
-    nickname: string | undefined;
-    id: number | undefined;
+    nickname?: string | undefined;
+    id?: number | undefined;
+    logo?: string | undefined;
   };
   homeTeam?: {
-    nickname: string | undefined;
-    id: number | undefined;
+    nickname?: string | undefined;
+    id?: number | undefined;
+    logo?: string | undefined;
   };
   scores?: {
     awayTotal?: number | string | undefined | null;
     homeTotal?: number | string | undefined | null;
   };
-  sportType?: string | undefined;
+  leagueType?: string | undefined;
+  id?: number | string;
 };
 
 export type handleSportType = {
@@ -210,4 +216,44 @@ export type initSeason = {
 export type seasonActionType = {
   type: "selectSeason";
   season: string;
+};
+
+export type matchInfoType = {
+  id?: number | null;
+  date?: {
+    start?: string | null;
+  };
+  periods?: {
+    current?: number;
+    total?: number;
+  };
+  status?: {
+    halftime?: string;
+    long?: string;
+  };
+  scores?: {
+    home?: {
+      linescore?: number[];
+    };
+    visitors?: {
+      linescore?: number[];
+    };
+  };
+};
+
+export type matchInfoObj = {
+  id?: string;
+  league?: string;
+  leagueType?: string;
+  date?: string | null;
+  awayTeam?: string;
+  awayLogo?: string;
+  awayScores?: string | number[] | undefined;
+  awayTotal?: string | null | number;
+  homeTeam?: string;
+  homeLogo?: string;
+  homeScores?: string | number[] | undefined;
+  homeTotal?: string | null | number;
+  periods?: string | number | undefined;
+  status?: string;
 };
