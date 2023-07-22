@@ -77,6 +77,7 @@ export default function MlbMatchItem(props: combinedTypes) {
       },
       leagueType: leagueType,
       id: props.gameID,
+      matchHour: matchHour,
     });
   };
 
@@ -172,6 +173,7 @@ export default function MlbMatchItem(props: combinedTypes) {
       },
       leagueType: leagueType,
       id: props.gameID,
+      matchHour: matchHour,
     });
   }, [matchAwayScore, matchHomeScore]);
 

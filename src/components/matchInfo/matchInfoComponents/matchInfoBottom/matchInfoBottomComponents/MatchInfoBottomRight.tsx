@@ -1,6 +1,40 @@
+import { matchInfoObj } from "types/types";
+import { useState, useEffect } from "react";
 import styles from "./MatchInfoBottomRight.module.scss";
 
-export default function MatchInfo() {
+export default function MatchInfo(props: matchInfoObj) {
+  const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
+  const [periodsPercentString, setPeriodsPercentString] = useState<
+    string | undefined | 0
+  >("");
+  let awayScores: null | number[] | undefined = null;
+  let homeScores: null | number[] | undefined = null;
+  let unit: null | undefined | any[] = null;
+
+  const periods = props.periods ? props.periods : matchInfoObj?.periods;
+  let periodsPercent: number | undefined | 0 | null = 0;
+
+  if (props?.awayScores || props?.homeScores) {
+    awayScores = props?.awayScores;
+    homeScores = props?.homeScores;
+  } else if (matchInfoObj) {
+    awayScores = matchInfoObj && matchInfoObj.awayScores;
+    homeScores = matchInfoObj && matchInfoObj.homeScores;
+  }
+
+  useEffect(() => {
+    const matchInfoObjString = localStorage.getItem("matchInfoObj");
+    matchInfoObjString && setMatchInfoObj(JSON.parse(matchInfoObjString));
+  }, []);
+
+  useEffect(() => {
+    periodsPercent = awayScores && Number(periods) / awayScores?.length;
+    if (periodsPercent === 1) {
+      setPeriodsPercentString("100%");
+    } else {
+      periodsPercent && setPeriodsPercentString(periodsPercent.toString());
+    }
+  });
   return (
     <div className={styles.matchInfo}>
       <div className={styles.title}>Match Info</div>
@@ -8,24 +42,24 @@ export default function MatchInfo() {
         <table>
           <thead>
             <tr>
-              <th>1Q</th>
-              <th>2Q</th>
-              <th>3Q</th>
-              <th>4Q</th>
+              {awayScores &&
+                awayScores.map((score: number, index: number) => {
+                  return <th key={index}>{index + 1}Q</th>;
+                })}
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>24</td>
-              <td>26</td>
-              <td>26</td>
-              <td>0</td>
+              {awayScores &&
+                awayScores.map((score: number, index: number) => {
+                  return <td key={index}>{score}</td>;
+                })}
             </tr>
             <tr>
-              <td>19</td>
-              <td>27</td>
-              <td>20</td>
-              <td>0</td>
+              {homeScores &&
+                homeScores.map((score: number, index: number) => {
+                  return <td key={index}>{score}</td>;
+                })}
             </tr>
           </tbody>
         </table>
@@ -34,12 +68,26 @@ export default function MatchInfo() {
         <div className={styles.timelineBody}>
           <div className={styles.rectangle}>
             <div className={styles.halftime}></div>
-            <div className={styles.timelineBar}></div>
-            <div className={styles.timeLayer}></div>
+            <div
+              className={styles.timelineBar}
+              style={{ position: "absolute", left: periodsPercentString }}
+            ></div>
+            <div
+              className={styles.timeLayer}
+              style={{
+                position: "absolute",
+                height: "100%",
+                opacity: "0.3",
+                left: "0",
+                width: periodsPercentString,
+              }}
+            ></div>
           </div>
         </div>
         <div className={styles.timecodeWrapper}>
-          <div className={styles.startTime}>13:30</div>
+          <div className={styles.startTime}>
+            {props.matchHour ? props.matchHour : matchInfoObj?.matchHour}
+          </div>
           {/* only nba uses halftime, mlb will use innings to view the timeline */}
           <div className={styles.halftime}>HT</div>
           <div className={styles.fulltime}>FT</div>

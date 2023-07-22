@@ -24,6 +24,7 @@ export default function dateReducer(
         },
         leagueType: action?.leagueType,
         id: action?.id,
+        matchHour: action?.matchHour,
       };
     }
   }

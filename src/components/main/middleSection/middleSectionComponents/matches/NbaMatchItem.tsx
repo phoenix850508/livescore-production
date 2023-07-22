@@ -5,7 +5,6 @@ import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import clsx from "clsx";
 import styles from "./NbaMatchItem.module.scss";
-import { match } from "assert";
 
 interface combinedTypes
   extends nbaMatchItemProps,
@@ -122,6 +121,7 @@ export default function NbaMatchItem(props: combinedTypes) {
       },
       leagueType: leagueType,
       id: props.id,
+      matchHour: matchHour,
     });
   };
 
@@ -143,6 +143,7 @@ export default function NbaMatchItem(props: combinedTypes) {
       },
       leagueType: leagueType,
       id: props.id,
+      matchHour: matchHour,
     });
   }, [props]);
 

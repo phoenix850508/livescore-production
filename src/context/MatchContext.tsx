@@ -19,6 +19,7 @@ const defaultMatch = {
   },
   leagueType: "",
   id: 0,
+  matchHour: "",
 };
 
 const MatchContext = createContext<{
@@ -42,6 +43,7 @@ const MatchContext = createContext<{
     },
     leagueType: "",
     id: 0,
+    matchHour: "",
   },
   dispatch: () => {},
 });

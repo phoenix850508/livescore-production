@@ -59,6 +59,7 @@ export default function MatchInfo() {
         homeTotal: match.scores?.homeTotal,
         periods: matchInfo.periods?.current,
         status: matchInfo.status?.long,
+        matchHour: match?.matchHour,
       };
 
       localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
@@ -74,6 +75,7 @@ export default function MatchInfo() {
         homeTeam={match.homeTeam?.nickname}
       />
       <MatchInfoBottom
+        league={leagueCategory}
         awayScores={matchInfo?.scores?.visitors?.linescore}
         homeScores={matchInfo?.scores?.home?.linescore}
         periods={matchInfo?.periods?.current}
@@ -84,6 +86,7 @@ export default function MatchInfo() {
         homeTeam={match.homeTeam?.nickname}
         homeLogo={match.homeTeam?.logo}
         homeTotal={match.scores?.homeTotal}
+        matchHour={match?.matchHour}
       />
     </div>
   );

@@ -105,6 +105,7 @@ export type initMatchType = {
   };
   leagueType?: string | undefined;
   id?: number | string;
+  matchHour?: string | undefined;
 };
 
 export type matchActionType = {
@@ -125,6 +126,7 @@ export type matchActionType = {
   };
   leagueType?: string | undefined;
   id?: number | string;
+  matchHour?: string | undefined;
 };
 
 export type handleSportType = {
@@ -248,12 +250,13 @@ export type matchInfoObj = {
   date?: string | null;
   awayTeam?: string;
   awayLogo?: string;
-  awayScores?: string | number[] | undefined;
+  awayScores?: number[] | undefined;
   awayTotal?: string | null | number;
   homeTeam?: string;
   homeLogo?: string;
-  homeScores?: string | number[] | undefined;
+  homeScores?: number[] | undefined;
   homeTotal?: string | null | number;
   periods?: string | number | undefined;
   status?: string;
+  matchHour?: string | undefined;
 };

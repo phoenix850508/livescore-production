@@ -75,13 +75,10 @@
     background-color: #fff;
   }
   .timelineBar {
-    position: absolute;
-    left: 75%;
     height: 100%;
     width: 3px;
     background-color: #e89faa;
     &::after {
-      content: "3Q";
       position: absolute;
       bottom: 0;
       transform: translate(-50%, 120%);
@@ -89,12 +86,7 @@
     }
   }
   .timeLayer {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 75%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-radius: 15px;
     background-color: grey;
     opacity: 0.3;
   }

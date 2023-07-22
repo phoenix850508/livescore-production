@@ -9,8 +9,6 @@ export default function MatchInfoBottom(props: matchInfoObj) {
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>
         <MatchTeams
-          awayScores={props.awayScores}
-          homeScores={props.homeScores}
           status={props.status}
           periods={props.periods}
           awayTeam={props.awayTeam}
@@ -22,7 +20,12 @@ export default function MatchInfoBottom(props: matchInfoObj) {
         />
         <MatchStats />
       </div>
-      <MatchInfoBottomRight />
+      <MatchInfoBottomRight
+        awayScores={props.awayScores}
+        homeScores={props.homeScores}
+        periods={props.periods}
+        matchHour={props.matchHour}
+      />
     </div>
   );
 }
