@@ -66,7 +66,6 @@
     rgba(55, 77, 245, 0.4) 52px 78px,
     rgba(55, 77, 245, 0.2) 78px 104px
   );
-  border-radius: 15px;
   .halftime {
     position: absolute;
     left: 50%;
@@ -86,7 +85,6 @@
     }
   }
   .timeLayer {
-    border-radius: 15px;
     background-color: grey;
     opacity: 0.3;
   }

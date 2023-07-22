@@ -2,13 +2,14 @@ import MatchInfoTop from "./matchInfoComponents/MatchInfoTop";
 import MatchInfoBottom from "./matchInfoComponents/matchInfoBottom/MatchInfoBottom";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { getMatchInfo } from "api/nba";
+import { getMatchInfo, getMatchStats } from "api/nba";
 import { MatchContext } from "context/MatchContext";
-import { matchInfoType } from "types/types";
+import { matchInfoType, matchStatsType } from "types/types";
 import styles from "./MatchInfo.module.scss";
 
 export default function MatchInfo() {
   const { id } = useParams();
+  const [matchStats, setMatchStats] = useState<null | object[]>(null);
   // matchInfo contains date, id, periods, scores, teams, and status
   const [matchInfo, setMatchInfo] = useState<null | matchInfoType>(null);
   // match contains team nickname, logo, leagueType, and total score
@@ -40,6 +41,17 @@ export default function MatchInfo() {
     asyncGetMatchInfo();
   }, [id]);
 
+  // get nba match stats
+  useEffect(() => {
+    const asyncGetMatchStats = async () => {
+      const response = id && (await getMatchStats(id));
+      const objData = response && response.data;
+      const idObject = objData && objData[id.toString()];
+      setMatchStats(idObject);
+    };
+    asyncGetMatchStats();
+  }, [id]);
+
   // set the nba match related data to localStorage to prevent refresh page data disapears
   useEffect(() => {
     if (matchInfo && match && leagueCategory) {
@@ -61,10 +73,16 @@ export default function MatchInfo() {
         status: matchInfo.status?.long,
         matchHour: match?.matchHour,
       };
-
       localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
     }
-  }, [id, leagueCategory, match, nbaDate, leagueType]);
+
+    if (matchStats && match) {
+      const homeStats = matchStats && matchStats[0];
+      const awayStats = matchStats && matchStats[1];
+      localStorage.setItem("awayStats", JSON.stringify(awayStats));
+      localStorage.setItem("homeStats", JSON.stringify(homeStats));
+    }
+  }, [id, match, leagueCategory, leagueType, nbaDate]);
   return (
     <div className={styles.matchInfo}>
       <MatchInfoTop

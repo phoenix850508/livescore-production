@@ -243,6 +243,25 @@ export type matchInfoType = {
   };
 };
 
+export type matchStatsType = {
+  statistics?: [
+    {
+      assists?: number;
+      blocks?: number;
+      defReb?: number;
+      offReb?: number;
+      pFouls?: number;
+      points?: number;
+      steals?: number;
+      turnovers?: number;
+    }
+  ];
+
+  team?: {
+    nickname?: string;
+  };
+};
+
 export type matchInfoObj = {
   id?: string;
   league?: string;

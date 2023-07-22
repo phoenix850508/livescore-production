@@ -66,3 +66,13 @@ export const getMatchInfo = async (id: number | string) => {
     console.error("[GET match info failed: ]", error);
   }
 };
+
+// get match stats
+export const getMatchStats = async (id: string) => {
+  try {
+    const respose = await axios.get(`${base_url}/stats/:${id}`);
+    return respose;
+  } catch (error) {
+    console.error("[GET match stats failed: ]", error);
+  }
+};

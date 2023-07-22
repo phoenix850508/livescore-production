@@ -1,10 +1,12 @@
 import MatchStats from "./matchInfoBottomComponents/MatchStats";
 import MatchInfoBottomRight from "./matchInfoBottomComponents/MatchInfoBottomRight";
 import MatchTeams from "./matchInfoBottomComponents/MatchTeams";
-import { matchInfoObj } from "types/types";
+import { matchInfoObj, matchStatsType } from "types/types";
 import styles from "./MatchInfoBottom.module.scss";
 
-export default function MatchInfoBottom(props: matchInfoObj) {
+interface combinedType extends matchInfoObj, matchStatsType {}
+
+export default function MatchInfoBottom(props: combinedType) {
   return (
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>
