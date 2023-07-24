@@ -1,22 +1,48 @@
 import { useState, useEffect } from "react";
-import { matchStatsType, matchStatsObjectType } from "types/types";
+import {
+  matchStatsType,
+  nbaMatchStatsObjectType,
+  mlbteamStatsType,
+} from "types/types";
 import clsx from "clsx";
 import styles from "./MatchStats.module.scss";
 
-export default function MatchStats(props: matchStatsObjectType) {
-  const [homeStats, setHomeStats] = useState<null | undefined | matchStatsType>(
-    null
-  );
-  const [awayStats, setAwayStats] = useState<null | undefined | matchStatsType>(
-    null
-  );
-  const homeStatArr = homeStats?.statistics;
-  const homeStatObj = homeStatArr && homeStatArr[0];
-  const homeStatKeys = homeStatObj && Object.keys(homeStatObj);
-  const awayStatArr = awayStats?.statistics;
-  const awayStatObj = awayStatArr && awayStatArr[0];
+interface combinedType extends nbaMatchStatsObjectType, mlbteamStatsType {}
 
-  const limitedStats = [
+export default function MatchStats(props: any) {
+  const [nbaHomeStats, setNbaHomeStats] = useState<
+    null | undefined | matchStatsType
+  >(null);
+  const [nbaAwayStats, setNbaAwayStats] = useState<
+    null | undefined | matchStatsType
+  >(null);
+  const [mlbHomeStats, setMlbHomeStats] = useState<mlbteamStatsType | null>(
+    null
+  );
+  const [mlbAwayStats, setMlbAwayStats] = useState<
+    mlbteamStatsType | null | undefined
+  >(null);
+  // nba decompose localStorage/props obj
+  const nbaHomeStatArr = nbaHomeStats?.statistics;
+  const nbaHomeStatObj = nbaHomeStatArr && nbaHomeStatArr[0];
+  const nbaHomeStatKeys = nbaHomeStatObj && Object.keys(nbaHomeStatObj);
+  const nbaAwayStatArr = nbaAwayStats?.statistics;
+  const nbaAwayStatObj = nbaAwayStatArr && nbaAwayStatArr[0];
+
+  // mlb decompose localStorage/props obj
+  const mlbHomeStatObj = mlbHomeStats && {
+    ...mlbHomeStats.Hitting,
+    ...mlbHomeStats.Pitching,
+    ...mlbHomeStats?.BaseRunning,
+  };
+  const mlbAwayStatObj = mlbAwayStats && {
+    ...mlbAwayStats.Hitting,
+    ...mlbAwayStats.Pitching,
+    ...mlbAwayStats.BaseRunning,
+  };
+  const mlbHomeStatKeys = mlbHomeStatObj && Object.keys(mlbHomeStatObj);
+
+  const limitedNbaStats = [
     "assists",
     "blocks",
     "defReb",
@@ -33,41 +59,84 @@ export default function MatchStats(props: matchStatsObjectType) {
     "turnovers",
   ];
 
+  const limitedMlbStats = [
+    "R",
+    "H",
+    "2B",
+    "3B",
+    "CS",
+    "PO",
+    "SB",
+    "BB",
+    "TB",
+    "Batters Faced",
+    "Flyouts",
+    "Groundouts",
+    "Pitches",
+    "Strikes",
+    "Wild Pitch",
+  ];
+
+  // get localStorage obj data
   useEffect(() => {
-    const homeStatsObjString = localStorage.getItem("homeStats");
-    const awayStatsObjString = localStorage.getItem("awayStats");
-    homeStatsObjString && setHomeStats(JSON.parse(homeStatsObjString));
-    awayStatsObjString && setAwayStats(JSON.parse(awayStatsObjString));
+    const matchInfoObjString = localStorage.getItem("matchInfoObj");
+    const matchInfoObj = matchInfoObjString && JSON.parse(matchInfoObjString);
+    // fot nba
+    if (matchInfoObj.leagueType === "nba") {
+      const homeStatsObjString = localStorage.getItem("homeStats");
+      const awayStatsObjString = localStorage.getItem("awayStats");
+      homeStatsObjString && setNbaHomeStats(JSON.parse(homeStatsObjString));
+      awayStatsObjString && setNbaAwayStats(JSON.parse(awayStatsObjString));
+    }
+    // for mlb
+    if (matchInfoObj.leagueType === "mlb") {
+      const homeStatsObjString = localStorage.getItem("homeStats");
+      const awayStatsObjString = localStorage.getItem("awayStats");
+      homeStatsObjString && setMlbHomeStats(JSON.parse(homeStatsObjString));
+      awayStatsObjString && setMlbAwayStats(JSON.parse(awayStatsObjString));
+    }
   }, []);
 
+  // get props obj data
   useEffect(() => {
-    const propsAwayStats = props?.awayStats;
-    const propsHomeStats = props.homeStats;
-    propsAwayStats && setHomeStats(propsHomeStats);
-    propsHomeStats && setAwayStats(propsAwayStats);
-  }, [props]);
+    // for nba
+    if (props.leagueType === "nba") {
+      const propsAwayStats = props?.awayStats;
+      const propsHomeStats = props.homeStats;
+      propsAwayStats && setNbaHomeStats(propsHomeStats);
+      propsHomeStats && setNbaAwayStats(propsAwayStats);
+    }
+    // for mlb
+    if (props.leagueType === "mlb") {
+      const propsAwayStats = props?.awayStats;
+      const propsHomeStats = props.homeStats;
+      propsAwayStats && setMlbAwayStats(propsAwayStats);
+      propsHomeStats && setMlbHomeStats(propsHomeStats);
+    }
+  }, [props.leagueType, props?.awayStats, props.homeStats]);
+
   return (
     <div className={styles.matchStats}>
       <div className={styles.title}>Match Stats</div>
       <div className={styles.allStatsWrapper}>
-        {homeStatKeys &&
-          homeStatKeys?.map((key: string, index: number) => {
-            if (limitedStats.includes(key)) {
+        {nbaHomeStatKeys &&
+          nbaHomeStatKeys?.map((key: string, index: number) => {
+            if (limitedNbaStats.includes(key)) {
               const awayKeyStat =
-                awayStatObj && awayStatObj[key as keyof object];
+                nbaAwayStatObj && nbaAwayStatObj[key as keyof object];
               const homeKeyStat =
-                homeStatObj && homeStatObj[key as keyof object];
+                nbaHomeStatObj && nbaHomeStatObj[key as keyof object];
               return (
                 <div className={styles.statsRow} key={index}>
                   <div
                     className={clsx(
                       {
                         [styles.awayStat]:
-                          awayKeyStat && awayKeyStat < homeKeyStat,
+                          awayKeyStat && awayKeyStat <= homeKeyStat,
                       },
                       {
                         [styles.highlightStats]:
-                          awayKeyStat && awayKeyStat >= homeKeyStat,
+                          awayKeyStat && awayKeyStat > homeKeyStat,
                       }
                     )}
                   >
@@ -78,11 +147,57 @@ export default function MatchStats(props: matchStatsObjectType) {
                     className={clsx(
                       {
                         [styles.homeStat]:
-                          awayKeyStat && homeKeyStat < awayKeyStat,
+                          awayKeyStat && homeKeyStat <= awayKeyStat,
                       },
                       {
                         [styles.highlightStats]:
-                          awayKeyStat && homeKeyStat >= awayKeyStat,
+                          awayKeyStat && homeKeyStat > awayKeyStat,
+                      }
+                    )}
+                  >
+                    {homeKeyStat}
+                  </div>
+                </div>
+              );
+            }
+          })}
+        {mlbHomeStatKeys &&
+          mlbHomeStatKeys?.map((key: string, index: number) => {
+            if (limitedMlbStats.includes(key)) {
+              const awayKeyStat =
+                mlbAwayStatObj && mlbAwayStatObj[key as keyof object];
+              const homeKeyStat =
+                mlbHomeStatObj && mlbHomeStatObj[key as keyof object];
+              return (
+                <div className={styles.statsRow} key={index}>
+                  <div
+                    className={clsx(
+                      {
+                        [styles.awayStat]:
+                          awayKeyStat &&
+                          Number(awayKeyStat) <= Number(homeKeyStat),
+                      },
+                      {
+                        [styles.highlightStats]:
+                          awayKeyStat &&
+                          Number(awayKeyStat) > Number(homeKeyStat),
+                      }
+                    )}
+                  >
+                    {awayKeyStat}
+                  </div>
+                  <div className={styles.statsTitle}>{key}</div>
+                  <div
+                    className={clsx(
+                      {
+                        [styles.homeStat]:
+                          awayKeyStat &&
+                          Number(homeKeyStat) <= Number(awayKeyStat),
+                      },
+                      {
+                        [styles.highlightStats]:
+                          awayKeyStat &&
+                          Number(homeKeyStat) > Number(awayKeyStat),
                       }
                     )}
                   >

@@ -1,15 +1,16 @@
-import { matchInfoObj } from "types/types";
+import { matchInfoObj, mlbMatchInfoType } from "types/types";
 import { useState, useEffect } from "react";
 import styles from "./MatchInfoBottomRight.module.scss";
 
+interface combinedType extends mlbMatchInfoType, matchInfoObj {}
+
 export default function MatchInfo(props: matchInfoObj) {
-  const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
+  const [matchInfoObj, setMatchInfoObj] = useState<null | combinedType>(null);
   const [periodsPercentString, setPeriodsPercentString] = useState<
     string | undefined | 0
   >("");
-  let awayScores: null | number[] | undefined = null;
-  let homeScores: null | number[] | undefined = null;
-  let unit: null | undefined | any[] = null;
+  let awayScores: null | number[] | string[] | undefined = null;
+  let homeScores: null | number[] | string[] | undefined = null;
 
   const periods = props.periods ? props.periods : matchInfoObj?.periods;
   let periodsPercent: number | undefined | 0 | null = 0;
@@ -17,9 +18,18 @@ export default function MatchInfo(props: matchInfoObj) {
   if (props?.awayScores || props?.homeScores) {
     awayScores = props?.awayScores;
     homeScores = props?.homeScores;
-  } else if (matchInfoObj) {
-    awayScores = matchInfoObj && matchInfoObj.awayScores;
-    homeScores = matchInfoObj && matchInfoObj.homeScores;
+  } else {
+    if (matchInfoObj?.leagueType === "nba") {
+      awayScores = matchInfoObj && matchInfoObj.awayScores;
+      homeScores = matchInfoObj && matchInfoObj.homeScores;
+    }
+    if (matchInfoObj?.leagueType === "mlb") {
+      matchInfoObj && console.log("matchInfoObj", matchInfoObj.awayScores);
+      const awayScoresObj = matchInfoObj?.lineScore?.away?.scoresByInning;
+      awayScores = awayScoresObj && Object.values(awayScoresObj);
+      const homeScoresObj = matchInfoObj?.lineScore?.home?.scoresByInning;
+      homeScores = homeScoresObj && Object.values(homeScoresObj);
+    }
   }
 
   useEffect(() => {
@@ -43,21 +53,30 @@ export default function MatchInfo(props: matchInfoObj) {
           <thead>
             <tr>
               {awayScores &&
-                awayScores.map((score: number, index: number) => {
-                  return <th key={index}>{index + 1}Q</th>;
+                awayScores.map((score: number | string, index: number) => {
+                  return (
+                    <th key={index}>
+                      {index + 1}
+                      {(props.leagueType
+                        ? props.leagueType
+                        : matchInfoObj?.leagueType) === "nba"
+                        ? "Q"
+                        : ""}
+                    </th>
+                  );
                 })}
             </tr>
           </thead>
           <tbody>
             <tr>
               {awayScores &&
-                awayScores.map((score: number, index: number) => {
+                awayScores.map((score: number | string, index: number) => {
                   return <td key={index}>{score}</td>;
                 })}
             </tr>
             <tr>
               {homeScores &&
-                homeScores.map((score: number, index: number) => {
+                homeScores.map((score: number | string, index: number) => {
                   return <td key={index}>{score}</td>;
                 })}
             </tr>

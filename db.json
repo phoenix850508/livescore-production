@@ -172,6 +172,76 @@
         }
       },
       {
+        "id": 12216,
+        "league": "standard",
+        "season": 2022,
+        "date": {
+          "start": "2023-04-02T22:00:00.000Z",
+          "end": null,
+          "duration": null
+        },
+        "stage": 2,
+        "status": {
+          "clock": null,
+          "halftime": false,
+          "short": 3,
+          "long": "Finished"
+        },
+        "periods": {
+          "current": 4,
+          "total": 4,
+          "endOfPeriod": false
+        },
+        "arena": {
+          "name": "State Farm Arena",
+          "city": "Atlanta",
+          "state": "GA",
+          "country": null
+        },
+        "teams": {
+          "visitors": {
+            "id": 8,
+            "name": "Dallas Mavericks",
+            "nickname": "Mavericks",
+            "code": "DAL",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
+          },
+          "home": {
+            "id": 1,
+            "name": "Atlanta Hawks",
+            "nickname": "Hawks",
+            "code": "ATL",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
+          }
+        },
+        "scores": {
+          "visitors": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": [29, 37, 25, 32, 7],
+            "points": 130
+          },
+          "home": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": [37, 33, 24, 29, 9],
+            "points": 132
+          }
+        },
+        "officials": [],
+        "timesTied": null,
+        "leadChanges": null,
+        "nugget": null
+      },
+      {
         "id": 12217,
         "league": "standard",
         "season": 2022,

@@ -220,7 +220,7 @@ export type seasonActionType = {
   season: string;
 };
 
-export type matchInfoType = {
+export type nbaMatchInfoType = {
   id?: number | null;
   date?: {
     start?: string | null;
@@ -243,7 +243,127 @@ export type matchInfoType = {
   };
 };
 
-export type matchStatsObjectType = {
+export type mlbMatchInfoType = {
+  gameDate: string;
+  Umpires?: string;
+  Venue?: string;
+  away?: string;
+  currentInning?: string;
+  currentOuts?: string;
+  gameID?: string;
+  gameStatus?: string;
+  home?: string;
+  lineScore?: {
+    away?: {
+      E?: string;
+      H?: string;
+      R?: string;
+      scoresByInning: {
+        1?: string;
+        2?: string;
+        3?: string;
+        4?: string;
+        5?: string;
+        6?: string;
+        7?: string;
+        8?: string;
+        9?: string;
+        10?: string;
+        11?: string;
+        12?: string;
+      };
+    };
+    home?: {
+      E?: string;
+      H?: string;
+      R?: string;
+      scoresByInning?: {
+        1?: string;
+        2?: string;
+        3?: string;
+        4?: string;
+        5?: string;
+        6?: string;
+        7?: string;
+        8?: string;
+        9?: string;
+        10?: string;
+        11?: string;
+        12?: string;
+      };
+    };
+  };
+  teamStats?: {
+    away?: {
+      BaseRunning?: {
+        CS?: string;
+        PO?: string;
+        SB?: string;
+      };
+      Hitting?: {
+        "2B"?: string;
+        "3B"?: string;
+        BB?: string;
+        TB?: string;
+      };
+      Pitching?: {
+        "Batters Faced": string;
+        Flyouts?: string;
+        Groundouts?: string;
+        Pitches?: string;
+        Strikes?: string;
+        "Wild Pitch"?: string;
+      };
+    };
+    home?: {
+      BaseRunning?: {
+        CS?: string;
+        PO?: string;
+        SB?: string;
+      };
+      Hitting?: {
+        "2B"?: string;
+        "3B"?: string;
+        BB?: string;
+        TB?: string;
+      };
+      Pitching?: {
+        "Batters Faced": string;
+        Flyouts?: string;
+        Groundouts?: string;
+        Pitches?: string;
+        Strikes?: string;
+        "Wild Pitch"?: string;
+      };
+    };
+  };
+};
+
+export type mlbteamStatsType = {
+  BaseRunning?: {
+    CS?: string | null;
+    PO?: string | null;
+    SB?: string | null;
+  };
+  Hitting?: {
+    "2B"?: string | null;
+    "3B"?: string | null;
+    BB?: string | null;
+    TB?: string | null;
+    R?: string | null;
+    H?: string | null;
+  };
+  Pitching?: {
+    "Batters Faced": string | null;
+    Flyouts?: string | null;
+    Groundouts?: string | null;
+    Pitches?: string | null;
+    Strikes?: string | null;
+    "Wild Pitch"?: string | null;
+  };
+};
+
+export type nbaMatchStatsObjectType = {
   homeStats?: {
     statistics?: [
       {
@@ -290,6 +410,7 @@ export type matchStatsObjectType = {
       nickname?: string;
     };
   } | null;
+  leagueType?: string | null;
 };
 
 export type matchStatsType = {
@@ -310,10 +431,6 @@ export type matchStatsType = {
       totReb?: number | null;
     }
   ];
-
-  team?: {
-    nickname?: string | null;
-  };
 };
 
 export type matchInfoObj = {
@@ -323,11 +440,11 @@ export type matchInfoObj = {
   date?: string | null | null;
   awayTeam?: string | null;
   awayLogo?: string;
-  awayScores?: number[] | undefined | null;
+  awayScores?: number[] | string[] | undefined | null;
   awayTotal?: string | null | number | null;
   homeTeam?: string | null;
   homeLogo?: string;
-  homeScores?: number[] | undefined | null;
+  homeScores?: number[] | string[] | undefined | null;
   homeTotal?: string | null | number;
   periods?: string | number | undefined | null;
   status?: string | null;

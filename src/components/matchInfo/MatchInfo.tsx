@@ -4,33 +4,65 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { getMatchInfo, getMatchStats } from "api/nba";
 import { MatchContext } from "context/MatchContext";
-import { matchInfoType } from "types/types";
+import { nbaMatchInfoType, mlbMatchInfoType } from "types/types";
 import { dummyMlbGamesStats } from "./dummyMlbGamesStats";
 import styles from "./MatchInfo.module.scss";
 
 export default function MatchInfo() {
   const { id } = useParams();
   const [matchStats, setMatchStats] = useState<null | object[]>(null);
-  // matchInfo contains date, id, periods, scores, teams, and status
-  const [matchInfo, setMatchInfo] = useState<null | matchInfoType>(null);
+  // nbaMatchInfo contains date, id, periods, scores, teams, and status
+  const [nbaMatchInfo, setNbaMatchInfo] = useState<null | nbaMatchInfoType>(
+    null
+  );
+  // mlbMatchInfo contains Umpires, Venue, currentInning, currentOuts, gameID, gameStatus, linescore, teamStats, home, away
+  const [mlbMatchInfo, setMlbMatchInfo] = useState<null | mlbMatchInfoType>(
+    null
+  );
+
   // match contains team nickname, logo, leagueType, and total score
   const { match } = useContext(MatchContext);
-  console.log(match);
+
+  // define props for either nba or mlb
   const leagueType = match.leagueType;
   let leagueCategory: string | undefined = "";
+  let awayScores = null;
+  let homeScores = null;
+  let periods = null;
+  let status = null;
+  let homeStats = null;
+  let awayStats = null;
   switch (leagueType) {
     case "nba": {
       leagueCategory = "National Basketball Association";
+      awayScores = nbaMatchInfo?.scores?.visitors?.linescore;
+      homeScores = nbaMatchInfo?.scores?.home?.linescore;
+      periods = nbaMatchInfo?.periods?.current;
+      status = nbaMatchInfo?.status?.long;
+      homeStats = matchStats && matchStats[0];
+      awayStats = matchStats && matchStats[1];
       break;
     }
     case "mlb": {
       leagueCategory = "Major League Baseball";
+      console.log(mlbMatchInfo);
+      const awayScoresObj = mlbMatchInfo?.lineScore?.away?.scoresByInning;
+      awayScores = awayScoresObj && Object.values(awayScoresObj);
+      const homeScoresObj = mlbMatchInfo?.lineScore?.home?.scoresByInning;
+      homeScores = homeScoresObj && Object.values(homeScoresObj);
+      periods = mlbMatchInfo?.currentInning;
+      status = mlbMatchInfo?.gameStatus;
+      const mlbHomeStatObj = mlbMatchInfo && mlbMatchInfo.teamStats?.home;
+      const mlbAwayStatObj = mlbMatchInfo && mlbMatchInfo.teamStats?.away;
+      homeStats = mlbHomeStatObj;
+      awayStats = mlbAwayStatObj;
       break;
     }
   }
 
-  const matchDate = matchInfo?.date?.start;
+  const matchDate = nbaMatchInfo?.date?.start;
   const nbaDate = matchDate && matchDate.slice(0, 10);
+  const mlbDate = id?.slice(0, 8);
 
   // get nba match info
   useEffect(() => {
@@ -38,7 +70,7 @@ export default function MatchInfo() {
       const response = id && (await getMatchInfo(id));
       const data = response && response.data;
       const idObject = data && data[id.toString()].response;
-      idObject && setMatchInfo(idObject);
+      idObject && setNbaMatchInfo(idObject);
     };
     if (leagueType === "nba") asyncGetMatchInfo();
   }, [id, leagueType]);
@@ -57,14 +89,41 @@ export default function MatchInfo() {
   // get mlb match stats
   useEffect(() => {
     if (leagueType === "mlb") {
-      const str = id;
-      str && console.log(dummyMlbGamesStats[str as keyof object]);
+      setMlbMatchInfo(dummyMlbGamesStats[id as keyof object]);
     }
-  }, [id]);
+  }, [id, leagueType]);
+
+  // set the match related mlb data to localStorage to prevent refersh page data disapear
+  useEffect(() => {
+    if (mlbMatchInfo && match && leagueType === "mlb") {
+      // store the values to props
+      // if the data alreadt exists in localStorage it will be overwritten
+      const matchInfoObj = {
+        ...mlbMatchInfo,
+        id: id,
+        league: leagueCategory,
+        leagueType: leagueType,
+        matchHour: match?.matchHour,
+        awayTeam: match.awayTeam?.nickname,
+        awayLogo: match.awayTeam?.logo,
+        awayTotal: match.scores?.awayTotal,
+        homeTeam: match.homeTeam?.nickname,
+        homeLogo: match.homeTeam?.logo,
+        homeTotal: match.scores?.homeTotal,
+      };
+      localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
+
+      const awayStats = mlbMatchInfo.teamStats?.away;
+      const homeStats = mlbMatchInfo.teamStats?.home;
+      localStorage.setItem("awayStats", JSON.stringify(awayStats));
+      localStorage.setItem("homeStats", JSON.stringify(homeStats));
+    }
+  });
 
   // set the match related nba data to localStorage to prevent refresh page data disapears
   useEffect(() => {
-    if (matchInfo && match && leagueType === "nba") {
+    if (nbaMatchInfo && match && leagueType === "nba") {
+      // store the values to props
       // if the data alreadt exists in localStorage it will be overwritten
       const matchInfoObj = {
         id: id,
@@ -73,14 +132,14 @@ export default function MatchInfo() {
         date: nbaDate,
         awayTeam: match.awayTeam?.nickname,
         awayLogo: match.awayTeam?.logo,
-        awayScores: matchInfo.scores?.visitors?.linescore,
+        awayScores: nbaMatchInfo.scores?.visitors?.linescore,
         awayTotal: match.scores?.awayTotal,
         homeTeam: match.homeTeam?.nickname,
         homeLogo: match.homeTeam?.logo,
-        homeScores: matchInfo.scores?.home?.linescore,
+        homeScores: nbaMatchInfo.scores?.home?.linescore,
         homeTotal: match.scores?.homeTotal,
-        periods: matchInfo.periods?.current,
-        status: matchInfo.status?.long,
+        periods: nbaMatchInfo.periods?.current,
+        status: nbaMatchInfo.status?.long,
         matchHour: match?.matchHour,
       };
       localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
@@ -99,16 +158,12 @@ export default function MatchInfo() {
       <MatchInfoTop
         leagueType={leagueType}
         league={leagueCategory}
-        date={nbaDate}
+        date={nbaDate ? nbaDate : mlbDate}
         awayTeam={match.awayTeam?.nickname}
         homeTeam={match.homeTeam?.nickname}
       />
       <MatchInfoBottom
-        league={leagueCategory}
-        awayScores={matchInfo?.scores?.visitors?.linescore}
-        homeScores={matchInfo?.scores?.home?.linescore}
-        periods={matchInfo?.periods?.current}
-        status={matchInfo?.status?.long}
+        leagueType={leagueType}
         awayTeam={match.awayTeam?.nickname}
         awayLogo={match.awayTeam?.logo}
         awayTotal={match.scores?.awayTotal}
@@ -116,8 +171,12 @@ export default function MatchInfo() {
         homeLogo={match.homeTeam?.logo}
         homeTotal={match.scores?.homeTotal}
         matchHour={match?.matchHour}
-        homeStats={matchStats && matchStats[0]}
-        awayStats={matchStats && matchStats[1]}
+        awayScores={awayScores}
+        homeScores={homeScores}
+        periods={periods}
+        status={status}
+        homeStats={homeStats}
+        awayStats={awayStats}
       />
     </div>
   );

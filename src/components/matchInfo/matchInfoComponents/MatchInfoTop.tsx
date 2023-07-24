@@ -5,6 +5,8 @@ import styles from "./MatchInfoTop.module.scss";
 
 export default function MathInfoTop(props: matchInfoObj) {
   const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
+
+  // get obj from localStorage
   useEffect(() => {
     const matchInfoObjString = localStorage.getItem("matchInfoObj");
     matchInfoObjString && setMatchInfoObj(JSON.parse(matchInfoObjString));
