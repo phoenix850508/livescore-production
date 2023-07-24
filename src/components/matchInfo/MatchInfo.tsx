@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import { getMatchInfo, getMatchStats } from "api/nba";
 import { MatchContext } from "context/MatchContext";
 import { matchInfoType } from "types/types";
+import { dummyMlbGamesStats } from "./dummyMlbGamesStats";
 import styles from "./MatchInfo.module.scss";
 
 export default function MatchInfo() {
@@ -14,6 +15,7 @@ export default function MatchInfo() {
   const [matchInfo, setMatchInfo] = useState<null | matchInfoType>(null);
   // match contains team nickname, logo, leagueType, and total score
   const { match } = useContext(MatchContext);
+  console.log(match);
   const leagueType = match.leagueType;
   let leagueCategory: string | undefined = "";
   switch (leagueType) {
@@ -52,7 +54,15 @@ export default function MatchInfo() {
     if (leagueType === "nba") asyncGetMatchStats();
   }, [id]);
 
-  // set the match related data to localStorage to prevent refresh page data disapears
+  // get mlb match stats
+  useEffect(() => {
+    if (leagueType === "mlb") {
+      const str = id;
+      str && console.log(dummyMlbGamesStats[str as keyof object]);
+    }
+  }, [id]);
+
+  // set the match related nba data to localStorage to prevent refresh page data disapears
   useEffect(() => {
     if (matchInfo && match && leagueType === "nba") {
       // if the data alreadt exists in localStorage it will be overwritten
@@ -83,6 +93,7 @@ export default function MatchInfo() {
       localStorage.setItem("homeStats", JSON.stringify(homeStats));
     }
   }, [id, match, leagueCategory, leagueType, nbaDate]);
+
   return (
     <div className={styles.matchInfo}>
       <MatchInfoTop
