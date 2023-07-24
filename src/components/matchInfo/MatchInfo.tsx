@@ -30,8 +30,8 @@ export default function MatchInfo() {
   let homeScores = null;
   let periods = null;
   let status = null;
-  let homeStats = null;
-  let awayStats = null;
+  let homeStats: any = null;
+  let awayStats: any = null;
   switch (leagueType) {
     case "nba": {
       leagueCategory = "National Basketball Association";
@@ -62,6 +62,47 @@ export default function MatchInfo() {
   const matchDate = nbaMatchInfo?.date?.start;
   const nbaDate = matchDate && matchDate.slice(0, 10);
   const mlbDate = id?.slice(0, 8);
+
+  // set match related data to localStorage to prevent refresh page data disapears
+  let matchInfoObj = {};
+  if (nbaMatchInfo && match && leagueType === "nba") {
+    // if the data alreadt exists in localStorage it will be overwritten
+    matchInfoObj = {
+      ...matchInfoObj,
+      id: id,
+      league: leagueCategory,
+      leagueType: leagueType,
+      date: nbaDate,
+      awayTeam: match.awayTeam?.nickname,
+      awayLogo: match.awayTeam?.logo,
+      awayScores: nbaMatchInfo.scores?.visitors?.linescore,
+      awayTotal: match.scores?.awayTotal,
+      homeTeam: match.homeTeam?.nickname,
+      homeLogo: match.homeTeam?.logo,
+      homeScores: nbaMatchInfo.scores?.home?.linescore,
+      homeTotal: match.scores?.homeTotal,
+      periods: nbaMatchInfo.periods?.current,
+      status: nbaMatchInfo.status?.long,
+      matchHour: match?.matchHour,
+    };
+    localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
+  } else if (mlbMatchInfo && match && leagueType === "mlb") {
+    // if the data alreadt exists in localStorage it will be overwritten
+    matchInfoObj = {
+      ...mlbMatchInfo,
+      id: id,
+      league: leagueCategory,
+      leagueType: leagueType,
+      matchHour: match?.matchHour,
+      awayTeam: match.awayTeam?.nickname,
+      awayLogo: match.awayTeam?.logo,
+      awayTotal: match.scores?.awayTotal,
+      homeTeam: match.homeTeam?.nickname,
+      homeLogo: match.homeTeam?.logo,
+      homeTotal: match.scores?.homeTotal,
+    };
+    localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
+  }
 
   // get nba match info
   useEffect(() => {
@@ -94,65 +135,16 @@ export default function MatchInfo() {
     }
   }, [id, leagueType]);
 
-  // set the match related mlb data to localStorage to prevent refersh page data disapear
+  // set all away and home stats to localStorage
   useEffect(() => {
-    if (mlbMatchInfo && match && leagueType === "mlb") {
-      // store the values to props
-      // if the data alreadt exists in localStorage it will be overwritten
-      const matchInfoObj = {
-        ...mlbMatchInfo,
-        id: id,
-        league: leagueCategory,
-        leagueType: leagueType,
-        matchHour: match?.matchHour,
-        awayTeam: match.awayTeam?.nickname,
-        awayLogo: match.awayTeam?.logo,
-        awayTotal: match.scores?.awayTotal,
-        homeTeam: match.homeTeam?.nickname,
-        homeLogo: match.homeTeam?.logo,
-        homeTotal: match.scores?.homeTotal,
-      };
-      localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
-
-      const awayStats = mlbMatchInfo.teamStats?.away;
-      const homeStats = mlbMatchInfo.teamStats?.home;
+    if (leagueType === "nba") {
+      localStorage.setItem("awayStats", JSON.stringify(awayStats));
+      localStorage.setItem("homeStats", JSON.stringify(homeStats));
+    } else if (leagueType === "mlb") {
       localStorage.setItem("awayStats", JSON.stringify(awayStats));
       localStorage.setItem("homeStats", JSON.stringify(homeStats));
     }
-  });
-
-  // set the match related nba data to localStorage to prevent refresh page data disapears
-  useEffect(() => {
-    if (nbaMatchInfo && match && leagueType === "nba") {
-      // store the values to props
-      // if the data alreadt exists in localStorage it will be overwritten
-      const matchInfoObj = {
-        id: id,
-        league: leagueCategory,
-        leagueType: leagueType,
-        date: nbaDate,
-        awayTeam: match.awayTeam?.nickname,
-        awayLogo: match.awayTeam?.logo,
-        awayScores: nbaMatchInfo.scores?.visitors?.linescore,
-        awayTotal: match.scores?.awayTotal,
-        homeTeam: match.homeTeam?.nickname,
-        homeLogo: match.homeTeam?.logo,
-        homeScores: nbaMatchInfo.scores?.home?.linescore,
-        homeTotal: match.scores?.homeTotal,
-        periods: nbaMatchInfo.periods?.current,
-        status: nbaMatchInfo.status?.long,
-        matchHour: match?.matchHour,
-      };
-      localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
-    }
-
-    if (matchStats) {
-      const homeStats = matchStats && matchStats[0];
-      const awayStats = matchStats && matchStats[1];
-      localStorage.setItem("awayStats", JSON.stringify(awayStats));
-      localStorage.setItem("homeStats", JSON.stringify(homeStats));
-    }
-  }, [id, match, leagueCategory, leagueType, nbaDate]);
+  }, [awayStats, homeStats, leagueType]);
 
   return (
     <div className={styles.matchInfo}>
