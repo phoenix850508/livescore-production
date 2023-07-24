@@ -12,12 +12,13 @@ import { dummyMlbStandings } from "./dummyMlbStandings";
 import styles from "./Standings.module.scss";
 
 export default function Standings(props: leagueParamsProps) {
-  const [conference, setConference] = useState<string>("east");
+  const [conference, setConference] = useState<string>("");
   const { season } = useContext(SeasonContext);
   const seasonString = season.season;
   const [nbaStandingData, nbaSetStandingData] =
     useState<null | nbaTeamsStandingType>(null);
   const [mlbStandingData, setMlbStandingData] = useState<object[] | null>(null);
+  const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
   // temporarily define each layer of object the way below(dummy data only), as cannot find a better way
   const standardObj =
     props.league === "nba" && nbaStandingData && nbaStandingData?.standard;
@@ -77,7 +78,7 @@ export default function Standings(props: leagueParamsProps) {
       setConference("east");
       asyncGetTeamsStandings();
     }
-  }, [seasonString, conference, props.league]);
+  }, [seasonString, props.league]);
 
   // get mlb
   useEffect(() => {
@@ -159,7 +160,9 @@ export default function Standings(props: leagueParamsProps) {
                       <div className={styles.teamName}>
                         <img
                           className={styles.teamLogo}
-                          src={team?.team?.logo}
+                          src={
+                            team?.team?.logo ? team?.team?.logo : defaultLogo
+                          }
                           alt="teamLogo.png"
                         />
                         <span>{team?.team?.nickname}</span>
@@ -188,7 +191,7 @@ export default function Standings(props: leagueParamsProps) {
                       <div className={styles.teamName}>
                         <img
                           className={styles.teamLogo}
-                          src={team.mlbLogo1}
+                          src={team.mlbLogo1 ? team.mlbLogo1 : defaultLogo}
                           alt="teamLogo.png"
                         />
                         <span>{team.teamName}</span>
@@ -217,7 +220,7 @@ export default function Standings(props: leagueParamsProps) {
                       <div className={styles.teamName}>
                         <img
                           className={styles.teamLogo}
-                          src={team.mlbLogo1}
+                          src={team.mlbLogo1 ? team.mlbLogo1 : defaultLogo}
                           alt="teamLogo.png"
                         />
                         <span>{team.teamName}</span>

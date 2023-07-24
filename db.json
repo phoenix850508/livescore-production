@@ -172,72 +172,74 @@
         }
       },
       {
-        "id": 12216,
-        "status": {
-          "clock": null,
-          "halftime": "false",
-          "long": "Finished"
-        },
+        "id": 12217,
+        "league": "standard",
+        "season": 2022,
         "date": {
           "start": "2023-04-02T22:00:00.000Z",
-          "end": null
+          "end": null,
+          "duration": null
+        },
+        "stage": 2,
+        "status": {
+          "clock": null,
+          "halftime": false,
+          "short": 3,
+          "long": "Finished"
         },
         "periods": {
           "current": 4,
-          "total": 4
+          "total": 4,
+          "endOfPeriod": false
         },
-        "scores": {
-          "visitors": { "linescore": [29, 37, 25, 32, 7] },
-          "home": { "linescore": [37, 33, 24, 29, 9] }
-        },
-        "teams": {
-          "visitors": {
-            "id": 8,
-            "name": "Dallas Mavericks",
-            "nickname": "Mavericks",
-            "code": "DAL"
-          },
-          "home": {
-            "id": 1,
-            "name": "Atlanta Hawks",
-            "nickname": "Hawks",
-            "code": "ATL"
-          }
-        }
-      },
-      {
-        "id": 12216,
-        "status": {
-          "clock": null,
-          "halftime": "false",
-          "long": "Finished"
-        },
-        "date": {
-          "start": "2023-04-02T22:00:00.000Z",
-          "end": null
-        },
-        "periods": {
-          "current": 4,
-          "total": 4
-        },
-        "scores": {
-          "visitors": { "linescore": [31, 30, 18, 30, 7] },
-          "home": { "linescore": [34, 19, 33, 32] }
+        "arena": {
+          "name": "Madison Square Garden",
+          "city": "New York",
+          "state": "NY",
+          "country": null
         },
         "teams": {
           "visitors": {
             "id": 41,
             "name": "Washington Wizards",
             "nickname": "Wizards",
-            "code": "WAS"
+            "code": "WAS",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
           },
           "home": {
             "id": 24,
             "name": "New York Knicks",
             "nickname": "Knicks",
-            "code": "NYK"
+            "code": "NYK",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
           }
-        }
+        },
+        "scores": {
+          "visitors": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": [31, 30, 18, 30],
+            "points": 109
+          },
+          "home": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": [34, 19, 33, 32],
+            "points": 118
+          }
+        },
+        "officials": [],
+        "timesTied": null,
+        "leadChanges": null,
+        "nugget": null
       }
     ]
   },
@@ -3979,37 +3981,145 @@
     "12216": {
       "response": {
         "id": 12216,
-        "status": {
-          "clock": null,
-          "halftime": "false",
-          "long": "Finished"
-        },
+        "league": "standard",
+        "season": 2022,
         "date": {
           "start": "2023-04-02T22:00:00.000Z",
-          "end": null
+          "end": null,
+          "duration": null
+        },
+        "stage": 2,
+        "status": {
+          "clock": null,
+          "halftime": false,
+          "short": 3,
+          "long": "Finished"
         },
         "periods": {
           "current": 4,
-          "total": 4
+          "total": 4,
+          "endOfPeriod": false
         },
-        "scores": {
-          "visitors": { "linescore": [29, 37, 25, 32, 7] },
-          "home": { "linescore": [37, 33, 24, 29, 9] }
+        "arena": {
+          "name": "State Farm Arena",
+          "city": "Atlanta",
+          "state": "GA",
+          "country": null
         },
         "teams": {
           "visitors": {
             "id": 8,
             "name": "Dallas Mavericks",
             "nickname": "Mavericks",
-            "code": "DAL"
+            "code": "DAL",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png"
           },
           "home": {
             "id": 1,
             "name": "Atlanta Hawks",
             "nickname": "Hawks",
-            "code": "ATL"
+            "code": "ATL",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png"
           }
-        }
+        },
+        "scores": {
+          "visitors": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": ["29", "37", "25", "32", "7"],
+            "points": 130
+          },
+          "home": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": ["37", "33", "24", "29", "9"],
+            "points": 132
+          }
+        },
+        "officials": [],
+        "timesTied": null,
+        "leadChanges": null,
+        "nugget": null
+      }
+    },
+    "12217": {
+      "response": {
+        "id": 12217,
+        "league": "standard",
+        "season": 2022,
+        "date": {
+          "start": "2023-04-02T22:00:00.000Z",
+          "end": null,
+          "duration": null
+        },
+        "stage": 2,
+        "status": {
+          "clock": null,
+          "halftime": false,
+          "short": 3,
+          "long": "Finished"
+        },
+        "periods": {
+          "current": 4,
+          "total": 4,
+          "endOfPeriod": false
+        },
+        "arena": {
+          "name": "Madison Square Garden",
+          "city": "New York",
+          "state": "NY",
+          "country": null
+        },
+        "teams": {
+          "visitors": {
+            "id": 41,
+            "name": "Washington Wizards",
+            "nickname": "Wizards",
+            "code": "WAS",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+          },
+          "home": {
+            "id": 24,
+            "name": "New York Knicks",
+            "nickname": "Knicks",
+            "code": "NYK",
+            "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
+          }
+        },
+        "scores": {
+          "visitors": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": ["31", "30", "18", "30"],
+            "points": 109
+          },
+          "home": {
+            "win": 0,
+            "loss": 0,
+            "series": {
+              "win": 0,
+              "loss": 0
+            },
+            "linescore": ["34", "19", "33", "32"],
+            "points": 118
+          }
+        },
+        "officials": [],
+        "timesTied": null,
+        "leadChanges": null,
+        "nugget": null
       }
     }
   },
@@ -13745,6 +13855,86 @@
             "turnovers": 14,
             "blocks": 3,
             "plusMinus": "-2",
+            "min": "240:00"
+          }
+        ]
+      }
+    ],
+    "12217": [
+      {
+        "team": {
+          "id": 24,
+          "name": "New York Knicks",
+          "nickname": "Knicks",
+          "code": "NYK",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Knicks_de_NY.png"
+        },
+        "statistics": [
+          {
+            "fastBreakPoints": null,
+            "pointsInPaint": null,
+            "biggestLead": null,
+            "secondChancePoints": null,
+            "pointsOffTurnovers": null,
+            "longestRun": null,
+            "points": 118,
+            "fgm": 46,
+            "fga": 88,
+            "fgp": "52.3",
+            "ftm": 13,
+            "fta": 18,
+            "ftp": "72.2",
+            "tpm": 13,
+            "tpa": 32,
+            "tpp": "40.6",
+            "offReb": 7,
+            "defReb": 32,
+            "totReb": 39,
+            "assists": 31,
+            "pFouls": 17,
+            "steals": 12,
+            "turnovers": 12,
+            "blocks": 4,
+            "plusMinus": "9",
+            "min": "240:00"
+          }
+        ]
+      },
+      {
+        "team": {
+          "id": 41,
+          "name": "Washington Wizards",
+          "nickname": "Wizards",
+          "code": "WAS",
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png"
+        },
+        "statistics": [
+          {
+            "fastBreakPoints": null,
+            "pointsInPaint": null,
+            "biggestLead": null,
+            "secondChancePoints": null,
+            "pointsOffTurnovers": null,
+            "longestRun": null,
+            "points": 109,
+            "fgm": 39,
+            "fga": 79,
+            "fgp": "72.2",
+            "ftm": 15,
+            "fta": 18,
+            "ftp": "83.3",
+            "tpm": 16,
+            "tpa": 37,
+            "tpp": "43.2",
+            "offReb": 5,
+            "defReb": 33,
+            "totReb": 38,
+            "assists": 26,
+            "pFouls": 18,
+            "steals": 9,
+            "turnovers": 19,
+            "blocks": 5,
+            "plusMinus": "-9",
             "min": "240:00"
           }
         ]

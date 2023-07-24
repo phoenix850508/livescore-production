@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { getMatchInfo, getMatchStats } from "api/nba";
 import { MatchContext } from "context/MatchContext";
-import { matchInfoType, matchStatsType } from "types/types";
+import { matchInfoType } from "types/types";
 import styles from "./MatchInfo.module.scss";
 
 export default function MatchInfo() {
@@ -105,6 +105,8 @@ export default function MatchInfo() {
         homeLogo={match.homeTeam?.logo}
         homeTotal={match.scores?.homeTotal}
         matchHour={match?.matchHour}
+        homeStats={matchStats && matchStats[0]}
+        awayStats={matchStats && matchStats[1]}
       />
     </div>
   );

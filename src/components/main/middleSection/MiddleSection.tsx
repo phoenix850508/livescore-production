@@ -45,6 +45,7 @@ export default function MiddleSection(props: combinedType) {
   // control whether mlb games should be shown
   const [showMlb, setShowMlb] = useState<boolean | null>(null);
 
+  // get nba games
   useEffect(() => {
     const asyncGetAllGames = async () => {
       const response = await getAllGames(nbaDate);

@@ -1,10 +1,10 @@
 import MatchStats from "./matchInfoBottomComponents/MatchStats";
 import MatchInfoBottomRight from "./matchInfoBottomComponents/MatchInfoBottomRight";
 import MatchTeams from "./matchInfoBottomComponents/MatchTeams";
-import { matchInfoObj, matchStatsType } from "types/types";
+import { matchInfoObj, matchStatsObjectType } from "types/types";
 import styles from "./MatchInfoBottom.module.scss";
 
-interface combinedType extends matchInfoObj, matchStatsType {}
+interface combinedType extends matchInfoObj, matchStatsObjectType {}
 
 export default function MatchInfoBottom(props: combinedType) {
   return (
@@ -20,7 +20,7 @@ export default function MatchInfoBottom(props: combinedType) {
           homeLogo={props.homeLogo}
           homeTotal={props.homeTotal}
         />
-        <MatchStats />
+        <MatchStats awayStats={props.awayStats} homeStats={props.homeStats} />
       </div>
       <MatchInfoBottomRight
         awayScores={props.awayScores}

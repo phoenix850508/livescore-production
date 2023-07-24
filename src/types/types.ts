@@ -243,39 +243,93 @@ export type matchInfoType = {
   };
 };
 
+export type matchStatsObjectType = {
+  homeStats?: {
+    statistics?: [
+      {
+        assists?: number | null;
+        blocks?: number | null;
+        defReb?: number | null;
+        offReb?: number | null;
+        pFouls?: number | null;
+        points?: number | null;
+        steals?: number | null;
+        turnovers?: number | null;
+        fgm?: number | null;
+        fga?: number | null;
+        tpm?: number | null;
+        tpa?: number | null;
+        totReb?: number | null;
+      }
+    ];
+
+    team?: {
+      nickname?: string;
+    };
+  } | null;
+  awayStats?: {
+    statistics?: [
+      {
+        assists?: number | null;
+        blocks?: number | null;
+        defReb?: number | null;
+        offReb?: number | null;
+        pFouls?: number | null;
+        points?: number | null;
+        steals?: number | null;
+        turnovers?: number | null;
+        fgm?: number | null;
+        fga?: number | null;
+        tpm?: number | null;
+        tpa?: number | null;
+        totReb?: number | null;
+      }
+    ];
+
+    team?: {
+      nickname?: string;
+    };
+  } | null;
+};
+
 export type matchStatsType = {
   statistics?: [
     {
-      assists?: number;
-      blocks?: number;
-      defReb?: number;
-      offReb?: number;
-      pFouls?: number;
-      points?: number;
-      steals?: number;
-      turnovers?: number;
+      assists?: number | null;
+      blocks?: number | null;
+      defReb?: number | null;
+      offReb?: number | null;
+      pFouls?: number | null;
+      points?: number | null;
+      steals?: number | null;
+      turnovers?: number | null;
+      fgm?: number | null;
+      fga?: number | null;
+      tpm?: number | null;
+      tpa?: number | null;
+      totReb?: number | null;
     }
   ];
 
   team?: {
-    nickname?: string;
+    nickname?: string | null;
   };
 };
 
 export type matchInfoObj = {
-  id?: string;
-  league?: string;
-  leagueType?: string;
-  date?: string | null;
-  awayTeam?: string;
+  id?: string | null;
+  league?: string | null;
+  leagueType?: string | null;
+  date?: string | null | null;
+  awayTeam?: string | null;
   awayLogo?: string;
-  awayScores?: number[] | undefined;
-  awayTotal?: string | null | number;
-  homeTeam?: string;
+  awayScores?: number[] | undefined | null;
+  awayTotal?: string | null | number | null;
+  homeTeam?: string | null;
   homeLogo?: string;
-  homeScores?: number[] | undefined;
+  homeScores?: number[] | undefined | null;
   homeTotal?: string | null | number;
-  periods?: string | number | undefined;
-  status?: string;
-  matchHour?: string | undefined;
+  periods?: string | number | undefined | null;
+  status?: string | null;
+  matchHour?: string | undefined | null;
 };

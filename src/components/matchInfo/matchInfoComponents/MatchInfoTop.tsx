@@ -13,7 +13,12 @@ export default function MathInfoTop(props: matchInfoObj) {
     <div className={styles.matchInfoTop}>
       <div className={styles.leagueAndDate}>
         <div className={styles.categories}>
-          <a href="/main" className={styles.sportCategory}>
+          <a
+            href={
+              props.leagueType === "nba" ? "/leagueInfo/nba" : "/leagueInfo/mlb"
+            }
+            className={styles.sportCategory}
+          >
             {(props.leagueType
               ? props.leagueType
               : matchInfoObj?.leagueType) === "nba"
@@ -25,7 +30,12 @@ export default function MathInfoTop(props: matchInfoObj) {
             src={triangleRight}
             alt="triangleRight.svg"
           />
-          <a href="/leagueInfo" className={styles.leagueCategory}>
+          <a
+            href={
+              props.leagueType === "nba" ? "/leagueInfo/nba" : "/leagueInfo/mlb"
+            }
+            className={styles.leagueCategory}
+          >
             {props.league ? props.league : matchInfoObj?.league}
           </a>
         </div>

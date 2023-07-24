@@ -23,16 +23,24 @@
   flex-direction: column;
   .statsRow {
     height: 40px;
-    padding: 0 40px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(34, 34, 38, 0.2);
     font-weight: 500;
+    .statsTitle {
+      flex: 1;
+    }
     &:nth-last-child(1) {
       border: none;
     }
-    .homeStats {
+    .awayStat,
+    .homeStat {
+      min-width: 50px;
+      text-align: center;
+    }
+    .highlightStats {
       border: 1px solid rgba(55, 77, 245, 0.3);
       padding: 5px 15px;
       background-color: rgba(55, 77, 245, 0.3);
