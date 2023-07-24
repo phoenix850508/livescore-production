@@ -38,8 +38,8 @@ export default function MatchInfo() {
       const idObject = data && data[id.toString()].response;
       idObject && setMatchInfo(idObject);
     };
-    asyncGetMatchInfo();
-  }, [id]);
+    if (leagueType === "nba") asyncGetMatchInfo();
+  }, [id, leagueType]);
 
   // get nba match stats
   useEffect(() => {
@@ -49,12 +49,12 @@ export default function MatchInfo() {
       const idObject = objData && objData[id.toString()];
       setMatchStats(idObject);
     };
-    asyncGetMatchStats();
+    if (leagueType === "nba") asyncGetMatchStats();
   }, [id]);
 
-  // set the nba match related data to localStorage to prevent refresh page data disapears
+  // set the match related data to localStorage to prevent refresh page data disapears
   useEffect(() => {
-    if (matchInfo && match && leagueCategory) {
+    if (matchInfo && match && leagueType === "nba") {
       // if the data alreadt exists in localStorage it will be overwritten
       const matchInfoObj = {
         id: id,
@@ -76,7 +76,7 @@ export default function MatchInfo() {
       localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
     }
 
-    if (matchStats && match) {
+    if (matchStats) {
       const homeStats = matchStats && matchStats[0];
       const awayStats = matchStats && matchStats[1];
       localStorage.setItem("awayStats", JSON.stringify(awayStats));
