@@ -24,7 +24,6 @@ export default function MatchInfo(props: matchInfoObj) {
       homeScores = matchInfoObj && matchInfoObj.homeScores;
     }
     if (matchInfoObj?.leagueType === "mlb") {
-      matchInfoObj && console.log("matchInfoObj", matchInfoObj.awayScores);
       const awayScoresObj = matchInfoObj?.lineScore?.away?.scoresByInning;
       awayScores = awayScoresObj && Object.values(awayScoresObj);
       const homeScoresObj = matchInfoObj?.lineScore?.home?.scoresByInning;

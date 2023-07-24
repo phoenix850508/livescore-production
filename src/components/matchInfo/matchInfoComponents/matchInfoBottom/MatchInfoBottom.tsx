@@ -7,7 +7,6 @@ import styles from "./MatchInfoBottom.module.scss";
 interface combinedType extends matchInfoObj, nbaMatchStatsObjectType {}
 
 export default function MatchInfoBottom(props: combinedType) {
-  console.log("homeStats", props.homeStats);
   return (
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>

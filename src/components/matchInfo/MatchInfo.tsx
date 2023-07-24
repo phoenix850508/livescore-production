@@ -45,7 +45,6 @@ export default function MatchInfo() {
     }
     case "mlb": {
       leagueCategory = "Major League Baseball";
-      console.log(mlbMatchInfo);
       const awayScoresObj = mlbMatchInfo?.lineScore?.away?.scoresByInning;
       awayScores = awayScoresObj && Object.values(awayScoresObj);
       const homeScoresObj = mlbMatchInfo?.lineScore?.home?.scoresByInning;
@@ -83,8 +82,10 @@ export default function MatchInfo() {
       const idObject = objData && objData[id.toString()];
       setMatchStats(idObject);
     };
-    if (leagueType === "nba") asyncGetMatchStats();
-  }, [id]);
+    if (leagueType === "nba") {
+      asyncGetMatchStats();
+    }
+  }, [id, leagueType]);
 
   // get mlb match stats
   useEffect(() => {

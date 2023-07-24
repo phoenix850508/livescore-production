@@ -82,14 +82,14 @@ export default function MatchStats(props: any) {
     const matchInfoObjString = localStorage.getItem("matchInfoObj");
     const matchInfoObj = matchInfoObjString && JSON.parse(matchInfoObjString);
     // fot nba
-    if (matchInfoObj.leagueType === "nba") {
+    if (matchInfoObj && matchInfoObj.leagueType === "nba") {
       const homeStatsObjString = localStorage.getItem("homeStats");
       const awayStatsObjString = localStorage.getItem("awayStats");
       homeStatsObjString && setNbaHomeStats(JSON.parse(homeStatsObjString));
       awayStatsObjString && setNbaAwayStats(JSON.parse(awayStatsObjString));
     }
     // for mlb
-    if (matchInfoObj.leagueType === "mlb") {
+    if (matchInfoObj && matchInfoObj.leagueType === "mlb") {
       const homeStatsObjString = localStorage.getItem("homeStats");
       const awayStatsObjString = localStorage.getItem("awayStats");
       homeStatsObjString && setMlbHomeStats(JSON.parse(homeStatsObjString));
