@@ -9,18 +9,18 @@ import styles from "./MatchStats.module.scss";
 
 interface combinedType extends nbaMatchStatsObjectType, mlbteamStatsType {}
 
-export default function MatchStats(props: any) {
+export default function MatchStats(props: combinedType) {
   const [nbaHomeStats, setNbaHomeStats] = useState<
     null | undefined | matchStatsType
   >(null);
   const [nbaAwayStats, setNbaAwayStats] = useState<
     null | undefined | matchStatsType
   >(null);
-  const [mlbHomeStats, setMlbHomeStats] = useState<mlbteamStatsType | null>(
-    null
-  );
+  const [mlbHomeStats, setMlbHomeStats] = useState<
+    mlbteamStatsType | matchStatsType | null
+  >(null);
   const [mlbAwayStats, setMlbAwayStats] = useState<
-    mlbteamStatsType | null | undefined
+    mlbteamStatsType | matchStatsType | null | undefined
   >(null);
   // nba decompose localStorage/props obj
   const nbaHomeStatArr = nbaHomeStats?.statistics;
@@ -31,14 +31,14 @@ export default function MatchStats(props: any) {
 
   // mlb decompose localStorage/props obj
   const mlbHomeStatObj = mlbHomeStats && {
-    ...mlbHomeStats.Hitting,
-    ...mlbHomeStats.Pitching,
+    ...mlbHomeStats?.Hitting,
+    ...mlbHomeStats?.Pitching,
     ...mlbHomeStats?.BaseRunning,
   };
   const mlbAwayStatObj = mlbAwayStats && {
-    ...mlbAwayStats.Hitting,
-    ...mlbAwayStats.Pitching,
-    ...mlbAwayStats.BaseRunning,
+    ...mlbAwayStats?.Hitting,
+    ...mlbAwayStats?.Pitching,
+    ...mlbAwayStats?.BaseRunning,
   };
   const mlbHomeStatKeys = mlbHomeStatObj && Object.keys(mlbHomeStatObj);
 

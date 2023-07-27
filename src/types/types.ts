@@ -344,7 +344,7 @@ export type mlbteamStatsType = {
     CS?: string | null;
     PO?: string | null;
     SB?: string | null;
-  };
+  } | null;
   Hitting?: {
     "2B"?: string | null;
     "3B"?: string | null;
@@ -352,7 +352,7 @@ export type mlbteamStatsType = {
     TB?: string | null;
     R?: string | null;
     H?: string | null;
-  };
+  } | null;
   Pitching?: {
     "Batters Faced": string | null;
     Flyouts?: string | null;
@@ -360,7 +360,7 @@ export type mlbteamStatsType = {
     Pitches?: string | null;
     Strikes?: string | null;
     "Wild Pitch"?: string | null;
-  };
+  } | null;
 };
 
 export type nbaMatchStatsObjectType = {
@@ -431,6 +431,9 @@ export type matchStatsType = {
       totReb?: number | null;
     }
   ];
+  Pitching?: {};
+  Hitting?: {};
+  BaseRunning?: {};
 };
 
 export type matchInfoObj = {

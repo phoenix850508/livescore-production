@@ -140,7 +140,7 @@ export default function MlbMatchItem(props: combinedTypes) {
   };
 
   useEffect(() => {
-    setMatchDataObj(Object.values(dummyMlbMatch)[0]);
+    setMatchDataObj(dummyMlbMatch[props.gameID as keyof object]);
   }, []);
 
   // // get per match information
