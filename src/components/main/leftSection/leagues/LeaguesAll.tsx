@@ -7,9 +7,12 @@ import africaIcon from "icons/africaIcon.svg";
 import europeIcon from "icons/europeIcon.svg";
 import worldIcon from "icons/worldIcon.svg";
 import LeagueItem from "./leaguesComponents/LeagueItem";
+import { onCalendarClick, onLeagueIconClick } from "types/types";
+import clsx from "clsx";
 import styles from "./LeaguesAll.module.scss";
 
-export default function LeaguesAll() {
+interface combinedTypes extends onCalendarClick, onLeagueIconClick {}
+export default function LeaguesAll(props: combinedTypes) {
   const locations: object[] = [
     { Africa: africaIcon },
     { England: englandIcon },
@@ -23,7 +26,12 @@ export default function LeaguesAll() {
   const leagues = new Map();
   leagues.set("USA", ["MLB", "NBA"]);
   return (
-    <div className={styles.leaguesAll}>
+    <div
+      className={clsx(
+        { [styles.noShow]: !props.showLeagueAll },
+        styles.leaguesAll
+      )}
+    >
       <h3 className={styles.leagueTitle}>All Leagues</h3>
       {locations.map((location: object, index: number) => {
         let indexBottom = false;

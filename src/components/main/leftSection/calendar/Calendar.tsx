@@ -2,9 +2,11 @@ import { useState } from "react";
 import CalendarTitle from "./calendarComponents/CalendarTitle";
 import CalendarDays from "./calendarComponents/CalendarDays";
 import CalendarDates from "./calendarComponents/CalendarDates";
+import { onCalendarClick } from "types/types";
+import clsx from "clsx";
 import styles from "./Calendar.module.scss";
 
-export default function Calendar() {
+export default function Calendar(props: onCalendarClick) {
   const currDate = new Date();
   const [month, setMonth] = useState(currDate.getMonth());
   const [year, setYear] = useState(currDate.getFullYear());
@@ -23,7 +25,12 @@ export default function Calendar() {
     }
   };
   return (
-    <div className={styles.calendar}>
+    <div
+      className={clsx(
+        { [styles.noShow]: !props.showCalendar },
+        styles.calendar
+      )}
+    >
       <CalendarTitle
         monthIndex={month}
         year={year}

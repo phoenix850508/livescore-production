@@ -1,6 +1,20 @@
+@use "styles/base";
+
 .calendar {
   height: 230px;
   padding-top: 22px;
   background-color: #fff;
   border-radius: 30px;
+}
+
+.noShow {
+  display: none;
+  transform: scale(1, 0);
+}
+
+@media (min-width: base.$break-point) {
+  .calendar {
+    display: block;
+    transform: scale(1, 1);
+  }
 }

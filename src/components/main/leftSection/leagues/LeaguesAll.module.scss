@@ -11,3 +11,13 @@
   color: base.$secondary-grey-background;
   margin-bottom: 20px;
 }
+
+.noShow {
+  display: none;
+}
+
+@media (min-width: base.$break-point) {
+  .leaguesAll {
+    display: block;
+  }
+}

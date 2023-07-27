@@ -157,6 +157,16 @@ export type onFavoritesClick = {
   onBrandClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
+export type onCalendarClick = {
+  onCalendarClick?: React.MouseEventHandler<HTMLDivElement>;
+  showCalendar?: boolean;
+};
+
+export type onLeagueIconClick = {
+  onLeagueIconClick?: React.MouseEventHandler<HTMLDivElement>;
+  showLeagueAll?: boolean;
+};
+
 export type leagueParamsProps = {
   league?: string;
 };

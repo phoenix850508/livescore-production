@@ -3,15 +3,20 @@ import searchIcon from "icons/searchIcon.svg";
 import solidBellIcon from "icons/solidBellIcon.svg";
 import basketballIcon from "icons/basketballIcon.svg";
 import baseballIcon from "icons/baseballIcon.svg";
+import calendarIcon from "icons/calendarIcon.svg";
+import seachIconWhite from "icons/searchIconWhite.svg";
 import {
   handleSportType,
   onFavoritesClick,
   leagueParamsProps,
   showSportType,
   showFavorites,
+  onCalendarClick,
 } from "types/types";
 import clsx from "clsx";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { DateContext } from "context/DateContext";
 import styles from "./Navbar.module.scss";
 
 interface combinedNavbarTypes
@@ -19,7 +24,8 @@ interface combinedNavbarTypes
     handleSportType,
     leagueParamsProps,
     showSportType,
-    showFavorites {}
+    showFavorites,
+    onCalendarClick {}
 
 export default function Navbar(props: combinedNavbarTypes) {
   return (
@@ -28,6 +34,7 @@ export default function Navbar(props: combinedNavbarTypes) {
         onFavoritesClick={props.onFavoritesClick}
         onBrandClick={props.onBrandClick}
         showFavorites={props.showFavorites}
+        onCalendarClick={props.onCalendarClick}
       />
       <NavbarBottom
         onBasketballClick={props.onBasketballClick}
@@ -39,11 +46,17 @@ export default function Navbar(props: combinedNavbarTypes) {
   );
 }
 
-interface combinedNavTopTypes extends onFavoritesClick, showFavorites {}
+interface combinedNavTopTypes
+  extends onFavoritesClick,
+    showFavorites,
+    onCalendarClick {}
 
 function NavbarTop(props: combinedNavTopTypes) {
   const resetShowSport = props.onBrandClick;
   const navigate = useNavigate();
+  const { state } = useContext(DateContext);
+  const date = state.date;
+  const location = useLocation();
   return (
     <nav className={styles.navbarTop}>
       <div
@@ -53,7 +66,7 @@ function NavbarTop(props: combinedNavTopTypes) {
           navigate("/main");
         }}
       >
-        <img src={brandIcon} alt="brandIcon.svg" />
+        <img className={styles.brandIcon} src={brandIcon} alt="brandIcon.svg" />
         <h1 className={styles.brandTitle}>Livescore</h1>
       </div>
       <div className={styles.navbarSearchBox}>
@@ -75,8 +88,55 @@ function NavbarTop(props: combinedNavTopTypes) {
         onClick={props.onFavoritesClick}
       >
         <span className={styles.favorites}>Favorites</span>
-        <img src={solidBellIcon} alt="solidBellIcon.svg" />
+        <img
+          className={styles.favoriteBell}
+          src={solidBellIcon}
+          alt="solidBellIcon.svg"
+        />
       </div>
+      {/* mobile elements */}
+      <div className={styles.mobileIconWrapper} onClick={props.onCalendarClick}>
+        <div
+          className={clsx(
+            { [styles.noShow]: location.pathname !== "/main" },
+            styles.calendarIconWrapper
+          )}
+        >
+          <img
+            className={styles.calendarIcon}
+            src={calendarIcon}
+            alt="calendarIcon"
+          />
+          <span className={styles.calendarIconText}>{date}</span>
+        </div>
+        <input
+          id="searchToggle"
+          className={styles.searchToggleCheckbox}
+          type="checkbox"
+        />
+        <label htmlFor="searchToggle">
+          <img
+            className={styles.searchIconWhite}
+            src={seachIconWhite}
+            alt="searchIcon"
+          />
+        </label>
+        <div className={styles.dropdownSearch}>
+          <div className={styles.dropdownSearchBox}>
+            <img
+              className={styles.dropdownSearchIcon}
+              src={searchIcon}
+              alt="searchIcon.svg"
+            />
+            <input
+              className={styles.dropdownSearchInput}
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+      </div>
+      {/* mobile elements */}
     </nav>
   );
 }

@@ -1,7 +1,11 @@
-.main {
-  padding: 0 35px 35px 10px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 3vw;
-  justify-content: space-between;
+@use "styles/base";
+
+@media (min-width: base.$break-point) {
+  .main {
+    padding: 0 35px 35px 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3vw;
+    justify-content: space-between;
+  }
 }

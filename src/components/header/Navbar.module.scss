@@ -5,10 +5,10 @@ header {
 }
 
 .navbarTop {
-  height: 90px;
-  gap: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  position: relative;
+  padding: 0 18px;
+  height: 48px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: base.$brand;
@@ -18,38 +18,20 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 18px;
+  gap: 11px;
   cursor: pointer;
   .brandTitle {
     color: #fff;
+    font-size: 20px;
+  }
+  .brandIcon {
+    width: 25px;
+    height: 25px;
   }
 }
 
 .navbarSearchBox {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 9px;
-  background-color: #fff;
-  height: 52px;
-  .searchIcon {
-    display: flex;
-    align-items: center;
-    width: 38px;
-    height: 38px;
-  }
-  .searchInput {
-    width: 100%;
-    flex: 1;
-    border: none;
-    font-size: 23px;
-    &:focus {
-      outline: none;
-    }
-    &::placeholder {
-      color: base.$secondary-grey-background;
-    }
-  }
+  display: none;
 }
 
 .navbarFavorites {
@@ -63,25 +45,106 @@ header {
 }
 
 .favorites {
-  color: #fff;
-  font-size: 24px;
+  display: none;
 }
 
-.highlightFav {
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 140px;
-    height: 3px;
-    background-color: #fff;
+.favoriteBell {
+  display: none;
+}
+
+// mobile elemnt section
+.mobileIconWrapper {
+  display: flex;
+  gap: 11px;
+
+  .noShow {
+    display: none;
+  }
+  .calendarIconWrapper {
+    position: relative;
+    .calendarIcon {
+      width: 26.5px;
+      height: 26px;
+      cursor: pointer;
+    }
+    .calendarIconText {
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      transform: translateX(-50%);
+      font-size: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .searchToggleCheckbox {
+    display: none;
+    &:checked ~ .dropdownSearch {
+      z-index: 999;
+      transform: scale(1, 1);
+      transition: transform 0.3s ease-in-out 0.1s;
+      transform-origin: right;
+    }
+  }
+  .searchIconWhite {
+    width: 25px;
+    height: 24px;
+    cursor: pointer;
   }
 }
 
+.dropdownSearch {
+  transform: scale(0, 1);
+  position: absolute;
+  left: 0;
+  top: 48px;
+  height: 48px;
+  width: 100%;
+  background-color: base.$brand;
+  .dropdownSearchBox {
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .dropdownSearchIcon {
+      width: 25px;
+      height: 24px;
+    }
+
+    .dropdownSearchInput {
+      z-index: 999;
+      width: 78vw;
+      height: 100%;
+      flex: 1;
+      font-size: 16px;
+      border: none;
+      overflow: hidden;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 16px;
+        color: base.$secondary-grey-background;
+      }
+    }
+  }
+}
+
+// navbarBottom starts
+
 .navbarBottom {
   position: relative;
-  height: 90px;
-  padding: 0 60px;
+  height: 48px;
+  padding: 0 20px;
   background-color: base.$secondary-brand;
   display: flex;
   flex-direction: column;
@@ -90,18 +153,19 @@ header {
 
 .navbarIconList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 120px));
+  grid-template-columns: repeat(auto-fill, minmax(70px, 75px));
   grid-template-rows: auto;
   li {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    font-size: 8px;
     color: #fff;
     opacity: 0.4;
     .sportsIcon {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       cursor: pointer;
     }
   }
@@ -112,9 +176,108 @@ header {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 120px;
+      width: 90px;
       height: 3px;
       background-color: #fff;
+    }
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .navbarTop {
+    padding: 0;
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+
+  .navbarBrand {
+    gap: 18px;
+    cursor: pointer;
+    .brandTitle {
+      font-size: 32px;
+    }
+    .brandIcon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .navbarSearchBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 9px;
+    background-color: #fff;
+    height: 52px;
+    border-radius: 4px;
+    overflow: hidden;
+    .searchIcon {
+      display: flex;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+    }
+    .searchInput {
+      width: 100%;
+      flex: 1;
+      border: none;
+      font-size: 23px;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: base.$secondary-grey-background;
+      }
+    }
+  }
+
+  .favorites {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .favoriteBell {
+    display: block;
+  }
+
+  .highlightFav {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 140px;
+      height: 3px;
+      background-color: #fff;
+    }
+  }
+
+  .mobileIconWrapper {
+    display: none;
+  }
+
+  .navbarBottom {
+    height: 90px;
+    padding: 0 60px;
+  }
+
+  .navbarIconList {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 120px));
+    li {
+      gap: 5px;
+      font-size: 16px;
+      .sportsIcon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .markBasketball,
+    .markBaseball {
+      &::after {
+        width: 120px;
+        height: 3px;
+      }
     }
   }
 }
