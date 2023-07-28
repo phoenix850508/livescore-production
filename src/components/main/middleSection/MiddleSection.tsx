@@ -5,10 +5,20 @@ import { useContext, useEffect, useState } from "react";
 import { getAllGames, getLiveGames } from "api/nba";
 import { getMlbGames } from "api/mlb";
 import { dummyMlbGames } from "./dummyMlbGames";
-import { showSportType, showFavorites, middleSecRef } from "types/types";
+import {
+  showSportType,
+  showFavorites,
+  middleSecRef,
+  onMobileIcon,
+} from "types/types";
+import clsx from "clsx";
 import styles from "./MiddleSection.module.scss";
 
-interface combinedType extends showFavorites, showSportType, middleSecRef {}
+interface combinedType
+  extends showFavorites,
+    showSportType,
+    middleSecRef,
+    onMobileIcon {}
 
 export default function MiddleSection(props: combinedType) {
   // use useState to get all games data
@@ -85,7 +95,12 @@ export default function MiddleSection(props: combinedType) {
     }
   }, [props.showSport, mlbGamesOnDate]);
   return (
-    <div className={styles.middleSection}>
+    <div
+      className={clsx(
+        { [styles.noShow]: props.showMobileIcon === "leagues" },
+        styles.middleSection
+      )}
+    >
       <h3 className={styles.middleTitle} ref={props.middleSecRef}>
         {props.showFavorites ? "Favorite teams games" : "Pinned Games"}
       </h3>

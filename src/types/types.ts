@@ -162,11 +162,6 @@ export type onCalendarClick = {
   calendarRef?: React.LegacyRef<HTMLDivElement>;
 };
 
-export type onLeagueCupClick = {
-  onLeagueCupClick?: React.MouseEventHandler<HTMLDivElement>;
-  showMobileIcon?: string | null;
-};
-
 export type leagueParamsProps = {
   league?: string;
 };
@@ -469,7 +464,7 @@ export type currentPage = {
 };
 
 export type onMobileIcon = {
-  onLeagueCupClick?: React.MouseEventHandler<HTMLLIElement>;
+  onLeagueCupClick?: React.MouseEventHandler<HTMLLIElement | HTMLDivElement>;
   onMatchesClick?: React.MouseEventHandler<HTMLLIElement>;
   showMobileIcon?: string | null;
 };

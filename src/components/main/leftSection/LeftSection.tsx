@@ -1,9 +1,9 @@
 import Calendar from "./calendar/Calendar";
 import LeaguesAll from "./leagues/LeaguesAll";
-import { onCalendarClick, onLeagueCupClick } from "types/types";
+import { onCalendarClick, onMobileIcon } from "types/types";
 import styles from "./LeftSection.module.scss";
 
-interface combinedTypes extends onCalendarClick, onLeagueCupClick {}
+interface combinedTypes extends onCalendarClick, onMobileIcon {}
 export default function LeftSection(props: combinedTypes) {
   return (
     <div className={styles.leftSection}>

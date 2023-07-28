@@ -1,6 +1,7 @@
+@use "styles/base";
+
 .featuredMatch {
   background-color: #fff;
-  border-radius: 0 0 30px 30px;
   cursor: pointer;
 }
 
@@ -34,4 +35,10 @@
 .logo {
   width: 63px;
   height: 63px;
+}
+
+@media (min-width: base.$break-point) {
+  .featuredMatch {
+    border-radius: 0 0 30px 30px;
+  }
 }

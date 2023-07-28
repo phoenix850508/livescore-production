@@ -1,12 +1,17 @@
 import FeaturedMatch from "./rightSectionComponents/FeaturedMatch";
-import { MatchContext } from "context/MatchContext";
-import { useContext } from "react";
-import { showSportType } from "types/types";
+import { showSportType, onMobileIcon } from "types/types";
+import clsx from "clsx";
 import styles from "./RightSection.module.scss";
 
-export default function RightSection(props: showSportType) {
+interface combinedTypes extends showSportType, onMobileIcon {}
+export default function RightSection(props: combinedTypes) {
   return (
-    <div className={styles.rightSection}>
+    <div
+      className={clsx(
+        { [styles.noShow]: props.showMobileIcon === "leagues" },
+        styles.rightSection
+      )}
+    >
       <div className={styles.featuredMatch}>
         <h3 className={styles.title}>Featured Match</h3>
         <FeaturedMatch showSport={props.showSport} />

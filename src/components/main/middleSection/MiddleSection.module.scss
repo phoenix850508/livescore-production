@@ -1,13 +1,15 @@
 @use "styles/base";
 
 .middleSection {
-  margin-top: 56px;
   padding: 35px 50px 30px 50px;
-  border-radius: 30px;
   background-color: #fff;
   color: base.$secondary-grey-background;
   display: flex;
   flex-direction: column;
+}
+
+.noShow {
+  display: none;
 }
 
 .middleTitle {
@@ -21,4 +23,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: base.$break-point) {
+  .middleSection {
+    margin-top: 56px;
+    display: block;
+    border-radius: 30px;
+  }
 }

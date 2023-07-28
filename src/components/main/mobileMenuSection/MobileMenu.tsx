@@ -81,6 +81,7 @@ export default function MobileMenu(props: combinedType) {
           <div
             className={clsx({
               [styles.underline]: mobileIcon === "favorites",
+              [styles.showFavoritefalse]: !props.showFavorites,
             })}
           ></div>
         </li>

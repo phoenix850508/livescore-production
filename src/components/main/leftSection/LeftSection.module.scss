@@ -1,3 +1,7 @@
-.leftSection {
-  margin-top: 56px;
+@use "styles/base";
+
+@media (min-width: base.$break-point) {
+  .leftSection {
+    margin-top: 56px;
+  }
 }
