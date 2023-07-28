@@ -1,6 +1,7 @@
 @use "styles/base";
 
 .mobileMenuWrapper {
+  z-index: 999;
   position: sticky;
   bottom: 0;
   width: 100%;

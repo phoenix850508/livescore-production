@@ -57,6 +57,7 @@ function NavbarTop(props: combinedNavTopTypes) {
   const { state } = useContext(DateContext);
   const date = state.date;
   const location = useLocation();
+  const calendarRef = props.calendarRef;
   return (
     <nav className={styles.navbarTop}>
       <div
@@ -95,12 +96,13 @@ function NavbarTop(props: combinedNavTopTypes) {
         />
       </div>
       {/* mobile elements */}
-      <div className={styles.mobileIconWrapper} onClick={props.onCalendarClick}>
+      <div className={styles.mobileIconWrapper}>
         <div
           className={clsx(
             { [styles.noShow]: location.pathname !== "/main" },
             styles.calendarIconWrapper
           )}
+          onClick={props.onCalendarClick}
         >
           <img
             className={styles.calendarIcon}

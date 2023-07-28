@@ -24,12 +24,14 @@ export default function Calendar(props: onCalendarClick) {
       setMonth(0);
     }
   };
+
   return (
     <div
       className={clsx(
         { [styles.noShow]: !props.showCalendar },
         styles.calendar
       )}
+      ref={props.calendarRef}
     >
       <CalendarTitle
         monthIndex={month}

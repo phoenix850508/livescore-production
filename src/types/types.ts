@@ -159,6 +159,7 @@ export type onFavoritesClick = {
 export type onCalendarClick = {
   onCalendarClick?: React.MouseEventHandler<HTMLDivElement>;
   showCalendar?: boolean;
+  calendarRef?: React.LegacyRef<HTMLDivElement>;
 };
 
 export type onLeagueCupClick = {
@@ -471,4 +472,8 @@ export type onMobileIcon = {
   onLeagueCupClick?: React.MouseEventHandler<HTMLLIElement>;
   onMatchesClick?: React.MouseEventHandler<HTMLLIElement>;
   showMobileIcon?: string | null;
+};
+
+export type middleSecRef = {
+  middleSecRef?: React.LegacyRef<HTMLDivElement>;
 };

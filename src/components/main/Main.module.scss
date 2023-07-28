@@ -1,5 +1,9 @@
 @use "styles/base";
 
+.main {
+  position: relative;
+}
+
 @media (min-width: base.$break-point) {
   .main {
     padding: 0 35px 35px 10px;

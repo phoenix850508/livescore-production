@@ -7,7 +7,10 @@ interface combinedTypes extends onCalendarClick, onLeagueCupClick {}
 export default function LeftSection(props: combinedTypes) {
   return (
     <div className={styles.leftSection}>
-      <Calendar showCalendar={props.showCalendar} />
+      <Calendar
+        showCalendar={props.showCalendar}
+        calendarRef={props.calendarRef}
+      />
       <LeaguesAll
         onLeagueCupClick={props.onLeagueCupClick}
         showMobileIcon={props.showMobileIcon}

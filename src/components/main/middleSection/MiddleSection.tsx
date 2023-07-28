@@ -5,10 +5,10 @@ import { useContext, useEffect, useState } from "react";
 import { getAllGames, getLiveGames } from "api/nba";
 import { getMlbGames } from "api/mlb";
 import { dummyMlbGames } from "./dummyMlbGames";
-import { showSportType, showFavorites } from "types/types";
+import { showSportType, showFavorites, middleSecRef } from "types/types";
 import styles from "./MiddleSection.module.scss";
 
-interface combinedType extends showFavorites, showSportType {}
+interface combinedType extends showFavorites, showSportType, middleSecRef {}
 
 export default function MiddleSection(props: combinedType) {
   // use useState to get all games data
@@ -86,7 +86,7 @@ export default function MiddleSection(props: combinedType) {
   }, [props.showSport, mlbGamesOnDate]);
   return (
     <div className={styles.middleSection}>
-      <h3 className={styles.middleTitle}>
+      <h3 className={styles.middleTitle} ref={props.middleSecRef}>
         {props.showFavorites ? "Favorite teams games" : "Pinned Games"}
       </h3>
       {/* dummy data不管輸入資料是否正確，都會render，因此這邊需要判斷式來比對是否當天有資料 */}

@@ -67,7 +67,9 @@ export default function CalendarDates(props: dateProps) {
               }
             )}
             key={index}
-            onClick={(e) => handleDateClick?.(date, index, props)}
+            onClick={(e) => {
+              handleDateClick?.(date, index, props);
+            }}
           >
             {date}
           </li>
