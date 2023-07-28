@@ -7,6 +7,19 @@ import styles from "./MatchTeams.module.scss";
 
 export default function MatchTeams(props: matchInfoObj) {
   const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
+  // check whethther team is subscribed
+  const subscribedTeamsString = localStorage.getItem("subscribedTeams");
+  const subscribedTeams: string[] =
+    subscribedTeamsString && JSON.parse(subscribedTeamsString);
+  const isHomeSub = props.homeTeam
+    ? subscribedTeams.some((team) => team === props.homeTeam)
+    : matchInfoObj &&
+      subscribedTeams.some((team) => team === matchInfoObj.homeTeam);
+  const isAwaySub = props.awayTeam
+    ? subscribedTeams.some((team) => team === props.awayTeam)
+    : matchInfoObj &&
+      subscribedTeams.some((team) => team === matchInfoObj.awayTeam);
+
   const navigate = useNavigate();
   const handleAwayTeamClick = () => {
     navigate("/teamInfo");
@@ -21,7 +34,7 @@ export default function MatchTeams(props: matchInfoObj) {
       <div className={styles.matchTeams}>
         <img
           className={styles.subscriptionStatus}
-          src={bellEmptyIcon}
+          src={isAwaySub ? bellSolidIcon : bellEmptyIcon}
           alt="bellEmptyIcon.svg"
         />
         <div className={styles.away}>
@@ -56,7 +69,7 @@ export default function MatchTeams(props: matchInfoObj) {
         </div>
         <img
           className={styles.subscriptionStatus}
-          src={bellEmptyIcon}
+          src={isHomeSub ? bellSolidIcon : bellEmptyIcon}
           alt="bellEmptyIcon.svg"
         />
       </div>

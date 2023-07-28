@@ -19,7 +19,6 @@ export default function NbaMatchItem(props: combinedTypes) {
   // toggle subscribe away team
   const handleAwayBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    console.log(e.target);
     // if localStorage has data
     const awayTeamName = teams?.visitors?.nickname;
     if (localStorage.getItem("subscribedTeams") !== null) {
