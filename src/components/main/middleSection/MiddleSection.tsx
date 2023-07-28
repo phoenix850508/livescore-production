@@ -87,7 +87,7 @@ export default function MiddleSection(props: combinedType) {
   return (
     <div className={styles.middleSection}>
       <h3 className={styles.middleTitle}>
-        {props.showFavorites ? "Favorit teams games" : "Pinned Games"}
+        {props.showFavorites ? "Favorite teams games" : "Pinned Games"}
       </h3>
       {/* dummy data不管輸入資料是否正確，都會render，因此這邊需要判斷式來比對是否當天有資料 */}
       {showNba &&

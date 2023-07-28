@@ -1,5 +1,6 @@
 import Navbar from "components/header/Navbar";
 import Main from "components/main/Main";
+import MobileMenu from "components/main/mobileMenuSection/MobileMenu";
 import { useState } from "react";
 
 export default function MainPage() {
@@ -7,7 +8,9 @@ export default function MainPage() {
   const [showSport, setShowSport] = useState("all");
   const [showFavorites, setShowFavorites] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
-  const [showLeagueAll, setShowLeagueAll] = useState(false);
+  const [showMobileIcon, setShowMobileIcon] = useState<string | null>(
+    localStorage.getItem("mobileIcon")
+  );
   const handleBasketballClick = (e: React.MouseEvent<HTMLImageElement>) => {
     setShowSport("basketball");
     setShowFavorites(false);
@@ -16,9 +19,10 @@ export default function MainPage() {
     setShowSport("baseball");
     setShowFavorites(false);
   };
-  // use useState to control whether shos favorites
+  // use useState to control whether shows favorites
   const handleFavoritesClick = () => {
     setShowFavorites(!showFavorites);
+    setShowMobileIcon("favorites");
   };
   // when main is clicked, navigate to main page
   const handleBrandClick = () => {
@@ -29,10 +33,16 @@ export default function MainPage() {
   const handleCalendarClick = () => {
     setShowCalendar(!showCalendar);
   };
-  // when the mobile league icon is clicked
-  const handleLeagueIconClick = () => {
-    setShowLeagueAll(!showLeagueAll);
+
+  // when the mobile matches icon is clicked
+  const handleMatchesClick = () => {
+    setShowMobileIcon("matches");
   };
+  // when the mobile league icon is clicked
+  const handleLeagueCupClick = () => {
+    setShowMobileIcon("leagues");
+  };
+
   return (
     <div>
       <Navbar
@@ -48,8 +58,16 @@ export default function MainPage() {
         showSport={showSport}
         showFavorites={showFavorites}
         showCalendar={showCalendar}
-        onLeagueIconClick={handleLeagueIconClick}
-        showLeagueAll={showLeagueAll}
+        onLeagueCupClick={handleLeagueCupClick}
+        showMobileIcon={showMobileIcon}
+        onFavoritesClick={handleFavoritesClick}
+      />
+      <MobileMenu
+        onMatchesClick={handleMatchesClick}
+        onLeagueCupClick={handleLeagueCupClick}
+        showMobileIcon={showMobileIcon}
+        onFavoritesClick={handleFavoritesClick}
+        showFavorites={showFavorites}
       />
     </div>
   );

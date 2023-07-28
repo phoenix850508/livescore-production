@@ -136,7 +136,6 @@ export type handleSportType = {
   onBaseballClick?:
     | ((e: React.MouseEvent<HTMLImageElement>) => React.MouseEvent)
     | React.MouseEventHandler<HTMLImageElement>;
-  onFavoritesClick?: React.MouseEventHandler<HTMLDivElement>;
   onBrandClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
@@ -153,7 +152,7 @@ export type matchDataObjType = {
 };
 
 export type onFavoritesClick = {
-  onFavoritesClick?: React.MouseEventHandler<HTMLDivElement>;
+  onFavoritesClick?: React.MouseEventHandler<HTMLDivElement | HTMLLIElement>;
   onBrandClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
@@ -162,9 +161,9 @@ export type onCalendarClick = {
   showCalendar?: boolean;
 };
 
-export type onLeagueIconClick = {
-  onLeagueIconClick?: React.MouseEventHandler<HTMLDivElement>;
-  showLeagueAll?: boolean;
+export type onLeagueCupClick = {
+  onLeagueCupClick?: React.MouseEventHandler<HTMLDivElement>;
+  showMobileIcon?: string | null;
 };
 
 export type leagueParamsProps = {
@@ -462,4 +461,14 @@ export type matchInfoObj = {
   periods?: string | number | undefined | null;
   status?: string | null;
   matchHour?: string | undefined | null;
+};
+
+export type currentPage = {
+  currentPage: number | null;
+};
+
+export type onMobileIcon = {
+  onLeagueCupClick?: React.MouseEventHandler<HTMLLIElement>;
+  onMatchesClick?: React.MouseEventHandler<HTMLLIElement>;
+  showMobileIcon?: string | null;
 };

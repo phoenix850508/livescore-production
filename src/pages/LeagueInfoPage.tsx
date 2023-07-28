@@ -1,5 +1,6 @@
 import Navbar from "components/header/Navbar";
 import LeagueInfo from "components/leagueInfo/LeagueInfo";
+import MobileMenu from "components/main/mobileMenuSection/MobileMenu";
 import { useParams, useNavigate } from "react-router-dom";
 
 export default function LeagueInfoPage() {
@@ -11,6 +12,7 @@ export default function LeagueInfoPage() {
   const handleBaseballClick = (e: React.MouseEvent<HTMLImageElement>) => {
     navigate("/leagueInfo/mlb");
   };
+
   return (
     <div>
       <Navbar
@@ -19,6 +21,7 @@ export default function LeagueInfoPage() {
         onBaseballClick={handleBaseballClick}
       />
       <LeagueInfo league={league} />
+      <MobileMenu />
     </div>
   );
 }

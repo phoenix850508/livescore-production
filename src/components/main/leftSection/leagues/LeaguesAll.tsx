@@ -7,11 +7,11 @@ import africaIcon from "icons/africaIcon.svg";
 import europeIcon from "icons/europeIcon.svg";
 import worldIcon from "icons/worldIcon.svg";
 import LeagueItem from "./leaguesComponents/LeagueItem";
-import { onCalendarClick, onLeagueIconClick } from "types/types";
+import { onCalendarClick, onLeagueCupClick } from "types/types";
 import clsx from "clsx";
 import styles from "./LeaguesAll.module.scss";
 
-interface combinedTypes extends onCalendarClick, onLeagueIconClick {}
+interface combinedTypes extends onCalendarClick, onLeagueCupClick {}
 export default function LeaguesAll(props: combinedTypes) {
   const locations: object[] = [
     { Africa: africaIcon },
@@ -28,7 +28,7 @@ export default function LeaguesAll(props: combinedTypes) {
   return (
     <div
       className={clsx(
-        { [styles.noShow]: !props.showLeagueAll },
+        { [styles.noShow]: props.showMobileIcon !== "leagues" },
         styles.leaguesAll
       )}
     >

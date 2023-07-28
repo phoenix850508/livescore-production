@@ -5,7 +5,8 @@ import {
   showSportType,
   showFavorites,
   onCalendarClick,
-  onLeagueIconClick,
+  onLeagueCupClick,
+  onFavoritesClick,
 } from "types/types";
 import styles from "./Main.module.scss";
 
@@ -13,15 +14,16 @@ interface combinedType
   extends showFavorites,
     showSportType,
     onCalendarClick,
-    onLeagueIconClick {}
+    onLeagueCupClick,
+    onFavoritesClick {}
 
 export default function Main(props: combinedType) {
   return (
     <div className={styles.main}>
       <LeftSection
         showCalendar={props.showCalendar}
-        onLeagueIconClick={props.onLeagueIconClick}
-        showLeagueAll={props.showLeagueAll}
+        onLeagueCupClick={props.onLeagueCupClick}
+        showMobileIcon={props.showMobileIcon}
       />
       <MiddleSection
         showSport={props.showSport}
