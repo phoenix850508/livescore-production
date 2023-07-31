@@ -18,7 +18,7 @@ export default function NbaMatchItem(props: combinedTypes) {
 
   // toggle subscribe away team
   const handleAwayBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
+    e.stopPropagation();
     // if localStorage has data
     const awayTeamName = teams?.visitors?.nickname;
     if (localStorage.getItem("subscribedTeams") !== null) {
@@ -49,7 +49,7 @@ export default function NbaMatchItem(props: combinedTypes) {
 
   // toggle subscribe home team
   const handleHomeBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
+    e.stopPropagation();
     // if localStorage has data
     const homeTeamName = teams?.home?.nickname;
     if (localStorage.getItem("subscribedTeams") !== null) {
