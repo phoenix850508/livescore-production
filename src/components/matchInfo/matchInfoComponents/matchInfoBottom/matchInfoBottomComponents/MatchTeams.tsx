@@ -12,13 +12,13 @@ export default function MatchTeams(props: matchInfoObj) {
   const subscribedTeams: string[] =
     subscribedTeamsString && JSON.parse(subscribedTeamsString);
   const isHomeSub = props.homeTeam
-    ? subscribedTeams.some((team) => team === props.homeTeam)
+    ? subscribedTeams?.some((team) => team === props.homeTeam)
     : matchInfoObj &&
-      subscribedTeams.some((team) => team === matchInfoObj.homeTeam);
+      subscribedTeams?.some((team) => team === matchInfoObj.homeTeam);
   const isAwaySub = props.awayTeam
-    ? subscribedTeams.some((team) => team === props.awayTeam)
+    ? subscribedTeams?.some((team) => team === props.awayTeam)
     : matchInfoObj &&
-      subscribedTeams.some((team) => team === matchInfoObj.awayTeam);
+      subscribedTeams?.some((team) => team === matchInfoObj.awayTeam);
 
   const navigate = useNavigate();
   const handleAwayTeamClick = () => {

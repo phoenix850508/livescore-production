@@ -51,6 +51,7 @@ export default function MainPage() {
   // when the mobile matches icon is clicked
   const handleMatchesClick = () => {
     setShowMobileIcon("matches");
+    setShowFavorites(false);
   };
   // when the mobile league icon is clicked
   const handleLeagueCupClick = () => {
