@@ -74,9 +74,6 @@ export default function MainPage() {
       });
   }, [state]);
 
-  // always back to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <div>
       <Navbar
