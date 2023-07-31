@@ -79,6 +79,11 @@ export default function MlbMatchItem(props: combinedTypes) {
       id: props.gameID,
       matchHour: matchHour,
     });
+
+    // eslint-disable-next-line no-restricted-globals
+    if (screen.width <= 1010) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
   };
 
   // toggle subscribe away team

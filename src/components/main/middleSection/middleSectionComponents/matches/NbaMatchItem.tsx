@@ -121,6 +121,10 @@ export default function NbaMatchItem(props: combinedTypes) {
       id: props.id,
       matchHour: matchHour,
     });
+    // eslint-disable-next-line no-restricted-globals
+    if (screen.width <= 1010) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
   };
 
   // dispatch the latest match

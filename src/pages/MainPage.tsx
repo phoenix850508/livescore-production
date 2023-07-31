@@ -2,7 +2,6 @@ import Navbar from "components/header/Navbar";
 import Main from "components/main/Main";
 import MobileMenu from "components/main/mobileMenuSection/MobileMenu";
 import { DateContext } from "context/DateContext";
-import { useLocation } from "react-router-dom";
 import { useState, useRef, useEffect, useContext } from "react";
 
 export default function MainPage() {
@@ -27,6 +26,7 @@ export default function MainPage() {
   };
   // use useState to control whether shows favorites
   const handleFavoritesClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setShowFavorites(!showFavorites);
     setShowMobileIcon("favorites");
   };
@@ -51,11 +51,13 @@ export default function MainPage() {
 
   // when the mobile matches icon is clicked
   const handleMatchesClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setShowMobileIcon("matches");
     setShowFavorites(false);
   };
   // when the mobile league icon is clicked
   const handleLeagueCupClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setShowMobileIcon("leagues");
     setShowFavorites(false);
   };
@@ -71,6 +73,9 @@ export default function MainPage() {
         inline: "end",
       });
   }, [state]);
+
+  // always back to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div>
