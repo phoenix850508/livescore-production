@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = "http://localhost:8000";
+const base_url = "http://localhost:3001";
 
 // 新增一個 instance，使用方法可見 axios interceptor readme
 const axiosInstance = axios.create({

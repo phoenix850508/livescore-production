@@ -9,6 +9,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 // the following code allows me to use json-server data after deployment
+// json-server code starts
 server.use(middlewares);
 server.use(
   jsonServer.rewriter({
