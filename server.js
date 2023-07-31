@@ -1,8 +1,26 @@
+const jsonServer = require("json-server");
+const server = jsonServer.create();
+const router = jsonServer.router("./db.json");
+const middlewares = jsonServer.defaults({ static: "./build" });
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
+
+// the following code allows me to use json-server data after deployment
+server.use(middlewares);
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  })
+);
+server.use(router);
+server.listen(port, () => {
+  console.log("Server is running");
+});
+// json-server code ends
+
 require("dotenv").config();
 const base_url =
   "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com";
