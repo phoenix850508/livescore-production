@@ -6,7 +6,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3001;
 
 // the following code allows me to use json-server data after deployment
 // json-server code starts
@@ -14,6 +14,15 @@ server.use(middlewares);
 server.use(
   jsonServer.rewriter({
     "/api/*": "/$1",
+    "/date/:date": "/date?date=:date",
+    "/live/:live": "/live?live=:live",
+    "/season/:season/team/:team": "/season?season=:season.team.team=:team",
+    "/game/:id": "/game?id=:id",
+    "/teams/:conference": "/teams?conference=:conference",
+    "/standing/:league/:season/:conference":
+      "/standing?league=:league/season=:season/conference=:conference",
+    "/stats/:id": "/stats?id=:id",
+    "/team/:id": "/team?id=:id",
   })
 );
 server.use(router);
