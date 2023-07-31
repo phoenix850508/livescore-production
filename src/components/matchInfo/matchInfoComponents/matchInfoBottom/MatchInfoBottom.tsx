@@ -1,12 +1,26 @@
 import MatchStats from "./matchInfoBottomComponents/MatchStats";
 import MatchInfoBottomRight from "./matchInfoBottomComponents/MatchInfoBottomRight";
 import MatchTeams from "./matchInfoBottomComponents/MatchTeams";
-import { matchInfoObj, nbaMatchStatsObjectType } from "types/types";
+import MobileStatsMenu from "./matchInfoBottomComponents/MobileStatsMenu";
+import {
+  matchInfoObj,
+  nbaMatchStatsObjectType,
+  mobileStatsProps,
+} from "types/types";
+import { useState } from "react";
 import styles from "./MatchInfoBottom.module.scss";
 
-interface combinedType extends matchInfoObj, nbaMatchStatsObjectType {}
+interface combinedType
+  extends matchInfoObj,
+    nbaMatchStatsObjectType,
+    mobileStatsProps {}
 
 export default function MatchInfoBottom(props: combinedType) {
+  const [activeMenu, setActiveMenu] = useState<"details" | "statistics">(
+    "details"
+  );
+  const handleDetailsClick = () => setActiveMenu("details");
+  const handleStatisticsClick = () => setActiveMenu("statistics");
   return (
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>
@@ -17,11 +31,19 @@ export default function MatchInfoBottom(props: combinedType) {
           homeTeam={props.homeTeam}
           homeLogo={props.homeLogo}
           homeTotal={props.homeTotal}
+          leagueType={props.leagueType}
+          date={props.date}
+        />
+        <MobileStatsMenu
+          activeMenu={activeMenu}
+          onDetailsClick={handleDetailsClick}
+          onStatisticsClick={handleStatisticsClick}
         />
         <MatchStats
           awayStats={props.awayStats}
           homeStats={props.homeStats}
           leagueType={props.leagueType}
+          activeMenu={activeMenu}
         />
       </div>
       <MatchInfoBottomRight
@@ -30,6 +52,7 @@ export default function MatchInfoBottom(props: combinedType) {
         periods={props.periods}
         matchHour={props.matchHour}
         leagueType={props.leagueType}
+        activeMenu={activeMenu}
       />
     </div>
   );

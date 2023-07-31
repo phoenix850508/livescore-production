@@ -2,6 +2,7 @@ import Navbar from "components/header/Navbar";
 import Main from "components/main/Main";
 import MobileMenu from "components/main/mobileMenuSection/MobileMenu";
 import { DateContext } from "context/DateContext";
+import { useLocation } from "react-router-dom";
 import { useState, useRef, useEffect, useContext } from "react";
 
 export default function MainPage() {
@@ -56,6 +57,7 @@ export default function MainPage() {
   // when the mobile league icon is clicked
   const handleLeagueCupClick = () => {
     setShowMobileIcon("leagues");
+    setShowFavorites(false);
   };
 
   // when date is selected, mobile calendat collapse
@@ -69,6 +71,7 @@ export default function MainPage() {
         inline: "end",
       });
   }, [state]);
+
   return (
     <div>
       <Navbar

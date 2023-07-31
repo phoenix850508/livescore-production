@@ -472,3 +472,9 @@ export type onMobileIcon = {
 export type middleSecRef = {
   middleSecRef?: React.LegacyRef<HTMLDivElement>;
 };
+
+export type mobileStatsProps = {
+  activeMenu?: "details" | "statistics";
+  onDetailsClick?: React.MouseEventHandler<HTMLDivElement>;
+  onStatisticsClick?: React.MouseEventHandler<HTMLDivElement>;
+};

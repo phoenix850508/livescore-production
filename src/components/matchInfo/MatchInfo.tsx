@@ -170,6 +170,7 @@ export default function MatchInfo() {
         status={status}
         homeStats={homeStats}
         awayStats={awayStats}
+        date={nbaDate ? nbaDate : mlbDate}
       />
     </div>
   );

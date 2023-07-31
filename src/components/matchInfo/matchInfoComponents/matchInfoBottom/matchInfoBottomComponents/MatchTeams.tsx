@@ -1,5 +1,6 @@
 import bellEmptyIcon from "icons/bellEmptyIcon.svg";
 import bellSolidIcon from "icons/bellSolidIcon.svg";
+import triangleRight from "icons/triangle-right.svg";
 import { useState, useEffect } from "react";
 import { matchInfoObj } from "types/types";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +33,47 @@ export default function MatchTeams(props: matchInfoObj) {
   return (
     <div>
       <div className={styles.matchTeams}>
+        <div className={styles.leagueAndDate}>
+          <div className={styles.categories}>
+            <span
+              onClick={() =>
+                props.leagueType === "nba"
+                  ? navigate("/leagueInfo/nba")
+                  : navigate("/leagueInfo/mlb")
+              }
+              className={styles.sportCategory}
+            >
+              {(props.leagueType
+                ? props.leagueType
+                : matchInfoObj?.leagueType) === "nba"
+                ? "Basketball"
+                : "Baseball"}
+            </span>
+            <img
+              className={styles.triangleRight}
+              src={triangleRight}
+              alt="triangleRight.svg"
+            />
+            <span
+              onClick={() =>
+                props.leagueType === "nba"
+                  ? navigate("/leagueInfo/nba")
+                  : navigate("/leagueInfo/mlb")
+              }
+              className={styles.leagueCategory}
+            >
+              {props.league ? props.league : matchInfoObj?.league}
+            </span>
+            <img
+              className={styles.triangleRight}
+              src={triangleRight}
+              alt="triangleRight.svg"
+            />
+          </div>
+          <span className={styles.matchDate}>
+            {props.date ? props.date : matchInfoObj?.date}
+          </span>
+        </div>
         <img
           className={styles.subscriptionStatus}
           src={isAwaySub ? bellSolidIcon : bellEmptyIcon}

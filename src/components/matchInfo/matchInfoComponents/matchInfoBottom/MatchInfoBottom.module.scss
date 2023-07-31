@@ -1,5 +1,9 @@
-.matchInfoBottom {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 20px;
+@use "styles/base";
+
+@media (min-width: base.$break-point) {
+  .matchInfoBottom {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+  }
 }

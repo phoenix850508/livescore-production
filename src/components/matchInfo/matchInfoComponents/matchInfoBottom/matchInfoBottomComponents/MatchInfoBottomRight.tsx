@@ -1,11 +1,14 @@
-import { matchInfoObj, mlbMatchInfoType } from "types/types";
+import { matchInfoObj, mlbMatchInfoType, mobileStatsProps } from "types/types";
 import { useState, useEffect } from "react";
+import clsx from "clsx";
 import styles from "./MatchInfoBottomRight.module.scss";
 
-interface combinedType extends mlbMatchInfoType, matchInfoObj {}
+interface combinedMatchInfpType extends mlbMatchInfoType, matchInfoObj {}
+interface combinedPropsType extends matchInfoObj, mobileStatsProps {}
 
-export default function MatchInfo(props: matchInfoObj) {
-  const [matchInfoObj, setMatchInfoObj] = useState<null | combinedType>(null);
+export default function MatchInfo(props: combinedPropsType) {
+  const [matchInfoObj, setMatchInfoObj] =
+    useState<null | combinedMatchInfpType>(null);
   const [periodsPercentString, setPeriodsPercentString] = useState<
     string | undefined | 0
   >("");
@@ -45,7 +48,12 @@ export default function MatchInfo(props: matchInfoObj) {
     }
   });
   return (
-    <div className={styles.matchInfo}>
+    <div
+      className={clsx(
+        { [styles.noShow]: props.activeMenu === "statistics" },
+        styles.matchInfo
+      )}
+    >
       <div className={styles.title}>Match Info</div>
       <div className={styles.tableWrapper}>
         <table>

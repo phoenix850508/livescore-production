@@ -1,3 +1,7 @@
-.matchInfo {
-  padding: 0 59px;
+@use "styles/base";
+
+@media (min-width: base.$break-point) {
+  .matchInfo {
+    padding: 0 59px;
+  }
 }

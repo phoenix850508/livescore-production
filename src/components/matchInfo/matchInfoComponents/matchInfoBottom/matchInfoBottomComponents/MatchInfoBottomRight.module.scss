@@ -1,19 +1,20 @@
 @use "styles/base";
 
 .matchInfo {
-  margin-top: 36px;
   padding: 38px 60px;
   min-height: 517px;
   display: flex;
   flex-direction: column;
   gap: 38px;
-  border-radius: 30px;
   background-color: #fff;
 }
 
+.noShow {
+  display: none;
+}
+
 .title {
-  font-size: 30px;
-  font-weight: 700;
+  display: none;
 }
 
 .tableWrapper {
@@ -129,4 +130,18 @@
   font-size: 16px;
   font-weight: 700;
   color: #000;
+}
+
+@media (min-width: base.$break-point) {
+  .matchInfo {
+    margin-top: 36px;
+    display: flex;
+    border-radius: 30px;
+  }
+
+  .title {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+  }
 }

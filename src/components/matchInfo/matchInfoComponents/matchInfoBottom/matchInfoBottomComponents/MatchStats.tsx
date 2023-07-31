@@ -3,11 +3,15 @@ import {
   matchStatsType,
   nbaMatchStatsObjectType,
   mlbteamStatsType,
+  mobileStatsProps,
 } from "types/types";
 import clsx from "clsx";
 import styles from "./MatchStats.module.scss";
 
-interface combinedType extends nbaMatchStatsObjectType, mlbteamStatsType {}
+interface combinedType
+  extends nbaMatchStatsObjectType,
+    mlbteamStatsType,
+    mobileStatsProps {}
 
 export default function MatchStats(props: combinedType) {
   const [nbaHomeStats, setNbaHomeStats] = useState<
@@ -116,7 +120,12 @@ export default function MatchStats(props: combinedType) {
   }, [props.leagueType, props?.awayStats, props.homeStats]);
 
   return (
-    <div className={styles.matchStats}>
+    <div
+      className={clsx(
+        { [styles.noShow]: props.activeMenu === "details" },
+        styles.matchStats
+      )}
+    >
       <div className={styles.title}>Match Stats</div>
       <div className={styles.allStatsWrapper}>
         {nbaHomeStatKeys &&

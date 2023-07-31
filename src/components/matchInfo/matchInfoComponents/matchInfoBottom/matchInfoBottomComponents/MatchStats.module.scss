@@ -1,20 +1,20 @@
 @use "styles/base";
 
 .matchStats {
-  margin-top: 36px;
+  padding-top: 30px;
   min-height: 517px;
   display: flex;
   flex-direction: column;
   gap: 38px;
-  border-radius: 30px;
   background-color: #fff;
 }
 
+.noShow {
+  display: none;
+}
+
 .title {
-  margin: 38px 40px 20px 40px;
-  font-size: 30px;
-  font-weight: 700;
-  text-align: start;
+  display: none;
 }
 
 .allStatsWrapper {
@@ -50,5 +50,22 @@
       background-color: rgba(55, 77, 245, 0.3);
       border-radius: 15px;
     }
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .matchStats {
+    padding: 0;
+    margin-top: 36px;
+    display: flex;
+    border-radius: 30px;
+  }
+
+  .title {
+    display: block;
+    margin: 38px 40px 20px 40px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: start;
   }
 }
