@@ -1,10 +1,12 @@
 import triangleRight from "icons/triangle-right.svg";
 import { useEffect, useState } from "react";
 import { matchInfoObj } from "types/types";
+import { useNavigate } from "react-router-dom";
 import styles from "./MatchInfoTop.module.scss";
 
 export default function MathInfoTop(props: matchInfoObj) {
   const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
+  const navigate = useNavigate();
 
   // get obj from localStorage
   useEffect(() => {
@@ -15,9 +17,11 @@ export default function MathInfoTop(props: matchInfoObj) {
     <div className={styles.matchInfoTop}>
       <div className={styles.leagueAndDate}>
         <div className={styles.categories}>
-          <a
-            href={
-              props.leagueType === "nba" ? "/leagueInfo/nba" : "/leagueInfo/mlb"
+          <span
+            onClick={() =>
+              props.leagueType === "nba"
+                ? navigate("/leagueInfo/nba")
+                : navigate("/leagueInfo/mlb")
             }
             className={styles.sportCategory}
           >
@@ -26,20 +30,22 @@ export default function MathInfoTop(props: matchInfoObj) {
               : matchInfoObj?.leagueType) === "nba"
               ? "Basketball"
               : "Baseball"}
-          </a>
+          </span>
           <img
             className={styles.triangleRight}
             src={triangleRight}
             alt="triangleRight.svg"
           />
-          <a
-            href={
-              props.leagueType === "nba" ? "/leagueInfo/nba" : "/leagueInfo/mlb"
+          <span
+            onClick={() =>
+              props.leagueType === "nba"
+                ? navigate("/leagueInfo/nba")
+                : navigate("/leagueInfo/mlb")
             }
             className={styles.leagueCategory}
           >
             {props.league ? props.league : matchInfoObj?.league}
-          </a>
+          </span>
         </div>
         <span className={styles.matchDate}>
           {props.date ? props.date : matchInfoObj?.date}
