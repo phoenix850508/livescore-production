@@ -89,7 +89,6 @@ export default function MlbMatchItem(props: combinedTypes) {
   // toggle subscribe away team
   const handleAwayBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    console.log(e.target);
     // if localStorage has data
     if (localStorage.getItem("subscribedTeams") !== null) {
       const team = localStorage.getItem("subscribedTeams");
@@ -118,7 +117,6 @@ export default function MlbMatchItem(props: combinedTypes) {
   // toggle subscribe home team
   const handleHomeBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    console.log(e.target);
     // if localStorage has data
     if (localStorage.getItem("subscribedTeams") !== null) {
       const team = localStorage.getItem("subscribedTeams");
