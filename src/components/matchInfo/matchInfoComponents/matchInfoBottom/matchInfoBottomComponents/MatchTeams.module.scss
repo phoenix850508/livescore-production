@@ -14,7 +14,8 @@
   top: 8px;
   left: 19px;
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   color: #999999;
   font-weight: 700;
   font-size: 10px;
@@ -32,6 +33,9 @@
       text-decoration: underline;
       color: #374df5;
     }
+  }
+  .matchDate {
+    align-self: center;
   }
 }
 
