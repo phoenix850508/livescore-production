@@ -1,17 +1,18 @@
+@use "styles/base";
+
 .leagueTitle {
-  padding: 21px 20px 21px 91px;
-  height: 196px;
+  padding: 21px 20px 21px 51px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 36px;
   background-color: #fff;
-  border-radius: 30px;
 }
 
 .leagueLogo {
-  min-height: 120px;
-  min-width: 78px;
+  min-height: 60px;
+  min-width: 39px;
 }
 
 .titleRight {
@@ -23,7 +24,7 @@
   text-align: start;
   gap: 13px;
   .titleName {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 700;
   }
   .location {
@@ -31,7 +32,7 @@
     align-items: center;
     gap: 18px;
     .season {
-      padding: 0.5rem;
+      padding: 0.2rem;
       margin-bottom: 5px;
       max-width: 200px;
       border-radius: 5px;
@@ -43,12 +44,57 @@
       }
     }
     .locationLogo {
-      width: 67px;
-      height: 67px;
+      width: 28px;
+      height: 28px;
     }
     .locationName {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .leagueTitle {
+    padding: 21px 20px 21px 91px;
+    height: 196px;
+    gap: 36px;
+    border-radius: 30px;
+  }
+
+  .leagueLogo {
+    min-height: 120px;
+    min-width: 78px;
+  }
+
+  .titleRight {
+    gap: 13px;
+    .titleName {
+      font-size: 30px;
+    }
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      .season {
+        padding: 0.5rem;
+        margin-bottom: 5px;
+        max-width: 200px;
+        border-radius: 5px;
+        border: 1px solid #a7aaaf;
+        &:hover,
+        &:focus {
+          border-color: #4a4a4a;
+          cursor: pointer;
+        }
+      }
+      .locationLogo {
+        width: 67px;
+        height: 67px;
+      }
+      .locationName {
+        font-size: 24px;
+      }
     }
   }
 }

@@ -51,6 +51,7 @@ export const getTeamsStandings = async (
     const response = await axios.get(
       `${base_url}/standing/:${league}/:${season}/:${conference}`
     );
+        console.log("Response", response)
     return response;
   } catch (error) {
     console.error("[GET teams standing failed]: ", error);

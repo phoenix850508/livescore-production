@@ -33,6 +33,7 @@ export default function MatchInfoBottom(props: combinedType) {
           homeTotal={props.homeTotal}
           leagueType={props.leagueType}
           date={props.date}
+          league={props.league}
         />
         <MobileStatsMenu
           activeMenu={activeMenu}

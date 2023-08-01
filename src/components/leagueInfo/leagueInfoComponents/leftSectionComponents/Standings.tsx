@@ -94,38 +94,42 @@ export default function Standings(props: leagueParamsProps) {
       <div className={styles.buttonGroup}>
         {props.league === "nba" && (
           <>
+          <div className={styles.buttonWrapper} onClick={() => setConference("east")}>
             <button
-              className={clsx({ [styles.selected]: conference === "east" })}
-              onClick={() => setConference("east")}
-            >
-              East
+              className={clsx({ [styles.selected]: conference === "east" })}>
+              EAST
             </button>
+            <div className={clsx({[styles.underline]: conference === "east" })}></div>
+          </div>
+          <div className={styles.buttonWrapper} onClick={() => setConference("west")}>
             <button
-              className={clsx({ [styles.selected]: conference === "west" })}
-              onClick={() => setConference("west")}
-            >
-              West
+              className={clsx({ [styles.selected]: conference === "west" })}>
+              WEST
             </button>
+            <div className={clsx({[styles.underline]: conference === "west"})}></div>
+          </div>
           </>
         )}
         {props.league === "mlb" && (
           <>
+          <div className={styles.buttonWrapper} onClick={() => setConference("American League")}>
             <button
               className={clsx({
                 [styles.selected]: conference === "American League",
-              })}
-              onClick={() => setConference("American League")}
-            >
+              })}>
               American League
             </button>
+            <div className={clsx({[styles.underline]: conference === "American League"})}></div>
+          </div>
+          <div className={styles.buttonWrapper} onClick={() => setConference("National League")}>
             <button
               className={clsx({
                 [styles.selected]: conference === "National League",
-              })}
-              onClick={() => setConference("National League")}
-            >
+              })}>
               National League
             </button>
+            <div className={clsx({[styles.underline]: conference === "National League"})}></div>
+          </div>
           </>
         )}
       </div>

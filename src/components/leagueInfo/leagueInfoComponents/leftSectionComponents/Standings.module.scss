@@ -1,40 +1,46 @@
 @use "styles/base";
 
 .standings {
-  margin-top: 30px;
-  border-radius: 30px;
-  padding: 36px 0;
   background-color: #fff;
 }
 
 .title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 30px;
+  display: none;
 }
 
 .buttonGroup {
-  margin-left: 67px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
   margin-bottom: 20px;
-  button {
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    background-color: rgba(34, 34, 38, 0.2);
-    color: white;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(34, 34, 38, 0.6);
+
+  .buttonWrapper {
+    position: relative;
+    button {
+      justify-self: center;
+      width: 100px;
+      height: 60px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: base.$brand;
+      background-color: #fff;
+      opacity: 0.4;
+      cursor: pointer;
     }
-  }
-  .selected {
-    background-color: rgba(34, 34, 38, 0.6);
+    .selected {
+      opacity: 1;
+    }
+    .underline {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 2px;
+      background-color: base.$brand;
+    }
   }
 }
 
@@ -43,7 +49,7 @@
   th,
   td {
     height: 44px;
-    min-width: 84px;
+    min-width: 30px;
     text-align: center;
   }
   th {
@@ -52,7 +58,7 @@
     border-bottom: 1.5px solid rgba(34, 34, 38, 0.1);
   }
   .emptyGap {
-    min-width: 160px;
+    min-width: 50px;
   }
   .teamLogo {
     width: 24px;
@@ -64,5 +70,50 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .standings {
+    padding: 36px 0;
+    margin-top: 30px;
+    border-radius: 30px;
+  }
+
+  .title {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .buttonGroup {
+    margin-left: 67px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 36px;
+    .buttonWrapper {
+      button {
+        width: 100px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: rgba(34, 34, 38, 0.2);
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(34, 34, 38, 0.6);
+        }
+      }
+      .selected {
+        background-color: rgba(34, 34, 38, 0.6);
+      }
+
+      .underline {
+        display: none;
+      }
+    }
   }
 }

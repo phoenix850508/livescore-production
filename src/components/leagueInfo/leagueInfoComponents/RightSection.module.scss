@@ -1,5 +1,9 @@
 @use "styles/base";
 
+.rightSection {
+  display: none;
+}
+
 .title {
   height: 77px;
   display: flex;
@@ -34,5 +38,11 @@
     .leagueName {
       text-align: start;
     }
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .rightSection {
+    display: block;
   }
 }

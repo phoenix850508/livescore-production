@@ -157,6 +157,7 @@ export default function MatchInfo() {
       />
       <MatchInfoBottom
         leagueType={leagueType}
+        league={leagueCategory}
         awayTeam={match.awayTeam?.nickname}
         awayLogo={match.awayTeam?.logo}
         awayTotal={match.scores?.awayTotal}
