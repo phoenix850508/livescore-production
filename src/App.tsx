@@ -14,10 +14,12 @@ import { MatchContextProvider } from "context/MatchContext";
 import "styles/reset.module.scss";
 import "styles/App.module.scss";
 
+const basename = process.env.PUBLIC_URL;
+
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <DateContextProvider>
           <MatchContextProvider>
             <Routes>
