@@ -27,7 +27,21 @@ export const getTeam = async (id: number) => {
     const response = await axios.get(`${base_url}/team/${id}`);
     return response;
   } catch (error) {
-    console.error("[GET team]: ", error);
+    console.error("[GET team failed]: ", error);
+  }
+};
+
+export const getgamePerSeasonPerTeam = async (
+  season: number | string,
+  teamId: number | string
+) => {
+  try {
+    const response = await axios.get(
+      `${base_url}/gamesPerTeamAndSeason?gamesPerTeamAndSeason=${season}/teamId?teamId=${teamId}`
+    );
+    return response;
+  } catch (error) {
+    console.error("[GET games per season/team failed]: ", error);
   }
 };
 
@@ -51,7 +65,7 @@ export const getTeamsStandings = async (
     const response = await axios.get(
       `${base_url}/standing/:${league}/:${season}/:${conference}`
     );
-        console.log("Response", response)
+    console.log("Response", response);
     return response;
   } catch (error) {
     console.error("[GET teams standing failed]: ", error);

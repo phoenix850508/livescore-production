@@ -41,6 +41,7 @@ export type allGamesProps = {
 };
 
 export type nbaMatchItemProps = {
+  teamFullName?: string | null;
   id?: number;
   scores?: {
     visitors?: {
@@ -52,10 +53,12 @@ export type nbaMatchItemProps = {
   };
   teams?: {
     visitors?: {
+      name?: string;
       nickname?: string;
       id?: number;
     };
     home?: {
+      name?: string;
       nickname?: string;
       id?: number;
     };
@@ -446,10 +449,12 @@ export type matchInfoObj = {
   league?: string | null;
   leagueType?: string | null;
   date?: string | null | null;
+  awayId?: number | string;
   awayTeam?: string | null;
   awayLogo?: string;
   awayScores?: number[] | string[] | undefined | null;
   awayTotal?: string | null | number | null;
+  homeId?: number | string;
   homeTeam?: string | null;
   homeLogo?: string;
   homeScores?: number[] | string[] | undefined | null;
@@ -457,6 +462,7 @@ export type matchInfoObj = {
   periods?: string | number | undefined | null;
   status?: string | null;
   matchHour?: string | undefined | null;
+  teamFullName?: string | null;
 };
 
 export type currentPage = {
@@ -478,3 +484,5 @@ export type mobileStatsProps = {
   onDetailsClick?: React.MouseEventHandler<HTMLDivElement>;
   onStatisticsClick?: React.MouseEventHandler<HTMLDivElement>;
 };
+
+export type teamFullName = { teamFullName: string | null };

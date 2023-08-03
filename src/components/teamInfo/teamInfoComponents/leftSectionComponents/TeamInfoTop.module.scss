@@ -4,8 +4,8 @@
   padding: 0 40px 0 50px;
   height: 196px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
   border-radius: 30px;
   background-color: #fff;
   .logoTitleWrapper {
@@ -34,7 +34,6 @@
   .teamLocation {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 12px;
     .locationName {
       text-align: start;
@@ -49,21 +48,26 @@
 }
 
 .subscriptionWrapper {
-  width: 135px;
-  height: 50px;
+  width: 120px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   border: 3px solid base.$brand;
+  cursor: pointer;
   .follow {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
     color: base.$brand;
   }
 }
 
+.solid {
+  border-radius: 20px;
+}
+
 .subscriptionBell {
-  width: 25px;
-  height: 30px;
+  width: 20px;
+  height: 35px;
 }

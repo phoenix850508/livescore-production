@@ -27,7 +27,7 @@ function App() {
               <Route path="main" element={<MainPage />} />
               <Route path="match/:league/:id" element={<MatchInfoPage />} />
               <Route path="leagueInfo/:league" element={<LeagueInfoPage />} />
-              <Route path="teamInfo" element={<TeamInfoPage />} />
+              <Route path="teamInfo/:teamId" element={<TeamInfoPage />} />
             </Routes>
           </MatchContextProvider>
         </DateContextProvider>

@@ -25,9 +25,11 @@ export default function MatchInfoBottom(props: combinedType) {
     <div className={styles.matchInfoBottom}>
       <div className={styles.matchInfoLeft}>
         <MatchTeams
+          awayId={props.awayId}
           awayTeam={props.awayTeam}
           awayLogo={props.awayLogo}
           awayTotal={props.awayTotal}
+          homeId={props.homeId}
           homeTeam={props.homeTeam}
           homeLogo={props.homeLogo}
           homeTotal={props.homeTotal}

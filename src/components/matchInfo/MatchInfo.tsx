@@ -73,10 +73,12 @@ export default function MatchInfo() {
       league: leagueCategory,
       leagueType: leagueType,
       date: nbaDate,
+      awayId: match.awayTeam?.id,
       awayTeam: match.awayTeam?.nickname,
       awayLogo: match.awayTeam?.logo,
       awayScores: nbaMatchInfo.scores?.visitors?.linescore,
       awayTotal: match.scores?.awayTotal,
+      homeId: match.homeTeam?.id,
       homeTeam: match.homeTeam?.nickname,
       homeLogo: match.homeTeam?.logo,
       homeScores: nbaMatchInfo.scores?.home?.linescore,
@@ -94,12 +96,15 @@ export default function MatchInfo() {
       league: leagueCategory,
       leagueType: leagueType,
       matchHour: match?.matchHour,
+      awayId: match.awayTeam?.id,
       awayTeam: match.awayTeam?.nickname,
       awayLogo: match.awayTeam?.logo,
       awayTotal: match.scores?.awayTotal,
+      homeId: match.homeTeam?.id,
       homeTeam: match.homeTeam?.nickname,
       homeLogo: match.homeTeam?.logo,
       homeTotal: match.scores?.homeTotal,
+      periods: mlbMatchInfo.currentInning,
     };
     localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
   }
@@ -158,9 +163,11 @@ export default function MatchInfo() {
       <MatchInfoBottom
         leagueType={leagueType}
         league={leagueCategory}
+        awayId={match.awayTeam?.id}
         awayTeam={match.awayTeam?.nickname}
         awayLogo={match.awayTeam?.logo}
         awayTotal={match.scores?.awayTotal}
+        homeId={match.homeTeam?.id}
         homeTeam={match.homeTeam?.nickname}
         homeLogo={match.homeTeam?.logo}
         homeTotal={match.scores?.homeTotal}

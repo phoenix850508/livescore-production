@@ -8,11 +8,11 @@ import styles from "./MatchTeams.module.scss";
 
 export default function MatchTeams(props: matchInfoObj) {
   const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
-    // use useState to decide whether the team is subscribed
+  // use useState to decide whether the team is subscribed
   const [awaySubs, setAwaySubs] = useState(false);
   const [homeSubs, setHomeSubs] = useState(false);
 
-        // toggle subscribe away team
+  // toggle subscribe away team
   const handleAwayBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     // if localStorage has data
@@ -23,7 +23,9 @@ export default function MatchTeams(props: matchInfoObj) {
       if (teamsParsed.some((teamName: string) => teamName === props.awayTeam)) {
         // remove the name from array
         setAwaySubs(false);
-        const arr = teamsParsed.filter((teamName: string) => teamName !== props.awayTeam);
+        const arr = teamsParsed.filter(
+          (teamName: string) => teamName !== props.awayTeam
+        );
         teamsParsed = arr;
       }
       // if teamName does not exists
@@ -51,7 +53,9 @@ export default function MatchTeams(props: matchInfoObj) {
       if (teamsParsed.some((teamName: string) => teamName === props.homeTeam)) {
         // remove the name from array
         setHomeSubs(false);
-        const arr = teamsParsed.filter((teamName: string) => teamName !== props.homeTeam);
+        const arr = teamsParsed.filter(
+          (teamName: string) => teamName !== props.homeTeam
+        );
         teamsParsed = arr;
       }
       // if teamName does not exists
@@ -70,7 +74,11 @@ export default function MatchTeams(props: matchInfoObj) {
 
   const navigate = useNavigate();
   const handleAwayTeamClick = () => {
-    navigate("/teamInfo");
+    navigate(`/teamInfo/${props.awayId ? props.awayId : matchInfoObj?.awayId}`);
+  };
+
+  const handleHomeTeamClick = () => {
+    navigate(`/teamInfo/${props.homeId ? props.homeId : matchInfoObj?.homeId}`);
   };
 
   useEffect(() => {
@@ -78,22 +86,25 @@ export default function MatchTeams(props: matchInfoObj) {
     const matchInfoObjString = localStorage.getItem("matchInfoObj");
     matchInfoObjString && setMatchInfoObj(JSON.parse(matchInfoObjString));
 
-      // check whethther team is subscribed
-  const subscribedTeamsString = localStorage.getItem("subscribedTeams");
-  const subscribedTeams: string[] =
-    subscribedTeamsString && JSON.parse(subscribedTeamsString);
-  const isHomeSub = props.homeTeam
-    ? subscribedTeams?.some((team) => team === props.homeTeam)
-    : matchInfoObj &&
-      subscribedTeams?.some((team) => team === matchInfoObj.homeTeam);
-      if (isHomeSub) {setHomeSubs(true)}
-  const isAwaySub = props.awayTeam
-    ? subscribedTeams?.some((team) => team === props.awayTeam)
-    : matchInfoObj &&
-      subscribedTeams?.some((team) => team === matchInfoObj.awayTeam);
-      if(isAwaySub) {setAwaySubs(true)}
+    // check whethther team is subscribed
+    const subscribedTeamsString = localStorage.getItem("subscribedTeams");
+    const subscribedTeams: string[] =
+      subscribedTeamsString && JSON.parse(subscribedTeamsString);
+    const isHomeSub = props.homeTeam
+      ? subscribedTeams?.some((team) => team === props.homeTeam)
+      : matchInfoObj &&
+        subscribedTeams?.some((team) => team === matchInfoObj.homeTeam);
+    if (isHomeSub) {
+      setHomeSubs(true);
+    }
+    const isAwaySub = props.awayTeam
+      ? subscribedTeams?.some((team) => team === props.awayTeam)
+      : matchInfoObj &&
+        subscribedTeams?.some((team) => team === matchInfoObj.awayTeam);
+    if (isAwaySub) {
+      setAwaySubs(true);
+    }
   }, []);
-
 
   return (
     <div>
@@ -173,6 +184,7 @@ export default function MatchTeams(props: matchInfoObj) {
             className={styles.logo}
             src={props.homeLogo ? props.homeLogo : matchInfoObj?.homeLogo}
             alt="homeLogo.svg"
+            onClick={handleHomeTeamClick}
           />
         </div>
         <img

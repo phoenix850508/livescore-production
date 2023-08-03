@@ -15,6 +15,7 @@ export default function MatchInfo(props: combinedPropsType) {
   let awayScores: null | number[] | string[] | undefined = null;
   let homeScores: null | number[] | string[] | undefined = null;
 
+  // in here only the first render data matters, because the periodsPercent remians unchange in the useEffect
   const periods = props.periods ? props.periods : matchInfoObj?.periods;
   let periodsPercent: number | undefined | 0 | null = 0;
 
@@ -41,12 +42,13 @@ export default function MatchInfo(props: combinedPropsType) {
 
   useEffect(() => {
     periodsPercent = awayScores && Number(periods) / awayScores?.length;
-    if (periodsPercent === 1) {
+    if (periodsPercent === 1 || "Final") {
       setPeriodsPercentString("100%");
     } else {
       periodsPercent && setPeriodsPercentString(periodsPercent.toString());
     }
-  });
+  }, []);
+
   return (
     <div
       className={clsx(
