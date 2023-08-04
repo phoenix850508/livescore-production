@@ -8,7 +8,8 @@ This side project is built for sports fans to subscribe their favorite teams, an
 
 Currently this project is still on the fly, therefore, the score shown may not be corrent on the day. However, as I'm really excited to build this project, soon the APIs will be connected, and all the dummy data will be removed in all pages.
 
-Try the app: https://livescore-2f15c0310cf4.herokuapp.com/main
+[The App is in production on heroku](https://livescore-2f15c0310cf4.herokuapp.com/main)
+<br />(currently only 2023/07/14 and 2023/07/18 data available)
 
 ## Features (🚧 means there are still things to add, feature not completed)
 
