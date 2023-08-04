@@ -1,14 +1,19 @@
+@use "styles/base";
+
 .teamInfoBottom {
-  margin-top: 36px;
   padding: 30px 55px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border-radius: 30px;
+}
+
+.noShow {
+  display: none;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 18px;
+  color: #999999;
   font-weight: 700;
 }
 
@@ -26,5 +31,18 @@
   &:focus {
     border-color: #4a4a4a;
     cursor: pointer;
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .teamInfoBottom {
+    display: flex;
+    margin-top: 36px;
+    border-radius: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+    color: black;
   }
 }

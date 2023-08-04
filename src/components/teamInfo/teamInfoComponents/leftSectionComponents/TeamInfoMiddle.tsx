@@ -1,9 +1,16 @@
-import { teamInfoType } from "types/types";
+import { teamInfoType, mobileTeamProps } from "types/types";
+import clsx from "clsx";
 import styles from "./TeamInfoMiddle.module.scss";
 
-export default function TeamInfoMiddle(props: teamInfoType) {
+interface combinedProps extends teamInfoType, mobileTeamProps {}
+export default function TeamInfoMiddle(props: combinedProps) {
   return (
-    <div className={styles.teamInfoMiddle}>
+    <div
+      className={clsx(
+        { [styles.noShow]: props.activeMenu === "matches" },
+        styles.teamInfoMiddle
+      )}
+    >
       <div className={styles.infoTitle}>Team Info</div>
       <div className={styles.teamDetailWrapper}>
         {props.league === "nba" && (

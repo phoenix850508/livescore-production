@@ -588,3 +588,9 @@ export type teamInfoType = {
   conference?: string;
   league?: string;
 };
+
+export type mobileTeamProps = {
+  onDetailsClick?: React.MouseEventHandler<HTMLDivElement>;
+  onMatchesClick?: React.MouseEventHandler<HTMLDivElement>;
+  activeMenu?: string;
+};

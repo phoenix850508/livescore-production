@@ -1,0 +1,46 @@
+@use "styles/base";
+
+.mobileTeamMenu {
+  padding-top: 50px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  color: base.$brand;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #fff;
+
+  .detailsWrapper {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .matchesWrapper {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .details,
+  .matches {
+    opacity: 0.4;
+  }
+  .active {
+    opacity: 1;
+  }
+  .underline {
+    height: 2px;
+    width: 87px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: base.$brand;
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .mobileTeamMenu {
+    display: none;
+  }
+}

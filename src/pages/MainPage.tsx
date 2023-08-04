@@ -7,10 +7,7 @@ import { useState, useRef, useEffect, useContext } from "react";
 export default function MainPage() {
   // use useState to control which sport to shown
   const [showSport, setShowSport] = useState("all");
-  const [showFavorites, setShowFavorites] = useState(
-    // eslint-disable-next-line no-restricted-globals
-    screen.width <= 1010 ? true : false
-  );
+  const [showFavorites, setShowFavorites] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
   const [showMobileIcon, setShowMobileIcon] = useState<string | null>(
     localStorage.getItem("mobileIcon")

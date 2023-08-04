@@ -1,10 +1,17 @@
 import MatchesLeft from "./matchesComponents/MatchesLeft";
-import { nbaMatchItemArray } from "types/types";
+import { nbaMatchItemArray, mobileTeamProps } from "types/types";
+import clsx from "clsx";
 import styles from "./TeamInfoBottom.module.scss";
 
-export default function TeamInfoBottom(props: nbaMatchItemArray) {
+interface combinedProps extends nbaMatchItemArray, mobileTeamProps {}
+export default function TeamInfoBottom(props: combinedProps) {
   return (
-    <div className={styles.teamInfoBottom}>
+    <div
+      className={clsx(
+        { [styles.noShow]: props.activeMenu === "details" },
+        styles.teamInfoBottom
+      )}
+    >
       <div className={styles.title}>Matches</div>
       <select className={styles.seasonSelect}>
         {props.league === "nba" && <option value="2022">22/23</option>}
