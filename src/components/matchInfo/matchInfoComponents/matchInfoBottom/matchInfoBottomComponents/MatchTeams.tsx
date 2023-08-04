@@ -74,11 +74,19 @@ export default function MatchTeams(props: matchInfoObj) {
 
   const navigate = useNavigate();
   const handleAwayTeamClick = () => {
-    navigate(`/teamInfo/${props.awayId ? props.awayId : matchInfoObj?.awayId}`);
+    navigate(
+      `/teamInfo/${props.leagueType}/${
+        props.awayId ? props.awayId : matchInfoObj?.awayId
+      }`
+    );
   };
 
   const handleHomeTeamClick = () => {
-    navigate(`/teamInfo/${props.homeId ? props.homeId : matchInfoObj?.homeId}`);
+    navigate(
+      `/teamInfo/${props.leagueType}/${
+        props.homeId ? props.homeId : matchInfoObj?.homeId
+      }`
+    );
   };
 
   useEffect(() => {

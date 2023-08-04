@@ -64,7 +64,7 @@ export type nbaMatchItemProps = {
     };
   };
   date?: {
-    start?: Date;
+    start?: Date | string;
     end?: string | null;
   };
   periods?: {
@@ -75,6 +75,17 @@ export type nbaMatchItemProps = {
     halftime?: string;
     long?: string;
   };
+  arena?: {
+    name?: string;
+    city?: string;
+    state?: string;
+    country?: string;
+  };
+};
+
+export type nbaMatchItemArray = {
+  matches: nbaMatchItemProps[] | null;
+  season?: string;
 };
 
 export type mlbMatchItemProps = {
@@ -485,4 +496,9 @@ export type mobileStatsProps = {
   onStatisticsClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
-export type teamFullName = { teamFullName: string | null };
+export type teamInfoType = {
+  teamFullName?: string | null;
+  arena?: string;
+  city?: string;
+  state?: string;
+};

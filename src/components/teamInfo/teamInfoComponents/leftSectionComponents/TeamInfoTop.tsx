@@ -3,11 +3,11 @@ import bellEmpty from "icons/bellEmptyIcon.svg";
 import bellSolid from "icons/bellSolidIcon.svg";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { matchInfoObj, teamFullName } from "types/types";
+import { matchInfoObj, teamInfoType } from "types/types";
 import clsx from "clsx";
 import styles from "./TeamInfoTop.module.scss";
 
-export default function TeamInfoTop(props: teamFullName) {
+export default function TeamInfoTop(props: teamInfoType) {
   const id = useParams().teamId;
   const [matchInfoObj, setMatchInfoObj] = useState<matchInfoObj | null>(null);
   // use useState to decide whether the team is subscribed
