@@ -81,11 +81,37 @@ export type nbaMatchItemProps = {
     state?: string;
     country?: string;
   };
+  // from here combines mlbMatchItemProps
+  away?: string;
+  gameDate?: string;
+  gameID?: string;
+  gameTime?: string;
+  home?: string;
+  teamIDAway?: string;
+  teamIDHome?: string;
+  lineScore?: {
+    away?: {
+      R?: string;
+    };
+    home?: {
+      R?: string;
+    };
+  };
+  gameStatus?: string;
+  league?: string;
+};
+
+export type arena = {
+  name?: string;
+  city?: string;
+  state?: string;
+  country?: string;
 };
 
 export type nbaMatchItemArray = {
-  matches: nbaMatchItemProps[] | null;
+  matches?: nbaMatchItemProps[] | mlbMatchItemProps[] | null;
   season?: string;
+  league?: string;
 };
 
 export type mlbMatchItemProps = {
@@ -96,6 +122,61 @@ export type mlbMatchItemProps = {
   home?: string;
   teamIDAway?: string;
   teamIDHome?: string;
+  lineScore?: {
+    away?: {
+      R?: string;
+    };
+    home?: {
+      R?: string;
+    };
+  };
+  gameStatus?: string;
+  // from here combines nbaMatchItemProps
+  teamFullName?: string | null;
+  id?: number;
+  scores?: {
+    visitors?: {
+      linescore?: number[];
+    };
+    home?: {
+      linescore?: number[];
+    };
+  };
+  teams?: {
+    visitors?: {
+      name?: string;
+      nickname?: string;
+      id?: number;
+    };
+    home?: {
+      name?: string;
+      nickname?: string;
+      id?: number;
+    };
+  };
+  date?: {
+    start?: Date | string;
+    end?: string | null;
+  };
+  periods?: {
+    current?: number;
+    total?: number;
+  };
+  status?: {
+    halftime?: string;
+    long?: string;
+  };
+  arena?: {
+    name?: string;
+    city?: string;
+    state?: string;
+    country?: string;
+  };
+};
+
+export type mlbMatchItem = {
+  schedule?: mlbMatchItemProps[] | null;
+  team?: string;
 };
 
 export type mlbLiveMatchItemProps = {
@@ -501,4 +582,9 @@ export type teamInfoType = {
   arena?: string;
   city?: string;
   state?: string;
+  teamID?: string;
+  teamCity?: string;
+  DIFF?: string;
+  conference?: string;
+  league?: string;
 };

@@ -22,22 +22,28 @@ export default function MatchLeftMatchItem(props: nbaMatchItemProps) {
   return (
     <div className={styles.matchLeftMatchItem}>
       <div className={styles.matchSchedule}>
-        <div className={styles.matchDate}>{date}</div>
+        <div className={styles.matchDate}>{date || props.gameDate}</div>
         <div className={styles.matchProgress}>
-          {status === "Finished" ? "FT" : "status"}
+          {props.league === "nba"
+            ? status === "Finished"
+              ? "FT"
+              : "status"
+            : props.gameStatus === "Completed"
+            ? "FT"
+            : props.gameStatus}
         </div>
       </div>
       <div className={styles.matchScoreBox}>
         <div className={styles.matchTeams}>
-          <div className={styles.away}>{awayTeam}</div>
-          <div className={styles.home}>{homeTeam}</div>
+          <div className={styles.away}>{awayTeam || props.away}</div>
+          <div className={styles.home}>{homeTeam || props.home}</div>
         </div>
         <div className={styles.matchScores}>
           <div className={styles.awayScore}>
-            <div>{awayTotal}</div>
+            <div>{awayTotal || props.lineScore?.away?.R}</div>
           </div>
           <div className={styles.homeScore}>
-            <div>{homeTotal}</div>
+            <div>{homeTotal || props.lineScore?.home?.R}</div>
           </div>
         </div>
       </div>

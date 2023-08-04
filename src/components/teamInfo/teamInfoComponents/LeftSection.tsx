@@ -13,8 +13,15 @@ export default function LeftSection(props: combinedTypes) {
         arena={props.arena}
         city={props.city}
         state={props.state}
+        league={props.league}
+        DIFF={props.DIFF}
+        conference={props.conference}
       />
-      <TeamInfoBottom matches={props.matches} season={props.season} />
+      <TeamInfoBottom
+        league={props.league}
+        matches={props.matches}
+        season={props.season}
+      />
     </div>
   );
 }

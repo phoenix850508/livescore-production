@@ -6,9 +6,15 @@ export default function TeamInfoMiddle(props: teamInfoType) {
     <div className={styles.teamInfoMiddle}>
       <div className={styles.infoTitle}>Team Info</div>
       <div className={styles.teamDetailWrapper}>
-        <div className={styles.arena}>Arena: {props.arena}</div>
+        {props.league === "nba" && (
+          <div className={styles.arena}>Arena: {props.arena}</div>
+        )}
+        {props.league === "mlb" && <div>DIFF: {props.DIFF}</div>}
         <div className={styles.city}>City: {props.city}</div>
-        <div className={styles.state}>State: {props.state}</div>
+        {props.league === "nba" && (
+          <div className={styles.state}>State: {props.state}</div>
+        )}
+        {props.league === "mlb" && <div>Conference: {props.conference}</div>}
         <div className={styles.country}>
           Country: {props.city}, {props.city !== "Toronto" ? "USA" : "Canada"}
         </div>

@@ -7,10 +7,11 @@ export default function TeamInfoBottom(props: nbaMatchItemArray) {
     <div className={styles.teamInfoBottom}>
       <div className={styles.title}>Matches</div>
       <select className={styles.seasonSelect}>
-        <option value="2022">22/23</option>
+        {props.league === "nba" && <option value="2022">22/23</option>}
+        {props.league === "mlb" && <option value="2023">2023</option>}
       </select>
       <div className={styles.matches}>
-        <MatchesLeft matches={props.matches} />
+        <MatchesLeft league={props.league} matches={props.matches} />
       </div>
     </div>
   );
