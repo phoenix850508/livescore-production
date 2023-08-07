@@ -1,9 +1,52 @@
 @use "styles/base";
 
+.headerWrapper {
+  position: relative;
+}
+
 header {
   position: sticky;
   top: 0;
+  z-index: 1;
+}
+
+.searchResultWrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
   z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .filteredTeams {
+    padding: 8px 16px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transform: scale(1, 0);
+    border-bottom: solid rgba(230, 230, 230, 0.5) 1px;
+    &:hover {
+      background-color: rgb(230, 230, 230);
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+    .filteredName {
+      min-width: 260px;
+      font-size: 16px;
+    }
+  }
+
+  .show {
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out 0.4s;
+  }
 }
 
 .navbarTop {
@@ -82,10 +125,11 @@ header {
 
   .searchToggleCheckbox {
     display: none;
+
     &:checked ~ .dropdownSearch {
       z-index: 999;
       transform: scale(1, 1);
-      transition: transform 0.3s ease-in-out 0.1s;
+      transition: transform 0.3s ease-in-out 0.2s;
       transform-origin: right;
     }
   }
@@ -186,6 +230,15 @@ header {
 }
 
 @media (min-width: base.$break-point) {
+  .searchResultWrapper {
+    .filteredTeams {
+      .filteredName {
+        min-width: 200px;
+        font-size: 16px;
+      }
+    }
+  }
+
   .navbarTop {
     padding: 0;
     height: 90px;

@@ -597,3 +597,24 @@ export type mobileTeamProps = {
   onMatchesClick?: React.MouseEventHandler<HTMLDivElement>;
   activeMenu?: string;
 };
+
+export type onInputChange = {
+  onInputChange?: React.ChangeEventHandler<HTMLInputElement>;
+  inputValue?: string | number | readonly string[] | undefined;
+  checked?: boolean;
+  onChekcboxChange?: React.ChangeEventHandler<HTMLInputElement>;
+};
+
+export type allTeams = {
+  id?: number;
+  response?: {
+    logo?: string;
+    name?: string;
+    nickname?: string;
+  };
+  mlbLogo1?: string;
+  teamAbv?: string;
+  teamCity?: string;
+  teamID?: string;
+  teamName?: string;
+};

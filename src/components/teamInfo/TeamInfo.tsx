@@ -24,6 +24,7 @@ export default function TeamInfo() {
   const [teamFullName, setTeamFullName] = useState<null | string>(null);
   const [mlbTeamInfo, setMlbTeamInfo] = useState<teamInfoType | null>(null);
   const [teamLogo, setTeamLogo] = useState<string | undefined>("");
+  const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
 
   // get current year
   const date = new Date();
@@ -40,17 +41,17 @@ export default function TeamInfo() {
     }
   }
 
-  // get nba home arena information
+  // get nba home information
   let index = 0;
   let homeTeamId: number | string | undefined | null = 0;
   let arena: arena | undefined | null;
   if (league === "nba") {
     homeTeamId = nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-    while (homeTeamId !== Number(id)) {
+    while (homeTeamId !== Number(id) && nbaAllSeasonGames) {
       index++;
       homeTeamId =
         nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-      if (index > 88) {
+      if (index > 87) {
         break;
       }
     }
@@ -66,7 +67,7 @@ export default function TeamInfo() {
       objArr && setNbaAllSeasonGames(Object.values(objArr));
     };
     if (league === "nba") asyncGetgamePerSeasonPerTeam();
-  }, []);
+  }, [id, league, season]);
 
   // get nba team full-name
   useEffect(() => {
@@ -77,38 +78,41 @@ export default function TeamInfo() {
         localStorage.setItem("teamFullName", response.data[0].response.name);
     };
     if (league === "nba") asyncGetTeam();
-  }, []);
+  }, [league, id]);
 
   // get nba teamLogo
   useEffect(() => {
     if (homeTeamId === Number(id) && league === "nba") {
       nbaAllSeasonGames &&
         setTeamLogo(nbaAllSeasonGames[index]?.teams?.home?.logo);
+    } else if (homeTeamId !== Number(id) && league === "nba") {
+      setTeamLogo(defaultLogo);
     }
-  }, [index, homeTeamId, id]);
+  }, [index, homeTeamId, id, league]);
 
   // get mlb all games per season per team
   useEffect(() => {
     setMlbAllSeasonGames(dummyMlbTeamMatches);
-  }, []);
+  }, [league, id]);
 
   // get mlb team full-name
   useEffect(() => {
     if (league === "mlb") {
+      homeTeamId = dummyMlbTeams[index].teamID;
       while (homeTeamId !== id) {
         index++;
         homeTeamId = dummyMlbTeams[index].teamID;
-        setTeamFullName(
-          `${dummyMlbTeams[index].teamCity} ${dummyMlbTeams[index].teamName}`
-        );
-        setMlbTeamInfo(dummyMlbTeams[index]);
-        if (index > 30) {
+        if (index > 29) {
           break;
         }
       }
       setTeamLogo(dummyMlbTeams[index].mlbLogo1);
+      setTeamFullName(
+        `${dummyMlbTeams[index].teamCity} ${dummyMlbTeams[index].teamName}`
+      );
+      setMlbTeamInfo(dummyMlbTeams[index]);
     }
-  }, []);
+  }, [league, id]);
 
   return (
     <div className={styles.teamInfo}>

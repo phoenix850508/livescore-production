@@ -1,16 +1,7 @@
-import BOS from "icons/mlbALTeams/boston-red-sox-logo.svg";
-import ATL from "icons/mlbNLTeams/atlanta-braves.svg";
-import NYM from "icons/mlbNLTeams/new-york-mets.svg";
-import CIN from "icons/mlbNLTeams/cincinnati-reds.svg";
-import TOR from "icons/mlbALTeams/toronto-blue-jays.svg";
-import PHI from "icons/mlbNLTeams/philadelphia-phillies.svg";
-import MIA from "icons/mlbNLTeams/miami-marlins-primary.svg";
-import ARI from "icons/mlbNLTeams/arizona-diamondbacks.svg";
-import { useContext, useEffect, useState, useMemo } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import { useNavigate } from "react-router-dom";
-import { getTeam } from "api/nba";
-import { showSportType } from "types/types";
+import { showSportType, allTeams } from "types/types";
 import styles from "./FeaturedMatch.module.scss";
 
 export default function FeaturedMatch(props: showSportType) {
@@ -50,41 +41,45 @@ export default function FeaturedMatch(props: showSportType) {
     alert("no teams selcted");
   };
 
-  // get team logo
-  const allNbaTeams = useMemo(() => {
-    const allNbaTeamsStr = localStorage.getItem("allNbaTeams");
-    return allNbaTeamsStr && JSON.parse(allNbaTeamsStr);
-  }, []);
+  // get teams
+  const allNbaTeamsStr = localStorage.getItem("allNbaTeams");
+  const allNbaTeams = allNbaTeamsStr && JSON.parse(allNbaTeamsStr);
 
-  const allMlbTeams = useMemo(() => {
-    const allMlbTeamsStr = localStorage.getItem("allMlbTeams");
-    return allMlbTeamsStr && JSON.parse(allMlbTeamsStr);
-  }, []);
+  const allMlbTeamsStr = localStorage.getItem("allMlbTeams");
+  const allMlbTeams = allMlbTeamsStr && JSON.parse(allMlbTeamsStr);
 
   useEffect(() => {
-    // if homeTeam data exists, and the data is from nba (which its name is more than 3 words)
+    // if match.homeTeam data exists, and the data is from nba (which its name is more than 3 words)
     if (homeTeam?.id && homeTeam?.nickname && homeTeam?.nickname?.length > 3) {
-      // nba
-      const filteredHomeTeam = allNbaTeams.filter(
-        (team: any) => team.id === match?.homeTeam?.id
-      )[0].response.logo;
-      const filteredAwayTeam = allNbaTeams.filter(
-        (team: any) => team.id === match?.awayTeam?.id
-      )[0].response.logo;
+      // find nba team form localStorage
+      const filteredHomeTeam =
+        allNbaTeams &&
+        allNbaTeams.filter(
+          (team: allTeams) => team.id === match?.homeTeam?.id
+        )[0]?.response.logo;
+      const filteredAwayTeam =
+        allNbaTeams &&
+        allNbaTeams.filter(
+          (team: allTeams) => team.id === match?.awayTeam?.id
+        )[0]?.response.logo;
       setHomeTeamLogo(filteredHomeTeam ? filteredHomeTeam : defaultLogo);
       setAwayTeamLogo(filteredAwayTeam ? filteredAwayTeam : defaultLogo);
     } else {
-      // mlb
-      const filteredHomeTeam = allMlbTeams.filter(
-        (team: any) => Number(team.teamID) === match?.homeTeam?.id
-      )[0].mlbLogo1;
-      const filteredAwayTeam = allMlbTeams.filter(
-        (team: any) => Number(team.teamID) === match?.awayTeam?.id
-      )[0].mlbLogo1;
+      // find mlb team from localStorage
+      const filteredHomeTeam =
+        allMlbTeams &&
+        allMlbTeams.filter(
+          (team: any) => Number(team.teamID) === match?.homeTeam?.id
+        )[0]?.mlbLogo1;
+      const filteredAwayTeam =
+        allMlbTeams &&
+        allMlbTeams.filter(
+          (team: any) => Number(team.teamID) === match?.awayTeam?.id
+        )[0]?.mlbLogo1;
       setHomeTeamLogo(filteredHomeTeam ? filteredHomeTeam : defaultLogo);
       setAwayTeamLogo(filteredAwayTeam ? filteredAwayTeam : defaultLogo);
     }
-  }, [homeTeam, props?.showSport]);
+  }, [homeTeam, props?.showSport, allNbaTeams, allMlbTeams]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>
