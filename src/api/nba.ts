@@ -22,7 +22,7 @@ export const getLiveGames = async () => {
 };
 
 // get team information
-export const getTeam = async (id: number) => {
+export const getTeam = async (id: number | string) => {
   try {
     const response = await axios.get(`${base_url}/team/${id}`);
     return response;
@@ -65,7 +65,6 @@ export const getTeamsStandings = async (
     const response = await axios.get(
       `${base_url}/standing/:${league}/:${season}/:${conference}`
     );
-    console.log("Response", response);
     return response;
   } catch (error) {
     console.error("[GET teams standing failed]: ", error);

@@ -6,21 +6,7 @@ import TOR from "icons/mlbALTeams/toronto-blue-jays.svg";
 import PHI from "icons/mlbNLTeams/philadelphia-phillies.svg";
 import MIA from "icons/mlbNLTeams/miami-marlins-primary.svg";
 import ARI from "icons/mlbNLTeams/arizona-diamondbacks.svg";
-import LAD from "icons/mlbNLTeams/los-angeles-dodgers.svg";
-import MIL from "icons/mlbNLTeams/milwaukee-brewers.svg";
-import TB from "icons/mlbALTeams/tampa-bay-rays.svg";
-import SEA from "icons/mlbALTeams/seattle-mariners.svg";
-import CHW from "icons/mlbALTeams/chicago-white-sox.svg";
-import KC from "icons/mlbALTeams/kansas-city-royals.svg";
-import OAK from "icons/mlbALTeams/oakland-athletics.svg";
-import NYY from "icons/mlbALTeams/new-york-yankees.svg";
-import COL from "icons/mlbNLTeams/colorado-rockies.svg";
-import PIT from "icons/mlbNLTeams/pittsburgh-pirates.svg";
-import SD from "icons/mlbNLTeams/san-diego-padres.svg";
-import MIN from "icons/mlbALTeams/minnesota-twins.svg";
-import DET from "icons/mlbALTeams/detroit-tigers.svg";
-import CLE from "icons/mlbALTeams/cleveland-guardians.svg";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useMemo } from "react";
 import { MatchContext } from "context/MatchContext";
 import { useNavigate } from "react-router-dom";
 import { getTeam } from "api/nba";
@@ -29,52 +15,7 @@ import styles from "./FeaturedMatch.module.scss";
 
 export default function FeaturedMatch(props: showSportType) {
   // just temporarily shows some logo for better view (will figure out other ways later)
-  const mlbLogo = [
-    BOS,
-    "BOS",
-    ATL,
-    "ATL",
-    NYM,
-    "NYM",
-    CIN,
-    "CIN",
-    TOR,
-    "TOR",
-    PHI,
-    "PHI",
-    MIA,
-    "MIA",
-    ARI,
-    "ARI",
-    LAD,
-    "LAD",
-    MIL,
-    "MIL",
-    TB,
-    "TB",
-    SEA,
-    "SEA",
-    CHW,
-    "CHW",
-    KC,
-    "KC",
-    OAK,
-    "OAK",
-    NYY,
-    "NYY",
-    COL,
-    "COL",
-    PIT,
-    "PIT",
-    SD,
-    "SD",
-    MIN,
-    "MIN",
-    DET,
-    "DET",
-    CLE,
-    "CLE",
-  ];
+
   const { match, dispatch } = useContext(MatchContext);
   // extract the latest/selected match information
   const awayTeam = match.awayTeam;
@@ -110,55 +51,40 @@ export default function FeaturedMatch(props: showSportType) {
   };
 
   // get team logo
-  useEffect(() => {
-    const asyncGetTeam = async () => {
-      // if homeTeam data exists, and the data is from nba (which its name is more than 3 words)
-      if (
-        awayTeam?.id &&
-        awayTeam?.nickname &&
-        awayTeam?.nickname?.length > 3
-      ) {
-        const response = awayTeam && (await getTeam(awayTeam?.id));
-        setAwayTeamLogo(response?.data[0].response.logo);
-      } else {
-        // temporarily use for better UX in dummy data
-        const logo = `${awayTeam?.nickname}`;
-        let index: number | null = null;
-        for (let i = 0; i < mlbLogo.length; i++) {
-          if (logo === mlbLogo[i]) {
-            index = i;
-          }
-        }
-        setAwayTeamLogo(index ? mlbLogo[index - 1] : defaultLogo);
-      }
-    };
-    asyncGetTeam();
-  }, [awayTeam, props?.showSport, mlbLogo]);
+  const allNbaTeams = useMemo(() => {
+    const allNbaTeamsStr = localStorage.getItem("allNbaTeams");
+    return allNbaTeamsStr && JSON.parse(allNbaTeamsStr);
+  }, []);
+
+  const allMlbTeams = useMemo(() => {
+    const allMlbTeamsStr = localStorage.getItem("allMlbTeams");
+    return allMlbTeamsStr && JSON.parse(allMlbTeamsStr);
+  }, []);
 
   useEffect(() => {
-    const asyncGetTeam = async () => {
-      // if homeTeam data exists, and the data is from nba (which its name is more than 3 words)
-      if (
-        homeTeam?.id &&
-        homeTeam?.nickname &&
-        homeTeam?.nickname?.length > 3
-      ) {
-        const response = homeTeam && (await getTeam(homeTeam?.id));
-        setHomeTeamLogo(response?.data[0].response.logo);
-      } else {
-        // temporarily use for better UX in dummy data
-        const logo = `${homeTeam?.nickname}`;
-        let index: number | null = null;
-        for (let i = 0; i < mlbLogo.length; i++) {
-          if (logo === mlbLogo[i]) {
-            index = i;
-          }
-        }
-        setHomeTeamLogo(index ? mlbLogo[index - 1] : defaultLogo);
-      }
-    };
-    asyncGetTeam();
-  }, [homeTeam, props?.showSport, mlbLogo]);
+    // if homeTeam data exists, and the data is from nba (which its name is more than 3 words)
+    if (homeTeam?.id && homeTeam?.nickname && homeTeam?.nickname?.length > 3) {
+      // nba
+      const filteredHomeTeam = allNbaTeams.filter(
+        (team: any) => team.id === match?.homeTeam?.id
+      )[0].response.logo;
+      const filteredAwayTeam = allNbaTeams.filter(
+        (team: any) => team.id === match?.awayTeam?.id
+      )[0].response.logo;
+      setHomeTeamLogo(filteredHomeTeam ? filteredHomeTeam : defaultLogo);
+      setAwayTeamLogo(filteredAwayTeam ? filteredAwayTeam : defaultLogo);
+    } else {
+      // mlb
+      const filteredHomeTeam = allMlbTeams.filter(
+        (team: any) => Number(team.teamID) === match?.homeTeam?.id
+      )[0].mlbLogo1;
+      const filteredAwayTeam = allMlbTeams.filter(
+        (team: any) => Number(team.teamID) === match?.awayTeam?.id
+      )[0].mlbLogo1;
+      setHomeTeamLogo(filteredHomeTeam ? filteredHomeTeam : defaultLogo);
+      setAwayTeamLogo(filteredAwayTeam ? filteredAwayTeam : defaultLogo);
+    }
+  }, [homeTeam, props?.showSport]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>

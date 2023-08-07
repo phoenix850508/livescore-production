@@ -15,7 +15,7 @@ import {
 } from "types/types";
 import clsx from "clsx";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { DateContext } from "context/DateContext";
 import styles from "./Navbar.module.scss";
 
@@ -57,7 +57,13 @@ function NavbarTop(props: combinedNavTopTypes) {
   const { state } = useContext(DateContext);
   const date = state.date;
   const location = useLocation();
-  const calendarRef = props.calendarRef;
+  const searchInputRef = useRef<null | string>(null);
+  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    searchInputRef.current = e.target.value;
+  };
+  const onSearchClick = () => {
+    console.log(searchInputRef.current);
+  };
   return (
     <nav className={styles.navbarTop}>
       <div
@@ -75,11 +81,18 @@ function NavbarTop(props: combinedNavTopTypes) {
           className={styles.searchIcon}
           src={searchIcon}
           alt="searchIcon.svg"
+          onClick={onSearchClick}
         />
         <input
           className={styles.searchInput}
           type="text"
           placeholder="Search"
+          onChange={onInputChange}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              onSearchClick();
+            }
+          }}
         />
       </div>
       <div

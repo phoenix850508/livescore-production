@@ -2,6 +2,8 @@ import Navbar from "components/header/Navbar";
 import Main from "components/main/Main";
 import MobileMenu from "components/main/mobileMenuSection/MobileMenu";
 import { DateContext } from "context/DateContext";
+import { getTeam } from "api/nba";
+import { dummyMlbTeams } from "components/teamInfo/dummyMlbTeams";
 import { useState, useRef, useEffect, useContext } from "react";
 
 export default function MainPage() {
@@ -62,7 +64,24 @@ export default function MainPage() {
     setShowFavorites(false);
   };
 
-  // when date is selected, mobile calendat collapse
+  // get all nba&mlb teams name/logo
+  useEffect(() => {
+    const asyncGetTeam = async () => {
+      const response = await getTeam("");
+      response &&
+        localStorage.setItem("allNbaTeams", JSON.stringify(response.data));
+    };
+
+    if (
+      localStorage.getItem("allNbaTeams") === null ||
+      localStorage.getItem("allMlbTeams") === null
+    ) {
+      asyncGetTeam();
+      localStorage.setItem("allMlbTeams", JSON.stringify(dummyMlbTeams));
+    }
+  }, []);
+
+  // when date is selected, mobile calendar collapse
   const { state } = useContext(DateContext);
   useEffect(() => {
     setShowCalendar(false);
