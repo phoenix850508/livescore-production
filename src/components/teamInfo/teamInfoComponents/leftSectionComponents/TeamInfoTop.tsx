@@ -4,6 +4,7 @@ import bellSolid from "icons/bellSolidIcon.svg";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { matchInfoObj, teamInfoType } from "types/types";
+import { getTeam } from "api/nba";
 import clsx from "clsx";
 import styles from "./TeamInfoTop.module.scss";
 
@@ -72,17 +73,14 @@ export default function TeamInfoTop(props: teamInfoType) {
       setTeamSubs(true);
     }
   }, [teamName]);
+
   return (
     <div className={styles.teamInfoTop}>
       <div className={styles.logoTitleWrapper}>
         {/* for nba id */}
         <img
           className={styles.teamLogo}
-          src={
-            Number(id) === awayId
-              ? matchInfoObj?.awayLogo
-              : matchInfoObj?.homeLogo
-          }
+          src={props?.teamLogo}
           alt="teamLogo.svg"
         />
         <div className={styles.teamNameWrapper}>

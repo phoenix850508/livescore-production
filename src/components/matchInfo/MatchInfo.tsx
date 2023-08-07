@@ -115,7 +115,6 @@ export default function MatchInfo() {
       const response = id && (await getMatchInfo(id));
       const data = response && response.data;
       const idObject = data && data[id.toString()].response;
-      console.log(data);
       idObject && setNbaMatchInfo(idObject);
     };
     if (leagueType === "nba") asyncGetMatchInfo();

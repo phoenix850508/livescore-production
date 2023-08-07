@@ -56,11 +56,13 @@ export type nbaMatchItemProps = {
       name?: string;
       nickname?: string;
       id?: number;
+      logo?: string;
     };
     home?: {
       name?: string;
       nickname?: string;
       id?: number;
+      logo?: string;
     };
   };
   date?: {
@@ -587,6 +589,7 @@ export type teamInfoType = {
   DIFF?: string;
   conference?: string;
   league?: string;
+  teamLogo?: string;
 };
 
 export type mobileTeamProps = {

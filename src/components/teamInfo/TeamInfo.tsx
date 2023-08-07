@@ -23,6 +23,7 @@ export default function TeamInfo() {
     useState<null | mlbMatchItem>(null);
   const [teamFullName, setTeamFullName] = useState<null | string>(null);
   const [mlbTeamInfo, setMlbTeamInfo] = useState<teamInfoType | null>(null);
+  const [teamLogo, setTeamLogo] = useState<string | undefined>("");
 
   // get current year
   const date = new Date();
@@ -39,7 +40,7 @@ export default function TeamInfo() {
     }
   }
 
-  // get nba home areana information
+  // get nba home arena information
   let index = 0;
   let homeTeamId: number | string | undefined | null = 0;
   let arena: arena | undefined | null;
@@ -49,7 +50,6 @@ export default function TeamInfo() {
       index++;
       homeTeamId =
         nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-      console.log("while loop in progress");
       if (index > 88) {
         break;
       }
@@ -79,6 +79,14 @@ export default function TeamInfo() {
     if (league === "nba") asyncGetTeam();
   }, []);
 
+  // get nba teamLogo
+  useEffect(() => {
+    if (homeTeamId === Number(id) && league === "nba") {
+      nbaAllSeasonGames &&
+        setTeamLogo(nbaAllSeasonGames[index]?.teams?.home?.logo);
+    }
+  }, [index, homeTeamId, id]);
+
   // get mlb all games per season per team
   useEffect(() => {
     setMlbAllSeasonGames(dummyMlbTeamMatches);
@@ -98,6 +106,7 @@ export default function TeamInfo() {
           break;
         }
       }
+      setTeamLogo(dummyMlbTeams[index].mlbLogo1);
     }
   }, []);
 
@@ -115,6 +124,7 @@ export default function TeamInfo() {
         league={league}
         DIFF={mlbTeamInfo?.DIFF}
         conference={mlbTeamInfo?.conference}
+        teamLogo={teamLogo}
       />
       <RightSection />
     </div>

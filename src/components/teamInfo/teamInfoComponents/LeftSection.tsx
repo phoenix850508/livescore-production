@@ -21,7 +21,11 @@ export default function LeftSection(props: combinedTypes) {
   };
   return (
     <div className={styles.leftSecttion}>
-      <TeamInfoTop teamFullName={props.teamFullName} />
+      <TeamInfoTop
+        teamFullName={props.teamFullName}
+        league={props.league}
+        teamLogo={props.teamLogo}
+      />
       <MobileTeamMenu
         onDetailsClick={handleDetailsClick}
         onMatchesClick={handleMatchesClick}
