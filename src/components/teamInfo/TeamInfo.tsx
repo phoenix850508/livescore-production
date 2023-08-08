@@ -70,8 +70,6 @@ export default function TeamInfo() {
       homeIdRef.current =
         nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
       while (homeIdRef.current !== Number(id)) {
-        console.log("get into while loop");
-        console.log("while loop homeIdRef.current: ", homeIdRef.current);
         index++;
         homeIdRef.current =
           nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
@@ -86,8 +84,6 @@ export default function TeamInfo() {
   // get nba teamLogo
   useEffect(() => {
     if (homeIdRef.current === Number(id) && league === "nba") {
-      console.log("useEffect index", index);
-      console.log("useEffect homeIdRef.current", homeIdRef.current);
       nbaAllSeasonGames &&
         setTeamLogo(nbaAllSeasonGames[index]?.teams?.home?.logo);
     } else if (homeIdRef.current !== Number(id) && league === "nba") {

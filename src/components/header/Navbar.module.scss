@@ -29,6 +29,7 @@ header {
     background-color: #fff;
     transform: scale(1, 0);
     border-bottom: solid rgba(230, 230, 230, 0.5) 1px;
+    cursor: pointer;
     &:hover {
       background-color: rgb(230, 230, 230);
     }
