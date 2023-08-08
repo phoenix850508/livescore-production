@@ -41,10 +41,25 @@ export default function TeamInfo() {
     }
   }
 
-  // declare id and arena into, needs to find the matching home game id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
+  // declare id and arena into, needs to find the matching home id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
   let index = 0;
   const homeIdRef = useRef<number | string | undefined | null>(0);
   const arenaRef = useRef<arena | undefined | null>(null);
+
+  // nba find the matching home id
+  if (league === "nba") {
+    homeIdRef.current =
+      nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+    while (homeIdRef.current !== Number(id)) {
+      index++;
+      homeIdRef.current =
+        nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+      if (index > 87) {
+        break;
+      }
+    }
+    arenaRef.current = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
+  }
 
   // get nab all games per season per team
   useEffect(() => {
@@ -67,17 +82,6 @@ export default function TeamInfo() {
     };
     if (league === "nba") {
       asyncGetTeam();
-      homeIdRef.current =
-        nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-      while (homeIdRef.current !== Number(id)) {
-        index++;
-        homeIdRef.current =
-          nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-        if (index > 87) {
-          break;
-        }
-      }
-      arenaRef.current = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
     }
   }, [league, id, index]);
 
