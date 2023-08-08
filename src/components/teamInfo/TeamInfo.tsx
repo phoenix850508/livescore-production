@@ -26,6 +26,7 @@ export default function TeamInfo() {
   const [teamLogo, setTeamLogo] = useState<string | undefined>("");
   const [arenaInfo, setArenaInfo] = useState<arena | undefined | null>(null);
   const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
+  const teamNicknameRef = useRef<null | string | undefined>(null);
 
   // get current year
   const date = new Date();
@@ -91,6 +92,8 @@ export default function TeamInfo() {
             ? response.data[0].response.logo
             : defaultLogo
         );
+        teamNicknameRef.current =
+          response && response.data[0].response.nickname;
       } else {
         setTeamLogo(defaultLogo);
       }
@@ -121,6 +124,7 @@ export default function TeamInfo() {
         `${dummyMlbTeams[index].teamCity} ${dummyMlbTeams[index].teamName}`
       );
       setMlbTeamInfo(dummyMlbTeams[index]);
+      teamNicknameRef.current = dummyMlbTeams[index].teamAbv;
     }
   }, [league, id, index]);
 
@@ -128,6 +132,7 @@ export default function TeamInfo() {
     <div className={styles.teamInfo}>
       <LeftSection
         teamFullName={teamFullName}
+        teamNickname={teamNicknameRef.current}
         arena={arenaInfo?.name}
         city={league === "nba" ? arenaInfo?.city : mlbTeamInfo?.teamCity}
         state={arenaInfo?.state}

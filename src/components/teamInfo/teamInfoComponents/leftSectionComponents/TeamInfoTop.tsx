@@ -3,27 +3,19 @@ import bellEmpty from "icons/bellEmptyIcon.svg";
 import bellSolid from "icons/bellSolidIcon.svg";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { matchInfoObj, teamInfoType } from "types/types";
+import { teamInfoType } from "types/types";
 import clsx from "clsx";
 import styles from "./TeamInfoTop.module.scss";
 
 export default function TeamInfoTop(props: teamInfoType) {
-  const id = useParams().teamId;
-  const [matchInfoObj, setMatchInfoObj] = useState<matchInfoObj | null>(null);
   // use useState to decide whether the team is subscribed
   const [teamSubs, setTeamSubs] = useState(false);
 
   // if localStorage does exists
   // determine whether user clicked via matchInfo awayLogo or homeLogo
-  const awayId = matchInfoObj && matchInfoObj.awayId;
-  const teamName =
-    matchInfoObj && Number(id) === awayId
-      ? matchInfoObj?.awayTeam
-      : matchInfoObj?.homeTeam;
-  console.log(teamName);
-  const teamFullName = props.teamFullName
-    ? props.teamFullName
-    : matchInfoObj && matchInfoObj.teamFullName;
+  const teamNickname = props.teamNickname;
+  const teamFullName = props.teamFullName;
+  console.log(teamNickname);
 
   // toggle subscribe team
   const handleBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -33,34 +25,25 @@ export default function TeamInfoTop(props: teamInfoType) {
       const teams = localStorage.getItem("subscribedTeams");
       let teamsParsed = teams && JSON.parse(teams);
       // if teamName existed in localStorage
-      if (teamsParsed.some((team: string) => team === teamName)) {
+      if (teamsParsed.some((team: string) => team === teamNickname)) {
         // remove the name from array
         setTeamSubs(false);
-        const arr = teamsParsed.filter((team: string) => team !== teamName);
+        const arr = teamsParsed.filter((team: string) => team !== teamNickname);
         teamsParsed = arr;
       }
       // if teamName does not exists
       else {
         setTeamSubs(true);
-        teamsParsed.push(teamName);
+        teamsParsed.push(teamNickname);
       }
       localStorage.setItem("subscribedTeams", JSON.stringify(teamsParsed));
     }
     // if localStorage has no data
     else {
       setTeamSubs(true);
-      localStorage.setItem("subscribedTeams", JSON.stringify([teamName]));
+      localStorage.setItem("subscribedTeams", JSON.stringify([teamNickname]));
     }
   };
-
-  useEffect(() => {
-    const matchInfoObjString = null || localStorage.getItem("matchInfoObj");
-    matchInfoObjString && setMatchInfoObj(JSON.parse(matchInfoObjString));
-    if (!matchInfoObjString) {
-      // if localStorage does not exists matchInfoObj
-      console.log("matchInfoObj does not exist");
-    }
-  }, []);
 
   useEffect(() => {
     // check whethther the team is subscribed
@@ -68,11 +51,11 @@ export default function TeamInfoTop(props: teamInfoType) {
     const subscribedTeams: string[] =
       subscribedTeamsString && JSON.parse(subscribedTeamsString);
     const isTeamSub =
-      matchInfoObj && subscribedTeams?.some((team) => team === teamName);
+      teamNickname && subscribedTeams?.some((team) => team === teamNickname);
     if (isTeamSub) {
       setTeamSubs(true);
     }
-  }, [teamName]);
+  }, [teamNickname]);
 
   return (
     <div className={styles.teamInfoTop}>

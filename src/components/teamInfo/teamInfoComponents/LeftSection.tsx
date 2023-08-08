@@ -23,6 +23,7 @@ export default function LeftSection(props: combinedTypes) {
     <div className={styles.leftSecttion}>
       <TeamInfoTop
         teamFullName={props.teamFullName}
+        teamNickname={props.teamNickname}
         league={props.league}
         teamLogo={props.teamLogo}
       />

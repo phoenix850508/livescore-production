@@ -41,6 +41,7 @@ export type allGamesProps = {
 };
 
 export type nbaMatchItemProps = {
+  teamNickname?: string | null;
   teamFullName?: string | null;
   id?: number;
   scores?: {
@@ -137,6 +138,7 @@ export type mlbMatchItemProps = {
   gameStatus?: string;
   // from here combines nbaMatchItemProps
   teamFullName?: string | null;
+  teamNickname?: string | null;
   id?: number;
   scores?: {
     visitors?: {
@@ -587,6 +589,7 @@ export type mobileStatsProps = {
 
 export type teamInfoType = {
   teamFullName?: string | null;
+  teamNickname?: string | null;
   arena?: string;
   city?: string;
   state?: string;
