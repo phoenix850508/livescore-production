@@ -1,6 +1,6 @@
 import RightSection from "components/leagueInfo/leagueInfoComponents/RightSection";
 import LeftSection from "./teamInfoComponents/LeftSection";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { getgamePerSeasonPerTeam, getTeam } from "api/nba";
 import {
@@ -43,13 +43,14 @@ export default function TeamInfo() {
 
   // get nba home information
   let index = 0;
-  let homeTeamId: number | string | undefined | null = 0;
+  const homeIdRef = useRef<number | string | undefined | null>(0);
   let arena: arena | undefined | null;
   if (league === "nba") {
-    homeTeamId = nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-    while (homeTeamId !== Number(id) && nbaAllSeasonGames) {
+    homeIdRef.current =
+      nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+    while (homeIdRef.current !== Number(id) && nbaAllSeasonGames) {
       index++;
-      homeTeamId =
+      homeIdRef.current =
         nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
       if (index > 87) {
         break;
@@ -82,13 +83,13 @@ export default function TeamInfo() {
 
   // get nba teamLogo
   useEffect(() => {
-    if (homeTeamId === Number(id) && league === "nba") {
+    if (homeIdRef.current === Number(id) && league === "nba") {
       nbaAllSeasonGames &&
         setTeamLogo(nbaAllSeasonGames[index]?.teams?.home?.logo);
-    } else if (homeTeamId !== Number(id) && league === "nba") {
+    } else if (homeIdRef.current !== Number(id) && league === "nba") {
       setTeamLogo(defaultLogo);
     }
-  }, [index, homeTeamId, id, league]);
+  }, [index, id, league]);
 
   // get mlb all games per season per team
   useEffect(() => {
@@ -98,10 +99,10 @@ export default function TeamInfo() {
   // get mlb team full-name
   useEffect(() => {
     if (league === "mlb") {
-      homeTeamId = dummyMlbTeams[index].teamID;
-      while (homeTeamId !== id) {
+      homeIdRef.current = dummyMlbTeams[index].teamID;
+      while (homeIdRef.current !== id) {
         index++;
-        homeTeamId = dummyMlbTeams[index].teamID;
+        homeIdRef.current = dummyMlbTeams[index].teamID;
         if (index > 29) {
           break;
         }
@@ -112,7 +113,7 @@ export default function TeamInfo() {
       );
       setMlbTeamInfo(dummyMlbTeams[index]);
     }
-  }, [league, id]);
+  }, [league, id, index]);
 
   return (
     <div className={styles.teamInfo}>
