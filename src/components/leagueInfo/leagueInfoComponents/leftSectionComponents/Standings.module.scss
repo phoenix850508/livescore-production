@@ -71,6 +71,13 @@
     align-items: center;
     justify-content: flex-start;
   }
+
+  .rows {
+    &:hover {
+      background-color: rgb(230, 230, 230);
+      cursor: pointer;
+    }
+  }
 }
 
 @media (min-width: base.$break-point) {

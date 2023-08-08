@@ -9,6 +9,7 @@ import {
 } from "types/types";
 import clsx from "clsx";
 import { dummyMlbStandings } from "./dummyMlbStandings";
+import { useNavigate } from "react-router-dom";
 import styles from "./Standings.module.scss";
 
 export default function Standings(props: leagueParamsProps) {
@@ -19,6 +20,7 @@ export default function Standings(props: leagueParamsProps) {
     useState<null | nbaTeamsStandingType>(null);
   const [mlbStandingData, setMlbStandingData] = useState<object[] | null>(null);
   const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
+  const navigate = useNavigate();
   // temporarily define each layer of object the way below(dummy data only), as cannot find a better way
   const standardObj =
     props.league === "nba" && nbaStandingData && nbaStandingData?.standard;
@@ -42,7 +44,6 @@ export default function Standings(props: leagueParamsProps) {
   }
 
   // mlb section
-
   // sort mlb data into AL and NL
   const alArr: mlbTeamStandingType[] = [];
   const nlArr: mlbTeamStandingType[] = [];
@@ -94,42 +95,70 @@ export default function Standings(props: leagueParamsProps) {
       <div className={styles.buttonGroup}>
         {props.league === "nba" && (
           <>
-          <div className={styles.buttonWrapper} onClick={() => setConference("east")}>
-            <button
-              className={clsx({ [styles.selected]: conference === "east" })}>
-              EAST
-            </button>
-            <div className={clsx({[styles.underline]: conference === "east" })}></div>
-          </div>
-          <div className={styles.buttonWrapper} onClick={() => setConference("west")}>
-            <button
-              className={clsx({ [styles.selected]: conference === "west" })}>
-              WEST
-            </button>
-            <div className={clsx({[styles.underline]: conference === "west"})}></div>
-          </div>
+            <div
+              className={styles.buttonWrapper}
+              onClick={() => setConference("east")}
+            >
+              <button
+                className={clsx({ [styles.selected]: conference === "east" })}
+              >
+                EAST
+              </button>
+              <div
+                className={clsx({ [styles.underline]: conference === "east" })}
+              ></div>
+            </div>
+            <div
+              className={styles.buttonWrapper}
+              onClick={() => setConference("west")}
+            >
+              <button
+                className={clsx({ [styles.selected]: conference === "west" })}
+              >
+                WEST
+              </button>
+              <div
+                className={clsx({ [styles.underline]: conference === "west" })}
+              ></div>
+            </div>
           </>
         )}
         {props.league === "mlb" && (
           <>
-          <div className={styles.buttonWrapper} onClick={() => setConference("American League")}>
-            <button
-              className={clsx({
-                [styles.selected]: conference === "American League",
-              })}>
-              American League
-            </button>
-            <div className={clsx({[styles.underline]: conference === "American League"})}></div>
-          </div>
-          <div className={styles.buttonWrapper} onClick={() => setConference("National League")}>
-            <button
-              className={clsx({
-                [styles.selected]: conference === "National League",
-              })}>
-              National League
-            </button>
-            <div className={clsx({[styles.underline]: conference === "National League"})}></div>
-          </div>
+            <div
+              className={styles.buttonWrapper}
+              onClick={() => setConference("American League")}
+            >
+              <button
+                className={clsx({
+                  [styles.selected]: conference === "American League",
+                })}
+              >
+                American League
+              </button>
+              <div
+                className={clsx({
+                  [styles.underline]: conference === "American League",
+                })}
+              ></div>
+            </div>
+            <div
+              className={styles.buttonWrapper}
+              onClick={() => setConference("National League")}
+            >
+              <button
+                className={clsx({
+                  [styles.selected]: conference === "National League",
+                })}
+              >
+                National League
+              </button>
+              <div
+                className={clsx({
+                  [styles.underline]: conference === "National League",
+                })}
+              ></div>
+            </div>
           </>
         )}
       </div>
@@ -158,7 +187,11 @@ export default function Standings(props: leagueParamsProps) {
                 const losses = conferenceObj?.loss;
                 const totalPlayed = wins && losses && wins + losses;
                 return (
-                  <tr key={index}>
+                  <tr
+                    key={index}
+                    className={styles.rows}
+                    onClick={() => navigate(`/teamInfo/nba/${team.team?.id}`)}
+                  >
                     <td className={styles.teamRank}>{conferenceObj?.rank}</td>
                     <td>
                       <div className={styles.teamName}>
@@ -189,7 +222,11 @@ export default function Standings(props: leagueParamsProps) {
                 const losses = Number(team.loss);
                 const totalPlayed = wins && losses && wins + losses;
                 return (
-                  <tr key={index}>
+                  <tr
+                    key={index}
+                    className={styles.rows}
+                    onClick={() => navigate(`/teamInfo/mlb/${team.teamID}`)}
+                  >
                     <td className={styles.teamRank}>{index + 1}</td>
                     <td>
                       <div className={styles.teamName}>
@@ -218,7 +255,11 @@ export default function Standings(props: leagueParamsProps) {
                 const losses = Number(team.loss);
                 const totalPlayed = wins && losses && wins + losses;
                 return (
-                  <tr key={index}>
+                  <tr
+                    key={index}
+                    className={styles.rows}
+                    onClick={() => navigate(`/teamInfo/mlb/${team.teamID}`)}
+                  >
                     <td className={styles.teamRank}>{index + 1}</td>
                     <td>
                       <div className={styles.teamName}>

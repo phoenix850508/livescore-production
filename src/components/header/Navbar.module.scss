@@ -10,46 +10,6 @@ header {
   z-index: 1;
 }
 
-.searchResultWrapper {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  transform: translateY(100%);
-  z-index: 999;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  .filteredTeams {
-    padding: 8px 16px;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    transform: scale(1, 0);
-    border-bottom: solid rgba(230, 230, 230, 0.5) 1px;
-    cursor: pointer;
-    &:hover {
-      background-color: rgb(230, 230, 230);
-    }
-    .logo {
-      width: 40px;
-      height: 40px;
-    }
-    .filteredName {
-      min-width: 260px;
-      font-size: 16px;
-    }
-  }
-
-  .show {
-    transform: scale(1, 1);
-    transform-origin: top;
-    transition: transform 0.2s ease-in-out 0.4s;
-  }
-}
-
 .navbarTop {
   position: relative;
   padding: 0 18px;
@@ -227,6 +187,47 @@ header {
       height: 3px;
       background-color: #fff;
     }
+  }
+}
+
+// dropdown search result start
+.searchResultWrapper {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  width: 100%;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .filteredTeams {
+    padding: 8px 16px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transform: scale(1, 0);
+    border-bottom: solid rgba(230, 230, 230, 0.5) 1px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(230, 230, 230);
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+    .filteredName {
+      min-width: 260px;
+      font-size: 16px;
+    }
+  }
+
+  .show {
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out 0.4s;
   }
 }
 

@@ -4,7 +4,6 @@ import bellSolid from "icons/bellSolidIcon.svg";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { matchInfoObj, teamInfoType } from "types/types";
-import { getTeam } from "api/nba";
 import clsx from "clsx";
 import styles from "./TeamInfoTop.module.scss";
 
@@ -21,6 +20,7 @@ export default function TeamInfoTop(props: teamInfoType) {
     matchInfoObj && Number(id) === awayId
       ? matchInfoObj?.awayTeam
       : matchInfoObj?.homeTeam;
+  console.log(teamName);
   const teamFullName = props.teamFullName
     ? props.teamFullName
     : matchInfoObj && matchInfoObj.teamFullName;

@@ -24,6 +24,7 @@ export default function TeamInfo() {
   const [teamFullName, setTeamFullName] = useState<null | string>(null);
   const [mlbTeamInfo, setMlbTeamInfo] = useState<teamInfoType | null>(null);
   const [teamLogo, setTeamLogo] = useState<string | undefined>("");
+  const [arenaInfo, setArenaInfo] = useState<arena | undefined | null>(null);
   const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
 
   // get current year
@@ -44,7 +45,6 @@ export default function TeamInfo() {
   // declare id and arena into, needs to find the matching home id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
   let index = 0;
   const homeIdRef = useRef<number | string | undefined | null>(0);
-  const arenaRef = useRef<arena | undefined | null>(null);
 
   // get nab all games per season per team
   useEffect(() => {
@@ -64,17 +64,16 @@ export default function TeamInfo() {
         nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
       while (homeIdRef.current !== Number(id)) {
         index++;
-        homeIdRef.current =
-          nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+        homeIdRef.current = nbaAllSeasonGames[index]?.teams?.home?.id;
         if (index > 87) {
           break;
         }
       }
       // if find the matched id, set arean info
       if (homeIdRef.current === Number(id)) {
-        arenaRef.current = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
+        setArenaInfo(nbaAllSeasonGames[index]?.arena);
       } else {
-        arenaRef.current = null;
+        setArenaInfo(null);
       }
     }
   }, [id, index, league, nbaAllSeasonGames]);
@@ -106,7 +105,7 @@ export default function TeamInfo() {
     setMlbAllSeasonGames(dummyMlbTeamMatches);
   }, [league, id]);
 
-  // get mlb team full-name
+  // get mlb team info: fullname/logo
   useEffect(() => {
     if (league === "mlb") {
       homeIdRef.current = dummyMlbTeams[index].teamID;
@@ -129,9 +128,9 @@ export default function TeamInfo() {
     <div className={styles.teamInfo}>
       <LeftSection
         teamFullName={teamFullName}
-        arena={arenaRef.current?.name}
-        city={league === "nba" ? arenaRef.current?.city : mlbTeamInfo?.teamCity}
-        state={arenaRef.current?.state}
+        arena={arenaInfo?.name}
+        city={league === "nba" ? arenaInfo?.city : mlbTeamInfo?.teamCity}
+        state={arenaInfo?.state}
         matches={
           league === "nba" ? nbaAllSeasonGames : mlbAllSeasonGames?.schedule
         }
