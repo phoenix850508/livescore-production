@@ -41,23 +41,10 @@ export default function TeamInfo() {
     }
   }
 
-  // get nba home information
+  // declare id and arena into, needs to find the matching home game id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
   let index = 0;
   const homeIdRef = useRef<number | string | undefined | null>(0);
-  let arena: arena | undefined | null;
-  if (league === "nba") {
-    homeIdRef.current =
-      nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-    while (homeIdRef.current !== Number(id) && nbaAllSeasonGames) {
-      index++;
-      homeIdRef.current =
-        nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-      if (index > 87) {
-        break;
-      }
-    }
-    arena = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
-  }
+  const arenaRef = useRef<arena | undefined | null>(null);
 
   // get nab all games per season per team
   useEffect(() => {
@@ -78,12 +65,29 @@ export default function TeamInfo() {
       response &&
         localStorage.setItem("teamFullName", response.data[0].response.name);
     };
-    if (league === "nba") asyncGetTeam();
-  }, [league, id]);
+    if (league === "nba") {
+      asyncGetTeam();
+      homeIdRef.current =
+        nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+      while (homeIdRef.current !== Number(id)) {
+        console.log("get into while loop");
+        console.log("while loop homeIdRef.current: ", homeIdRef.current);
+        index++;
+        homeIdRef.current =
+          nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+        if (index > 87) {
+          break;
+        }
+      }
+      arenaRef.current = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
+    }
+  }, [league, id, index]);
 
   // get nba teamLogo
   useEffect(() => {
     if (homeIdRef.current === Number(id) && league === "nba") {
+      console.log("useEffect index", index);
+      console.log("useEffect homeIdRef.current", homeIdRef.current);
       nbaAllSeasonGames &&
         setTeamLogo(nbaAllSeasonGames[index]?.teams?.home?.logo);
     } else if (homeIdRef.current !== Number(id) && league === "nba") {
@@ -119,9 +123,9 @@ export default function TeamInfo() {
     <div className={styles.teamInfo}>
       <LeftSection
         teamFullName={teamFullName}
-        arena={arena?.name}
-        city={league === "nba" ? arena?.city : mlbTeamInfo?.teamCity}
-        state={arena?.state}
+        arena={arenaRef.current?.name}
+        city={league === "nba" ? arenaRef.current?.city : mlbTeamInfo?.teamCity}
+        state={arenaRef.current?.state}
         matches={
           league === "nba" ? nbaAllSeasonGames : mlbAllSeasonGames?.schedule
         }
