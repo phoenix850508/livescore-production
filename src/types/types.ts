@@ -46,9 +46,11 @@ export type nbaMatchItemProps = {
   scores?: {
     visitors?: {
       linescore?: number[];
+      points?: number;
     };
     home?: {
       linescore?: number[];
+      points?: number;
     };
   };
   teams?: {
@@ -139,9 +141,11 @@ export type mlbMatchItemProps = {
   scores?: {
     visitors?: {
       linescore?: number[];
+      points?: number;
     };
     home?: {
       linescore?: number[];
+      points?: number;
     };
   };
   teams?: {
@@ -149,11 +153,13 @@ export type mlbMatchItemProps = {
       name?: string;
       nickname?: string;
       id?: number;
+      logo?: string;
     };
     home?: {
       name?: string;
       nickname?: string;
       id?: number;
+      logo?: string;
     };
   };
   date?: {
@@ -187,43 +193,43 @@ export type mlbLiveMatchItemProps = {
 
 export type initMatchType = {
   awayTeam?: {
-    nickname?: string | undefined;
-    id?: number | undefined;
-    logo?: string | undefined;
+    nickname?: string | undefined | null;
+    id?: number | undefined | null;
+    logo?: string | undefined | null;
   };
   homeTeam?: {
-    nickname?: string | undefined;
-    id?: number | undefined;
-    logo?: string | undefined;
+    nickname?: string | undefined | null;
+    id?: number | undefined | null;
+    logo?: string | undefined | null;
   };
   scores?: {
     awayTotal?: number | string | undefined | null;
     homeTotal?: number | string | undefined | null;
   };
-  leagueType?: string | undefined;
-  id?: number | string;
-  matchHour?: string | undefined;
+  leagueType?: string | undefined | null;
+  id?: number | string | null;
+  matchHour?: string | undefined | null;
 };
 
 export type matchActionType = {
   type: "selectFeaturedMatch";
   awayTeam?: {
-    nickname?: string | undefined;
-    id?: number | undefined;
-    logo?: string | undefined;
+    nickname?: string | undefined | null;
+    id?: number | undefined | null;
+    logo?: string | undefined | null;
   };
   homeTeam?: {
-    nickname?: string | undefined;
-    id?: number | undefined;
-    logo?: string | undefined;
+    nickname?: string | undefined | null;
+    id?: number | undefined | null;
+    logo?: string | undefined | null;
   };
   scores?: {
     awayTotal?: number | string | undefined | null;
     homeTotal?: number | string | undefined | null;
   };
-  leagueType?: string | undefined;
-  id?: number | string;
-  matchHour?: string | undefined;
+  leagueType?: string | undefined | null;
+  id?: number | string | null;
+  matchHour?: string | undefined | null;
 };
 
 export type handleSportType = {
@@ -543,14 +549,14 @@ export type matchInfoObj = {
   league?: string | null;
   leagueType?: string | null;
   date?: string | null | null;
-  awayId?: number | string;
+  awayId?: number | string | null;
   awayTeam?: string | null;
-  awayLogo?: string;
+  awayLogo?: string | null;
   awayScores?: number[] | string[] | undefined | null;
   awayTotal?: string | null | number | null;
-  homeId?: number | string;
+  homeId?: number | string | null;
   homeTeam?: string | null;
-  homeLogo?: string;
+  homeLogo?: string | null;
   homeScores?: number[] | string[] | undefined | null;
   homeTotal?: string | null | number;
   periods?: string | number | undefined | null;

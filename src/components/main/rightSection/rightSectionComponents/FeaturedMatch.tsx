@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { MatchContext } from "context/MatchContext";
 import { useNavigate } from "react-router-dom";
-import { showSportType, allTeams } from "types/types";
+import { showSportType, allTeams, leagueParamsProps } from "types/types";
 import styles from "./FeaturedMatch.module.scss";
 
-export default function FeaturedMatch(props: showSportType) {
+interface combinedType extends showSportType, leagueParamsProps {}
+export default function FeaturedMatch(props: combinedType) {
   // just temporarily shows some logo for better view (will figure out other ways later)
 
   const { match, dispatch } = useContext(MatchContext);
@@ -49,7 +50,7 @@ export default function FeaturedMatch(props: showSportType) {
   const allMlbTeams = allMlbTeamsStr && JSON.parse(allMlbTeamsStr);
 
   useEffect(() => {
-    // if match.homeTeam data exists, and the data is from nba (which its name is more than 3 words)
+    // if match.homeTeam data exists, and the data is from nba
     if (homeTeam?.id && homeTeam?.nickname && homeTeam?.nickname?.length > 3) {
       // find nba team form localStorage
       const filteredHomeTeam =

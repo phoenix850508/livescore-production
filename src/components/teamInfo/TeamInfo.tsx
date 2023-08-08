@@ -46,21 +46,6 @@ export default function TeamInfo() {
   const homeIdRef = useRef<number | string | undefined | null>(0);
   const arenaRef = useRef<arena | undefined | null>(null);
 
-  // nba find the matching home id
-  if (league === "nba") {
-    homeIdRef.current =
-      nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-    while (homeIdRef.current !== Number(id)) {
-      index++;
-      homeIdRef.current =
-        nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-      if (index > 87) {
-        break;
-      }
-    }
-    arenaRef.current = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
-  }
-
   // get nab all games per season per team
   useEffect(() => {
     const asyncGetgamePerSeasonPerTeam = async () => {
@@ -72,28 +57,49 @@ export default function TeamInfo() {
     if (league === "nba") asyncGetgamePerSeasonPerTeam();
   }, [id, league, season]);
 
-  // get nba team full-name
+  // find nba matching home id for team info
+  useEffect(() => {
+    if (league === "nba" && nbaAllSeasonGames) {
+      homeIdRef.current =
+        nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+      while (homeIdRef.current !== Number(id)) {
+        index++;
+        homeIdRef.current =
+          nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
+        if (index > 87) {
+          break;
+        }
+      }
+      // if find the matched id, set arean info
+      if (homeIdRef.current === Number(id)) {
+        arenaRef.current = nbaAllSeasonGames && nbaAllSeasonGames[index]?.arena;
+      } else {
+        arenaRef.current = null;
+      }
+    }
+  }, [id, index, league, nbaAllSeasonGames]);
+
+  // get nba team
   useEffect(() => {
     const asyncGetTeam = async () => {
       const response = id && (await getTeam(Number(id)));
       response && setTeamFullName(response.data[0].response.name);
       response &&
         localStorage.setItem("teamFullName", response.data[0].response.name);
+      if (response && response.data[0].response.logo) {
+        setTeamLogo(
+          response.data[0].response.logo
+            ? response.data[0].response.logo
+            : defaultLogo
+        );
+      } else {
+        setTeamLogo(defaultLogo);
+      }
     };
     if (league === "nba") {
       asyncGetTeam();
     }
   }, [league, id, index]);
-
-  // get nba teamLogo
-  useEffect(() => {
-    if (homeIdRef.current === Number(id) && league === "nba") {
-      nbaAllSeasonGames &&
-        setTeamLogo(nbaAllSeasonGames[index]?.teams?.home?.logo);
-    } else if (homeIdRef.current !== Number(id) && league === "nba") {
-      setTeamLogo(defaultLogo);
-    }
-  }, [index, id, league]);
 
   // get mlb all games per season per team
   useEffect(() => {
@@ -135,7 +141,12 @@ export default function TeamInfo() {
         conference={mlbTeamInfo?.conference}
         teamLogo={teamLogo}
       />
-      <RightSection />
+      <RightSection
+        matches={
+          league === "nba" ? nbaAllSeasonGames : mlbAllSeasonGames?.schedule
+        }
+        league={league}
+      />
     </div>
   );
 }

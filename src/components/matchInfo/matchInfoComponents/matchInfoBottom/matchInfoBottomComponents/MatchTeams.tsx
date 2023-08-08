@@ -8,6 +8,7 @@ import styles from "./MatchTeams.module.scss";
 
 export default function MatchTeams(props: matchInfoObj) {
   const [matchInfoObj, setMatchInfoObj] = useState<null | matchInfoObj>(null);
+  const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
   // use useState to decide whether the team is subscribed
   const [awaySubs, setAwaySubs] = useState(false);
   const [homeSubs, setHomeSubs] = useState(false);
@@ -170,7 +171,13 @@ export default function MatchTeams(props: matchInfoObj) {
           </h3>
           <img
             className={styles.logo}
-            src={props.awayLogo ? props.awayLogo : matchInfoObj?.awayLogo}
+            src={
+              props.awayLogo
+                ? props.awayLogo
+                : matchInfoObj?.awayLogo
+                ? matchInfoObj?.awayLogo
+                : defaultLogo
+            }
             alt="awayLogo.svg"
             onClick={handleAwayTeamClick}
           />
@@ -190,7 +197,13 @@ export default function MatchTeams(props: matchInfoObj) {
           </h3>
           <img
             className={styles.logo}
-            src={props.homeLogo ? props.homeLogo : matchInfoObj?.homeLogo}
+            src={
+              props.homeLogo
+                ? props.homeLogo
+                : matchInfoObj?.homeLogo
+                ? matchInfoObj?.homeLogo
+                : defaultLogo
+            }
             alt="homeLogo.svg"
             onClick={handleHomeTeamClick}
           />
