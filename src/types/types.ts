@@ -5,6 +5,11 @@ export type dateProps = {
   year: number;
   prevClick?: React.MouseEventHandler<HTMLImageElement>;
   nextClick?: React.MouseEventHandler<HTMLImageElement>;
+  onDateClick?: (
+    date: number | string
+  ) => React.MouseEventHandler<HTMLLIElement> | void;
+  activeDate?: string | number | null;
+  activeMonth?: string | number | null;
 };
 
 export type locationProps = {

@@ -1,7 +1,5 @@
 import { dateProps } from "types/types";
 import clsx from "clsx";
-import { useState, useContext } from "react";
-import { DateContext } from "context/DateContext";
 import styles from "./CalendarDates.module.scss";
 
 export default function CalendarDates(props: dateProps) {
@@ -18,7 +16,7 @@ export default function CalendarDates(props: dateProps) {
   const highlightCurrDate: boolean =
     currDate.getMonth() === props.monthIndex &&
     currDate.getFullYear() === props.year;
-  // repplace each element of dates array with this month's date
+  // replace each element of dates array with this month's date
   for (let i = 0; i <= lastDayOfMonth - 1; i++) {
     dates.splice(firstDayOfMonth + i, 1, i + 1);
   }
@@ -26,25 +24,6 @@ export default function CalendarDates(props: dateProps) {
   for (let j = firstDayOfMonth; j > 0; j--) {
     dates.splice(firstDayOfMonth - j, 1, "");
   }
-  // highlight when the date gets clicked
-  const [activeDate, setActiveDate] = useState<number | string | null>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  // add useReducer from the DateContext to update the latest clicked date
-  const { dispatch } = useContext(DateContext);
-  const handleDateClick = (
-    date: number | string,
-    index: number,
-    props: dateProps
-  ): void => {
-    setActiveDate(date);
-    setActiveIndex(index);
-    dispatch({
-      type: "change_date",
-      year: props.year,
-      monthIndex: props.monthIndex,
-      date: Number(date),
-    });
-  };
 
   return (
     <ul className={styles.dates}>
@@ -53,7 +32,7 @@ export default function CalendarDates(props: dateProps) {
           <li
             key={index}
             className={styles.currDate}
-            onClick={(e) => handleDateClick?.(date, index, props)}
+            onClick={() => props.onDateClick?.(date)}
           >
             {date}
           </li>
@@ -63,13 +42,12 @@ export default function CalendarDates(props: dateProps) {
               { [styles.date]: date },
               {
                 [styles.activeDate]:
-                  date === activeDate && index === activeIndex,
+                  date === props.activeDate &&
+                  props.activeMonth === props.monthIndex,
               }
             )}
             key={index}
-            onClick={(e) => {
-              handleDateClick?.(date, index, props);
-            }}
+            onClick={() => props.onDateClick?.(date)}
           >
             {date}
           </li>

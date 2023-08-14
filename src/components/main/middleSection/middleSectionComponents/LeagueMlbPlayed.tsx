@@ -50,26 +50,25 @@ export default function LeagueMlbPlayed(props: combinedTypes) {
             />
           );
         })}
-      {filteredGames?.length ? (
-        props.showFavorites &&
-        filteredGames.map((match: combinedTypes, index: number) => {
-          return (
-            <MlbMatchItem
-              key={index}
-              away={match.away}
-              home={match.home}
-              gameID={match.gameID}
-              gameTime={match.gameTime}
-              teamIDAway={match.teamIDAway}
-              teamIDHome={match.teamIDHome}
-              showFavorites={props.showFavorites}
-              showSport={props.showSport}
-            />
-          );
-        })
-      ) : (
-        <h3 className={styles.empty}>No subscribed team</h3>
-      )}
+      {props.showFavorites && filteredGames?.length
+        ? filteredGames.map((match: combinedTypes, index: number) => {
+            return (
+              <MlbMatchItem
+                key={index}
+                away={match.away}
+                home={match.home}
+                gameID={match.gameID}
+                gameTime={match.gameTime}
+                teamIDAway={match.teamIDAway}
+                teamIDHome={match.teamIDHome}
+                showFavorites={props.showFavorites}
+                showSport={props.showSport}
+              />
+            );
+          })
+        : props.showFavorites && (
+            <h3 className={styles.empty}>No subscribed team</h3>
+          )}
     </div>
   );
 }

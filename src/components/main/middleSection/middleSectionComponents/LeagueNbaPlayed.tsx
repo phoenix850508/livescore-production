@@ -48,26 +48,25 @@ export default function LeagueNbaPlayed(props: combinedTypes) {
             />
           );
         })}
-      {filteredGames?.length ? (
-        props.showFavorites &&
-        filteredGames.map((match: combinedTypes, index: number) => {
-          return (
-            <NbaMatchItem
-              key={index}
-              id={match.id}
-              scores={match.scores}
-              teams={match.teams}
-              date={match.date}
-              periods={match.periods}
-              status={match.status}
-              showFavorites={props.showFavorites}
-              showSport={props.showSport}
-            />
-          );
-        })
-      ) : (
-        <h3 className={styles.empty}>No subscribed team</h3>
-      )}
+      {props.showFavorites && filteredGames?.length
+        ? filteredGames.map((match: combinedTypes, index: number) => {
+            return (
+              <NbaMatchItem
+                key={index}
+                id={match.id}
+                scores={match.scores}
+                teams={match.teams}
+                date={match.date}
+                periods={match.periods}
+                status={match.status}
+                showFavorites={props.showFavorites}
+                showSport={props.showSport}
+              />
+            );
+          })
+        : props.showFavorites && (
+            <h3 className={styles.empty}>No subscribed team</h3>
+          )}
     </div>
   );
 }
