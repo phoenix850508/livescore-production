@@ -24,10 +24,11 @@ export default function LeagueMlbPlayed(props: combinedTypes) {
     const subsTeamsStr = localStorage.getItem("subscribedTeams");
     const subsTeams = subsTeamsStr && JSON.parse(subsTeamsStr);
     filteredGames = allGames?.filter((match: combinedTypes) => {
-      for (let i = 0; i < subsTeams.length; i++) {
+      for (let i = 0; i < subsTeams?.length; i++) {
         if (subsTeams[i] === match.away) return true;
         if (subsTeams[i] === match.home) return true;
       }
+      return false;
     });
   }
   return (

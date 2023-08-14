@@ -632,3 +632,31 @@ export type allTeams = {
   teamID?: string;
   teamName?: string;
 };
+
+export type nbaTeam = {
+  id?: number;
+  response?: {
+    city: string;
+    code: string;
+    logo: string;
+    name: string;
+    nickname: string;
+  };
+};
+
+export type mlbTeam = {
+  DIFF: string;
+  RA: string;
+  RS: string;
+  conference: string;
+  conferenceAbv: string;
+  division: string;
+  espnLogo1: string;
+  loss: string;
+  mlbLogo1: string;
+  teamAbv: string;
+  teamCity: string;
+  teamID: string;
+  teamName: string;
+  wins: string;
+};

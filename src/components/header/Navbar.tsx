@@ -18,8 +18,9 @@ import {
   allTeams,
 } from "types/types";
 import clsx from "clsx";
-import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { nbaTeam, mlbTeam } from "types/types";
 import { DateContext } from "context/DateContext";
 import styles from "./Navbar.module.scss";
 
@@ -31,15 +32,10 @@ interface combinedNavbarTypes
     showFavorites,
     onCalendarClick {}
 
-// get teams
-const allNbaTeamsStr = localStorage.getItem("allNbaTeams");
-const allNbaTeams = allNbaTeamsStr && JSON.parse(allNbaTeamsStr);
-
-const allMlbTeamsStr = localStorage.getItem("allMlbTeams");
-const allMlbTeams = allMlbTeamsStr && JSON.parse(allMlbTeamsStr);
-
 export default function Navbar(props: combinedNavbarTypes) {
   const [searchInput, setSearchInput] = useState("");
+  const [allNbaTeams, setAllNbaTeams] = useState<null | nbaTeam[]>(null);
+  const [allMlbTeams, setAllMlbTeams] = useState<null | mlbTeam[]>(null);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
@@ -61,6 +57,16 @@ export default function Navbar(props: combinedNavbarTypes) {
   const handleCheckboxToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(!checked);
   };
+
+  // get teams
+  const allNbaTeamsStr = localStorage.getItem("allNbaTeams");
+
+  const allMlbTeamsStr = localStorage.getItem("allMlbTeams");
+
+  useEffect(() => {
+    allNbaTeamsStr && setAllNbaTeams(JSON.parse(allNbaTeamsStr));
+    allMlbTeamsStr && setAllMlbTeams(JSON.parse(allMlbTeamsStr));
+  }, [allNbaTeamsStr, allMlbTeamsStr]);
   return (
     <div className={styles.headerWrapper}>
       <header>

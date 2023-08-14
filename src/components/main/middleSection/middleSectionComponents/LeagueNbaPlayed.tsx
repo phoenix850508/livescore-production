@@ -20,14 +20,16 @@ export default function LeagueNbaPlayed(props: combinedTypes) {
 
   if (props.showFavorites) {
     const subsTeamsStr = localStorage.getItem("subscribedTeams");
-    const subsTeams = subsTeamsStr && JSON.parse(subsTeamsStr);
+    const subsTeams = (subsTeamsStr && JSON.parse(subsTeamsStr)) || {};
     filteredGames = allGames?.filter((match: combinedTypes) => {
-      for (let i = 0; i < subsTeams.length; i++) {
+      for (let i = 0; i < subsTeams?.length; i++) {
         if (subsTeams[i] === match.teams?.visitors?.nickname) return true;
         if (subsTeams[i] === match.teams?.home?.nickname) return true;
       }
+      return false;
     });
   }
+
   return (
     <div className={styles.leaguePlayed}>
       <LeaguePlayedTop showSport={props.showSport} nbaGames={props.nbaGames} />

@@ -15,7 +15,6 @@ export default function TeamInfoTop(props: teamInfoType) {
   // determine whether user clicked via matchInfo awayLogo or homeLogo
   const teamNickname = props.teamNickname;
   const teamFullName = props.teamFullName;
-  console.log(teamNickname);
 
   // toggle subscribe team
   const handleBellClicked = (e: React.MouseEvent<HTMLDivElement>) => {
