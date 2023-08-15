@@ -1,0 +1,48 @@
+@use "styles/base";
+
+.rightSection {
+  display: none;
+}
+
+.title {
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: base.$secondary-grey-background;
+  background-color: rgba(229, 233, 239, 0.4);
+  border-radius: 30px 30px 0 0;
+}
+
+.matchLeague {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  .leagueIcon {
+    min-width: 30px;
+    min-height: 30px;
+  }
+  .leagueName,
+  .matchDate {
+    font-size: 14px;
+    font-weight: 700;
+    color: base.$secondary-grey-background;
+  }
+  .matchTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .leagueName {
+      text-align: start;
+    }
+  }
+}
+
+@media (min-width: base.$break-point) {
+  .rightSection {
+    display: block;
+  }
+}

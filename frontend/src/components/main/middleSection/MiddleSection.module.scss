@@ -1,0 +1,34 @@
+@use "styles/base";
+
+.middleSection {
+  padding: 35px 50px 30px 50px;
+  background-color: #fff;
+  color: base.$secondary-grey-background;
+  display: flex;
+  flex-direction: column;
+}
+
+.noShow {
+  display: none;
+}
+
+.middleTitle {
+  text-align: start;
+}
+
+.noEventsWrapper {
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: base.$break-point) {
+  .middleSection {
+    margin-top: 56px;
+    display: block;
+    border-radius: 30px;
+  }
+}

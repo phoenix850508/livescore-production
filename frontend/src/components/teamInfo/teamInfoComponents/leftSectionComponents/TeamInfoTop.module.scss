@@ -1,0 +1,141 @@
+@use "styles/base";
+
+.teamInfoTop {
+  height: 100px;
+  padding: 18px 20px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+  .logoTitleWrapper {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.teamLogo {
+  width: auto;
+  height: 53px;
+}
+
+.teamNameWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 13px;
+
+  .teamTitle {
+    text-align: start;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .teamLocation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .locationName {
+      text-align: start;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .locationLogo {
+      width: 28px;
+      height: 25px;
+    }
+  }
+}
+
+.subscriptionWrapper {
+  width: 97px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 3px solid base.$brand;
+  cursor: pointer;
+  .follow {
+    font-weight: 700;
+    font-size: 11px;
+    color: base.$brand;
+  }
+}
+
+.solid {
+  border-radius: 20px;
+}
+
+.subscriptionBell {
+  width: 15px;
+  height: 20px;
+}
+
+@media (min-width: base.$break-point) {
+  .teamInfoTop {
+    height: 196px;
+    padding: 0 40px 0 50px;
+    border-radius: 30px;
+    .logoTitleWrapper {
+      display: flex;
+      gap: 36px;
+    }
+  }
+  .teamLogo {
+    width: auto;
+    height: 130px;
+  }
+
+  .teamNameWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+
+    .teamTitle {
+      text-align: start;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .teamLocation {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .locationName {
+        text-align: start;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .locationLogo {
+        width: 67px;
+        height: 67px;
+      }
+    }
+  }
+
+  .subscriptionWrapper {
+    width: 120px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 3px solid base.$brand;
+    cursor: pointer;
+    .follow {
+      font-weight: 700;
+      font-size: 16px;
+      color: base.$brand;
+    }
+  }
+
+  .solid {
+    border-radius: 20px;
+  }
+
+  .subscriptionBell {
+    width: 20px;
+    height: 35px;
+  }
+}

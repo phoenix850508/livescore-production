@@ -1,0 +1,43 @@
+@use "styles/base";
+
+.featuredMatch {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.matchInfo {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 38px;
+  padding: 0 14px;
+}
+
+.scores {
+  transform: translateX(-10%);
+  min-width: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.away,
+.home {
+  height: 103px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 63px;
+}
+
+@media (min-width: base.$break-point) {
+  .featuredMatch {
+    border-radius: 0 0 30px 30px;
+  }
+}

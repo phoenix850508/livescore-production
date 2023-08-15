@@ -1,0 +1,11 @@
+@use "styles/base";
+
+@media (min-width: base.$break-point) {
+  .teamInfo {
+    padding: 0 59px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    margin-top: 53px;
+  }
+}

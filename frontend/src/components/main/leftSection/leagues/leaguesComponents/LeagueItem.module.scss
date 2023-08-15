@@ -1,0 +1,43 @@
+.leagueItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 41px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(14, 17, 21, 0.05);
+  }
+}
+.indexBottom {
+  &:hover {
+    background-color: rgba(14, 17, 21, 0.05);
+    border-radius: 0 0 30px 30px;
+  }
+}
+
+.leagueItemFocus {
+  background-color: rgba(14, 17, 21, 0.05);
+}
+
+.leagueInfoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.flags {
+  width: 40px;
+  height: 40px;
+}
+
+.dropdownMenu {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(14, 17, 21, 0.05);
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(14, 17, 21, 0.1);
+  }
+}
