@@ -2,7 +2,7 @@
   "name": "live-score",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://livescore-2f15c0310cf4.herokuapp.com/",
+  "homepage": "https://livescore-50312dbe5709.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
