@@ -44,7 +44,7 @@ const headers = {
 };
 
 // get nba matches per date
-app.get("/date/:date", async (req, res) => {
+app.get("/api/date/:date", async (req, res) => {
   const options = {
     method: "GET",
     url: `${base_url}/games?date=${req.params.date}`,
@@ -60,7 +60,7 @@ app.get("/date/:date", async (req, res) => {
 });
 
 // get nba teams
-app.get("/teams/:id", async (req, res) => {
+app.get("/api/teams/:id", async (req, res) => {
   const options = {
     method: "GET",
     url: `${base_url}/teams?id=${req.params.id}`,
@@ -79,7 +79,7 @@ app.get("/teams/:id", async (req, res) => {
 });
 
 // get nba match stats
-app.get("/stats/:id", async (req, res) => {
+app.get("/api/stats/:id", async (req, res) => {
   const options = {
     method: "GET",
     url: `${base_url}/games/statistics?id=${req.params.id}`,
@@ -95,7 +95,7 @@ app.get("/stats/:id", async (req, res) => {
 });
 
 // get nba match info
-app.get("/game/:id", async (req, res) => {
+app.get("/api/game/:id", async (req, res) => {
   const options = {
     method: "GET",
     url: `${base_url}/games?id=${req.params.id}`,
@@ -111,7 +111,7 @@ app.get("/game/:id", async (req, res) => {
 });
 
 // get nba league standing
-app.get("/standing/:league/:season/:conference", async (req, res) => {
+app.get("/api/standing/:league/:season/:conference", async (req, res) => {
   const options = {
     method: "GET",
     url: `${base_url}/standings?league=${req.params.league}&season=${req.params.season}&conference=${req.params.conference}`,
@@ -127,7 +127,7 @@ app.get("/standing/:league/:season/:conference", async (req, res) => {
 });
 
 // get nba team all season games
-app.get("/gamesPerTeamAndSeason/:season/:teamId", async (req, res) => {
+app.get("/api/gamesPerTeamAndSeason/:season/:teamId", async (req, res) => {
   const options = {
     method: "GET",
     url: `${base_url}/games?season=${req.params.season}&team=${req.params.teamId}`,
