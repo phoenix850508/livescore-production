@@ -1,6 +1,10 @@
 {
   "name": "live-score",
   "version": "1.0.0",
+  "engines": {
+    "node": "15.9.0",
+    "npm": "7.5.3"
+  },
   "description": "<img width=\"1000\" alt=\"截圖 2023-07-19 下午2 53 32\" src=\"https://github.com/phoenix850508/livescore/assets/121414639/3cb5cd01-8558-442d-839d-ed7460341d3e\">",
   "main": "index.js",
   "dependencies": {
