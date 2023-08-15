@@ -68,7 +68,7 @@ export const getTeamsStandings = async (
 ) => {
   try {
     const response = await axios.get(
-      `${base_url}/standing/:${league}/:${season}/:${conference}`
+      `${base_url}/standing/${league}/${season}/${conference}`
     );
     console.log(response);
     return response;

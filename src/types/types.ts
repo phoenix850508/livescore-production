@@ -276,26 +276,7 @@ export type leagueParamsProps = {
   league?: string;
 };
 
-export type nbaTeamsStandingType = {
-  standard?: {
-    2022?: {
-      east?: {
-        response?: [] | object[];
-      };
-      west?: {
-        response?: [] | object[];
-      };
-    };
-    2021?: {
-      east?: {
-        response?: [] | object[];
-      };
-      west?: {
-        response?: [] | object[];
-      };
-    };
-  };
-};
+export type nbaTeamsStandingType = nbaTeamStandingType[];
 
 export type nbaTeamStandingType = {
   team?: {

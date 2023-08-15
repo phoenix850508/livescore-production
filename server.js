@@ -114,6 +114,22 @@ app.get("/game/:id", async (req, res) => {
   }
 });
 
+// get nba league standing
+app.get("/standing/:league/:season/:conference", async (req, res) => {
+  const options = {
+    method: "GET",
+    url: `${base_url}/standings?league=${req.params.league}&season=${req.params.season}&conference=${req.params.conference}`,
+    headers,
+  };
+  try {
+    const response = await axios.request(options);
+    res.json(response.data);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 // get mlb line scores
 app.get("/mlb/linescore/:gameID", async (req, res) => {
   const options = {

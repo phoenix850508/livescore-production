@@ -21,23 +21,12 @@ export default function Standings(props: leagueParamsProps) {
   const [mlbStandingData, setMlbStandingData] = useState<object[] | null>(null);
   const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
   const navigate = useNavigate();
-  // temporarily define each layer of object the way below(dummy data only), as cannot find a better way
-  const standardObj =
-    props.league === "nba" && nbaStandingData && nbaStandingData?.standard;
-  const teamsEast =
-    seasonString === "2022"
-      ? standardObj && standardObj?.[2022]?.east?.response
-      : standardObj && standardObj?.[2021]?.east?.response;
-  const teamsWest =
-    seasonString === "2022"
-      ? standardObj && standardObj?.[2022]?.west?.response
-      : standardObj && standardObj?.[2021]?.west?.response;
-  const teams = conference === "east" ? teamsEast : teamsWest;
 
   //sort nab teams by their ranks
-  const reOrdered = teams && new Array<object>(teams?.length);
-  if (teams && reOrdered) {
-    teams.map((team: nbaTeamStandingType, index: number) => {
+  const reOrdered =
+    nbaStandingData && new Array<object>(nbaStandingData?.length);
+  if (nbaStandingData && reOrdered) {
+    nbaStandingData.map((team: nbaTeamStandingType, index: number) => {
       const rank: number | undefined = team.conference?.rank;
       return rank && reOrdered?.splice(rank - 1, 1, team);
     });
@@ -65,6 +54,13 @@ export default function Standings(props: leagueParamsProps) {
     else return Number(a.loss) - Number(b.loss);
   });
 
+  // make nba default conference
+  useEffect(() => {
+    if (props.league === "nba") {
+      setConference("east");
+    }
+  }, [props.league]);
+
   // get nba
   useEffect(() => {
     const asyncGetTeamsStandings = async () => {
@@ -73,13 +69,15 @@ export default function Standings(props: leagueParamsProps) {
         seasonString,
         conference
       );
-      response && nbaSetStandingData(Object.values(response)[0]);
+      nbaSetStandingData(response && response?.data?.response);
     };
-    if (props.league === "nba") {
-      setConference("east");
+    if (
+      props.league === "nba" &&
+      conference !== ("American League" || "National League" || "")
+    ) {
       asyncGetTeamsStandings();
     }
-  }, [seasonString, props.league]);
+  }, [seasonString, props.league, conference]);
 
   // get mlb
   useEffect(() => {
