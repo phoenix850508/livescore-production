@@ -43,10 +43,6 @@ const headers = {
   "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
 };
 
-app.get("/", (req, res) => {
-  res.send("Express in running in the backend");
-});
-
 // get nba matches per date
 app.get("/date/:date", async (req, res) => {
   const options = {
