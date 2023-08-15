@@ -59,7 +59,7 @@ export default function MiddleSection(props: combinedType) {
   useEffect(() => {
     const asyncGetAllGames = async () => {
       const response = await getAllGames(nbaDate);
-      setNbaGamesOnDate(response && response.data);
+      setNbaGamesOnDate(response && response.data.response);
     };
     asyncGetAllGames();
   }, [nbaDate]);
@@ -67,7 +67,7 @@ export default function MiddleSection(props: combinedType) {
   useEffect(() => {
     // control whether nba games should be shown
     if (props.showSport === "basketball" || props.showSport === "all") {
-      if (nbaGamesOnDate && Object.keys(nbaGamesOnDate)[0] === nbaDate) {
+      if (nbaGamesOnDate && Object.values(nbaGamesOnDate).length) {
         setShowNba(true);
       } else {
         setShowNba(false);

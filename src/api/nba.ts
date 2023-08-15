@@ -1,11 +1,12 @@
 import axios from "axios";
 
-const base_url = "https://livescore-2f15c0310cf4.herokuapp.com/api";
+const base_url = "http://localhost:3001";
 
 // get all nba games on date
 export const getAllGames = async (date: string) => {
   try {
     const response = await axios.get(`${base_url}/date/${date}`);
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET all games failed]: ", error);
@@ -15,6 +16,7 @@ export const getAllGames = async (date: string) => {
 export const getLiveGames = async () => {
   try {
     const response = await axios.get(`${base_url}/live/all`);
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET all live games filed: ]", error);
@@ -24,7 +26,8 @@ export const getLiveGames = async () => {
 // get team information
 export const getTeam = async (id: number | string) => {
   try {
-    const response = await axios.get(`${base_url}/team/${id}`);
+    const response = await axios.get(`${base_url}/teams/${id}`);
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET team failed]: ", error);
@@ -39,6 +42,7 @@ export const getgamePerSeasonPerTeam = async (
     const response = await axios.get(
       `${base_url}/gamesPerTeamAndSeason?gamesPerTeamAndSeason=${season}/teamId?teamId=${teamId}`
     );
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET games per season/team failed]: ", error);
@@ -49,6 +53,7 @@ export const getgamePerSeasonPerTeam = async (
 export const getTeamsConference = async (conference: string) => {
   try {
     const response = await axios.get(`${base_url}/teams/${conference}`);
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET team per conference failed]: ", error);
@@ -65,6 +70,7 @@ export const getTeamsStandings = async (
     const response = await axios.get(
       `${base_url}/standing/:${league}/:${season}/:${conference}`
     );
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET teams standing failed]: ", error);
@@ -75,6 +81,7 @@ export const getTeamsStandings = async (
 export const getMatchInfo = async (id: number | string) => {
   try {
     const response = await axios.get(`${base_url}/game/:${id}`);
+    console.log(response);
     return response;
   } catch (error) {
     console.error("[GET match info failed: ]", error);
@@ -84,8 +91,9 @@ export const getMatchInfo = async (id: number | string) => {
 // get match stats
 export const getMatchStats = async (id: string) => {
   try {
-    const respose = await axios.get(`${base_url}/stats/:${id}`);
-    return respose;
+    const response = await axios.get(`${base_url}/stats/:${id}`);
+    console.log(response);
+    return response;
   } catch (error) {
     console.error("[GET match stats failed: ]", error);
   }

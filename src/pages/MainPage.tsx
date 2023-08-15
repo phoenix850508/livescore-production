@@ -67,9 +67,12 @@ export default function MainPage() {
   // get all nba&mlb teams name/logo
   useEffect(() => {
     const asyncGetTeam = async () => {
-      const response = await getTeam("");
+      const response = await getTeam("all");
       response &&
-        localStorage.setItem("allNbaTeams", JSON.stringify(response.data));
+        localStorage.setItem(
+          "allNbaTeams",
+          JSON.stringify(response.data.response)
+        );
     };
 
     if (

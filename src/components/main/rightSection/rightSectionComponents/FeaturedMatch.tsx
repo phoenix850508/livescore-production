@@ -55,16 +55,16 @@ export default function FeaturedMatch(props: combinedType) {
       // find nba team form localStorage
       const filteredHomeTeam =
         allNbaTeams &&
-        allNbaTeams.filter(
-          (team: allTeams) => team.id === match?.homeTeam?.id
-        )[0]?.response.logo;
+        allNbaTeams.filter((team: allTeams) => team.id === match?.homeTeam?.id);
       const filteredAwayTeam =
         allNbaTeams &&
-        allNbaTeams.filter(
-          (team: allTeams) => team.id === match?.awayTeam?.id
-        )[0]?.response.logo;
-      setHomeTeamLogo(filteredHomeTeam ? filteredHomeTeam : defaultLogo);
-      setAwayTeamLogo(filteredAwayTeam ? filteredAwayTeam : defaultLogo);
+        allNbaTeams.filter((team: allTeams) => team.id === match?.awayTeam?.id);
+      setHomeTeamLogo(
+        filteredHomeTeam ? filteredHomeTeam[0].logo : defaultLogo
+      );
+      setAwayTeamLogo(
+        filteredAwayTeam ? filteredAwayTeam[0].logo : defaultLogo
+      );
     } else {
       // find mlb team from localStorage
       const filteredHomeTeam =

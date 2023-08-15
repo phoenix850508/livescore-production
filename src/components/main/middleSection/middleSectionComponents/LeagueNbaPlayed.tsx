@@ -15,7 +15,7 @@ interface combinedTypes
     showSportType {}
 
 export default function LeagueNbaPlayed(props: combinedTypes) {
-  const allGames = props.nbaGames && Object.values(props.nbaGames)[0];
+  const allGames = props.nbaGames && Object.values(props.nbaGames);
   let filteredGames: object[] | undefined | null = null;
 
   if (props.showFavorites) {

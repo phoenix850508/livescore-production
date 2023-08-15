@@ -83,12 +83,12 @@ export default function NbaMatchItem(props: combinedTypes) {
   // extract props away scores
   const awayLinescore = props?.scores?.visitors?.linescore;
   const awayTotal = awayLinescore?.reduce(
-    (accum: number, curr: number): number => accum + curr
+    (accum: number, curr: number): number => Number(accum) + Number(curr)
   );
   // extract props home scores
   const homeLinescore = props?.scores?.home?.linescore;
   const homeTotal = homeLinescore?.reduce(
-    (accum: number, curr: number): number => accum + curr
+    (accum: number, curr: number): number => Number(accum) + Number(curr)
   );
   // extract props date, then slice the match hour from Sun, 02 Apr 2023 00:30:00 GMT
   const date = props?.date?.start;
@@ -108,10 +108,12 @@ export default function NbaMatchItem(props: combinedTypes) {
       awayTeam: {
         id: teams?.visitors?.id,
         nickname: teams?.visitors?.nickname,
+        logo: teams?.visitors?.logo,
       },
       homeTeam: {
         id: teams?.home?.id,
         nickname: teams?.home?.nickname,
+        logo: teams?.home?.logo,
       },
       scores: {
         awayTotal: awayTotal && awayTotal,
@@ -159,13 +161,17 @@ export default function NbaMatchItem(props: combinedTypes) {
       // if away teamName existed in localStorage
       if (teamsParsed.some((teamName: string) => teamName === awayTeamName)) {
         setAwaySubs(true);
+      } else {
+        setAwaySubs(false);
       }
       // if home teamName existed in localStorage
       if (teamsParsed.some((teamName: string) => teamName === homeTeamName)) {
         setHomeSubs(true);
+      } else {
+        setHomeSubs(false);
       }
     }
-  }, []);
+  }, [teams?.home?.nickname, teams?.visitors?.nickname]);
 
   return (
     <div
