@@ -2,6 +2,7 @@ import { matchInfoObj, mlbMatchInfoType, mobileStatsProps } from "types/types";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 import styles from "./MatchInfoBottomRight.module.scss";
+import { match } from "assert";
 
 interface combinedMatchInfpType extends mlbMatchInfoType, matchInfoObj {}
 interface combinedPropsType extends matchInfoObj, mobileStatsProps {}
@@ -14,6 +15,8 @@ export default function MatchInfo(props: combinedPropsType) {
   >("");
   let awayScores: null | number[] | string[] | undefined = null;
   let homeScores: null | number[] | string[] | undefined = null;
+
+  const officials = props.officials ? props.officials : matchInfoObj?.officials;
 
   // in here only the first render data matters, because the periodsPercent remians unchange in the useEffect
   const periods = props.periods ? props.periods : matchInfoObj?.periods;
@@ -123,15 +126,22 @@ export default function MatchInfo(props: combinedPropsType) {
       </div>
       <div className={styles.arena}>
         <h3 className={styles.arenaTitle}>Arena</h3>
-        <div className={styles.areanaName}>Name: Ball Arena</div>
-        <div className={styles.areanaCity}>City: Denver</div>
-        <div className={styles.areanaState}>State: CO</div>
+        <div className={styles.areanaName}>
+          Name: {props.arena ? props.arena : matchInfoObj?.arena}
+        </div>
+        <div className={styles.areanaCity}>
+          City: {props.city ? props.city : matchInfoObj?.city}
+        </div>
+        <div className={styles.areanaState}>
+          State: {props.state ? props.state : matchInfoObj?.state}
+        </div>
       </div>
       <div className={styles.officials}>
         <h3 className={styles.officialsTitle}>Officials</h3>
-        <div className={styles.officialsName}>Tom Washington</div>
-        <div className={styles.officialsName}>Bill Kennedy</div>
-        <div className={styles.officialsName}>Marat Kogut</div>
+        {officials &&
+          officials.map((name: string) => {
+            return <div className={styles.officialsName}>{name}</div>;
+          })}
       </div>
     </div>
   );

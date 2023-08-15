@@ -78,9 +78,9 @@ export const getTeamsStandings = async (
 };
 
 // get match info
-export const getMatchInfo = async (id: number | string) => {
+export const getMatchInfo = async (id: number) => {
   try {
-    const response = await axios.get(`${base_url}/game/:${id}`);
+    const response = await axios.get(`${base_url}/game/${id}`);
     console.log(response);
     return response;
   } catch (error) {
@@ -89,9 +89,9 @@ export const getMatchInfo = async (id: number | string) => {
 };
 
 // get match stats
-export const getMatchStats = async (id: string) => {
+export const getMatchStats = async (id: number) => {
   try {
-    const response = await axios.get(`${base_url}/stats/:${id}`);
+    const response = await axios.get(`${base_url}/stats/${id}`);
     console.log(response);
     return response;
   } catch (error) {

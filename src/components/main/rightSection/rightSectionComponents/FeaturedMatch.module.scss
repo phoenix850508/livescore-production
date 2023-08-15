@@ -33,8 +33,7 @@
 }
 
 .logo {
-  width: 63px;
-  height: 63px;
+  max-height: 63px;
 }
 
 @media (min-width: base.$break-point) {

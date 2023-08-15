@@ -82,6 +82,38 @@ app.get("/teams/:id", async (req, res) => {
   }
 });
 
+// get nba match stats
+app.get("/stats/:id", async (req, res) => {
+  const options = {
+    method: "GET",
+    url: `${base_url}/games/statistics?id=${req.params.id}`,
+    headers,
+  };
+  try {
+    const response = await axios.request(options);
+    res.json(response.data);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// get nba match info
+app.get("/game/:id", async (req, res) => {
+  const options = {
+    method: "GET",
+    url: `${base_url}/games?id=${req.params.id}`,
+    headers,
+  };
+  try {
+    const response = await axios.request(options);
+    res.json(response.data);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 // get mlb line scores
 app.get("/mlb/linescore/:gameID", async (req, res) => {
   const options = {

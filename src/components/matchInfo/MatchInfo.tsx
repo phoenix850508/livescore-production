@@ -86,6 +86,9 @@ export default function MatchInfo() {
       periods: nbaMatchInfo.periods?.current,
       status: nbaMatchInfo.status?.long,
       matchHour: match?.matchHour,
+      arena: nbaMatchInfo.arena?.name,
+      city: nbaMatchInfo.arena?.city,
+      state: nbaMatchInfo.arena?.state,
     };
     localStorage.setItem("matchInfoObj", JSON.stringify(matchInfoObj));
   } else if (mlbMatchInfo && match && leagueType === "mlb") {
@@ -112,21 +115,19 @@ export default function MatchInfo() {
   // get nba match info
   useEffect(() => {
     const asyncGetMatchInfo = async () => {
-      const response = id && (await getMatchInfo(id));
-      const data = response && response.data;
-      const idObject = data && data[id.toString()].response;
-      idObject && setNbaMatchInfo(idObject);
+      const response = id && (await getMatchInfo(Number(id)));
+      setNbaMatchInfo(response && response?.data?.response[0]);
     };
-    if (leagueType === "nba") asyncGetMatchInfo();
+    if (leagueType === "nba") {
+      asyncGetMatchInfo();
+    }
   }, [id, leagueType]);
 
   // get nba match stats
   useEffect(() => {
     const asyncGetMatchStats = async () => {
-      const response = id && (await getMatchStats(id));
-      const objData = response && response.data;
-      const idObject = objData && objData[id.toString()];
-      setMatchStats(idObject);
+      const response = id && (await getMatchStats(Number(id)));
+      setMatchStats(response && response?.data.response);
     };
     if (leagueType === "nba") {
       asyncGetMatchStats();
@@ -179,6 +180,9 @@ export default function MatchInfo() {
         homeStats={homeStats}
         awayStats={awayStats}
         date={nbaDate ? nbaDate : mlbDate}
+        arena={nbaMatchInfo?.arena?.name}
+        city={nbaMatchInfo?.arena?.city}
+        state={nbaMatchInfo?.arena?.state}
       />
     </div>
   );

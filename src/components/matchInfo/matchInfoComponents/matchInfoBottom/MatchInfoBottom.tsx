@@ -56,6 +56,9 @@ export default function MatchInfoBottom(props: combinedType) {
         matchHour={props.matchHour}
         leagueType={props.leagueType}
         activeMenu={activeMenu}
+        arena={props.arena}
+        city={props.city}
+        state={props.state}
       />
     </div>
   );

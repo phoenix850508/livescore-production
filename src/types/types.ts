@@ -356,6 +356,12 @@ export type nbaMatchInfoType = {
       linescore?: number[];
     };
   };
+  arena?: {
+    city?: string;
+    name?: string;
+    state?: string;
+  };
+  officials?: string[];
 };
 
 export type mlbMatchInfoType = {
@@ -570,6 +576,10 @@ export type matchInfoObj = {
   status?: string | null;
   matchHour?: string | undefined | null;
   teamFullName?: string | null;
+  arena?: string;
+  city?: string;
+  state?: string;
+  officials?: string[];
 };
 
 export type currentPage = {
@@ -621,11 +631,9 @@ export type onInputChange = {
 
 export type allTeams = {
   id?: number;
-  response?: {
-    logo?: string;
-    name?: string;
-    nickname?: string;
-  };
+  logo?: string;
+  name?: string;
+  nickname?: string;
   mlbLogo1?: string;
   teamAbv?: string;
   teamCity?: string;

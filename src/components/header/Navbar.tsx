@@ -60,8 +60,8 @@ export default function Navbar(props: combinedNavbarTypes) {
 
   // get teams
   const allNbaTeamsStr = localStorage.getItem("allNbaTeams");
-
   const allMlbTeamsStr = localStorage.getItem("allMlbTeams");
+  const defaultLogo = "https://www.svgrepo.com/show/133513/shield.svg";
 
   useEffect(() => {
     allNbaTeamsStr && setAllNbaTeams(JSON.parse(allNbaTeamsStr));
@@ -102,12 +102,10 @@ export default function Navbar(props: combinedNavbarTypes) {
               >
                 <img
                   className={styles.logo}
-                  src={team.response?.logo}
+                  src={team?.logo ? team?.logo : defaultLogo}
                   alt="nbalogo"
                 />
-                <span className={styles.filteredName}>
-                  {team.response?.name}
-                </span>
+                <span className={styles.filteredName}>{team?.name}</span>
               </div>
             );
           })}
@@ -311,7 +309,7 @@ function NavbarBottom(props: combinedNavBottomTypes) {
 
 function searchNba(teams: allTeams[], input: string) {
   return teams.filter((team) => {
-    return team?.response?.name?.toLowerCase().includes(input.toLowerCase());
+    return team?.name?.toLowerCase().includes(input.toLowerCase());
   });
 }
 
