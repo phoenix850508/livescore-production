@@ -43,7 +43,7 @@ export default function TeamInfo() {
     }
   }
 
-  // declare id and arena into, needs to find the matching home id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
+  // declare id and arena info, needs to find the matching home id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
   let index = 0;
   const homeIdRef = useRef<number | string | undefined | null>(0);
 
@@ -51,9 +51,7 @@ export default function TeamInfo() {
   useEffect(() => {
     const asyncGetgamePerSeasonPerTeam = async () => {
       const response = id && (await getgamePerSeasonPerTeam(season, id));
-      const obj = response && response.data;
-      const objArr = Object.values(obj)[0];
-      objArr && setNbaAllSeasonGames(Object.values(objArr));
+      setNbaAllSeasonGames(response && response.data.response);
     };
     if (league === "nba") asyncGetgamePerSeasonPerTeam();
   }, [id, league, season]);
@@ -63,14 +61,17 @@ export default function TeamInfo() {
     if (league === "nba" && nbaAllSeasonGames) {
       homeIdRef.current =
         nbaAllSeasonGames && nbaAllSeasonGames[index]?.teams?.home?.id;
-      while (homeIdRef.current !== Number(id)) {
+      while (
+        homeIdRef.current !== Number(id) ||
+        nbaAllSeasonGames[index].arena?.country
+      ) {
         index++;
         homeIdRef.current = nbaAllSeasonGames[index]?.teams?.home?.id;
         if (index > 87) {
           break;
         }
       }
-      // if find the matched id, set arean info
+      // if find the matched id, set arena info
       if (homeIdRef.current === Number(id)) {
         setArenaInfo(nbaAllSeasonGames[index]?.arena);
       } else {
@@ -83,17 +84,17 @@ export default function TeamInfo() {
   useEffect(() => {
     const asyncGetTeam = async () => {
       const response = id && (await getTeam(Number(id)));
-      response && setTeamFullName(response.data[0].response.name);
+      response && setTeamFullName(response.data.response[0].name);
       response &&
-        localStorage.setItem("teamFullName", response.data[0].response.name);
-      if (response && response.data[0].response.logo) {
+        localStorage.setItem("teamFullName", response.data.response[0].name);
+      if (response && response.data.response[0].logo) {
         setTeamLogo(
-          response.data[0].response.logo
-            ? response.data[0].response.logo
+          response.data.response[0].logo
+            ? response.data.response[0].logo
             : defaultLogo
         );
         teamNicknameRef.current =
-          response && response.data[0].response.nickname;
+          response && response.data.response[0].nickname;
       } else {
         setTeamLogo(defaultLogo);
       }

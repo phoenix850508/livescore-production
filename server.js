@@ -130,6 +130,22 @@ app.get("/standing/:league/:season/:conference", async (req, res) => {
   }
 });
 
+// get nba team all season games
+app.get("/gamesPerTeamAndSeason/:season/:teamId", async (req, res) => {
+  const options = {
+    method: "GET",
+    url: `${base_url}/games?season=${req.params.season}&team=${req.params.teamId}`,
+    headers,
+  };
+  try {
+    const response = await axios.request(options);
+    res.json(response.data);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 // get mlb line scores
 app.get("/mlb/linescore/:gameID", async (req, res) => {
   const options = {

@@ -40,7 +40,7 @@ export const getgamePerSeasonPerTeam = async (
 ) => {
   try {
     const response = await axios.get(
-      `${base_url}/gamesPerTeamAndSeason?gamesPerTeamAndSeason=${season}/teamId?teamId=${teamId}`
+      `${base_url}/gamesPerTeamAndSeason/${season}/${teamId}`
     );
     console.log(response);
     return response;
