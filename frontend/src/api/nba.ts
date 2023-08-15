@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = "https://livescore-50312dbe5709.herokuapp.com/api";
+const base_url = "https://livescore-83864383907c.herokuapp.com//api";
 
 // get all nba games on date
 export const getAllGames = async (date: string) => {
