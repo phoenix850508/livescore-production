@@ -17,7 +17,7 @@ const headers = {
   "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
 };
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(__dirname, "./build")));
 
 app.get("/api", (req, res) => {
   res.send("express in running in the backend");
