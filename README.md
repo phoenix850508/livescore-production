@@ -6,7 +6,7 @@
 
 This side project is built for sports fans to subscribe their favorite teams, and get real-time match information on all sports.
 
-Currently this project is still on the fly, therefore, the score shown may not be correct on the day. However, as I'm really excited to build this project, soon the APIs will be connected, and all the dummy data will be removed in all pages.
+Currently this project is still on the fly, therefore, currently only NBA data is connected in real-time. However, as I'm really excited to build this project, soon all the APIs will be connected, and the dummy data will be removed in all pages.
 
 [The App is in production on heroku](https://livescore-83864383907c.herokuapp.com)
 <br />(currently mlb games only available on 2023/07/18 as it's in dummy data)
