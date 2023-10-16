@@ -171,25 +171,15 @@ export default function MatchTeams(props: matchInfoObj) {
           </h3>
           <img
             className={styles.logo}
-            src={
-              props.awayLogo
-                ? props.awayLogo
-                : matchInfoObj?.awayLogo
-                ? matchInfoObj?.awayLogo
-                : defaultLogo
-            }
+            src={props.awayLogo ? props.awayLogo : defaultLogo}
             alt="awayLogo.svg"
             onClick={handleAwayTeamClick}
           />
         </div>
         <div className={styles.scores}>
-          <span className={styles.awayScore}>
-            {props.awayTotal ? props.awayTotal : matchInfoObj?.awayTotal}
-          </span>
+          <span className={styles.awayScore}>{props.awayTotal}</span>
           <span>-</span>
-          <span className={styles.homeScore}>
-            {props.homeTotal ? props.homeTotal : matchInfoObj?.homeTotal}
-          </span>
+          <span className={styles.homeScore}>{props.homeTotal}</span>
         </div>
         <div className={styles.home}>
           <h3 className={styles.homeName}>
@@ -197,13 +187,7 @@ export default function MatchTeams(props: matchInfoObj) {
           </h3>
           <img
             className={styles.logo}
-            src={
-              props.homeLogo
-                ? props.homeLogo
-                : matchInfoObj?.homeLogo
-                ? matchInfoObj?.homeLogo
-                : defaultLogo
-            }
+            src={props.homeLogo ? props.homeLogo : defaultLogo}
             alt="homeLogo.svg"
             onClick={handleHomeTeamClick}
           />

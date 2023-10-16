@@ -82,24 +82,24 @@ export default function MatchStats(props: combinedType) {
   ];
 
   // get localStorage obj data
-  useEffect(() => {
-    const matchInfoObjString = localStorage.getItem("matchInfoObj");
-    const matchInfoObj = matchInfoObjString && JSON.parse(matchInfoObjString);
-    // fot nba
-    if (matchInfoObj && matchInfoObj.leagueType === "nba") {
-      const homeStatsObjString = localStorage.getItem("homeStats");
-      const awayStatsObjString = localStorage.getItem("awayStats");
-      homeStatsObjString && setNbaHomeStats(JSON.parse(homeStatsObjString));
-      awayStatsObjString && setNbaAwayStats(JSON.parse(awayStatsObjString));
-    }
-    // for mlb
-    if (matchInfoObj && matchInfoObj.leagueType === "mlb") {
-      const homeStatsObjString = localStorage.getItem("homeStats");
-      const awayStatsObjString = localStorage.getItem("awayStats");
-      homeStatsObjString && setMlbHomeStats(JSON.parse(homeStatsObjString));
-      awayStatsObjString && setMlbAwayStats(JSON.parse(awayStatsObjString));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const matchInfoObjString = localStorage.getItem("matchInfoObj");
+  //   const matchInfoObj = matchInfoObjString && JSON.parse(matchInfoObjString);
+  //   // fot nba
+  //   if (matchInfoObj && matchInfoObj.leagueType === "nba") {
+  //     const homeStatsObjString = localStorage.getItem("homeStats");
+  //     const awayStatsObjString = localStorage.getItem("awayStats");
+  //     if (homeStatsObjString) setNbaHomeStats(JSON.parse(homeStatsObjString));
+  //     if (awayStatsObjString) setNbaAwayStats(JSON.parse(awayStatsObjString));
+  //   }
+  //   // for mlb
+  //   if (matchInfoObj && matchInfoObj.leagueType === "mlb") {
+  //     const homeStatsObjString = localStorage.getItem("homeStats");
+  //     const awayStatsObjString = localStorage.getItem("awayStats");
+  //     if (homeStatsObjString) setMlbHomeStats(JSON.parse(homeStatsObjString));
+  //     if (awayStatsObjString) setMlbAwayStats(JSON.parse(awayStatsObjString));
+  //   }
+  // }, []);
 
   // get props obj data
   useEffect(() => {
