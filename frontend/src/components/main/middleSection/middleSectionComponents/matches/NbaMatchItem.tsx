@@ -83,12 +83,14 @@ export default function NbaMatchItem(props: combinedTypes) {
   // extract props away scores
   const awayLinescore = props?.scores?.visitors?.linescore;
   const awayTotal = awayLinescore?.reduce(
-    (accum: number, curr: number): number => Number(accum) + Number(curr)
+    (accum: number, curr: number): number => Number(accum) + Number(curr),
+    0
   );
   // extract props home scores
   const homeLinescore = props?.scores?.home?.linescore;
   const homeTotal = homeLinescore?.reduce(
-    (accum: number, curr: number): number => Number(accum) + Number(curr)
+    (accum: number, curr: number): number => Number(accum) + Number(curr),
+    0
   );
   // extract props date, then slice the match hour from Sun, 02 Apr 2023 00:30:00 GMT
   const date = props?.date?.start;
