@@ -20,6 +20,7 @@ export default function MatchInfo(props: combinedPropsType) {
 
   // in here only the first render data matters, because the periodsPercent remians unchange in the useEffect
   const periods = props.periods;
+  console.log(periods);
   let periodsPercent: number | undefined | 0 | null = 0;
 
   if (props?.awayScores || props?.homeScores) {

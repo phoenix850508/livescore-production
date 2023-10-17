@@ -60,10 +60,10 @@ export default function FeaturedMatch(props: combinedType) {
         allNbaTeams &&
         allNbaTeams.filter((team: allTeams) => team.id === match?.awayTeam?.id);
       setHomeTeamLogo(
-        filteredHomeTeam ? filteredHomeTeam[0].logo : defaultLogo
+        filteredHomeTeam[0] ? filteredHomeTeam[0]?.logo : defaultLogo
       );
       setAwayTeamLogo(
-        filteredAwayTeam ? filteredAwayTeam[0].logo : defaultLogo
+        filteredAwayTeam[0] ? filteredAwayTeam[0]?.logo : defaultLogo
       );
     } else {
       // find mlb team from localStorage
@@ -80,7 +80,14 @@ export default function FeaturedMatch(props: combinedType) {
       setHomeTeamLogo(filteredHomeTeam ? filteredHomeTeam : defaultLogo);
       setAwayTeamLogo(filteredAwayTeam ? filteredAwayTeam : defaultLogo);
     }
-  }, [homeTeam, props?.showSport, allNbaTeams, allMlbTeams]);
+  }, [
+    homeTeam,
+    props?.showSport,
+    allNbaTeams,
+    allMlbTeams,
+    match?.homeTeam?.id,
+    match?.awayTeam?.id,
+  ]);
   return (
     <div className={styles.featuredMatch} onClick={handleClick}>
       <div className={styles.matchInfo}>
