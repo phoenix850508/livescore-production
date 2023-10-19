@@ -22,6 +22,15 @@ A simple version of a livescore web application, the features can be categorized
 - User can view a certain team from by clicking the team logo in the matchinfo page
 - User use the search bar to search for particular team or league
 
+## 🔧 Spec 
+- Node 15.9.0
+- React 18.2.0
+- TypeScript 4.9.5
+- axios 1.4.0
+- clsx 1.2.1
+- sass 1.63.6
+
+
 ## Installation
 
 1. Please ensure that Node.js and npm are well installed in your local environment.
