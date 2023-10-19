@@ -1,6 +1,6 @@
 import RightSection from "components/leagueInfo/leagueInfoComponents/RightSection";
 import LeftSection from "./teamInfoComponents/LeftSection";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { getgamePerSeasonPerTeam, getTeam } from "api/nba";
 import {
@@ -11,6 +11,8 @@ import {
 } from "types/types";
 import { dummyMlbTeamMatches } from "./dummyMlbTeamMatches";
 import { dummyMlbTeams } from "./dummyMlbTeams";
+import { SeasonContext } from "context/SeasonContext";
+
 import styles from "./TeamInfo.module.scss";
 
 export default function TeamInfo() {
@@ -29,19 +31,8 @@ export default function TeamInfo() {
   const teamNicknameRef = useRef<null | string | undefined>(null);
 
   // get current year
-  const date = new Date();
-  const currYear = date.getFullYear();
-  let season = "";
-  switch (league) {
-    case "nba": {
-      season = `${currYear - 1}`;
-      break;
-    }
-    case "mlb": {
-      season = `${currYear}`;
-      break;
-    }
-  }
+  const { season } = useContext(SeasonContext);
+  const seasonStr = season.season;
 
   // declare id and arena info, needs to find the matching home id from nbaAllSeasonGames/mlbAllSeasonGames in order to find team information
   let index = 0;
@@ -50,11 +41,11 @@ export default function TeamInfo() {
   // get nab all games per season per team
   useEffect(() => {
     const asyncGetgamePerSeasonPerTeam = async () => {
-      const response = id && (await getgamePerSeasonPerTeam(season, id));
+      const response = id && (await getgamePerSeasonPerTeam(seasonStr, id));
       setNbaAllSeasonGames(response && response.data.response);
     };
     if (league === "nba") asyncGetgamePerSeasonPerTeam();
-  }, [id, league, season]);
+  }, [id, league, season, seasonStr]);
 
   // find nba matching home id for team info
   useEffect(() => {
@@ -140,7 +131,7 @@ export default function TeamInfo() {
         matches={
           league === "nba" ? nbaAllSeasonGames : mlbAllSeasonGames?.schedule
         }
-        season={season}
+        season={seasonStr}
         league={league}
         DIFF={mlbTeamInfo?.DIFF}
         conference={mlbTeamInfo?.conference}

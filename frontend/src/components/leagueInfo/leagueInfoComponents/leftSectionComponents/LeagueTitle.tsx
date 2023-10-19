@@ -42,6 +42,7 @@ export default function LeagueTitle(props: leagueParamsProps) {
             {props.league === "mlb" && <option value="2023">2023</option>}
             {props.league === "nba" && (
               <>
+                <option value="2023">23/24</option>
                 <option value="2022">22/23</option>
                 <option value="2021">21/22</option>
               </>

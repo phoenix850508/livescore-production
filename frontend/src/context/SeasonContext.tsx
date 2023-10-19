@@ -2,7 +2,9 @@ import React, { createContext, useReducer } from "react";
 import seasonReducer from "reducer/seasonReducer";
 import { initSeason, seasonActionType } from "types/types";
 
-const defaultSeason = { season: "2022" };
+const date = new Date();
+const currYear = date.getFullYear();
+const defaultSeason = { season: currYear.toString() };
 
 const SeasonContext = createContext<{
   season: initSeason;
