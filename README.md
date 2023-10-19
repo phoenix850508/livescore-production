@@ -29,6 +29,9 @@ A simple version of a livescore web application, the features can be categorized
 - axios 1.4.0
 - clsx 1.2.1
 - sass 1.63.6
+- express 4.18.2
+- cors 2.8.5
+- json-server 0.17.3
 
 
 ## Installation
