@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f29efea2.css",
-    "main.js": "/static/js/main.4c7bfdc8.js",
+    "main.js": "/static/js/main.620f667f.js",
     "static/js/787.7f8014e2.chunk.js": "/static/js/787.7f8014e2.chunk.js",
     "static/media/nbaIcon.svg": "/static/media/nbaIcon.deb91573b01f13fdf98af42a6e58ac64.svg",
     "static/media/leagueCup.svg": "/static/media/leagueCup.96d8a5515b8e7d50ea91739ec06ca807.svg",
@@ -35,11 +35,11 @@
     "static/media/brandIcon.svg": "/static/media/brandIcon.985cf853b2c03f8151ad903904a942ee.svg",
     "static/media/triangle-right.svg": "/static/media/triangle-right.e67f95e7d6da0cfab41f77227c719952.svg",
     "main.f29efea2.css.map": "/static/css/main.f29efea2.css.map",
-    "main.4c7bfdc8.js.map": "/static/js/main.4c7bfdc8.js.map",
+    "main.620f667f.js.map": "/static/js/main.620f667f.js.map",
     "787.7f8014e2.chunk.js.map": "/static/js/787.7f8014e2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f29efea2.css",
-    "static/js/main.4c7bfdc8.js"
+    "static/js/main.620f667f.js"
   ]
 }
