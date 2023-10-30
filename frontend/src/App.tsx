@@ -10,6 +10,8 @@ import {
 } from "pages";
 import { DateContextProvider } from "context/DateContext";
 import { MatchContextProvider } from "context/MatchContext";
+import { SeasonContextProvider } from "context/SeasonContext";
+
 
 import "styles/reset.module.scss";
 import "styles/App.module.scss";
@@ -20,16 +22,18 @@ function App() {
       <BrowserRouter basename="/">
         <DateContextProvider>
           <MatchContextProvider>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="main" element={<MainPage />} />
-              <Route path="match/:league/:id" element={<MatchInfoPage />} />
-              <Route path="leagueInfo/:league" element={<LeagueInfoPage />} />
-              <Route
-                path="teamInfo/:league/:teamId"
-                element={<TeamInfoPage />}
-              />
-            </Routes>
+            <SeasonContextProvider>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="main" element={<MainPage />} />
+                <Route path="match/:league/:id" element={<MatchInfoPage />} />
+                <Route path="leagueInfo/:league" element={<LeagueInfoPage />} />
+                <Route
+                  path="teamInfo/:league/:teamId"
+                  element={<TeamInfoPage />}
+                />
+              </Routes>
+            </SeasonContextProvider>
           </MatchContextProvider>
         </DateContextProvider>
       </BrowserRouter>
